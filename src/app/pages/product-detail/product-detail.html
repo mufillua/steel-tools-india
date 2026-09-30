@@ -1,0 +1,234 @@
+@if (product(); as p) {
+  <!-- ═════ Breadcrumb band ═════ -->
+  <div class="pd-band">
+    <div class="pd-band__bg" aria-hidden="true"></div>
+    <div class="sti-container sti-container--wide">
+      <sti-breadcrumbs [items]="crumbs()" />
+    </div>
+  </div>
+
+  <!-- ═════ Main: gallery + summary + enquiry ═════ -->
+  <section class="pd-main" aria-labelledby="pd-title">
+    <div class="sti-container sti-container--wide pd-grid">
+      <div class="pd-media">
+        <sti-product-gallery [images]="p.images" [name]="p.name" [category]="p.category" />
+      </div>
+
+      <div class="pd-info">
+        <p class="pd-kicker">
+          @if (category(); as c) {
+            <a [routerLink]="'/products'" [queryParams]="{ category: c.slug }">{{ c.name }}</a>
+            <span class="pd-kicker__sep" aria-hidden="true">/</span>
+          }
+          <span>{{ p.subcategory }}</span>
+        </p>
+
+        <h1 id="pd-title" class="pd-title">{{ p.name }}</h1>
+        <p class="pd-summary">{{ p.summary }}</p>
+
+        <ul class="pd-tags" role="list">
+          <li class="pd-tag pd-tag--brand">{{ p.brand }}</li>
+          @if (p.standard) {
+            <li class="pd-tag">{{ p.standard }}</li>
+          }
+          @if (p.variants.length > 1) {
+            <li class="pd-tag"><sti-icon name="ruler" [size]="14" /> {{ p.variants.length }} sizes listed</li>
+          }
+        </ul>
+
+        <p class="pd-desc">{{ p.description }}</p>
+
+        <!-- Size summary -->
+        @if (p.variants.length > 1) {
+          <div class="pd-size">
+            <span class="pd-size__k">Size</span>
+            @if (selected(); as v) {
+              <strong class="pd-size__v">{{ v.label }}</strong>
+              <a class="pd-size__link" href="#sizes" (click)="toSizes($event, sizes)">Change</a>
+            } @else {
+              <span class="pd-size__none">Not selected</span>
+              <a class="pd-size__link" href="#sizes" (click)="toSizes($event, sizes)">
+                Choose a size <sti-icon name="arrow-right" [size]="14" />
+              </a>
+            }
+          </div>
+        }
+
+        <div #panel class="pd-enquiry">
+          <sti-enquiry-panel [product]="p" [variant]="selected()" />
+        </div>
+
+        <ul class="pd-more" role="list">
+          <li>
+            <sti-icon name="quote" [size]="16" />
+            <span>Several items or a drawing to send?
+              <a [routerLink]="quotePath" [queryParams]="quoteParams()">Use the quote form</a></span>
+          </li>
+          <li>
+            <sti-icon name="phone" [size]="16" />
+            <span>Prefer to talk? <a [href]="links.tel">Call {{ company.phoneDisplay }}</a></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════ Sizes & variants ═════ -->
+  <section #sizes id="sizes" class="pd-sec pd-sizes" aria-labelledby="sizes-title">
+    <div class="sti-container sti-container--wide">
+      <header class="pd-sec__head">
+        <p class="sti-eyebrow">Sizes &amp; variants</p>
+        <h2 id="sizes-title" class="pd-sec__title">
+          {{ p.variants.length > 1 ? 'Choose a size' : p.variants.length === 1 ? 'Listed size' : 'Sizes' }}
+        </h2>
+        @if (p.variants.length > 1) {
+          <p class="pd-sec__lead">
+            Every size below is as listed in the catalogue. Select one and it's included in your enquiry automatically.
+          </p>
+        }
+      </header>
+
+      @if (p.variants.length) {
+        <sti-variant-selector [product]="p" [selectedId]="selected()?.id ?? null" (selectedChange)="selectVariant($event)" />
+      } @else {
+        <div class="pd-nosizes">
+          <sti-icon name="info" [size]="20" />
+          <p>
+            Sizes for this product aren't itemised on our site yet. Send us the size or specification you need
+            on WhatsApp or email and we'll confirm it for you.
+          </p>
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- ═════ Specifications ═════ -->
+  <section class="pd-sec pd-specs" aria-labelledby="specs-title">
+    <div class="sti-container sti-container--wide pd-specs__grid">
+      <div>
+        <header class="pd-sec__head">
+          <p class="sti-eyebrow">Technical data</p>
+          <h2 id="specs-title" class="pd-sec__title">Specifications</h2>
+        </header>
+
+        @if (p.specifications.length) {
+          <dl class="spec">
+            @for (s of p.specifications; track s.label) {
+              <div class="spec__row">
+                <dt>{{ s.label }}</dt>
+                <dd>{{ s.value }}</dd>
+              </div>
+            }
+          </dl>
+        } @else {
+          <p class="pd-muted">Detailed specifications are available on request.</p>
+        }
+      </div>
+
+      <aside class="pd-facts" aria-labelledby="facts-title">
+        <h3 id="facts-title" class="pd-facts__title">Product details</h3>
+        <dl class="facts">
+          @for (d of details(); track d.label) {
+            <div class="facts__row">
+              <dt>{{ d.label }}</dt>
+              <dd>{{ d.value }}</dd>
+            </div>
+          }
+        </dl>
+        <p class="pd-facts__note">
+          <sti-icon name="info" [size]="15" />
+          Specifications are as listed in the manufacturer's catalogue. Please confirm availability, exact
+          dimensions and grade when you enquire.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ═════ Related ═════ -->
+  @if (related().length) {
+    <section class="pd-sec pd-related" aria-labelledby="related-title">
+      <div class="sti-container sti-container--wide">
+        <header class="pd-sec__head pd-sec__head--row">
+          <div>
+            <p class="sti-eyebrow">{{ category()?.name }}</p>
+            <h2 id="related-title" class="pd-sec__title">Related products</h2>
+          </div>
+          @if (category(); as c) {
+            <a class="sti-btn pd-related__all" routerLink="/products" [queryParams]="{ category: c.slug }">
+              View all {{ c.name }} <sti-icon class="sti-btn__arrow" name="arrow-right" [size]="16" />
+            </a>
+          }
+        </header>
+        <ul class="pd-related__grid" role="list">
+          @for (r of related(); track r.slug) {
+            <li><sti-product-card [product]="r" [headingLevel]="3" /></li>
+          }
+        </ul>
+      </div>
+    </section>
+  }
+
+  <div #pageEnd class="pd-end" aria-hidden="true"></div>
+
+  <!-- ═════ Sticky enquiry dock ═════ -->
+  <div class="dock" [class.is-visible]="dockVisible()" [attr.inert]="dockVisible() ? null : ''" aria-label="Quick enquiry" role="region">
+    <div class="sti-container sti-container--wide dock__inner">
+      <div class="dock__text">
+        <p class="dock__name">{{ p.name }}</p>
+        <p class="dock__size">
+          @if (selected(); as v) {
+            <span class="dock__k">Size</span> {{ v.label }}
+          } @else if (p.variants.length > 1) {
+            <a href="#sizes" (click)="toSizes($event, sizes)">Choose a size</a>
+          } @else {
+            {{ p.summary }}
+          }
+        </p>
+      </div>
+      <div class="dock__actions">
+        <sti-whatsapp-button [product]="p" [variant]="selected()" />
+        <sti-email-button [product]="p" [variant]="selected()" [iconOnMobile]="true" />
+      </div>
+    </div>
+  </div>
+} @else if (catalogue.status() === 'error') {
+  <section class="sti-section">
+    <div class="sti-container pd-state">
+      <p class="sti-eyebrow">Catalogue</p>
+      <h1>The catalogue couldn't be loaded.</h1>
+      <p class="sti-lead">Please refresh the page, or contact us directly — we'll help you find the product.</p>
+      <div class="pd-state__actions">
+        <a class="sti-btn sti-btn--primary" [routerLink]="quotePath">Get A Quote</a>
+        <a class="sti-btn" [href]="links.tel">Call {{ company.phoneDisplay }}</a>
+      </div>
+    </div>
+  </section>
+} @else if (catalogue.status() === 'ready') {
+  <section class="sti-section">
+    <div class="sti-container pd-state">
+      <sti-breadcrumbs [items]="crumbs()" />
+      <p class="sti-eyebrow">Error 404</p>
+      <h1>Product not found</h1>
+      <p class="sti-lead">
+        This product isn't in our catalogue, or its link has changed. Browse the catalogue, or tell us what you
+        need and we'll check it for you.
+      </p>
+      <div class="pd-state__actions">
+        <a class="sti-btn sti-btn--blue" routerLink="/products">Browse Products</a>
+        <a class="sti-btn sti-btn--primary" [routerLink]="quotePath">Get A Quote</a>
+      </div>
+    </div>
+  </section>
+} @else {
+  <section class="sti-section" aria-busy="true" aria-label="Loading product">
+    <div class="sti-container sti-container--wide pd-grid pd-skel">
+      <span class="pd-skel__img"></span>
+      <div>
+        <span class="pd-skel__line pd-skel__line--s"></span>
+        <span class="pd-skel__line pd-skel__line--l"></span>
+        <span class="pd-skel__line"></span>
+        <span class="pd-skel__line pd-skel__line--m"></span>
+      </div>
+    </div>
+  </section>
+}

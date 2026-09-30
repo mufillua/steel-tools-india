@@ -1,0 +1,119 @@
+<sti-page-intro
+  [crumbs]="crumbs"
+  eyebrow="Catalogue"
+  title="Product Categories"
+  lead="Every product group from the R★R Brand, Taparia and Miranda ranges. Open a category to see every product in it, or jump straight to a product type."
+/>
+
+<!-- Jump links -->
+<nav class="jump" aria-label="Jump to a category">
+  <div class="sti-container sti-container--wide">
+    <ul class="jump__list" role="list">
+      @for (v of views(); track v.category.slug) {
+        <li>
+          <a class="jump__link" [href]="'#cat-' + v.category.slug" (click)="jumpTo($event, v.category.slug)">
+            <span class="jump__ref">{{ v.ref }}</span>{{ v.category.name }}
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+</nav>
+
+<section class="sti-section cats" aria-label="All categories">
+  <div class="sti-container sti-container--wide">
+    @if (catalogue.status() === 'error') {
+      <p class="cats__error">Product counts couldn't be loaded — the category links below still work.</p>
+    }
+
+    <ol class="cats__list" role="list">
+      @for (v of views(); track v.category.slug) {
+        @let c = v.category;
+        <li class="sheet" [id]="'cat-' + c.slug">
+          <div class="sheet__main">
+            <div class="sheet__head">
+              <span class="sheet__icon"><sti-category-icon [name]="c.icon" [size]="56" /></span>
+              <span class="sheet__ref" aria-hidden="true">CAT. {{ v.ref }}</span>
+            </div>
+
+            <h2 class="sheet__name">
+              <a routerLink="/products" [queryParams]="{ category: c.slug }">{{ c.name }}</a>
+            </h2>
+            <p class="sheet__desc">{{ c.description }}</p>
+
+            <dl class="sheet__stats">
+              <div>
+                <dt>Products</dt>
+                <dd>@if (ready()) { {{ c.productCount }} } @else { <span class="skel" aria-hidden="true"></span> }</dd>
+              </div>
+              <div>
+                <dt>Sizes listed</dt>
+                <dd>@if (ready()) { {{ v.sizes.toLocaleString('en-IN') }} } @else { <span class="skel" aria-hidden="true"></span> }</dd>
+              </div>
+              <div>
+                <dt>{{ c.brands.length > 1 ? 'Brands' : 'Brand' }}</dt>
+                <dd class="sheet__brands">{{ c.brands.join(' · ') }}</dd>
+              </div>
+            </dl>
+
+            <a class="sti-btn sti-btn--blue sheet__cta" routerLink="/products" [queryParams]="{ category: c.slug }">
+              View Products <sti-icon class="sti-btn__arrow" name="arrow-right" [size]="16" />
+            </a>
+          </div>
+
+          <div class="sheet__side">
+            @if (v.photos.length) {
+              <ul class="sheet__photos" role="list" aria-label="Example products">
+                @for (p of v.photos; track p.slug) {
+                  <li>
+                    <a [routerLink]="['/products', p.slug]" class="sheet__photo">
+                      <sti-product-image [src]="p.images[0]" alt="" [category]="p.category" ratio="1 / 1" />
+                      <span class="sheet__photo-name">{{ p.name }}</span>
+                    </a>
+                  </li>
+                }
+              </ul>
+            }
+
+            <div class="sheet__types">
+              <h3 class="sheet__types-title">Product types</h3>
+              @if (ready()) {
+                <ul class="types" role="list">
+                  @for (t of v.types; track t.name) {
+                    <li>
+                      <a routerLink="/products" [queryParams]="{ category: c.slug, type: t.name }">
+                        <span>{{ t.name }}</span><span class="types__n">{{ t.count }}</span>
+                      </a>
+                    </li>
+                  }
+                  @if (v.moreTypes) {
+                    <li>
+                      <a class="types__more" routerLink="/products" [queryParams]="{ category: c.slug }">
+                        + {{ v.moreTypes }} more {{ v.moreTypes === 1 ? 'type' : 'types' }}
+                      </a>
+                    </li>
+                  }
+                </ul>
+              } @else {
+                <ul class="chips" role="list">
+                  @for (h of c.highlights; track h) { <li>{{ h }}</li> }
+                </ul>
+              }
+            </div>
+          </div>
+        </li>
+      }
+    </ol>
+
+    <div class="cats__ask">
+      <div>
+        <p class="sti-eyebrow">Not listed?</p>
+        <h2 class="cats__ask-title">Can't find the tool you need?</h2>
+        <p>Send us the product, size and quantity — we'll check it for you.</p>
+      </div>
+      <a class="sti-btn sti-btn--primary sti-btn--lg" [routerLink]="quotePath">
+        Get A Quote <sti-icon class="sti-btn__arrow" name="arrow-right" [size]="18" />
+      </a>
+    </div>
+  </div>
+</section>

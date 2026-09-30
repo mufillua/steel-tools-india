@@ -1,0 +1,29 @@
+@let c = category();
+<a class="cc" routerLink="/products" [queryParams]="{ category: c.slug }">
+  <span class="cc__ref" aria-hidden="true">{{ (index() + 1).toString().padStart(2, '0') }}</span>
+
+  <span class="cc__icon">
+    <sti-category-icon [name]="c.icon" [size]="60" />
+  </span>
+
+  <h3 class="cc__name">{{ c.name }}</h3>
+  <p class="cc__desc">{{ c.description }}</p>
+
+  <span class="cc__foot">
+    <span class="cc__count">
+      @if (countsReady()) {
+        @if (c.productCount > 0) {
+          <strong>{{ c.productCount }}</strong> {{ c.productCount === 1 ? 'product' : 'products' }}
+        } @else {
+          Being added
+        }
+      } @else {
+        <span class="cc__count-skel" aria-hidden="true"></span>
+      }
+    </span>
+    <span class="cc__cta">
+      View Products
+      <sti-icon name="arrow-right" [size]="16" />
+    </span>
+  </span>
+</a>

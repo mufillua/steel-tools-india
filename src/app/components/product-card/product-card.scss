@@ -1,0 +1,208 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.pc {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--sti-border);
+  border-radius: var(--sti-radius-md);
+  background: var(--sti-surface);
+  overflow: hidden;
+  transition:
+    transform var(--sti-dur) var(--sti-ease),
+    border-color var(--sti-dur) var(--sti-ease),
+    box-shadow var(--sti-dur) var(--sti-ease);
+
+  &:hover,
+  &:focus-within {
+    transform: translateY(-4px);
+    border-color: var(--sti-blue-300);
+    box-shadow: var(--sti-shadow-lift);
+  }
+
+  &:hover ::ng-deep img.is-loaded {
+    transform: scale(1.05);
+  }
+}
+
+.pc__media {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px solid var(--sti-border);
+}
+
+.pc__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 8px;
+  border-radius: var(--sti-radius-xs);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--sti-blue-200);
+  font-family: var(--sti-font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: var(--sti-blue-800);
+}
+
+.pc__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 18px 18px 18px;
+}
+
+.pc__cat {
+  margin: 0 0 6px;
+  @include tech-label(var(--sti-red-600));
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+}
+
+.pc__name {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+  line-height: 1.12;
+
+  a {
+    color: var(--sti-text-strong);
+    text-decoration: none;
+
+    // Whole-card hit area for the title link (buttons sit above it).
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    &:hover {
+      color: var(--sti-blue-800);
+    }
+  }
+}
+
+.pc__spec {
+  margin: 0 0 6px;
+  font-family: var(--sti-font-mono);
+  font-size: 0.8125rem;
+  color: var(--sti-blue-900);
+}
+
+.pc__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  margin: 0 0 16px;
+  font-size: var(--sti-text-xs);
+  color: var(--sti-muted);
+}
+
+.pc__dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--sti-blue-400);
+}
+
+.pc__actions {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: auto;
+
+  .sti-btn {
+    padding: 0 10px;
+  }
+}
+
+.pc__view {
+  --btn-border: var(--sti-blue-200);
+}
+
+// ── Phones: compact horizontal card (photo left, details right, actions below) ──
+@media (max-width: 559.98px) {
+  .pc {
+    display: grid;
+    grid-template-columns: 108px minmax(0, 1fr);
+    column-gap: 14px;
+    align-content: start;
+    padding: 12px;
+  }
+
+  .pc__body {
+    display: contents;
+  }
+
+  .pc__media {
+    grid-column: 1;
+    grid-row: 1 / span 4;
+    align-self: start;
+    border: 1px solid var(--sti-border);
+    border-radius: var(--sti-radius-sm);
+    overflow: hidden;
+
+    ::ng-deep .pi {
+      aspect-ratio: 1 / 1 !important;
+    }
+
+    ::ng-deep .pi__ph-text {
+      display: none;
+    }
+  }
+
+  .pc__badge {
+    top: auto;
+    bottom: 5px;
+    left: 5px;
+    padding: 2px 5px;
+    font-size: 0.625rem;
+  }
+
+  .pc__cat,
+  .pc__name,
+  .pc__spec,
+  .pc__meta {
+    grid-column: 2;
+  }
+
+  .pc__cat {
+    margin: 2px 0 4px;
+    font-size: 0.625rem;
+  }
+
+  .pc__name {
+    margin-bottom: 4px;
+    font-size: 1.15rem;
+  }
+
+  .pc__spec {
+    margin-bottom: 4px;
+    font-size: 0.75rem;
+  }
+
+  .pc__meta {
+    margin-bottom: 0;
+  }
+
+  // The standard is on the product page; on a phone card it only wraps awkwardly.
+  .pc__dot,
+  .pc__std {
+    display: none;
+  }
+
+  .pc__actions {
+    grid-column: 1 / -1;
+    margin-top: 12px;
+  }
+}

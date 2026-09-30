@@ -1,0 +1,5 @@
+// Global stylesheet — design tokens, base elements, shared utilities.
+// Component styles pull mixins with:  @use 'mixins' as *;
+@use 'variables';
+@use 'base';
+@use 'animations';

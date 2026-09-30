@@ -1,0 +1,548 @@
+@use 'variables' as v;
+@use 'mixins' as *;
+
+:host {
+  display: contents;
+}
+
+// =============== Bar ===============
+.hdr {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: var(--sti-z-header);
+  // Solid white: the supplied logo has a white canvas, so the bar must match it exactly.
+  background: var(--sti-surface);
+  box-shadow: 0 1px 0 var(--sti-border);
+  transition:
+    box-shadow var(--sti-dur) var(--sti-ease),
+    background-color var(--sti-dur) var(--sti-ease);
+}
+
+.hdr--compact {
+  box-shadow: var(--sti-shadow-header);
+}
+
+// Thin two-tone rule across the very top — blue with a short red "tolerance mark".
+.hdr__rule {
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--sti-blue-800) 0 calc(var(--sti-gutter) + 64px),
+    var(--sti-red-600) calc(var(--sti-gutter) + 64px) calc(var(--sti-gutter) + 112px),
+    var(--sti-blue-800) calc(var(--sti-gutter) + 112px) 100%
+  );
+}
+
+.hdr__bar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: var(--sti-header-h);
+  transition: height var(--sti-dur) var(--sti-ease);
+
+  .hdr--compact & {
+    height: var(--sti-header-h-compact);
+  }
+}
+
+// =============== Brand ===============
+.hdr__brand {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+  margin-right: auto;
+  border-radius: var(--sti-radius-xs);
+  // The supplied logo has a white canvas — it sits on the white bar untouched.
+}
+
+.hdr__logo {
+  height: 58px;
+  width: auto;
+  transform-origin: left center;
+  transition: transform var(--sti-dur) var(--sti-ease);
+
+  .hdr--compact & {
+    transform: scale(0.76);
+  }
+
+  @include down(v.$bp-nav) {
+    height: 50px;
+  }
+
+  @include down(v.$bp-xs) {
+    height: 44px;
+  }
+}
+
+// =============== Desktop nav ===============
+.hdr__nav {
+  display: none;
+  align-items: center;
+  gap: 8px;
+
+  @include up(v.$bp-nav) {
+    display: flex;
+  }
+}
+
+.hdr__links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hdr__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: var(--sti-radius-sm);
+  color: var(--sti-text);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    color var(--sti-dur-fast) var(--sti-ease),
+    background-color var(--sti-dur-fast) var(--sti-ease);
+
+  // Underline that draws in from the left on hover and sits red when active.
+  &::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 5px;
+    height: 2px;
+    background: var(--sti-blue-400);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--sti-dur) var(--sti-ease-out), background-color var(--sti-dur) var(--sti-ease);
+  }
+
+  &:hover {
+    color: var(--sti-blue-900);
+    background: var(--sti-blue-50);
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+
+  &.is-active {
+    color: var(--sti-blue-900);
+    font-weight: 600;
+
+    &::after {
+      transform: scaleX(1);
+      background: var(--sti-red-600);
+    }
+  }
+}
+
+.hdr__divider {
+  width: 1px;
+  height: 26px;
+  margin: 0 10px;
+  background: var(--sti-border-strong);
+}
+
+// Phone: clearly legible, clickable.
+.hdr__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 12px 0 6px;
+  border-radius: 999px;
+  color: var(--sti-blue-900);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color var(--sti-dur-fast) var(--sti-ease);
+
+  &:hover {
+    color: var(--sti-blue-900);
+    background: var(--sti-blue-50);
+
+    .hdr__phone-icon {
+      background: var(--sti-blue-800);
+      color: #fff;
+    }
+  }
+}
+
+.hdr__phone-icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--sti-blue-100);
+  color: var(--sti-blue-800);
+  transition:
+    background-color var(--sti-dur) var(--sti-ease),
+    color var(--sti-dur) var(--sti-ease);
+}
+
+.hdr__phone-label {
+  font-size: var(--sti-text-sm);
+  font-weight: 500;
+  color: var(--sti-muted);
+}
+
+.hdr__phone-num {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+.hdr__cta {
+  margin-left: 6px;
+  min-height: 44px;
+
+  .hdr--compact & {
+    min-height: 40px;
+  }
+}
+
+// =============== Toggle ===============
+.hdr__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 44px;
+  padding: 0 14px 0 12px;
+  border: 1px solid var(--sti-border-strong);
+  border-radius: var(--sti-radius-sm);
+  background: var(--sti-surface);
+  color: var(--sti-blue-900);
+  font-size: var(--sti-text-sm);
+  font-weight: 600;
+  transition:
+    background-color var(--sti-dur-fast) var(--sti-ease),
+    border-color var(--sti-dur-fast) var(--sti-ease);
+
+  &:hover {
+    background: var(--sti-blue-50);
+    border-color: var(--sti-blue-400);
+  }
+
+  @include up(v.$bp-nav) {
+    display: none;
+  }
+
+  @include down(v.$bp-xs) {
+    padding: 0 12px;
+
+    .hdr__toggle-text {
+      @include sr-only;
+    }
+  }
+}
+
+.hdr__toggle-lines {
+  position: relative;
+  width: 18px;
+  height: 12px;
+
+  span {
+    position: absolute;
+    left: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    transition:
+      transform var(--sti-dur) var(--sti-ease-out),
+      opacity var(--sti-dur-fast) var(--sti-ease),
+      width var(--sti-dur) var(--sti-ease-out);
+  }
+
+  span:nth-child(1) {
+    top: 0;
+    width: 18px;
+  }
+  span:nth-child(2) {
+    top: 5px;
+    width: 18px;
+  }
+  span:nth-child(3) {
+    top: 10px;
+    width: 11px;
+    background: var(--sti-red-600);
+  }
+
+  .hdr--open & {
+    span:nth-child(1) {
+      transform: translateY(5px) rotate(45deg);
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      width: 18px;
+      transform: translateY(-5px) rotate(-45deg);
+      background: currentColor;
+    }
+  }
+}
+
+// =============== Mobile menu ===============
+.mnav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: calc(100dvh - var(--sti-header-h) - 3px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--sti-surface);
+  border-top: 1px solid var(--sti-border);
+  box-shadow: 0 24px 40px -24px rgba(23, 38, 58, 0.35);
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3d(0, -8px, 0);
+  transition:
+    opacity var(--sti-dur) var(--sti-ease),
+    transform var(--sti-dur) var(--sti-ease-out),
+    visibility 0s linear var(--sti-dur);
+
+  // Faint blueprint grid behind the menu.
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    @include blueprint-grid(rgba(45, 86, 144, 0.035), rgba(45, 86, 144, 0.06), 20px);
+  }
+
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition:
+      opacity var(--sti-dur) var(--sti-ease),
+      transform var(--sti-dur-slow) var(--sti-ease-out),
+      visibility 0s;
+  }
+
+  @include up(v.$bp-nav) {
+    display: none;
+  }
+}
+
+.mnav__inner {
+  position: relative;
+  padding-block: 12px 24px;
+}
+
+.mnav__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 4px;
+}
+
+.mnav__item {
+  opacity: 0;
+  transform: translate3d(0, -6px, 0);
+  transition:
+    opacity var(--sti-dur) var(--sti-ease),
+    transform var(--sti-dur) var(--sti-ease-out);
+
+  .is-open & {
+    opacity: 1;
+    transform: none;
+    transition-delay: calc(var(--i, 0) * 45ms + 60ms);
+  }
+
+  &:nth-last-child(2) {
+    margin-top: 12px;
+  }
+
+  &:last-child {
+    margin-top: 8px;
+  }
+}
+
+.mnav__link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 56px;
+  padding: 0 12px;
+  border-bottom: 1px solid var(--sti-border);
+  color: var(--sti-text-strong);
+  text-decoration: none;
+  transition:
+    background-color var(--sti-dur-fast) var(--sti-ease),
+    color var(--sti-dur-fast) var(--sti-ease);
+
+  sti-icon {
+    margin-left: auto;
+    color: var(--sti-blue-400);
+    transition: transform var(--sti-dur) var(--sti-ease);
+  }
+
+  &:hover {
+    background: var(--sti-blue-50);
+    color: var(--sti-blue-900);
+
+    sti-icon {
+      transform: translateX(3px);
+      color: var(--sti-blue-800);
+    }
+  }
+
+  &.is-active {
+    color: var(--sti-blue-900);
+
+    .mnav__index {
+      color: var(--sti-red-600);
+    }
+
+    sti-icon {
+      color: var(--sti-red-600);
+    }
+  }
+}
+
+.mnav__index {
+  font-family: var(--sti-font-mono);
+  font-size: var(--sti-text-xs);
+  color: var(--sti-blue-400);
+  letter-spacing: 0.08em;
+}
+
+.mnav__label {
+  font-family: var(--sti-font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.mnav__phone {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--sti-blue-200);
+  border-radius: var(--sti-radius-md);
+  background: var(--sti-blue-50);
+  color: var(--sti-blue-900);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--sti-blue-900);
+    border-color: var(--sti-blue-400);
+  }
+}
+
+.mnav__phone-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--sti-blue-800);
+  color: #fff;
+}
+
+.mnav__phone-label {
+  display: block;
+  font-size: var(--sti-text-xs);
+  font-weight: 500;
+  color: var(--sti-muted);
+}
+
+.mnav__phone-num {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.mnav__phone-hint {
+  margin-left: auto;
+  font-size: var(--sti-text-xs);
+  color: var(--sti-muted);
+
+  @include down(360px) {
+    display: none;
+  }
+}
+
+.mnav__foot {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin: 20px 0 0;
+  @include tech-label(var(--sti-muted));
+}
+
+.mnav__foot-sep {
+  color: var(--sti-red-600);
+}
+
+// Dim the page behind the open menu.
+.mnav-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--sti-z-overlay);
+  background: rgba(23, 38, 58, 0.32);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--sti-dur) var(--sti-ease),
+    visibility 0s linear var(--sti-dur);
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--sti-dur) var(--sti-ease);
+  }
+
+  @include up(v.$bp-nav) {
+    display: none;
+  }
+}
+
+// Quick actions under the phone card
+.mnav__quick {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.mnav__quick-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  border: 1px solid var(--sti-border-strong);
+  border-radius: var(--sti-radius-sm);
+  background: #fff;
+  font-size: var(--sti-text-sm);
+  font-weight: 600;
+  color: var(--sti-blue-900);
+  text-decoration: none;
+
+  &--wa {
+    border-color: rgba(26, 125, 68, 0.45);
+    color: var(--sti-whatsapp);
+  }
+
+  &.is-active {
+    border-color: var(--sti-blue-800);
+  }
+
+  &:focus-visible {
+    @include focus-ring(2px);
+  }
+}

@@ -1,0 +1,60 @@
+<sti-page-intro
+  [crumbs]="crumbs"
+  eyebrow="Get A Quote"
+  title="Tell us what you need"
+  lead="Fill in what you can — product, size and quantity — and send it to us on WhatsApp or by email. We'll come back with price and availability."
+/>
+
+<section class="sti-section quote" aria-label="Quote request">
+  <div class="sti-container sti-container--wide quote__grid">
+    <div class="quote__card">
+      <sti-quote-form [productSlug]="prefillProduct()" [variantId]="prefillVariant()" />
+    </div>
+
+    <aside class="quote__side" aria-labelledby="direct-title">
+      <div class="side-card">
+        <h2 id="direct-title" class="side-card__title">Prefer to talk directly?</h2>
+        <ul class="direct" role="list">
+          <li>
+            <a class="direct__link" [href]="whatsappHello" target="_blank" rel="noopener">
+              <span class="direct__icon direct__icon--wa"><sti-icon name="chat" [size]="18" /></span>
+              <span><span class="direct__k">WhatsApp</span><span class="direct__v">{{ company.whatsappDisplay }}</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="direct__link" [href]="links.tel">
+              <span class="direct__icon"><sti-icon name="phone" [size]="18" /></span>
+              <span><span class="direct__k"></span><span class="direct__v">{{ company.phoneDisplay }}</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="direct__link" [href]="links.mailto">
+              <span class="direct__icon"><sti-icon name="mail" [size]="18" /></span>
+              <span><span class="direct__k">Email</span><span class="direct__v">{{ company.email }}</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="direct__link" [href]="links.mapsSearch" target="_blank" rel="noopener">
+              <span class="direct__icon"><sti-icon name="pin" [size]="18" /></span>
+              <span><span class="direct__k">Address</span><span class="direct__v direct__v--addr">{{ address }}</span></span>
+            </a>
+          </li>
+        </ul>
+        <div class="side-card__hours">
+          <h3 class="side-card__sub"><sti-icon name="clock" [size]="16" /> Business hours</h3>
+          <sti-business-hours />
+        </div>
+      </div>
+
+      <div class="side-card side-card--steps">
+        <h2 class="side-card__title">How it works</h2>
+        <ol class="steps" role="list">
+          <li><span class="steps__n">1</span><span><strong>Fill in the form.</strong> Coming from a product page? The product and size are already added.</span></li>
+          <li><span class="steps__n">2</span><span><strong>Choose WhatsApp or email.</strong> Your message opens ready to send — check it and press send.</span></li>
+          <li><span class="steps__n">3</span><span><strong>Hear back from us</strong> with price and availability.</span></li>
+        </ol>
+        <p class="side-card__since"><span>{{ company.name }}</span><span>{{ company.tagline }}</span></p>
+      </div>
+    </aside>
+  </div>
+</section>

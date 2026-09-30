@@ -1,0 +1,87 @@
+<div class="pf">
+  <div class="pf__head">
+    <h2 class="pf__title">Filters</h2>
+    @if (activeCount() > 0) {
+      <button type="button" class="pf__clear" (click)="clearAll.emit()">
+        Clear all ({{ activeCount() }})
+      </button>
+    }
+  </div>
+
+  <!-- Category -->
+  <fieldset class="pf__group">
+    <legend class="pf__legend">Category</legend>
+    <ul class="pf__list" role="list">
+      @for (o of categories(); track o.value) {
+        <li>
+          <label class="pf__opt" [class.is-empty]="o.count === 0 && !o.checked">
+            <input
+              type="checkbox"
+              [checked]="o.checked"
+              [disabled]="o.count === 0 && !o.checked"
+              (change)="toggle.emit({ kind: 'category', value: o.value })"
+            />
+            <span class="pf__box" aria-hidden="true"></span>
+            <span class="pf__label">{{ o.label }}</span>
+            <span class="pf__count">{{ o.count }}</span>
+          </label>
+        </li>
+      }
+    </ul>
+  </fieldset>
+
+  <!-- Product type (sub-category), only for selected categories -->
+  <fieldset class="pf__group">
+    <legend class="pf__legend">Product Type</legend>
+    @if (typeGroups().length) {
+      @for (g of typeGroups(); track g.title) {
+        @if (typeGroups().length > 1) {
+          <p class="pf__subhead">{{ g.title }}</p>
+        }
+        <ul class="pf__list" role="list">
+          @for (o of g.options; track o.value) {
+            <li>
+              <label class="pf__opt" [class.is-empty]="o.count === 0 && !o.checked">
+                <input
+                  type="checkbox"
+                  [checked]="o.checked"
+                  [disabled]="o.count === 0 && !o.checked"
+                  (change)="toggle.emit({ kind: 'type', value: o.value })"
+                />
+                <span class="pf__box" aria-hidden="true"></span>
+                <span class="pf__label">{{ o.label }}</span>
+                <span class="pf__count">{{ o.count }}</span>
+              </label>
+            </li>
+          }
+        </ul>
+      }
+    } @else {
+      <p class="pf__hint">Choose a category to narrow down by product type.</p>
+    }
+  </fieldset>
+
+  <!-- Brand -->
+  @if (brands().length > 1) {
+    <fieldset class="pf__group">
+      <legend class="pf__legend">Brand</legend>
+      <ul class="pf__list" role="list">
+        @for (o of brands(); track o.value) {
+          <li>
+            <label class="pf__opt" [class.is-empty]="o.count === 0 && !o.checked">
+              <input
+                type="checkbox"
+                [checked]="o.checked"
+                [disabled]="o.count === 0 && !o.checked"
+                (change)="toggle.emit({ kind: 'brand', value: o.value })"
+              />
+              <span class="pf__box" aria-hidden="true"></span>
+              <span class="pf__label">{{ o.label }}</span>
+              <span class="pf__count">{{ o.count }}</span>
+            </label>
+          </li>
+        }
+      </ul>
+    </fieldset>
+  }
+</div>

@@ -1,0 +1,36 @@
+@let p = product();
+<article class="pc">
+  <a class="pc__media" [routerLink]="['/products', p.slug]" tabindex="-1" aria-hidden="true">
+    <sti-product-image [src]="p.images[0]" [alt]="p.name" [category]="p.category" />
+    @if (optionCount() > 1) {
+      <span class="pc__badge">{{ optionCount() }} sizes</span>
+    }
+  </a>
+
+  <div class="pc__body">
+    <p class="pc__cat">{{ categoryName() }}</p>
+
+    @if (headingLevel() === 2) {
+      <h2 class="pc__name"><a [routerLink]="['/products', p.slug]">{{ p.name }}</a></h2>
+    } @else {
+      <h3 class="pc__name"><a [routerLink]="['/products', p.slug]">{{ p.name }}</a></h3>
+    }
+
+    <p class="pc__spec">{{ p.summary }}</p>
+
+    <p class="pc__meta">
+      <span>{{ p.brand }}</span>
+      @if (p.standard) {
+        <span class="pc__dot" aria-hidden="true"></span>
+        <span class="pc__std">{{ p.standard }}</span>
+      }
+    </p>
+
+    <div class="pc__actions">
+      <a class="sti-btn sti-btn--sm sti-btn--outline pc__view" [routerLink]="['/products', p.slug]" [attr.aria-label]="'View ' + p.name">
+        View Product
+      </a>
+      <sti-whatsapp-button [product]="p" size="sm" />
+    </div>
+  </div>
+</article>

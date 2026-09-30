@@ -1,0 +1,411 @@
+import { Product } from '../../models/product.model';
+import { rows } from '../variant-builders';
+
+/**
+ * R★R Brand — Carbide Cutting Tools, price list w.e.f. 19-09-2026 (16 pp).
+ * Tables transcribed from the PDF (OCR + visual check of every page). Prices intentionally omitted.
+ * U-drill: one variant per length (2D / 3D / 4D) that has an entry in the table; "-" = not listed.
+ */
+
+const BRAND = 'R★R Brand';
+const SC = 'solid-carbide-tools';
+const IX = 'indexable-tooling';
+const img = (cat: string, file: string) => `assets/products/${cat}/${file}.webp`;
+
+const RAW: Product[] = [
+  {
+    slug: "solid-carbide-drill-hrc55",
+    name: "Solid Carbide Drill HRC55 · 2 Flute",
+    category: SC,
+    subcategory: "Solid Carbide Drills",
+    brand: BRAND,
+    summary: "Ø0.5–20 mm · TiSiN coated",
+    description:
+      "Two-flute solid carbide drill in the HRC55 range with TiSiN copper coating. Listed from Ø0.5 to Ø20 mm; ranges step in 0.1 mm, so a range such as 5.2–6.1 covers every size between.",
+    images: [img(SC, "solid-carbide-drill-hrc55")],
+    specifications: [
+      { label: "Range", value: "HRC55" },
+      { label: "Flutes", value: "2" },
+      { label: "Coating", value: "TiSiN (copper)" },
+      { label: "Diameter range", value: "0.5–20.0 mm" },
+      { label: "Size steps", value: "Ranges step in 0.1 mm" },
+      { label: "ISO material range", value: "P (steel), K (cast iron)" },
+      { label: "Machining operations", value: "Drilling" },
+    ],
+    variantAxes: ["Cut Ø", "Flute L", "Total L"],
+    variants: rows(["Cut Ø", "Flute L", "Total L"], [["0.5–0.9", "12", "34"], ["1.0–2.0", "20", "40"], ["2.1–3.0", "20", "40"], ["2.1–2.5", "30", "57"], ["2.6–3.0", "35", "65"], ["3.1–4.1", "25", "50"], ["3.1–4.1", "35", "65"], ["3.3", "40", "75"], ["3.3", "50", "100"], ["4.2–5.1", "25", "50"], ["4.2–5.1", "40", "75"], ["4.2–5.1", "50", "100"], ["5.2–6.1", "40", "75"], ["5.2–6.1", "60", "100"], ["5.8", "25", "50"], ["6.2–7.1", "60", "100"], ["7.2–8.1", "60", "100"], ["8.2–9.1", "60", "100"], ["8.5", "50", "80"], ["9.2–10.1", "60", "100"], ["10.2–11.1", "60", "100"], ["11.2–12.1", "60", "100"], ["12.2–13.1", "60", "100"], ["13.2–14.1", "60", "100"], ["13.5", "45", "80"], ["14.2–15.1", "60", "100"], ["15.2–16.1", "60", "100"], ["16.2–17.1", "60", "100"], ["17.2–18.1", "60", "100"], ["18.2–19.1", "60", "100"], ["19.2–20.0", "60", "100"]], (a) => `Ø${a['Cut Ø']} × ${a['Total L']} L · flute ${a['Flute L']}`),
+    source: { doc: 'RR-CT', page: 3, section: "Solid Carbide Drill HRC55 · 2 Flute" },
+    featured: true,
+  },
+  {
+    slug: "spot-drill-90-hrc55",
+    name: "Spot Drill 90° HRC55 · 2 Flute",
+    category: SC,
+    subcategory: "Solid Carbide Drills",
+    brand: BRAND,
+    summary: "Ø4–12 mm · 90° · TiSiN coated",
+    description:
+      "Two-flute 90° spot drill in the HRC55 range with TiSiN copper coating, listed in Ø4, 6, 8, 10 and 12 mm.",
+    images: [img(SC, "spot-drill-90-hrc55")],
+    specifications: [
+      { label: "Range", value: "HRC55" },
+      { label: "Flutes", value: "2" },
+      { label: "Point angle", value: "90°" },
+      { label: "Coating", value: "TiSiN (copper)" },
+      { label: "ISO material range", value: "P (steel), K (cast iron)" },
+      { label: "Machining operations", value: "Centre drilling, drilling, chamfering" },
+    ],
+    variantAxes: ["Cut Ø", "Degree", "Shank Ø", "Total L"],
+    variants: rows(["Cut Ø", "Degree", "Shank Ø", "Total L"], [["4", "90", "4", "50"], ["6", "90", "6", "50"], ["8", "90", "8", "60"], ["10", "90", "10", "75"], ["12", "90", "12", "75"]], (a) => `Ø${a['Cut Ø']} · ${a['Degree']}° · ${a['Total L']} L`),
+    source: { doc: 'RR-CT', page: 3, section: "Spot Drill (90°) HRC55 · 2 Flute" },
+  },
+  {
+    slug: "square-endmill-hrc45-4-flute",
+    name: "Square Endmill HRC45 · 4 Flute",
+    category: SC,
+    subcategory: "Square Endmills",
+    brand: BRAND,
+    summary: "Ø1–20 mm · TiAlN coated",
+    description:
+      "Four-flute solid carbide square endmill in the HRC45 range with TiAlN dark grey coating, listed from Ø1 to Ø20 mm in standard and long lengths.",
+    images: [img(SC, "square-endmill-hrc45-4-flute")],
+    specifications: [
+      { label: "Range", value: "HRC45" },
+      { label: "Flutes", value: "4" },
+      { label: "Coating", value: "TiAlN (dark grey)" },
+      { label: "Diameter range", value: "1–20 mm" },
+      { label: "ISO material range", value: "P (steel), K (cast iron)" },
+      { label: "Machining operations", value: "Slotting, side milling, ramping, helical, plunging" },
+    ],
+    variantAxes: ["Cut Ø", "Flute L", "Shank Ø", "Total L"],
+    variants: rows(["Cut Ø", "Flute L", "Shank Ø", "Total L"], [["1", "3", "4", "50"], ["1.5", "4", "4", "50"], ["2", "5", "4", "50"], ["2.5", "7", "4", "50"], ["3", "8", "3", "50"], ["3", "8", "4", "50"], ["3", "12", "3", "75"], ["3", "15", "3", "100"], ["3.5", "10", "4", "50"], ["4", "10", "4", "50"], ["4", "16", "4", "75"], ["4", "20", "4", "100"], ["4.5", "12", "6", "50"], ["5", "13", "5", "50"], ["5", "20", "5", "75"], ["5", "30", "5", "100"], ["6", "15", "6", "50"], ["6", "25", "6", "75"], ["6", "30", "6", "100"], ["6", "45", "6", "150"], ["8", "20", "8", "60"], ["8", "28", "8", "75"], ["8", "35", "8", "100"], ["8", "50", "8", "150"], ["10", "25", "10", "75"], ["10", "40", "10", "100"], ["10", "50", "10", "150"], ["10", "65", "10", "200"], ["12", "30", "12", "75"], ["12", "45", "12", "100"], ["12", "60", "12", "150"], ["12", "70", "12", "200"], ["14", "45", "14", "100"], ["14", "60", "14", "150"], ["16", "45", "16", "100"], ["16", "60", "16", "150"], ["18", "45", "18", "100"], ["18", "70", "18", "150"], ["20", "45", "20", "100"], ["20", "70", "20", "150"]], (a) => `Ø${a['Cut Ø']} × ${a['Total L']} L · flute ${a['Flute L']} · shank Ø${a['Shank Ø']}`),
+    source: { doc: 'RR-CT', page: 4, section: "Square Endmill HRC45 · 4 Flute" },
+  },
+  {
+    slug: "square-endmill-hrc55-4-flute",
+    name: "Square Endmill HRC55 · 4 Flute",
+    category: SC,
+    subcategory: "Square Endmills",
+    brand: BRAND,
+    summary: "Ø1–20 mm · TiSiN coated",
+    description:
+      "Four-flute solid carbide square endmill in the HRC55 range with TiSiN copper coating, listed from Ø1 to Ø20 mm with lengths up to 200 mm.",
+    images: [img(SC, "square-endmill-hrc55-4-flute")],
+    specifications: [
+      { label: "Range", value: "HRC55" },
+      { label: "Flutes", value: "4" },
+      { label: "Coating", value: "TiSiN (copper)" },
+      { label: "Diameter range", value: "1–20 mm" },
+      { label: "ISO material range", value: "P (steel), K (cast iron)" },
+      { label: "Machining operations", value: "Slotting, side milling, ramping, helical, plunging" },
+    ],
+    variantAxes: ["Cut Ø", "Flute L", "Shank Ø", "Total L"],
+    variants: rows(["Cut Ø", "Flute L", "Shank Ø", "Total L"], [["1", "3", "4", "50"], ["1.5", "5", "4", "50"], ["2", "6", "4", "50"], ["2.5", "8", "4", "50"], ["3", "9", "3", "50"], ["3", "9", "4", "50"], ["3", "9", "6", "50"], ["3", "12", "3", "75"], ["3", "15", "3", "100"], ["3", "40", "3", "100"], ["3.5", "11", "4", "50"], ["4", "12", "4", "50"], ["4", "12", "6", "50"], ["4", "16", "4", "75"], ["4", "20", "4", "100"], ["4.5", "12", "6", "50"], ["5", "13", "5", "50"], ["5", "13", "6", "50"], ["5", "18", "5", "75"], ["5", "30", "5", "100"], ["6", "15", "6", "50"], ["6", "24", "6", "75"], ["6", "30", "6", "100"], ["6", "45", "6", "150"], ["7", "24", "7", "60"], ["7", "28", "7", "100"], ["7", "50", "7", "150"], ["8", "24", "8", "60"], ["8", "25", "8", "75"], ["8", "35", "8", "100"], ["8", "50", "8", "150"], ["9", "25", "9", "60"], ["9", "45", "9", "75"], ["9", "35", "8.8", "75"], ["9", "30", "9", "100"], ["9", "50", "9", "150"], ["10", "25", "10", "75"], ["10", "40", "10", "100"], ["10", "55", "10", "150"], ["10", "65", "10", "200"], ["12", "30", "12", "75"], ["12", "45", "12", "100"], ["12", "55", "12", "150"], ["12", "70", "12", "200"], ["13", "45", "13", "100"], ["13", "70", "13", "150"], ["14", "45", "14", "100"], ["14", "70", "14", "150"], ["16", "45", "16", "100"], ["16", "80", "16", "150"], ["16", "85", "16", "200"], ["17", "45", "17", "100"], ["18", "45", "18", "100"], ["18", "80", "18", "150"], ["20", "45", "20", "100"], ["20", "80", "20", "150"], ["20", "90", "20", "200"]], (a) => `Ø${a['Cut Ø']} × ${a['Total L']} L · flute ${a['Flute L']} · shank Ø${a['Shank Ø']}`),
+    source: { doc: 'RR-CT', page: 5, section: "Square Endmill HRC55 · 4 Flute" },
+    featured: true,
+  },
+  {
+    slug: "square-endmill-hrc65-4-flute",
+    name: "Square Endmill HRC65 · 4 Flute",
+    category: SC,
+    subcategory: "Square Endmills",
+    brand: BRAND,
+    summary: "Ø1–20 mm · Blue Nano coated",
+    description:
+      "Four-flute solid carbide square endmill in the HRC65 range with Blue Nano coating, listed from Ø1 to Ø20 mm.",
+    images: [img(SC, "square-endmill-hrc65-4-flute")],
+    specifications: [
+      { label: "Range", value: "HRC65" },
+      { label: "Flutes", value: "4" },
+      { label: "Coating", value: "Blue Nano" },
+      { label: "Diameter range", value: "1–20 mm" },
+      { label: "ISO material range", value: "P (steel), M (stainless), K (cast iron), H (hardened)" },
+      { label: "Machining operations", value: "Slotting, side milling, ramping, helical, plunging" },
+    ],
+    variantAxes: ["Cut Ø", "Flute L", "Shank Ø", "Total L"],
+    variants: rows(["Cut Ø", "Flute L", "Shank Ø", "Total L"], [["1", "3", "4", "50"], ["1.5", "4.5", "4", "50"], ["2", "6", "4", "50"], ["2.5", "7.5", "4", "50"], ["3", "9", "3", "50"], ["3", "12", "3", "75"], ["3", "20", "3", "100"], ["4", "12", "4", "50"], ["4", "16", "4", "75"], ["4", "20", "4", "100"], ["5", "13", "5", "50"], ["5", "18", "5", "75"], ["5", "30", "5", "100"], ["6", "15", "6", "50"], ["6", "24", "6", "75"], ["6", "30", "6", "100"], ["8", "20", "8", "60"], ["8", "25", "8", "75"], ["8", "35", "8", "100"], ["10", "25", "10", "75"], ["10", "40", "10", "100"], ["12", "30", "12", "75"], ["12", "45", "12", "100"], ["16", "45", "16", "100"], ["20", "45", "20", "100"]], (a) => `Ø${a['Cut Ø']} × ${a['Total L']} L · flute ${a['Flute L']} · shank Ø${a['Shank Ø']}`),
+    source: { doc: 'RR-CT', page: 6, section: "Square Endmill HRC65 · 4 Flute" },
+  },
+  {
+    slug: "key-way-endmill-hrc55",
+    name: "Key Way Endmill HRC55 · 3 Flute",
+    category: SC,
+    subcategory: "Special Endmills",
+    brand: BRAND,
+    summary: "Ø1, Ø3 · TiSiN coated",
+    description:
+      "Three-flute key way endmill in the HRC55 range with TiSiN copper coating, listed in Ø1 and Ø3 mm.",
+    images: [img(SC, "key-way-endmill-hrc55")],
+    specifications: [
+      { label: "Range", value: "HRC55" },
+      { label: "Flutes", value: "3" },
+      { label: "Coating", value: "TiSiN (copper)" },
+      { label: "ISO material range", value: "P (steel), K (cast iron)" },
+      { label: "Machining operations", value: "Slotting, plunging" },
+    ],
+    variantAxes: ["Cut Ø", "Flute L", "Shank Ø", "Total L"],
+    variants: rows(["Cut Ø", "Flute L", "Shank Ø", "Total L"], [["1", "3", "4", "50"], ["3", "9", "3", "50"]], (a) => `Ø${a['Cut Ø']} × ${a['Total L']} L · flute ${a['Flute L']} · shank Ø${a['Shank Ø']}`),
+    source: { doc: 'RR-CT', page: 6, section: "Key Way Endmill HRC55 · 3 Flute" },
+  },
+  {
+    slug: "endmill-for-aluminium-hrc55",
+    name: "Endmill for Aluminium HRC55 · 3 Flute",
+    category: SC,
+    subcategory: "Special Endmills",
+    brand: BRAND,
+    summary: "Ø1–16 mm · uncoated",
+    description:
+      "Uncoated three-flute solid carbide endmill for aluminium (ISO N), listed from Ø1 to Ø16 mm.",
+    images: [img(SC, "endmill-for-aluminium-hrc55")],
+    specifications: [
+      { label: "Range", value: "HRC55" },
+      { label: "Flutes", value: "3" },
+      { label: "Coating", value: "Uncoated" },
+      { label: "ISO material range", value: "N (non-ferrous / aluminium)" },
+      { label: "Machining operations", value: "Slotting, side milling, ramping, helical" },
+    ],
+    variantAxes: ["Cut Ø", "Flute L", "Shank Ø", "Total L"],
+    variants: rows(["Cut Ø", "Flute L", "Shank Ø", "Total L"], [["1", "3", "4", "50"], ["1.5", "4.5", "4", "50"], ["2", "6", "4", "50"], ["2.5", "8", "4", "50"], ["3", "9", "3", "50"], ["3", "12", "3", "75"], ["4", "12", "4", "50"], ["4", "16", "4", "75"], ["5", "15", "5", "50"], ["5", "18", "5", "75"], ["6", "18", "6", "50"], ["6", "24", "6", "75"], ["8", "24", "8", "60"], ["10", "30", "10", "75"], ["12", "35", "12", "75"], ["16", "45", "16", "100"]], (a) => `Ø${a['Cut Ø']} × ${a['Total L']} L · flute ${a['Flute L']} · shank Ø${a['Shank Ø']}`),
+    source: { doc: 'RR-CT', page: 7, section: "Endmill for Aluminium HRC55 · 3 Flute" },
+  },
+  {
+    slug: "long-neck-endmill-hrc55",
+    name: "Long Neck Endmill HRC55 · 4F / 2F",
+    category: SC,
+    subcategory: "Special Endmills",
+    brand: BRAND,
+    summary: "Ø0.5–3 mm · neck 8–20 mm",
+    description:
+      "Long neck solid carbide endmill in the HRC55 range with TiSiN copper coating. Cutting diameters below 1 mm are 2 flute; from 1 mm upward the tool is 4 flute.",
+    images: [img(SC, "long-neck-endmill-hrc55")],
+    specifications: [
+      { label: "Range", value: "HRC55" },
+      { label: "Flutes", value: "2 (below Ø1 mm), 4 (Ø1 mm and above)" },
+      { label: "Coating", value: "TiSiN (copper)" },
+      { label: "Neck lengths", value: "8–20 mm" },
+      { label: "ISO material range", value: "P (steel), K (cast iron)" },
+      { label: "Machining operations", value: "Side milling, profiling, slotting" },
+    ],
+    variantAxes: ["Cut Ø", "Flute L", "Neck L", "Shank Ø", "Total L"],
+    variants: rows(["Cut Ø", "Flute L", "Neck L", "Shank Ø", "Total L"], [["0.5", "1", "8", "4", "50"], ["0.8", "1.6", "10", "4", "50"], ["1", "3", "12", "4", "50"], ["1", "3", "16", "4", "50"], ["1", "3", "20", "4", "50"], ["1.5", "5", "12", "4", "50"], ["1.5", "5", "16", "4", "50"], ["1.5", "5", "20", "4", "50"], ["2", "6", "12", "4", "50"], ["2", "6", "16", "4", "50"], ["2", "6", "20", "4", "50"], ["2.5", "8", "12", "4", "50"], ["2.5", "8", "16", "4", "50"], ["2.5", "8", "20", "4", "50"], ["3", "9", "12", "4", "50"], ["3", "9", "16", "4", "50"], ["3", "9", "20", "4", "50"]], (a) => `Ø${a['Cut Ø']} · neck ${a['Neck L']} · flute ${a['Flute L']} · ${a['Total L']} L`),
+    source: { doc: 'RR-CT', page: 7, section: "Long Neck Endmill HRC55 · 4F / 2F" },
+  },
+  {
+    slug: "ballnose-endmill-hrc45-2-flute",
+    name: "Ballnose Endmill HRC45 · 2 Flute",
+    category: SC,
+    subcategory: "Ballnose Endmills",
+    brand: BRAND,
+    summary: "Ø1–20 mm · TiAlN coated",
+    description:
+      "Two-flute solid carbide ballnose endmill in the HRC45 range with TiAlN dark grey coating, listed from Ø1 (R0.5) to Ø20 (R10) mm.",
+    images: [img(SC, "ballnose-endmill-hrc45-2-flute")],
+    specifications: [
+      { label: "Range", value: "HRC45" },
+      { label: "Flutes", value: "2" },
+      { label: "Coating", value: "TiAlN (dark grey)" },
+      { label: "Diameter range", value: "1–20 mm" },
+      { label: "ISO material range", value: "P (steel), K (cast iron)" },
+      { label: "Machining operations", value: "Profiling, side milling, ramping, plunging" },
+    ],
+    variantAxes: ["Cut Ø", "Cut R", "Flute L", "Shank Ø", "Total L"],
+    variants: rows(["Cut Ø", "Cut R", "Flute L", "Shank Ø", "Total L"], [["1", "0.5", "2", "4", "50"], ["1.5", "0.75", "3", "4", "50"], ["2", "1", "4", "4", "50"], ["2.5", "1.25", "5", "4", "50"], ["3", "1.5", "6", "3", "50"], ["3", "1.5", "6", "3", "75"], ["3", "1.5", "6", "3", "100"], ["3.5", "1.75", "7", "4", "50"], ["4", "2", "8", "4", "50"], ["4", "2", "8", "4", "75"], ["4", "2", "8", "4", "100"], ["5", "2.5", "10", "5", "50"], ["5", "2.5", "10", "5", "75"], ["5", "2.5", "10", "5", "100"], ["6", "3", "12", "6", "50"], ["6", "3", "12", "6", "75"], ["6", "3", "12", "6", "100"], ["8", "4", "16", "8", "60"], ["8", "4", "16", "8", "75"], ["8", "4", "16", "8", "100"], ["10", "5", "20", "10", "75"], ["10", "5", "20", "10", "100"], ["10", "5", "20", "10", "150"], ["12", "6", "24", "12", "75"], ["12", "6", "24", "12", "100"], ["12", "6", "24", "12", "150"], ["14", "7", "28", "14", "100"], ["14", "7", "28", "14", "150"], ["16", "8", "32", "16", "100"], ["16", "8", "32", "16", "150"], ["18", "9", "36", "18", "100"], ["18", "9", "36", "18", "150"], ["20", "10", "40", "20", "100"], ["20", "10", "40", "20", "150"]], (a) => `Ø${a['Cut Ø']} R${a['Cut R']} × ${a['Total L']} L · flute ${a['Flute L']} · shank Ø${a['Shank Ø']}`),
+    source: { doc: 'RR-CT', page: 8, section: "Ballnose Endmill HRC45 · 2 Flute" },
+  },
+  {
+    slug: "ballnose-endmill-hrc55-2-flute",
+    name: "Ballnose Endmill HRC55 · 2 Flute",
+    category: SC,
+    subcategory: "Ballnose Endmills",
+    brand: BRAND,
+    summary: "Ø1–20 mm · TiSiN coated",
+    description:
+      "Two-flute solid carbide ballnose endmill in the HRC55 range with TiSiN copper coating, listed from Ø1 (R0.5) to Ø20 (R10) mm. Two flutes leave more chip room for slotting and deeper cuts.",
+    images: [img(SC, "ballnose-endmill-hrc55-2-flute")],
+    specifications: [
+      { label: "Range", value: "HRC55" },
+      { label: "Flutes", value: "2" },
+      { label: "Coating", value: "TiSiN (copper)" },
+      { label: "Diameter range", value: "1–20 mm" },
+      { label: "ISO material range", value: "P (steel), K (cast iron)" },
+      { label: "Machining operations", value: "Profiling, side milling, ramping, plunging" },
+    ],
+    variantAxes: ["Cut Ø", "Cut R", "Flute L", "Shank Ø", "Total L"],
+    variants: rows(["Cut Ø", "Cut R", "Flute L", "Shank Ø", "Total L"], [["1", "0.5", "2", "4", "50"], ["1.5", "0.75", "3", "4", "50"], ["2", "1", "4", "4", "50"], ["2.5", "1.25", "5", "4", "50"], ["3", "1.5", "6", "3", "50"], ["3", "1.5", "6", "3", "75"], ["3", "1.5", "6", "3", "100"], ["3.5", "1.75", "7", "4", "50"], ["4", "2", "8", "4", "50"], ["4", "2", "8", "4", "75"], ["4", "2", "8", "4", "100"], ["5", "2.5", "10", "5", "50"], ["5", "2.5", "10", "5", "75"], ["5", "2.5", "10", "5", "100"], ["6", "3", "12", "6", "50"], ["6", "3", "12", "6", "75"], ["6", "3", "12", "6", "100"], ["8", "4", "16", "8", "60"], ["8", "4", "16", "8", "75"], ["8", "4", "16", "8", "100"], ["10", "5", "20", "10", "75"], ["10", "5", "20", "10", "100"], ["10", "5", "20", "10", "150"], ["12", "6", "24", "12", "75"], ["12", "6", "24", "12", "100"], ["12", "6", "24", "12", "150"], ["14", "7", "28", "14", "100"], ["14", "7", "28", "14", "150"], ["16", "8", "32", "16", "100"], ["16", "8", "32", "16", "150"], ["18", "9", "36", "18", "100"], ["18", "9", "36", "18", "150"], ["20", "10", "40", "20", "100"], ["20", "10", "40", "20", "150"]], (a) => `Ø${a['Cut Ø']} R${a['Cut R']} × ${a['Total L']} L · flute ${a['Flute L']} · shank Ø${a['Shank Ø']}`),
+    source: { doc: 'RR-CT', page: 9, section: "Ballnose Endmill HRC55 · 2 Flute" },
+    featured: true,
+  },
+  {
+    slug: "ballnose-endmill-hrc55-4-flute",
+    name: "Ballnose Endmill HRC55 · 4 Flute",
+    category: SC,
+    subcategory: "Ballnose Endmills",
+    brand: BRAND,
+    summary: "Ø1–20 mm · TiSiN coated",
+    description:
+      "Four-flute solid carbide ballnose endmill in the HRC55 range with TiSiN copper coating, listed from Ø1 (R0.5) to Ø20 (R10) mm. Four flutes give a finer surface and higher feed in finishing and shallow 3D passes.",
+    images: [img(SC, "ballnose-endmill-hrc55-4-flute")],
+    specifications: [
+      { label: "Range", value: "HRC55" },
+      { label: "Flutes", value: "4" },
+      { label: "Coating", value: "TiSiN (copper)" },
+      { label: "Diameter range", value: "1–20 mm" },
+      { label: "ISO material range", value: "P (steel), K (cast iron)" },
+      { label: "Machining operations", value: "Profiling, side milling, ramping, plunging" },
+    ],
+    variantAxes: ["Cut Ø", "Cut R", "Flute L", "Shank Ø", "Total L"],
+    variants: rows(["Cut Ø", "Cut R", "Flute L", "Shank Ø", "Total L"], [["1", "0.5", "2", "4", "50"], ["1.5", "0.75", "3", "4", "50"], ["2", "1", "4", "4", "50"], ["2.5", "1.25", "5", "4", "50"], ["3", "1.5", "6", "3", "50"], ["3", "1.5", "6", "3", "75"], ["3", "1.5", "6", "3", "100"], ["3.5", "1.75", "7", "4", "50"], ["4", "2", "8", "4", "50"], ["4", "2", "8", "4", "75"], ["4", "2", "8", "4", "100"], ["5", "2.5", "10", "5", "50"], ["5", "2.5", "25", "5", "75"], ["5", "2.5", "30", "5", "100"], ["6", "3", "12", "6", "50"], ["6", "3", "25", "6", "75"], ["6", "3", "30", "6", "100"], ["8", "4", "16", "8", "60"], ["8", "4", "25", "8", "75"], ["8", "4", "35", "8", "100"], ["8", "4", "50", "8", "150"], ["10", "5", "20", "10", "75"], ["10", "5", "45", "10", "100"], ["10", "5", "70", "10", "150"], ["12", "6", "24", "12", "75"], ["12", "6", "45", "12", "100"], ["12", "6", "70", "12", "150"], ["14", "7", "45", "14", "100"], ["16", "8", "45", "16", "100"], ["18", "9", "45", "18", "100"], ["20", "10", "45", "20", "100"]], (a) => `Ø${a['Cut Ø']} R${a['Cut R']} × ${a['Total L']} L · flute ${a['Flute L']} · shank Ø${a['Shank Ø']}`),
+    source: { doc: 'RR-CT', page: 10, section: "Ballnose Endmill HRC55 · 4 Flute" },
+  },
+  {
+    slug: "bap-indexable-endmill",
+    name: "BAP Indexable Endmill — AP11 / AP16 Insert",
+    category: IX,
+    subcategory: "Indexable Endmills",
+    brand: BRAND,
+    summary: "Ø10–40 mm · AP11 / AP16 inserts",
+    description:
+      "BAP indexable endmill — BAP300R bodies for AP11 inserts (Ø10–20 mm) and BAP400R bodies for AP16 inserts (Ø25–40 mm).",
+    images: [img(IX, "bap-indexable-endmill")],
+    specifications: [
+      { label: "Insert", value: "AP11 (BAP300R), AP16 (BAP400R)" },
+      { label: "Diameter range", value: "10–40 mm" },
+      { label: "Machining operations", value: "Face milling, side milling, ramping, slotting" },
+    ],
+    variantAxes: ["Cut Ø", "Shank Ø", "Total L", "Teeth", "Body · insert"],
+    variants: rows(["Cut Ø", "Shank Ø", "Total L", "Teeth", "Body · insert"], [["10", "10", "100", "1T", "BAP300R · AP11"], ["12", "12", "120", "1T", "BAP300R · AP11"], ["16", "15", "150", "2T", "BAP300R · AP11"], ["16", "15", "200", "2T", "BAP300R · AP11"], ["16", "16", "150", "2T", "BAP300R · AP11"], ["16", "16", "200", "2T", "BAP300R · AP11"], ["20", "19", "150", "2T", "BAP300R · AP11"], ["20", "19", "200", "2T", "BAP300R · AP11"], ["20", "20", "150", "2T", "BAP300R · AP11"], ["20", "20", "200", "2T", "BAP300R · AP11"], ["20", "20", "250", "2T", "BAP300R · AP11"], ["20", "20", "300", "2T", "BAP300R · AP11"], ["25", "25", "150", "2T", "BAP400R · AP16"], ["25", "25", "200", "2T", "BAP400R · AP16"], ["25", "25", "250", "2T", "BAP400R · AP16"], ["25", "25", "300", "2T", "BAP400R · AP16"], ["32", "32", "200", "3T", "BAP400R · AP16"], ["32", "32", "250", "3T", "BAP400R · AP16"], ["32", "32", "300", "3T", "BAP400R · AP16"], ["40", "32", "200", "3T", "BAP400R · AP16"], ["40", "32", "250", "3T", "BAP400R · AP16"], ["40", "32", "300", "3T", "BAP400R · AP16"]], (a) => `Ø${a['Cut Ø']} × ${a['Total L']} L · shank Ø${a['Shank Ø']} · ${a['Teeth']}`),
+    source: { doc: 'RR-CT', page: 11, section: "BAP Indexable Endmill AP11 / AP16 Insert" },
+    featured: true,
+  },
+  {
+    slug: "bap-face-mill-cutter",
+    name: "BAP Face Mill Cutter — AP16 Insert",
+    category: IX,
+    subcategory: "Face Mill Cutters",
+    brand: BRAND,
+    summary: "Ø50–160 mm · AP16 inserts",
+    description:
+      "BAP400R face mill cutter for AP16 inserts, listed from Ø50 to Ø160 mm with 4 to 8 teeth.",
+    images: [img(IX, "bap-face-mill-cutter")],
+    specifications: [
+      { label: "Insert", value: "AP16 (BAP400R)" },
+      { label: "Diameter range", value: "50–160 mm" },
+      { label: "Machining operations", value: "Face milling, side milling, ramping, slotting" },
+    ],
+    variantAxes: ["Cut Ø", "Bore Ø", "Teeth"],
+    variants: rows(["Cut Ø", "Bore Ø", "Teeth"], [["50", "22", "4T"], ["63", "22", "4T"], ["80", "27", "6T"], ["100", "32", "6T"], ["125", "40", "7T"], ["160", "40", "8T"]], (a) => `Ø${a['Cut Ø']} · bore Ø${a['Bore Ø']} · ${a['Teeth']}`),
+    source: { doc: 'RR-CT', page: 11, section: "BAP Face Mill Cutter AP16 Insert" },
+  },
+  {
+    slug: "emr-indexable-endmill",
+    name: "EMR Indexable Endmill — RP10 / RP12 Insert",
+    category: IX,
+    subcategory: "Indexable Endmills",
+    brand: BRAND,
+    summary: "Ø10–40 mm · RP10 / RP12 inserts",
+    description:
+      "EMR indexable endmill — EMR5R bodies for RP10 inserts (Ø10–20 mm) and EMR6R bodies for RP12 inserts (Ø25–40 mm).",
+    images: [img(IX, "emr-indexable-endmill")],
+    specifications: [
+      { label: "Insert", value: "RP10 (EMR5R), RP12 (EMR6R)" },
+      { label: "Diameter range", value: "10–40 mm" },
+      { label: "Machining operations", value: "Face milling, profiling, side milling, ramping" },
+    ],
+    variantAxes: ["Cut Ø", "Shank Ø", "Total L", "Teeth", "Body · insert"],
+    variants: rows(["Cut Ø", "Shank Ø", "Total L", "Teeth", "Body · insert"], [["10", "10", "100", "1T", "EMR5R · RP10"], ["12", "12", "120", "1T", "EMR5R · RP10"], ["16", "16", "150", "1T", "EMR5R · RP10"], ["16", "16", "200", "1T", "EMR5R · RP10"], ["20", "20", "150", "2T", "EMR5R · RP10"], ["20", "20", "200", "2T", "EMR5R · RP10"], ["20", "20", "250", "2T", "EMR5R · RP10"], ["20", "20", "300", "2T", "EMR5R · RP10"], ["25", "25", "150", "2T", "EMR6R · RP12"], ["25", "25", "200", "2T", "EMR6R · RP12"], ["25", "25", "250", "2T", "EMR6R · RP12"], ["25", "25", "300", "2T", "EMR6R · RP12"], ["32", "32", "200", "3T", "EMR6R · RP12"], ["32", "32", "250", "3T", "EMR6R · RP12"], ["32", "32", "300", "3T", "EMR6R · RP12"], ["40", "32", "200", "3T", "EMR6R · RP12"], ["40", "32", "250", "3T", "EMR6R · RP12"], ["40", "32", "300", "3T", "EMR6R · RP12"]], (a) => `Ø${a['Cut Ø']} × ${a['Total L']} L · shank Ø${a['Shank Ø']} · ${a['Teeth']}`),
+    source: { doc: 'RR-CT', page: 12, section: "EMR Indexable Endmill RP10 / RP12 Insert" },
+  },
+  {
+    slug: "emr-face-mill-cutter",
+    name: "EMR Face Mill Cutter — RP12 Insert",
+    category: IX,
+    subcategory: "Face Mill Cutters",
+    brand: BRAND,
+    summary: "Ø50–160 mm · RP12 inserts",
+    description:
+      "EMR6R face mill cutter for RP12 inserts, listed from Ø50 to Ø160 mm with 4 to 8 teeth.",
+    images: [img(IX, "emr-face-mill-cutter")],
+    specifications: [
+      { label: "Insert", value: "RP12 (EMR6R)" },
+      { label: "Diameter range", value: "50–160 mm" },
+      { label: "Machining operations", value: "Face milling, profiling, side milling, ramping" },
+    ],
+    variantAxes: ["Cut Ø", "Bore Ø", "Teeth"],
+    variants: rows(["Cut Ø", "Bore Ø", "Teeth"], [["50", "22", "4T"], ["63", "22", "4T"], ["80", "27", "6T"], ["100", "32", "6T"], ["125", "40", "7T"], ["160", "40", "8T"]], (a) => `Ø${a['Cut Ø']} · bore Ø${a['Bore Ø']} · ${a['Teeth']}`),
+    source: { doc: 'RR-CT', page: 12, section: "EMR Face Mill Cutter RP12 Insert" },
+  },
+  {
+    slug: "exn-indexable-endmill",
+    name: "EXN Indexable Endmill — LNMU03 Insert",
+    category: IX,
+    subcategory: "Indexable Endmills",
+    brand: BRAND,
+    summary: "Ø16–32 mm · LNMU03 inserts",
+    description:
+      "EXN03 indexable endmill for LNMU03 inserts, listed from Ø16 to Ø32 mm with 2 to 5 teeth.",
+    images: [img(IX, "exn-indexable-endmill")],
+    specifications: [
+      { label: "Insert", value: "LNMU03 (EXN03)" },
+      { label: "Diameter range", value: "16–32 mm" },
+      { label: "Machining operations", value: "Face milling, side milling, ramping" },
+    ],
+    variantAxes: ["Cut Ø", "Shank Ø", "Total L", "Teeth"],
+    variants: rows(["Cut Ø", "Shank Ø", "Total L", "Teeth"], [["16", "16", "160", "2T"], ["16", "16", "200", "2T"], ["20", "20", "160", "3T"], ["20", "20", "200", "3T"], ["25", "24", "160", "4T"], ["25", "24", "200", "4T"], ["32", "32", "150", "5T"], ["32", "32", "200", "5T"]], (a) => `Ø${a['Cut Ø']} × ${a['Total L']} L · shank Ø${a['Shank Ø']} · ${a['Teeth']}`),
+    source: { doc: 'RR-CT', page: 13, section: "EXN Indexable Endmill LNMU03 Insert" },
+  },
+  {
+    slug: "exn-face-mill-cutter",
+    name: "EXN Face Mill Cutter — LNMU03 Insert",
+    category: IX,
+    subcategory: "Face Mill Cutters",
+    brand: BRAND,
+    summary: "Ø50–80 mm · LNMU03 inserts",
+    description:
+      "EXN03 face mill cutter for LNMU03 inserts, listed in Ø50, Ø63 and Ø80 mm.",
+    images: [img(IX, "exn-face-mill-cutter")],
+    specifications: [
+      { label: "Insert", value: "LNMU03 (EXN03)" },
+      { label: "Diameter range", value: "50–80 mm" },
+      { label: "Machining operations", value: "Face milling, side milling, ramping" },
+    ],
+    variantAxes: ["Cut Ø", "Bore Ø", "Teeth"],
+    variants: rows(["Cut Ø", "Bore Ø", "Teeth"], [["50", "22", "8T"], ["63", "22", "8T"], ["80", "27", "10T"]], (a) => `Ø${a['Cut Ø']} · bore Ø${a['Bore Ø']} · ${a['Teeth']}`),
+    source: { doc: 'RR-CT', page: 13, section: "EXN Face Mill Cutter LNMU03 Insert" },
+  },
+  {
+    slug: "u-drill-spmg",
+    name: "U-Drill — SPMG Insert · 2D / 3D / 4D",
+    category: IX,
+    subcategory: "U-Drills",
+    brand: BRAND,
+    summary: "Ø10–51 mm · 2D, 3D, 4D",
+    description:
+      "Indexable U-drill for SPMG inserts in 2D, 3D and 4D lengths, listed from Ø10 to Ø51 mm in 0.5 mm steps. 4D is not listed for Ø10–12.5 mm; Ø51 uses SPMG07 inserts in 2 pockets.",
+    images: [img(IX, "u-drill-spmg")],
+    specifications: [
+      { label: "Insert", value: "SPMG04 – SPMG14 (by diameter)" },
+      { label: "Lengths", value: "2D, 3D, 4D" },
+      { label: "Diameter range", value: "10–51 mm (0.5 mm steps)" },
+    ],
+    variantAxes: ["Cut Ø", "Shank Ø", "Length", "Insert"],
+    variants: rows(["Cut Ø", "Shank Ø", "Length", "Insert"], [["10", "20", "2D", "SPMG04"], ["10", "20", "3D", "SPMG04"], ["10.5", "20", "2D", "SPMG04"], ["10.5", "20", "3D", "SPMG04"], ["11", "20", "2D", "SPMG04"], ["11", "20", "3D", "SPMG04"], ["11.5", "20", "2D", "SPMG04"], ["11.5", "20", "3D", "SPMG04"], ["12", "20", "2D", "SPMG04"], ["12", "20", "3D", "SPMG04"], ["12.5", "20", "2D", "SPMG05"], ["12.5", "20", "3D", "SPMG05"], ["13", "20", "2D", "SPMG05"], ["13", "20", "3D", "SPMG05"], ["13", "20", "4D", "SPMG05"], ["13.5", "20", "2D", "SPMG05"], ["13.5", "20", "3D", "SPMG05"], ["13.5", "20", "4D", "SPMG05"], ["14", "20", "2D", "SPMG05"], ["14", "20", "3D", "SPMG05"], ["14", "20", "4D", "SPMG05"], ["14.5", "20", "2D", "SPMG05"], ["14.5", "20", "3D", "SPMG05"], ["14.5", "20", "4D", "SPMG05"], ["15", "25", "2D", "SPMG05"], ["15", "25", "3D", "SPMG05"], ["15", "25", "4D", "SPMG05"], ["15.5", "25", "2D", "SPMG05"], ["15.5", "25", "3D", "SPMG05"], ["15.5", "25", "4D", "SPMG05"], ["16", "25", "2D", "SPMG05"], ["16", "25", "3D", "SPMG05"], ["16", "25", "4D", "SPMG05"], ["16.5", "25", "2D", "SPMG05"], ["16.5", "25", "3D", "SPMG05"], ["16.5", "25", "4D", "SPMG05"], ["17", "25", "2D", "SPMG06"], ["17", "25", "3D", "SPMG06"], ["17", "25", "4D", "SPMG06"], ["17.5", "25", "2D", "SPMG06"], ["17.5", "25", "3D", "SPMG06"], ["17.5", "25", "4D", "SPMG06"], ["18", "25", "2D", "SPMG06"], ["18", "25", "3D", "SPMG06"], ["18", "25", "4D", "SPMG06"], ["18.5", "25", "2D", "SPMG06"], ["18.5", "25", "3D", "SPMG06"], ["18.5", "25", "4D", "SPMG06"], ["19", "25", "2D", "SPMG06"], ["19", "25", "3D", "SPMG06"], ["19", "25", "4D", "SPMG06"], ["19.5", "25", "2D", "SPMG06"], ["19.5", "25", "3D", "SPMG06"], ["19.5", "25", "4D", "SPMG06"], ["20", "25", "2D", "SPMG06"], ["20", "25", "3D", "SPMG06"], ["20", "25", "4D", "SPMG06"], ["20.5", "25", "2D", "SPMG06"], ["20.5", "25", "3D", "SPMG06"], ["20.5", "25", "4D", "SPMG06"], ["21", "25", "2D", "SPMG06"], ["21", "25", "3D", "SPMG06"], ["21", "25", "4D", "SPMG06"], ["21.5", "25", "2D", "SPMG06"], ["21.5", "25", "3D", "SPMG06"], ["21.5", "25", "4D", "SPMG06"], ["22", "25", "2D", "SPMG07"], ["22", "25", "3D", "SPMG07"], ["22", "25", "4D", "SPMG07"], ["22.5", "25", "2D", "SPMG07"], ["22.5", "25", "3D", "SPMG07"], ["22.5", "25", "4D", "SPMG07"], ["23", "25", "2D", "SPMG07"], ["23", "25", "3D", "SPMG07"], ["23", "25", "4D", "SPMG07"], ["23.5", "25", "2D", "SPMG07"], ["23.5", "25", "3D", "SPMG07"], ["23.5", "25", "4D", "SPMG07"], ["24", "25", "2D", "SPMG07"], ["24", "25", "3D", "SPMG07"], ["24", "25", "4D", "SPMG07"], ["24.5", "25", "2D", "SPMG07"], ["24.5", "25", "3D", "SPMG07"], ["24.5", "25", "4D", "SPMG07"], ["25", "25", "2D", "SPMG07"], ["25", "25", "3D", "SPMG07"], ["25", "25", "4D", "SPMG07"], ["25.5", "32", "2D", "SPMG07"], ["25.5", "32", "3D", "SPMG07"], ["25.5", "32", "4D", "SPMG07"], ["26", "32", "2D", "SPMG07"], ["26", "32", "3D", "SPMG07"], ["26", "32", "4D", "SPMG07"], ["26.5", "32", "2D", "SPMG07"], ["26.5", "32", "3D", "SPMG07"], ["26.5", "32", "4D", "SPMG07"], ["27", "32", "2D", "SPMG07"], ["27", "32", "3D", "SPMG07"], ["27", "32", "4D", "SPMG07"], ["27.5", "32", "2D", "SPMG07"], ["27.5", "32", "3D", "SPMG07"], ["27.5", "32", "4D", "SPMG07"], ["28", "32", "2D", "SPMG09"], ["28", "32", "3D", "SPMG09"], ["28", "32", "4D", "SPMG09"], ["28.5", "32", "2D", "SPMG09"], ["28.5", "32", "3D", "SPMG09"], ["28.5", "32", "4D", "SPMG09"], ["29", "32", "2D", "SPMG09"], ["29", "32", "3D", "SPMG09"], ["29", "32", "4D", "SPMG09"], ["29.5", "32", "2D", "SPMG09"], ["29.5", "32", "3D", "SPMG09"], ["29.5", "32", "4D", "SPMG09"], ["30", "32", "2D", "SPMG09"], ["30", "32", "3D", "SPMG09"], ["30", "32", "4D", "SPMG09"], ["30.5", "32", "2D", "SPMG09"], ["30.5", "32", "3D", "SPMG09"], ["30.5", "32", "4D", "SPMG09"], ["31", "32", "2D", "SPMG09"], ["31", "32", "3D", "SPMG09"], ["31", "32", "4D", "SPMG09"], ["31.5", "32", "2D", "SPMG09"], ["31.5", "32", "3D", "SPMG09"], ["31.5", "32", "4D", "SPMG09"], ["32", "32", "2D", "SPMG09"], ["32", "32", "3D", "SPMG09"], ["32", "32", "4D", "SPMG09"], ["32.5", "32", "2D", "SPMG09"], ["32.5", "32", "3D", "SPMG09"], ["32.5", "32", "4D", "SPMG09"], ["33", "32", "2D", "SPMG09"], ["33", "32", "3D", "SPMG09"], ["33", "32", "4D", "SPMG09"], ["33.5", "32", "2D", "SPMG09"], ["33.5", "32", "3D", "SPMG09"], ["33.5", "32", "4D", "SPMG09"], ["34", "32", "2D", "SPMG11"], ["34", "32", "3D", "SPMG11"], ["34", "32", "4D", "SPMG11"], ["34.5", "32", "2D", "SPMG11"], ["34.5", "32", "3D", "SPMG11"], ["34.5", "32", "4D", "SPMG11"], ["35", "32", "2D", "SPMG11"], ["35", "32", "3D", "SPMG11"], ["35", "32", "4D", "SPMG11"], ["35.5", "32", "2D", "SPMG11"], ["35.5", "32", "3D", "SPMG11"], ["35.5", "32", "4D", "SPMG11"], ["36", "32", "2D", "SPMG11"], ["36", "32", "3D", "SPMG11"], ["36", "32", "4D", "SPMG11"], ["36.5", "32", "2D", "SPMG11"], ["36.5", "32", "3D", "SPMG11"], ["36.5", "32", "4D", "SPMG11"], ["37", "32", "2D", "SPMG11"], ["37", "32", "3D", "SPMG11"], ["37", "32", "4D", "SPMG11"], ["37.5", "32", "2D", "SPMG11"], ["37.5", "32", "3D", "SPMG11"], ["37.5", "32", "4D", "SPMG11"], ["38", "32", "2D", "SPMG11"], ["38", "32", "3D", "SPMG11"], ["38", "32", "4D", "SPMG11"], ["38.5", "32", "2D", "SPMG11"], ["38.5", "32", "3D", "SPMG11"], ["38.5", "32", "4D", "SPMG11"], ["39", "32", "2D", "SPMG11"], ["39", "32", "3D", "SPMG11"], ["39", "32", "4D", "SPMG11"], ["39.5", "32", "2D", "SPMG11"], ["39.5", "32", "3D", "SPMG11"], ["39.5", "32", "4D", "SPMG11"], ["40", "32", "2D", "SPMG11"], ["40", "32", "3D", "SPMG11"], ["40", "32", "4D", "SPMG11"], ["45", "40", "2D", "SPMG14"], ["45", "40", "3D", "SPMG14"], ["45", "40", "4D", "SPMG14"], ["50", "40", "2D", "SPMG14"], ["50", "40", "3D", "SPMG14"], ["50", "40", "4D", "SPMG14"], ["51", "40", "2D", "SPMG07 (2 pockets)"], ["51", "40", "3D", "SPMG07 (2 pockets)"], ["51", "40", "4D", "SPMG07 (2 pockets)"]], (a) => `Ø${a['Cut Ø']} · ${a['Length']} · ${a['Insert']}`),
+    source: { doc: 'RR-CT', page: 14, section: "U-Drill SPMG · 2D / 3D / 4D" },
+    featured: true,
+  },
+];
+
+/** Every dimension in this catalogue is in millimetres — say so in the size table and enquiry text. */
+const MM_AXIS = /(Ø|^Cut R| L)$/;
+const withUnits = (p: Product): Product => {
+  const rename = (axis: string) => (MM_AXIS.test(axis) ? `${axis} (mm)` : axis);
+  return {
+    ...p,
+    variantAxes: p.variantAxes.map(rename),
+    variants: p.variants.map((v) => ({
+      ...v,
+      attributes: Object.fromEntries(Object.entries(v.attributes).map(([k, val]) => [rename(k), val])),
+    })),
+  };
+};
+
+export const RR_CT_PRODUCTS: Product[] = RAW.map(withUnits);

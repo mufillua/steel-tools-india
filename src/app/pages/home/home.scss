@@ -1,0 +1,479 @@
+@use 'variables' as v;
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+// ═════════ Shared section header ═════════
+// .sec-head / .sec-head__title / .sec-head__lead live in styles/_base.scss (shared).
+
+// ═════════ Categories ═════════
+.cats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include up(v.$bp-xl) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  > li {
+    min-width: 0;
+  }
+}
+
+// 8th tile: the "not listed?" prompt, styled as a dashed drawing frame.
+.cats-grid__ask {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 260px;
+  padding: 26px 24px 20px;
+  border: 1.5px dashed var(--sti-blue-400);
+  border-radius: var(--sti-radius-md);
+  background:
+    linear-gradient(160deg, var(--sti-red-50), var(--sti-blue-50) 70%);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    border-color var(--sti-dur) var(--sti-ease),
+    transform var(--sti-dur) var(--sti-ease);
+
+  &:hover {
+    color: inherit;
+    transform: translateY(-4px);
+    border-color: var(--sti-red-400);
+
+    .cats-grid__ask-cta sti-icon {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.cats-grid__ask-k {
+  @include tech-label(var(--sti-red-600));
+  margin-bottom: auto;
+}
+
+.cats-grid__ask-title {
+  margin-top: 28px;
+  font-family: var(--sti-font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--sti-text-strong);
+}
+
+.cats-grid__ask-text {
+  margin: 8px 0 18px;
+  font-size: var(--sti-text-sm);
+  color: var(--sti-muted);
+}
+
+.cats-grid__ask-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--sti-border-strong);
+  font-size: var(--sti-text-sm);
+  font-weight: 600;
+  color: var(--sti-red-600);
+
+  sti-icon {
+    transition: transform var(--sti-dur) var(--sti-ease);
+  }
+}
+
+// ═════════ Featured ═════════
+.home-featured {
+  overflow: hidden;
+  border-block: 1px solid var(--sti-border);
+}
+
+.home-featured__diag {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 0 58%,
+    rgba(255, 255, 255, 0.6) 58% 78%,
+    transparent 78%
+  );
+}
+
+.home-featured__all {
+  --btn-border: var(--sti-blue-300);
+}
+
+.prod-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include up(v.$bp-sm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include up(v.$bp-xl) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  > li {
+    min-width: 0;
+  }
+
+  // Phones: four featured products, then "View all products" below.
+  @include down(v.$bp-sm) {
+    gap: 12px;
+
+    > li:nth-child(n + 5) {
+      display: none;
+    }
+  }
+}
+
+.home-featured__more {
+  display: none;
+  margin-top: 20px;
+
+  @include down(v.$bp-sm) {
+    display: flex;
+  }
+}
+
+.skel-card {
+  display: grid;
+  gap: 10px;
+  padding-bottom: 20px;
+  border: 1px solid var(--sti-border);
+  border-radius: var(--sti-radius-md);
+  background: var(--sti-surface);
+  overflow: hidden;
+}
+
+.skel-card__img,
+.skel-card__line {
+  display: block;
+  background: linear-gradient(90deg, var(--sti-blue-100), var(--sti-blue-50), var(--sti-blue-100));
+  background-size: 200% 100%;
+  animation: sti-shimmer 1.3s linear infinite;
+}
+
+.skel-card__img {
+  aspect-ratio: 4 / 3;
+  margin-bottom: 8px;
+}
+
+.skel-card__line {
+  height: 12px;
+  margin-inline: 18px;
+  border-radius: 3px;
+  width: 70%;
+
+  &--s {
+    width: 35%;
+    height: 9px;
+  }
+  &--m {
+    width: 50%;
+  }
+}
+
+.state {
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+  padding: 28px;
+  border: 1px dashed var(--sti-red-200);
+  border-radius: var(--sti-radius-md);
+  background: var(--sti-surface);
+
+  p {
+    margin: 0;
+    color: var(--sti-muted);
+  }
+}
+
+.state__title {
+  font-weight: 600;
+  color: var(--sti-text-strong) !important;
+}
+
+// ═════════ Why ═════════
+.home-why__grid {
+  display: grid;
+  gap: 40px;
+
+  @include up(v.$bp-lg) {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
+    gap: clamp(48px, 6vw, 96px);
+    align-items: start;
+  }
+}
+
+.home-why__intro {
+  min-width: 0;
+
+  @include up(v.$bp-lg) {
+    position: sticky;
+    top: calc(var(--sti-header-h-compact) + 40px);
+  }
+
+  .sec-head__title {
+    margin-bottom: 16px;
+  }
+}
+
+.home-why__year {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid var(--sti-border-strong);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 64px;
+    height: 3px;
+    background: var(--sti-red-600);
+  }
+}
+
+.home-why__since {
+  padding-bottom: 14px;
+  @include tech-label(var(--sti-muted));
+}
+
+// Outlined year, like an engraved/stamped mark.
+.home-why__num {
+  font-family: var(--sti-font-display);
+  font-size: clamp(5rem, 3.5rem + 6vw, 8.5rem);
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: 0.02em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--sti-blue-600);
+  background: repeating-linear-gradient(-45deg, var(--sti-blue-200) 0 1px, transparent 1px 7px);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.why-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--sti-border-strong);
+  border-left: 1px solid var(--sti-border-strong);
+
+  @include up(v.$bp-sm) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.why-item {
+  position: relative;
+  padding: 28px 26px 30px;
+  border-right: 1px solid var(--sti-border-strong);
+  border-bottom: 1px solid var(--sti-border-strong);
+  background: var(--sti-surface);
+  transition: background-color var(--sti-dur) var(--sti-ease);
+
+  @include down(v.$bp-sm) {
+    padding: 20px 18px;
+  }
+
+  &:hover {
+    background: var(--sti-blue-50);
+
+    .why-item__icon {
+      background: var(--sti-blue-800);
+      color: #fff;
+      border-color: var(--sti-blue-800);
+    }
+  }
+}
+
+.why-item__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  @include down(v.$bp-sm) {
+    margin-bottom: 12px;
+  }
+}
+
+.why-item__icon {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--sti-radius-sm);
+  border: 1px solid var(--sti-blue-200);
+  background: var(--sti-blue-50);
+  color: var(--sti-blue-800);
+  transition:
+    background-color var(--sti-dur) var(--sti-ease),
+    color var(--sti-dur) var(--sti-ease),
+    border-color var(--sti-dur) var(--sti-ease);
+}
+
+.why-item__n {
+  font-family: var(--sti-font-mono);
+  font-size: var(--sti-text-xs);
+  color: var(--sti-red-600);
+  letter-spacing: 0.1em;
+}
+
+.why-item__title {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+}
+
+.why-item__text {
+  margin: 0;
+  font-size: var(--sti-text-sm);
+  line-height: 1.65;
+  color: var(--sti-muted);
+}
+
+// ═════════ CTA ═════════
+.home-cta {
+  padding-bottom: var(--sti-section-y);
+}
+
+.cta {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  gap: 28px;
+  padding: clamp(32px, 5vw, 60px);
+  border: 1px solid var(--sti-blue-200);
+  border-radius: var(--sti-radius-lg);
+  background:
+    radial-gradient(80% 120% at 100% 100%, var(--sti-red-100), transparent 55%),
+    linear-gradient(135deg, var(--sti-blue-100) 0%, var(--sti-blue-50) 60%, #fff 100%);
+
+  @include up(v.$bp-lg) {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    align-items: center;
+  }
+
+  // red diagonal bar on the right edge
+  &::after {
+    content: '';
+    position: absolute;
+    top: -20%;
+    bottom: -20%;
+    right: 4%;
+    width: 10px;
+    z-index: -1;
+    transform: skewX(-18deg);
+    background: var(--sti-red-600);
+    opacity: 0.85;
+    box-shadow: 18px 0 0 -4px var(--sti-red-200);
+
+    @include down(v.$bp-lg) {
+      right: 2%;
+      opacity: 0.35;
+    }
+  }
+}
+
+.cta__hatch {
+  position: absolute;
+  inset: 0 0 0 55%;
+  z-index: -1;
+  @include hatch(rgba(45, 86, 144, 0.1), 9px);
+  mask-image: linear-gradient(90deg, transparent, #000 40%);
+}
+
+.cta__copy {
+  min-width: 0;
+}
+
+.cta__title {
+  margin: 0 0 10px;
+  font-size: var(--sti-text-3xl);
+}
+
+.cta__text {
+  margin: 0;
+  font-size: var(--sti-text-md);
+  color: var(--sti-muted);
+}
+
+.cta__side {
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+
+  @include up(v.$bp-lg) {
+    justify-items: end;
+  }
+}
+
+.cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  @include up(v.$bp-lg) {
+    justify-content: flex-end;
+  }
+
+  @include down(v.$bp-xs) {
+    width: 100%;
+
+    .sti-btn {
+      flex: 1 1 100%;
+    }
+  }
+}
+
+.cta__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--sti-blue-200);
+  background: #fff;
+  color: var(--sti-text);
+  font-size: var(--sti-text-sm);
+  text-decoration: none;
+
+  strong {
+    color: var(--sti-blue-900);
+    font-weight: 600;
+  }
+
+  sti-icon {
+    color: var(--sti-red-600);
+  }
+
+  &:hover {
+    color: var(--sti-text);
+    background: #fff;
+  }
+}

@@ -1,0 +1,97 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.gal {
+  margin: 0;
+}
+
+.gal__frame {
+  position: relative;
+  border: 1px solid var(--sti-border);
+  border-radius: var(--sti-radius-lg);
+  background: var(--sti-surface);
+  overflow: hidden;
+  box-shadow: var(--sti-shadow-soft);
+
+  sti-product-image {
+    display: block;
+  }
+}
+
+// Registration / crop marks, as on a drawing sheet.
+.gal__mark {
+  position: absolute;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  border-color: var(--sti-blue-300);
+  border-style: solid;
+  border-width: 0;
+  pointer-events: none;
+
+  &--tl { top: 14px; left: 14px; border-top-width: 1.5px; border-left-width: 1.5px; }
+  &--tr { top: 14px; right: 14px; border-top-width: 1.5px; border-right-width: 1.5px; }
+  &--bl { bottom: 14px; left: 14px; border-bottom-width: 1.5px; border-left-width: 1.5px; }
+  &--br { bottom: 14px; right: 14px; border-bottom-width: 1.5px; border-right-width: 1.5px; border-color: var(--sti-red-400); }
+}
+
+.gal__strip {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 10px;
+  padding-inline: 4px;
+  @include tech-label(var(--sti-blue-700));
+  font-size: 0.6875rem;
+}
+
+.gal__of {
+  color: var(--sti-muted);
+}
+
+.gal__note {
+  color: var(--sti-muted);
+  letter-spacing: 0.08em;
+}
+
+.gal__thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.gal__thumb {
+  width: 76px;
+  height: 76px;
+  padding: 6px;
+  border: 1px solid var(--sti-border);
+  border-radius: var(--sti-radius-sm);
+  background: linear-gradient(160deg, var(--sti-blue-50), var(--sti-blue-100));
+  cursor: pointer;
+  transition:
+    border-color var(--sti-dur) var(--sti-ease),
+    box-shadow var(--sti-dur) var(--sti-ease);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &:hover {
+    border-color: var(--sti-blue-400);
+  }
+
+  &.is-active {
+    border-color: var(--sti-blue-800);
+    box-shadow: inset 0 -3px 0 var(--sti-red-600);
+  }
+
+  &:focus-visible {
+    @include focus-ring(2px);
+  }
+}

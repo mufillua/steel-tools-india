@@ -1,0 +1,118 @@
+// Global keyframes + utility animation classes.
+// Only transform/opacity are animated. All of it collapses under reduced motion.
+
+@keyframes sti-fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes sti-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sti-slide-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes sti-draw-line {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.sti-anim-fade-up {
+  animation: sti-fade-up var(--sti-dur-slow) var(--sti-ease-out) both;
+}
+
+.sti-anim-fade-in {
+  animation: sti-fade-in var(--sti-dur-slow) var(--sti-ease-out) both;
+}
+
+// Stagger helpers for entrance sequences.
+@for $i from 1 through 8 {
+  .sti-delay-#{$i} {
+    animation-delay: #{$i * 70}ms;
+  }
+}
+
+// ---- Router page transition (View Transitions API) ----
+::view-transition-old(root) {
+  animation: 140ms var(--sti-ease) both sti-vt-out;
+}
+::view-transition-new(root) {
+  animation: 280ms var(--sti-ease-out) both sti-vt-in;
+}
+@keyframes sti-vt-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes sti-vt-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+    scroll-behavior: auto !important;
+  }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+}
+
+// ---- Scroll reveal (see RevealDirective) ----
+// Content is only hidden once JS has "armed" it, so nothing is lost without JS.
+.sti-reveal.is-armed {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition:
+    opacity 620ms var(--sti-ease-out),
+    transform 620ms var(--sti-ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.sti-reveal.is-armed.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes sti-shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}

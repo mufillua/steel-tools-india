@@ -1,0 +1,117 @@
+@use 'variables' as v;
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.pg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 8px;
+}
+
+.pg__list {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include down(v.$bp-sm) {
+    display: none;
+  }
+}
+
+// Phones get "Page 2 of 9" between Previous / Next instead of the number row.
+.pg__compact {
+  display: none;
+  margin: 0 8px;
+  font-size: var(--sti-text-sm);
+  color: var(--sti-muted);
+
+  strong {
+    color: var(--sti-blue-900);
+  }
+
+  @include down(v.$bp-sm) {
+    display: block;
+  }
+}
+
+.pg__num,
+.pg__step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 42px;
+  border: 1px solid var(--sti-border-strong);
+  border-radius: var(--sti-radius-sm);
+  background: var(--sti-surface);
+  color: var(--sti-blue-900);
+  font-size: var(--sti-text-sm);
+  font-weight: 600;
+  transition:
+    background-color var(--sti-dur-fast) var(--sti-ease),
+    border-color var(--sti-dur-fast) var(--sti-ease),
+    color var(--sti-dur-fast) var(--sti-ease),
+    transform var(--sti-dur-fast) var(--sti-ease);
+
+  &:hover:not(:disabled):not(.is-current) {
+    background: var(--sti-blue-50);
+    border-color: var(--sti-blue-400);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+}
+
+.pg__num {
+  min-width: 42px;
+  padding: 0 10px;
+  font-family: var(--sti-font-mono);
+  font-weight: 500;
+
+  &.is-current {
+    position: relative;
+    background: var(--sti-blue-800);
+    border-color: var(--sti-blue-800);
+    color: #fff;
+    cursor: default;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 30%;
+      right: 30%;
+      bottom: 5px;
+      height: 2px;
+      background: var(--sti-red-400);
+    }
+  }
+}
+
+.pg__step {
+  padding: 0 14px;
+
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+}
+
+.pg__prev-icon {
+  transform: rotate(180deg);
+}
+
+.pg__gap {
+  min-width: 24px;
+  text-align: center;
+  color: var(--sti-muted);
+  font-family: var(--sti-font-mono);
+}

@@ -1,0 +1,221 @@
+<sti-page-intro
+  [crumbs]="crumbs"
+  [eyebrow]="company.tagline"
+  title="About Steel Tools India"
+  [lead]="'A tooling business in ' + company.city + ', established in ' + company.foundedYear + '.'"
+/>
+
+<!-- ═════ Heritage ═════ -->
+<section class="sti-section heritage" aria-labelledby="heritage-title">
+  <div class="sti-container sti-container--wide heritage__grid">
+    <div class="heritage__copy">
+      <p class="sti-eyebrow">Our story</p>
+      <h2 id="heritage-title" class="heritage__title">In Kolkata since {{ company.foundedYear }}.</h2>
+      <p class="sti-lead">
+        {{ company.name }} was established in {{ company.foundedYear }} and is based at {{ company.address.lines[0] }},
+        {{ company.city }}.
+      </p>
+      <p>
+        We deal in machine tool accessories, revolving and dead centres, solid carbide and indexable tooling, HSS
+        cutting tools, carbide tipped tools and burrs, hand tools — pliers, spanners, sockets, screwdrivers and more —
+        workshop equipment and non-sparking tools. This website is our catalogue of
+        those ranges — organised by category, with every listed size — so you can find what you need and ask us
+        about it directly.
+      </p>
+      <div class="heritage__actions">
+        <a class="sti-btn sti-btn--blue" routerLink="/products">
+          Browse Products <sti-icon class="sti-btn__arrow" name="arrow-right" [size]="16" />
+        </a>
+        <a class="sti-btn sti-btn--primary" [routerLink]="quotePath">Get A Quote</a>
+      </div>
+    </div>
+
+    <!-- Title block, as on an engineering drawing -->
+    <figure class="plate" [attr.aria-label]="company.name + ', established ' + company.foundedYear">
+      <div class="plate__logo">
+        <img src="assets/brand/sti-logo-full.png" [alt]="company.name + ' — ' + company.tagline" width="765" height="225" />
+      </div>
+      <dl class="plate__block">
+        <div class="plate__cell plate__cell--year">
+          <dt>Est.</dt>
+          <dd>{{ company.foundedYear }}</dd>
+        </div>
+        <div class="plate__cell">
+          <dt>City</dt>
+          <dd>{{ company.city }}</dd>
+        </div>
+        <div class="plate__cell">
+          <dt>Years</dt>
+          <dd>{{ years }}</dd>
+        </div>
+        <div class="plate__cell">
+          <dt>Sheet</dt>
+          <dd>01 / 01</dd>
+        </div>
+      </dl>
+
+      <!-- Steel rule: a scale from 1957 to today. Only the two ends are labelled with meaning. -->
+      <div class="rule" aria-hidden="true">
+        <div class="rule__bar">
+          @for (t of ticks; track t.pos) {
+            <span class="rule__tick" [class.rule__tick--major]="t.major" [style.left.%]="t.pos">
+              @if (t.label) { <span class="rule__label">{{ t.label }}</span> }
+            </span>
+          }
+        </div>
+        <div class="rule__ends">
+          <span><strong>{{ company.foundedYear }}</strong> Established</span>
+          <span><strong>{{ thisYear }}</strong> Today</span>
+        </div>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ═════ Owner ═════ -->
+<section class="sti-section owner" aria-labelledby="owner-title">
+  <div class="sti-container sti-container--wide owner__grid">
+    <figure class="owner__card" [attr.aria-label]="company.owner.name + ', ' + company.owner.role">
+      <span class="owner__mono" aria-hidden="true">{{ initials }}</span>
+      <figcaption>
+        <span class="owner__name">{{ company.owner.name }}</span>
+        <span class="owner__role">{{ company.owner.role }}, {{ company.name }}</span>
+      </figcaption>
+      <span class="owner__est" aria-hidden="true">Est. {{ company.foundedYear }} · {{ company.city }}</span>
+    </figure>
+
+    <div class="owner__copy">
+      <p class="sti-eyebrow">Meet the owner</p>
+      <h2 id="owner-title" class="owner__title">{{ company.owner.name }}</h2>
+      <p class="sti-lead">
+        {{ company.name }} is owned and run by {{ company.owner.name }}. Under his leadership the business carries on
+        the work it has done in {{ company.city }} since {{ company.foundedYear }} — supplying machine tool accessories,
+        cutting tools and hand tools to the workshops and industries that rely on them.
+      </p>
+      <p>
+        His focus is on what customers value most: the right tool in the right size, dependable ranges from R★R Brand,
+        Taparia and Miranda, and straight answers on price and availability. This online catalogue is part of that — every
+        listed product and size in one place, with a direct line to {{ company.name }} on WhatsApp, phone or email.
+      </p>
+      <div class="owner__actions">
+        <a class="sti-btn sti-btn--whatsapp" [href]="links.whatsapp" target="_blank" rel="noopener">
+          <sti-icon name="chat" [size]="17" /> WhatsApp
+        </a>
+        <a class="sti-btn sti-btn--outline" [href]="links.tel"><sti-icon name="phone" [size]="17" /> Call {{ company.phoneDisplay }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ In numbers (from the catalogue itself) ═════ -->
+<section class="numbers" aria-label="The catalogue in numbers">
+  <div class="sti-container sti-container--wide">
+    <dl class="numbers__row">
+      <div><dt>Established</dt><dd>{{ company.foundedYear }}</dd></div>
+      <div><dt>Product categories</dt><dd>{{ stats().categories }}</dd></div>
+      <div><dt>Products listed</dt><dd>@if (ready()) { {{ stats().products }} } @else { – }</dd></div>
+      <div><dt>Sizes &amp; variants</dt><dd>@if (ready()) { {{ stats().sizes.toLocaleString('en-IN') }} } @else { – }</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ═════ What we supply ═════ -->
+<section class="sti-section supply" aria-labelledby="supply-title">
+  <div class="sti-container sti-container--wide">
+    <header class="sec-head">
+      <div>
+        <p class="sti-eyebrow">What we supply</p>
+        <h2 id="supply-title" class="sec-head__title">{{ catalogue.categories().length }} product groups</h2>
+      </div>
+    </header>
+    <ul class="supply__grid" role="list">
+      @for (c of catalogue.categories(); track c.slug) {
+        <li>
+          <a class="supply__item" routerLink="/products" [queryParams]="{ category: c.slug }">
+            <sti-category-icon [name]="c.icon" [size]="40" />
+            <span class="supply__name">{{ c.name }}</span>
+            @if (ready()) { <span class="supply__n">{{ c.productCount }} products</span> }
+            <sti-icon class="supply__arrow" name="arrow-right" [size]="16" />
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+</section>
+
+<!-- ═════ Ranges ═════ -->
+@if (ready()) {
+  <section class="sti-section ranges" aria-labelledby="ranges-title">
+    <div class="sti-container sti-container--wide">
+      <header class="sec-head">
+        <div>
+          <p class="sti-eyebrow">Ranges in our catalogue</p>
+          <h2 id="ranges-title" class="sec-head__title">Brands you'll find here</h2>
+        </div>
+      </header>
+      <ul class="ranges__grid" role="list">
+        @for (b of brands(); track b.brand) {
+          <li class="range">
+            <p class="range__name">{{ b.brand }}</p>
+            <p class="range__count">{{ b.count }} products</p>
+            <ul class="range__cats" role="list">
+              @for (c of b.categories; track c.slug) {
+                <li><a routerLink="/products" [queryParams]="{ category: c.slug, brand: b.brand }">{{ c.name }}</a></li>
+              }
+            </ul>
+          </li>
+        }
+      </ul>
+    </div>
+  </section>
+}
+
+<!-- ═════ Working with us ═════ -->
+<section class="sti-section work" aria-labelledby="work-title">
+  <div class="sti-container sti-container--wide work__grid">
+    <div>
+      <p class="sti-eyebrow">Working with us</p>
+      <h2 id="work-title" class="sec-head__title">Find it, then ask us.</h2>
+    </div>
+    <ol class="work__list" role="list">
+      <li>
+        <span class="work__n">01</span>
+        <h3>Look it up</h3>
+        <p>Search by name, taper, size or standard, and filter by category, type and brand.</p>
+      </li>
+      <li>
+        <span class="work__n">02</span>
+        <h3>Pick the size</h3>
+        <p>Every product page lists the sizes from the catalogue. Choose one and it's added to your enquiry.</p>
+      </li>
+      <li>
+        <span class="work__n">03</span>
+        <h3>Send it on WhatsApp or email</h3>
+        <p>We reply with the current price and availability. No account, no checkout.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═════ Visit / contact ═════ -->
+<section class="visit" aria-labelledby="visit-title">
+  <div class="sti-container sti-container--wide">
+    <div class="visit__card">
+      <div>
+        <p class="sti-eyebrow">{{ company.name }} · {{ company.tagline }}</p>
+        <h2 id="visit-title" class="visit__title">{{ address }}</h2>
+        <p class="visit__hours">
+          <sti-icon name="clock" [size]="15" />
+          @for (h of company.hours; track h.short; let last = $last) {
+            <span>{{ h.short }} {{ fmt(h) }}</span>@if (!last) {<span aria-hidden="true" class="visit__sep">·</span>}
+          }
+        </p>
+      </div>
+      <div class="visit__actions">
+        <a class="sti-btn sti-btn--primary" [href]="links.tel"><sti-icon name="phone" [size]="17" /> Call {{ company.phoneDisplay }}</a>
+        <a class="sti-btn visit__ghost" [href]="links.mapsSearch" target="_blank" rel="noopener"><sti-icon name="pin" [size]="17" /> Open in Maps</a>
+        <a class="sti-btn visit__ghost" routerLink="/contact">All contact details</a>
+      </div>
+    </div>
+  </div>
+</section>

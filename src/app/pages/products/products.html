@@ -1,0 +1,202 @@
+<!-- ═════ Header band with search ═════ -->
+<section class="ph" aria-labelledby="ph-title">
+  <div class="ph__bg" aria-hidden="true"></div>
+  <div class="sti-container sti-container--wide ph__inner">
+    <sti-breadcrumbs class="ph__crumbs" [items]="crumbs()" />
+
+    <div class="ph__row">
+      <div class="ph__copy">
+        <h1 id="ph-title" class="ph__title">{{ focusCategory()?.name ?? 'Products' }}</h1>
+        <p class="ph__lead">
+          {{
+            focusCategory()?.description ??
+              'Search the catalogue by product name, size, taper, standard or model, then narrow it down with filters.'
+          }}
+        </p>
+      </div>
+
+      <form class="search" role="search" (submit)="submitSearch($event)">
+        <label class="sti-sr-only" for="product-search">Search products</label>
+        <sti-icon class="search__icon" name="search" [size]="18" />
+        <input
+          #searchInput
+          id="product-search"
+          class="search__input"
+          type="search"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Search e.g. BT-50, ER-32, MT-3, T-slot nut…"
+          [value]="searchText()"
+          (input)="onSearchInput($any($event.target).value)"
+        />
+        @if (searchText()) {
+          <button type="button" class="search__clear" (click)="clearSearch()" aria-label="Clear search">
+            <sti-icon name="close" [size]="16" />
+          </button>
+        }
+        <button type="submit" class="sti-btn sti-btn--blue search__go">Search</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ Catalogue ═════ -->
+<section class="cat sti-container sti-container--wide" aria-label="Product catalogue">
+  <!-- Desktop sidebar -->
+  <aside class="cat__side" aria-label="Filters">
+    <sti-product-filters
+      [categories]="categoryOptions()"
+      [typeGroups]="typeGroups()"
+      [brands]="brandOptions()"
+      [activeCount]="activeFilterCount()"
+      (toggle)="onToggle($event)"
+      (clearAll)="clearFilters()"
+    />
+  </aside>
+
+  <div class="cat__main">
+    <div #resultsTop class="bar">
+      <p class="bar__count" aria-live="polite">
+        @if (status() === 'ready') {
+          @if (total()) {
+            Showing <strong>{{ rangeStart() }}–{{ rangeEnd() }}</strong> of
+            <strong>{{ total() }}</strong> {{ total() === 1 ? 'product' : 'products' }}
+          } @else {
+            No products match
+          }
+        } @else {
+          Loading catalogue…
+        }
+      </p>
+
+      <div class="bar__tools">
+        <button type="button" class="sti-btn sti-btn--sm bar__filters" (click)="openDrawer()" aria-controls="filter-drawer" [attr.aria-expanded]="drawerOpen()">
+          <sti-icon name="sliders" [size]="16" />
+          Filters
+          @if (activeFilterCount()) {
+            <span class="bar__badge">{{ activeFilterCount() }}</span>
+          }
+        </button>
+
+        <label class="sort">
+          <span class="sort__label">Sort by</span>
+          <select class="sort__select" [value]="sort()" (change)="onSort($any($event.target).value)">
+            @for (o of sortOptions; track o.key) {
+              <option [value]="o.key" [selected]="o.key === sort()">{{ o.key === 'catalogue' && query() ? 'Best match' : o.label }}</option>
+            }
+          </select>
+        </label>
+      </div>
+    </div>
+
+    @if (chips().length || query()) {
+      <ul class="chips" role="list" aria-label="Active filters">
+        @if (query()) {
+          <li>
+            <button type="button" class="chip chip--search" (click)="clearSearch()">
+              <span>“{{ query() }}”</span>
+              <sti-icon name="close" [size]="13" />
+              <span class="sti-sr-only">Remove search</span>
+            </button>
+          </li>
+        }
+        @for (c of chips(); track c.kind + c.value) {
+          <li>
+            <button type="button" class="chip" (click)="onToggle({ kind: c.kind, value: c.value })">
+              <span>{{ c.label }}</span>
+              <sti-icon name="close" [size]="13" />
+              <span class="sti-sr-only">Remove filter</span>
+            </button>
+          </li>
+        }
+        <li><button type="button" class="chips__clear" (click)="clearEverything()">Clear all</button></li>
+      </ul>
+    }
+
+    @switch (status()) {
+      @case ('error') {
+        <sti-empty-state
+          tone="error"
+          icon="info"
+          title="The catalogue couldn't be loaded"
+          text="Please refresh the page. You can still send us your requirement directly."
+        >
+          <a class="sti-btn sti-btn--primary" [routerLink]="quotePath">Get A Quote</a>
+        </sti-empty-state>
+      }
+      @case ('ready') {
+        @if (total()) {
+          <ul class="grid" role="list">
+            @for (p of paged(); track p.slug) {
+              <li class="grid__item">
+                <sti-product-card [product]="p" [headingLevel]="2" />
+              </li>
+            }
+          </ul>
+
+          <sti-pagination
+            class="cat__pages"
+            [current]="page()"
+            [totalPages]="totalPages()"
+            label="Product pages"
+            (pageChange)="goToPage($event)"
+          />
+        } @else {
+          <sti-empty-state
+            title="No products found"
+            [text]="query()
+              ? 'Nothing in the catalogue matches “' + query() + '”' + (activeFilterCount() ? ' with the selected filters.' : '.') + ' Try a size, taper or a shorter word.'
+              : 'No products match the selected filters.'"
+          >
+            @if (query()) {
+              <button type="button" class="sti-btn" (click)="clearSearch()">Clear Search</button>
+            }
+            @if (activeFilterCount()) {
+              <button type="button" class="sti-btn" (click)="clearFilters()">Clear Filters</button>
+            }
+            <a class="sti-btn sti-btn--primary" [routerLink]="quotePath">Ask us instead</a>
+          </sti-empty-state>
+        }
+      }
+      @default {
+        <div class="grid">
+          <sti-product-grid-skeleton [count]="6" />
+        </div>
+      }
+    }
+  </div>
+</section>
+
+<!-- ═════ Mobile filter drawer ═════ -->
+<div class="drawer-backdrop" [class.is-open]="drawerOpen()" (click)="closeDrawer()" aria-hidden="true"></div>
+<div
+  id="filter-drawer"
+  class="drawer"
+  [class.is-open]="drawerOpen()"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Filters"
+  [attr.inert]="drawerOpen() ? null : ''"
+>
+  <div class="drawer__top">
+    <span class="drawer__title">Refine results</span>
+    <button type="button" class="drawer__close" (click)="closeDrawer()" aria-label="Close filters">
+      <sti-icon name="close" [size]="20" />
+    </button>
+  </div>
+  <div class="drawer__body">
+    <sti-product-filters
+      [categories]="categoryOptions()"
+      [typeGroups]="typeGroups()"
+      [brands]="brandOptions()"
+      [activeCount]="activeFilterCount()"
+      (toggle)="onToggle($event)"
+      (clearAll)="clearFilters()"
+    />
+  </div>
+  <div class="drawer__foot">
+    <button type="button" class="sti-btn sti-btn--blue sti-btn--lg sti-btn--block" (click)="closeDrawer()">
+      Show {{ total() }} {{ total() === 1 ? 'product' : 'products' }}
+    </button>
+  </div>
+</div>

@@ -1,0 +1,132 @@
+<header
+  class="hdr"
+  [class.hdr--compact]="compact()"
+  [class.hdr--open]="menuOpen()"
+>
+  <div class="hdr__rule" aria-hidden="true"></div>
+
+  <div class="hdr__bar sti-container sti-container--wide">
+    <a class="hdr__brand" routerLink="/" [attr.aria-label]="company.name + ' — home'">
+      <img
+        class="hdr__logo"
+        src="assets/brand/sti-logo-full.png"
+        [alt]="company.name + ' — ' + company.tagline"
+        width="765"
+        height="225"
+        fetchpriority="high"
+      />
+    </a>
+
+    <nav class="hdr__nav" aria-label="Primary">
+      <ul class="hdr__links" role="list">
+        @for (item of nav; track item.path) {
+          <li>
+            <a
+              class="hdr__link"
+              [routerLink]="item.path"
+              routerLinkActive="is-active"
+              [routerLinkActiveOptions]="{ exact: item.exact }"
+              ariaCurrentWhenActive="page"
+              >{{ item.label }}</a
+            >
+          </li>
+        }
+      </ul>
+
+      <span class="hdr__divider" aria-hidden="true"></span>
+
+      <a class="hdr__phone" [href]="links.tel" [attr.aria-label]="'Call ' + company.phoneDisplay">
+        <span class="hdr__phone-icon"><sti-icon name="phone" [size]="15" /></span>
+        <span class="hdr__phone-num">{{ company.phoneDisplay }}</span>
+      </a>
+
+      <a
+        class="sti-btn sti-btn--primary hdr__cta"
+        [routerLink]="quotePath"
+        routerLinkActive="is-active"
+        ariaCurrentWhenActive="page"
+      >
+        <sti-icon name="quote" [size]="17" />
+        Get A Quote
+      </a>
+    </nav>
+
+    <button
+      #toggleBtn
+      type="button"
+      class="hdr__toggle"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="sti-mobile-menu"
+      [attr.aria-label]="menuOpen() ? 'Close menu' : 'Open menu'"
+      (click)="toggleMenu()"
+    >
+      <span class="hdr__toggle-lines" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+      <span class="hdr__toggle-text" aria-hidden="true">{{ menuOpen() ? 'Close' : 'Menu' }}</span>
+    </button>
+  </div>
+
+  <!-- Mobile / tablet menu -->
+  <div
+    id="sti-mobile-menu"
+    class="mnav"
+    [class.is-open]="menuOpen()"
+    [attr.inert]="menuOpen() ? null : ''"
+    [attr.aria-hidden]="!menuOpen()"
+  >
+    <nav #mobileNav class="mnav__inner sti-container" aria-label="Mobile">
+      <ul class="mnav__links" role="list">
+        @for (item of nav; track item.path; let i = $index) {
+          <li class="mnav__item" [style.--i]="i">
+            <a
+              class="mnav__link"
+              [routerLink]="item.path"
+              routerLinkActive="is-active"
+              [routerLinkActiveOptions]="{ exact: item.exact }"
+              ariaCurrentWhenActive="page"
+            >
+              <span class="mnav__index">0{{ i + 1 }}</span>
+              <span class="mnav__label">{{ item.label }}</span>
+              <sti-icon name="chevron-right" [size]="18" />
+            </a>
+          </li>
+        }
+
+        <li class="mnav__item" [style.--i]="nav.length">
+          <a class="mnav__phone" [href]="links.tel">
+            <span class="mnav__phone-icon"><sti-icon name="phone" [size]="18" /></span>
+            <span>
+              <span class="mnav__phone-num">{{ company.phoneDisplay }}</span>
+            </span>
+            <span class="mnav__phone-hint">Tap to call</span>
+          </a>
+        </li>
+
+        <li class="mnav__item mnav__quick" [style.--i]="nav.length + 1">
+          <a class="mnav__quick-link mnav__quick-link--wa" [href]="links.whatsapp" target="_blank" rel="noopener">
+            <sti-icon name="chat" [size]="17" /> WhatsApp
+          </a>
+          <a class="mnav__quick-link" [routerLink]="contactPath" routerLinkActive="is-active">
+            <sti-icon name="pin" [size]="17" /> Contact
+          </a>
+        </li>
+
+        <li class="mnav__item" [style.--i]="nav.length + 2">
+          <a class="sti-btn sti-btn--primary sti-btn--lg sti-btn--block" [routerLink]="quotePath">
+            <sti-icon name="quote" [size]="18" />
+            Get A Quote
+          </a>
+        </li>
+      </ul>
+
+      <p class="mnav__foot">
+        <span class="mnav__foot-name">{{ company.name }}</span>
+        <span class="mnav__foot-sep" aria-hidden="true">/</span>
+        <span>{{ company.tagline }}</span>
+      </p>
+    </nav>
+  </div>
+</header>
+
+<div class="mnav-backdrop" [class.is-open]="menuOpen()" (click)="closeMenu()" aria-hidden="true"></div>

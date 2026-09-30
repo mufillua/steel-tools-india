@@ -1,0 +1,593 @@
+@use 'variables' as v;
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: clamp(40px, 6vw, 40px) clamp(48px, 6vw, 88px);
+  background:
+    radial-gradient(70% 90% at 0% 0%, rgba(255, 255, 255, 0.9), transparent 60%),
+    linear-gradient(170deg, var(--sti-blue-100) 0%, var(--sti-blue-50) 55%, var(--sti-background) 100%);
+  border-bottom: 1px solid var(--sti-border);
+}
+
+// ── Background: blueprint grid, skewed plate, red hairline ──
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  @include blueprint-grid;
+  mask-image: linear-gradient(180deg, #000 0%, #000 70%, transparent 100%);
+}
+
+.hero__plate {
+  position: absolute;
+  top: -10%;
+  bottom: -10%;
+  right: -6%;
+  width: 52%;
+  transform: skewX(-14deg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.25));
+  border-left: 1px solid var(--sti-blue-200);
+
+  @include down(v.$bp-lg) {
+    width: 70%;
+    right: -40%;
+  }
+}
+
+.hero__hairline {
+  position: absolute;
+  top: -10%;
+  bottom: -10%;
+  right: calc(46% + 22px);
+  width: 2px;
+  transform: skewX(-14deg);
+  background: linear-gradient(180deg, transparent, var(--sti-red-400) 30%, var(--sti-red-400) 70%, transparent);
+  opacity: 0.55;
+
+  @include down(v.$bp-lg) {
+    display: none;
+  }
+}
+
+// ── Layout ──
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+
+  @include up(v.$bp-lg) {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: clamp(40px, 5vw, 72px);
+  }
+}
+
+.hero__copy {
+  min-width: 0;
+}
+
+.hero__sep {
+  color: var(--sti-red-600);
+}
+
+.hero__title {
+  margin-bottom: 20px;
+  max-width: 15ch;
+  font-size: clamp(2.6rem, 1.7rem + 3.6vw, 4.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.005em;
+}
+
+.hero__accent {
+  position: relative;
+  color: var(--sti-blue-800);
+  white-space: nowrap;
+
+  // Red "tolerance" underline beneath the accent phrase.
+  &::after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    right: 8%;
+    bottom: -0.06em;
+    height: 0.09em;
+    background: linear-gradient(90deg, var(--sti-red-600) 0 70%, transparent 70% 74%, var(--sti-red-600) 74% 80%, transparent 80%);
+    transform-origin: left;
+    animation: sti-draw-line 900ms var(--sti-ease-out) 450ms both;
+  }
+
+  @include down(v.$bp-xs) {
+    white-space: normal;
+  }
+}
+
+.hero__lead {
+  margin: 0 0 30px;
+  max-width: 54ch;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  @include down(v.$bp-xs) {
+    .sti-btn {
+      flex: 1 1 100%;
+    }
+  }
+}
+
+// ── Stats strip — a row of measurement "readouts" ──
+.hero__stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 40px 0 0;
+  max-width: 560px;
+  border-top: 1px solid var(--sti-border-strong);
+
+  @include down(v.$bp-sm) {
+    margin-top: 32px;
+
+    dd {
+      font-size: 1.6rem !important;
+    }
+
+    dt {
+      font-size: 0.6875rem !important;
+    }
+  }
+
+  // Two readouts per row on small phones, so labels never squeeze into three lines.
+  @include down(v.$bp-xs) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 16px;
+  }
+}
+
+.hero__stat {
+  position: relative;
+  padding: 14px 12px 0 0;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end; // keeps every value on the same line even when a label wraps
+  gap: 2px;
+
+  // tick mark on the ruler line
+  &::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 1px;
+    height: 9px;
+    background: var(--sti-blue-600);
+  }
+
+  dt {
+    font-size: var(--sti-text-xs);
+    color: var(--sti-muted);
+    line-height: 1.3;
+  }
+
+  dd {
+    margin: 0;
+    font-family: var(--sti-font-display);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--sti-blue-900);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.hero__stat--est dd {
+  color: var(--sti-red-600);
+}
+
+.hero__skel {
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--sti-blue-100), var(--sti-surface), var(--sti-blue-100));
+  background-size: 200% 100%;
+  animation: sti-shimmer 1.2s linear infinite;
+}
+
+// ── Visual ──
+.hero__visual {
+  position: relative;
+  min-width: 0;
+  padding: 0 0 28px;
+  width: 100%;
+  max-width: 400px;
+  justify-self: center;
+
+  // On phones the drawing sheet would push the catalogue too far down — copy + CTAs only.
+  @include down(v.$bp-sm) {
+    display: none;
+  }
+
+  @include up(v.$bp-lg) {
+    max-width: none;
+    padding: 0 28px 64px 0;
+  }
+}
+
+.sheet {
+  position: relative;
+  margin: 0;
+  border: 1px solid var(--sti-blue-200);
+  border-radius: var(--sti-radius-sm);
+  background: var(--sti-surface);
+  box-shadow: var(--sti-shadow-soft);
+  overflow: hidden;
+}
+
+.sheet__mark {
+  position: absolute;
+  z-index: 2;
+  width: 14px;
+  height: 14px;
+  border-color: var(--sti-blue-400);
+  border-style: solid;
+  border-width: 0;
+
+  &--tl {
+    top: 10px;
+    left: 10px;
+    border-top-width: 1.5px;
+    border-left-width: 1.5px;
+  }
+  &--tr {
+    top: 10px;
+    right: 10px;
+    border-top-width: 1.5px;
+    border-right-width: 1.5px;
+  }
+  &--bl {
+    bottom: 76px;
+    left: 10px;
+    border-bottom-width: 1.5px;
+    border-left-width: 1.5px;
+  }
+  &--br {
+    bottom: 76px;
+    right: 10px;
+    border-bottom-width: 1.5px;
+    border-right-width: 1.5px;
+  }
+}
+
+.sheet__canvas {
+  position: relative;
+  aspect-ratio: 5 / 4;
+  background:
+    radial-gradient(60% 60% at 55% 48%, #fff 0%, rgba(255, 255, 255, 0) 75%),
+    var(--sti-blue-50);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    @include blueprint-grid(rgba(45, 86, 144, 0.06), rgba(45, 86, 144, 0.1), 20px);
+  }
+}
+
+.sheet__img {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  width: 58%;
+  height: auto;
+  max-height: 78%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 18px 18px rgba(23, 38, 58, 0.2));
+  animation: sti-hero-float 900ms var(--sti-ease-out) 200ms both;
+}
+
+@keyframes sti-hero-float {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -46%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.sheet__loading {
+  position: absolute;
+  inset: 20%;
+  border-radius: var(--sti-radius-md);
+  background: linear-gradient(90deg, var(--sti-blue-100), var(--sti-surface), var(--sti-blue-100));
+  background-size: 200% 100%;
+  animation: sti-shimmer 1.2s linear infinite;
+}
+
+// ── Dimension lines ──
+.dim {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sti-blue-800);
+}
+
+.dim__line {
+  position: absolute;
+  background: var(--sti-blue-600);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background: var(--sti-blue-600);
+  }
+}
+
+.dim__label {
+  position: relative;
+  padding: 2px 8px;
+  background: var(--sti-blue-50);
+  font-family: var(--sti-font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.dim--h {
+  left: 20%;
+  right: 20%;
+  bottom: 7%;
+  height: 20px;
+
+  .dim__line {
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+
+    &::before,
+    &::after {
+      top: -5px;
+      width: 1px;
+      height: 11px;
+    }
+    &::before {
+      left: 0;
+    }
+    &::after {
+      right: 0;
+    }
+  }
+}
+
+.dim--v {
+  left: 7%;
+  top: 14%;
+  bottom: 24%;
+  width: 20px;
+
+  .dim__line {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+
+    &::before,
+    &::after {
+      left: -5px;
+      height: 1px;
+      width: 11px;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  .dim__label {
+    transform: rotate(-90deg);
+  }
+}
+
+.leader {
+  position: absolute;
+  top: 16%;
+  left: 62%;
+  display: flex;
+  align-items: center;
+}
+
+.leader__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid var(--sti-red-600);
+  background: var(--sti-surface);
+}
+
+.leader__line {
+  width: 44px;
+  height: 1px;
+  background: var(--sti-red-600);
+  transform-origin: left;
+  animation: sti-draw-line 600ms var(--sti-ease-out) 800ms both;
+}
+
+.leader__label {
+  padding: 4px 8px;
+  border: 1px solid var(--sti-red-200);
+  border-radius: var(--sti-radius-xs);
+  background: var(--sti-surface);
+  font-family: var(--sti-font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  color: var(--sti-red-700);
+  white-space: nowrap;
+  animation: sti-fade-in 400ms var(--sti-ease) 1100ms both;
+}
+
+// ── Title block ──
+.tblock {
+  display: grid;
+  grid-template-columns: 66px minmax(0, 1.1fr) minmax(0, 1.6fr) 64px;
+  border-top: 1.5px solid var(--sti-blue-800);
+  background: var(--sti-surface);
+
+  @include down(v.$bp-xs) {
+    grid-template-columns: 56px minmax(0, 1fr) 58px;
+
+    .tblock__cell--co {
+      display: none;
+    }
+  }
+}
+
+.tblock__logo {
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  border-right: 1px solid var(--sti-border-strong);
+
+  img {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.tblock__cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  min-width: 0;
+  padding: 10px 12px;
+  border-right: 1px solid var(--sti-border-strong);
+
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.tblock__k {
+  font-family: var(--sti-font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sti-muted);
+}
+
+.tblock__v {
+  font-family: var(--sti-font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--sti-text-strong);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tblock__cell--est .tblock__v {
+  color: var(--sti-red-600);
+}
+
+// ── Detail callout cards ──
+.detail {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 238px;
+  padding: 10px 14px 10px 10px;
+  border: 1px solid var(--sti-border);
+  border-radius: var(--sti-radius-sm);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--sti-shadow-lift);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    transform var(--sti-dur) var(--sti-ease),
+    border-color var(--sti-dur) var(--sti-ease);
+
+  &:hover {
+    color: inherit;
+    transform: translateY(-3px);
+    border-color: var(--sti-blue-400);
+  }
+
+  @include down(v.$bp-lg) {
+    display: none;
+  }
+}
+
+.detail--a {
+  right: 0;
+  top: 30%;
+  animation: sti-fade-up 700ms var(--sti-ease-out) 700ms both;
+}
+
+.detail--b {
+  left: -40px;
+  bottom: 0;
+  animation: sti-fade-up 700ms var(--sti-ease-out) 850ms both;
+}
+
+.detail__img {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--sti-radius-xs);
+  background: var(--sti-blue-50);
+
+  img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+  }
+}
+
+.detail__text {
+  display: grid;
+  min-width: 0;
+}
+
+.detail__k {
+  font-family: var(--sti-font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sti-red-600);
+}
+
+.detail__name {
+  font-family: var(--sti-font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--sti-text-strong);
+}
+
+.detail__v {
+  font-family: var(--sti-font-mono);
+  font-size: 0.75rem;
+  color: var(--sti-blue-800);
+}

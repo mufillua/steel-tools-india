@@ -1,0 +1,36 @@
+@use 'mixins' as *;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+// The header is position:fixed (so compacting on scroll never shifts content);
+// reserve its full height + the 3px brand rule here.
+.shell__main {
+  flex: 1 0 auto;
+  padding-top: calc(var(--sti-header-h) + 3px);
+  outline: none;
+}
+
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  padding: 10px 16px;
+  border-radius: var(--sti-radius-sm);
+  background: var(--sti-blue-900);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform var(--sti-dur) var(--sti-ease);
+
+  &:focus-visible {
+    transform: none;
+    color: #fff;
+  }
+}

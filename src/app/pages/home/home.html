@@ -1,0 +1,143 @@
+<sti-home-hero />
+
+<!-- ═══════════ Explore Our Categories ═══════════ -->
+<section class="sti-section home-cats" aria-labelledby="cats-title">
+  <div class="sti-container sti-container--wide">
+    <header class="sec-head" stiReveal>
+      <div>
+        <p class="sti-eyebrow">Catalogue</p>
+        <h2 id="cats-title" class="sec-head__title">Explore Our Categories</h2>
+      </div>
+      <p class="sec-head__lead">
+        Product groups from the R★R Brand, Taparia and Miranda ranges — pick one to see
+        every product and size in it.
+      </p>
+    </header>
+
+    <ul class="cats-grid" role="list">
+      @for (c of categories(); track c.slug; let i = $index) {
+        <li stiReveal [revealDelay]="(i % 4) * 70">
+          <sti-category-card [category]="c" [index]="i" [countsReady]="status() === 'ready'" />
+        </li>
+      }
+      <li stiReveal [revealDelay]="210">
+        <a class="cats-grid__ask" [routerLink]="quotePath">
+          <span class="cats-grid__ask-k">Not listed?</span>
+          <span class="cats-grid__ask-title">Send us your requirement</span>
+          <span class="cats-grid__ask-text">Tell us the tool, size and quantity you need — on WhatsApp or email.</span>
+          <span class="cats-grid__ask-cta">Get A Quote <sti-icon name="arrow-right" [size]="16" /></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════ Featured Products ═══════════ -->
+<section class="sti-section sti-section--grid home-featured" aria-labelledby="feat-title">
+  <div class="home-featured__diag" aria-hidden="true"></div>
+  <div class="sti-container sti-container--wide">
+    <header class="sec-head" stiReveal>
+      <div>
+        <p class="sti-eyebrow">From the catalogue</p>
+        <h2 id="feat-title" class="sec-head__title">Featured Products</h2>
+      </div>
+      <a class="sti-btn home-featured__all" routerLink="/products">
+        View all products <sti-icon class="sti-btn__arrow" name="arrow-right" [size]="16" />
+      </a>
+    </header>
+
+    @switch (status()) {
+      @case ('error') {
+        <div class="state">
+          <p class="state__title">The catalogue couldn't be loaded.</p>
+          <p>Please refresh the page, or contact us directly.</p>
+          <a class="sti-btn sti-btn--primary" [routerLink]="quotePath">Get A Quote</a>
+        </div>
+      }
+      @case ('ready') {
+        <ul class="prod-grid" role="list">
+          @for (p of featured(); track p.slug; let i = $index) {
+            <li stiReveal [revealDelay]="(i % 4) * 70">
+              <sti-product-card [product]="p" />
+            </li>
+          }
+        </ul>
+        <a class="sti-btn sti-btn--outline sti-btn--block home-featured__more" routerLink="/products">
+          View all {{ total() }} products <sti-icon class="sti-btn__arrow" name="arrow-right" [size]="16" />
+        </a>
+      }
+      @default {
+        <ul class="prod-grid" role="list" aria-busy="true" aria-label="Loading products">
+          @for (s of skeletons; track s) {
+            <li class="skel-card" aria-hidden="true">
+              <span class="skel-card__img"></span>
+              <span class="skel-card__line skel-card__line--s"></span>
+              <span class="skel-card__line"></span>
+              <span class="skel-card__line skel-card__line--m"></span>
+            </li>
+          }
+        </ul>
+      }
+    }
+  </div>
+</section>
+
+<!-- ═══════════ Why Steel Tools India ═══════════ -->
+<section class="sti-section home-why" aria-labelledby="why-title">
+  <div class="sti-container sti-container--wide home-why__grid">
+    <div class="home-why__intro" stiReveal>
+      <p class="sti-eyebrow">Why {{ company.name }}</p>
+      <h2 id="why-title" class="sec-head__title">Tooling, catalogued properly.</h2>
+      <p class="sti-lead">
+        A clear catalogue of the tools we deal in — organised by category, with every listed size — and a
+        direct line to us when you're ready to ask.
+      </p>
+
+      <div class="home-why__year" aria-hidden="true">
+        <span class="home-why__since">Since</span>
+        <span class="home-why__num">{{ company.foundedYear }}</span>
+      </div>
+    </div>
+
+    <ol class="why-list" role="list">
+      @for (w of why(); track w.title; let i = $index) {
+        <li class="why-item" stiReveal [revealDelay]="(i % 2) * 90">
+          <span class="why-item__top">
+            <span class="why-item__icon"><sti-icon [name]="w.icon" [size]="20" /></span>
+            <span class="why-item__n">{{ (i + 1).toString().padStart(2, '0') }}</span>
+          </span>
+          <h3 class="why-item__title">{{ w.title }}</h3>
+          <p class="why-item__text">{{ w.text }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>
+
+<!-- ═══════════ Quote CTA ═══════════ -->
+<section class="home-cta" aria-labelledby="cta-title">
+  <div class="sti-container sti-container--wide">
+    <div class="cta" stiReveal>
+      <div class="cta__hatch" aria-hidden="true"></div>
+      <div class="cta__copy">
+        <p class="sti-eyebrow">Get A Quote</p>
+        <h2 id="cta-title" class="cta__title">Looking for a specific tool?</h2>
+        <p class="cta__text">Find the product you need or send us your requirement.</p>
+      </div>
+      <div class="cta__side">
+        <div class="cta__actions">
+          <a class="sti-btn sti-btn--blue sti-btn--lg" routerLink="/products">
+            Browse Products <sti-icon class="sti-btn__arrow" name="arrow-right" [size]="18" />
+          </a>
+          <a class="sti-btn sti-btn--primary sti-btn--lg" [routerLink]="quotePath">
+            <sti-icon name="quote" [size]="18" /> Get A Quote
+          </a>
+        </div>
+        <a class="cta__phone" [href]="links.tel">
+          <sti-icon name="phone" [size]="16" />
+          <span>Or call <strong>{{ company.phoneDisplay }}</strong></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,159 @@
+<form class="qf" [formGroup]="form" novalidate (submit)="$event.preventDefault()">
+  @if (errors().length) {
+    <div class="qf-errors" role="alert" tabindex="-1" [attr.aria-labelledby]="idPrefix() + '-err-title'">
+      <p [id]="idPrefix() + '-err-title'" class="qf-errors__title">
+        <sti-icon name="info" [size]="18" /> Please check {{ errors().length === 1 ? 'this field' : 'these ' + errors().length + ' fields' }}
+      </p>
+      <ul role="list">
+        @for (e of errors(); track e.id) {
+          <li><a [href]="'#' + e.id" (click)="focusField($event, e.id)">{{ e.text }}</a></li>
+        }
+      </ul>
+    </div>
+  }
+
+  <!-- ═════ Your details ═════ -->
+  <fieldset class="qf-set">
+    <legend class="qf-legend"><span class="qf-legend__n">01</span> Your details</legend>
+    <div class="qf-grid">
+      <div class="qf-field" [class.has-error]="error('name')">
+        <label [for]="fieldId('name')">Name <span class="qf-req" aria-hidden="true">*</span></label>
+        <input [id]="fieldId('name')" type="text" formControlName="name" autocomplete="name" required
+          [attr.aria-invalid]="!!error('name')" [attr.aria-describedby]="error('name') ? fieldId('name') + '-err' : null" />
+        @if (error('name'); as msg) { <p class="qf-err" [id]="fieldId('name') + '-err'">{{ msg }}</p> }
+      </div>
+
+      <div class="qf-field">
+        <label [for]="fieldId('company')">Company <span class="qf-opt">optional</span></label>
+        <input [id]="fieldId('company')" type="text" formControlName="company" autocomplete="organization" />
+      </div>
+
+      <div class="qf-field" [class.has-error]="error('phone')">
+        <label [for]="fieldId('phone')">Phone <span class="qf-opt">optional</span></label>
+        <input [id]="fieldId('phone')" type="tel" formControlName="phone" autocomplete="tel" inputmode="tel" placeholder="e.g. 98300 00000"
+          [attr.aria-invalid]="!!error('phone')" [attr.aria-describedby]="error('phone') ? fieldId('phone') + '-err' : null" />
+        @if (error('phone'); as msg) { <p class="qf-err" [id]="fieldId('phone') + '-err'">{{ msg }}</p> }
+      </div>
+
+      <div class="qf-field" [class.has-error]="error('email')">
+        <label [for]="fieldId('email')">Email <span class="qf-opt">optional</span></label>
+        <input [id]="fieldId('email')" type="email" formControlName="email" autocomplete="email" inputmode="email"
+          [attr.aria-invalid]="!!error('email')" [attr.aria-describedby]="error('email') ? fieldId('email') + '-err' : null" />
+        @if (error('email'); as msg) { <p class="qf-err" [id]="fieldId('email') + '-err'">{{ msg }}</p> }
+      </div>
+    </div>
+  </fieldset>
+
+  <!-- ═════ What you need ═════ -->
+  <fieldset class="qf-set">
+    <legend class="qf-legend"><span class="qf-legend__n">02</span> What you need</legend>
+
+    @if (product(); as p) {
+      <div class="qf-product">
+        <sti-product-image class="qf-product__img" [src]="p.images[0]" [alt]="''" [category]="p.category" ratio="1 / 1" />
+        <div class="qf-product__body">
+          <p class="qf-product__k">Product from our catalogue</p>
+          <p class="qf-product__name"><a [routerLink]="['/products', p.slug]">{{ p.name }}</a></p>
+          <p class="qf-product__meta">{{ catalogue.categoryName(p.category) }} · {{ p.brand }}</p>
+
+          @if (p.variants.length > 1) {
+            <div class="qf-field qf-field--inline">
+              <label [for]="fieldId('variant')">Size</label>
+              <select [id]="fieldId('variant')" [value]="selectedVariantId()" (change)="selectedVariantId.set($any($event.target).value)">
+                <option value="">Not sure / tell me the options</option>
+                @for (v of p.variants; track v.id) {
+                  <option [value]="v.id" [selected]="v.id === selectedVariantId()">{{ v.label }}</option>
+                }
+              </select>
+            </div>
+          } @else if (variant(); as v) {
+            <p class="qf-product__meta">Size: <strong>{{ v.label }}</strong></p>
+          }
+        </div>
+        <button type="button" class="qf-product__remove" (click)="removeProduct()">
+          <sti-icon name="close" [size]="16" /><span class="sti-sr-only">Remove {{ p.name }} from the enquiry</span>
+        </button>
+      </div>
+    } @else if (unknownProduct()) {
+      <p class="qf-note">The product in your link isn't in our catalogue any more — just describe what you need below.</p>
+    }
+
+    <div class="qf-field" [class.has-error]="error('requirement')">
+      <label [for]="fieldId('requirement')">
+        @if (product()) {
+          Anything else about this item? <span class="qf-opt">optional</span>
+        } @else {
+          Product / Requirement <span class="qf-req" aria-hidden="true">*</span>
+        }
+      </label>
+      <input [id]="fieldId('requirement')" type="text" formControlName="requirement" autocomplete="off"
+        [attr.list]="product() ? null : fieldId('products')"
+        [placeholder]="product() ? 'e.g. grade, finish, drawing reference' : 'e.g. BT-40 ER-32 collet chuck, 100L'"
+        [attr.aria-required]="!product()" [attr.aria-invalid]="!!error('requirement')"
+        [attr.aria-describedby]="(error('requirement') ? fieldId('requirement') + '-err ' : '') + fieldId('requirement') + '-hint'"
+        (change)="onRequirementChange($any($event.target).value)" />
+      <p class="qf-hint" [id]="fieldId('requirement') + '-hint'">
+        {{ product() ? 'Add a grade, finish or anything we should know.' : 'Type a product name — pick a suggestion to attach it from our catalogue.' }}
+      </p>
+      @if (error('requirement'); as msg) { <p class="qf-err" [id]="fieldId('requirement') + '-err'">{{ msg }}</p> }
+      <datalist [id]="fieldId('products')">
+        @for (n of productNames(); track n) { <option [value]="n"></option> }
+      </datalist>
+    </div>
+
+    <div class="qf-grid qf-grid--qty">
+      <div class="qf-field" [class.has-error]="error('quantity')">
+        <label [for]="fieldId('quantity')">Quantity <span class="qf-opt">optional</span></label>
+        <input [id]="fieldId('quantity')" type="text" formControlName="quantity" placeholder="e.g. 10 nos." autocomplete="off" />
+        @if (error('quantity'); as msg) { <p class="qf-err">{{ msg }}</p> }
+      </div>
+    </div>
+
+    <div class="qf-field" [class.has-error]="error('message')">
+      <label [for]="fieldId('message')">Message <span class="qf-opt">optional</span></label>
+      <textarea [id]="fieldId('message')" formControlName="message" rows="4"
+        placeholder="Delivery location, timeline, or other items you need."></textarea>
+      @if (error('message'); as msg) { <p class="qf-err">{{ msg }}</p> }
+    </div>
+  </fieldset>
+
+  <!-- ═════ Send ═════ -->
+  <div class="qf-send">
+    <p class="qf-legend"><span class="qf-legend__n">03</span> Send your enquiry</p>
+
+    <details class="qf-preview">
+      <summary>Preview the message</summary>
+      <pre>{{ preview() }}</pre>
+    </details>
+
+    <div class="qf-actions">
+      <button type="button" class="sti-btn sti-btn--whatsapp sti-btn--lg" (click)="send('whatsapp')">
+        <sti-icon name="chat" [size]="19" /> Send via WhatsApp
+      </button>
+      <button type="button" class="sti-btn sti-btn--lg qf-email" (click)="send('email')">
+        <sti-icon name="mail" [size]="19" /> Send via Email
+      </button>
+    </div>
+
+    <p class="qf-honest">
+      <sti-icon name="info" [size]="15" />
+      This form doesn't store your details. It opens WhatsApp or your email app with the message ready —
+      you press send.
+    </p>
+
+    @if (sent(); as ch) {
+      <div class="qf-sent" role="status">
+        <sti-icon name="check" [size]="20" />
+        <div>
+          @if (ch === 'whatsapp') {
+            <p><strong>WhatsApp has opened with your message.</strong> Press send in WhatsApp to reach {{ company.name }}.</p>
+          } @else {
+            <p><strong>Your email app should open with the message ready.</strong> If nothing opened, email
+              <a [href]="links.mailto">{{ company.email }}</a> and paste the message.</p>
+          }
+          <button type="button" class="qf-link" (click)="copyMessage()">{{ copied() ? 'Message copied' : 'Copy message' }}</button>
+        </div>
+      </div>
+    }
+  </div>
+</form>

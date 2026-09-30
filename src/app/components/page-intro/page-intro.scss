@@ -1,0 +1,68 @@
+@use 'variables' as v;
+@use 'mixins' as *;
+
+:host {
+  display: block;
+}
+
+.intro {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: clamp(24px, 3vw, 32px) clamp(40px, 5vw, 64px);
+  background: linear-gradient(180deg, var(--sti-blue-100) 0%, var(--sti-blue-50) 100%);
+  border-bottom: 1px solid var(--sti-border);
+}
+
+.intro__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  @include blueprint-grid;
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.35) 70%);
+
+  // Diagonal plate on the right with a red hairline edge.
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -12%;
+    width: 42%;
+    transform: skewX(-16deg);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.2));
+    border-left: 2px solid var(--sti-red-200);
+
+    @include down(v.$bp-md) {
+      width: 30%;
+      right: -18%;
+    }
+  }
+}
+
+.intro__inner {
+  position: relative;
+}
+
+.intro__crumbs {
+  margin-bottom: clamp(20px, 3vw, 32px);
+}
+
+.intro__title {
+  margin-bottom: 14px;
+  max-width: 20ch;
+}
+
+.intro__lead {
+  margin: 0;
+}
+
+.intro__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  &:not(:empty) {
+    margin-top: 28px;
+  }
+}

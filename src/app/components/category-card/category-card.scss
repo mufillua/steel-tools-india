@@ -1,0 +1,215 @@
+@use 'mixins' as *;
+
+:host {
+  display: block;
+  height: 100%;
+}
+
+.cc {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 26px 24px 20px;
+  border: 1px solid var(--sti-border);
+  border-radius: var(--sti-radius-md);
+  background: var(--sti-surface);
+  color: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  transition:
+    transform var(--sti-dur) var(--sti-ease),
+    border-color var(--sti-dur) var(--sti-ease),
+    box-shadow var(--sti-dur) var(--sti-ease);
+
+  // Blueprint corner that brightens on hover.
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto auto;
+    width: 150px;
+    height: 150px;
+    z-index: -1;
+    @include blueprint-grid(rgba(45, 86, 144, 0.06), rgba(45, 86, 144, 0.09), 15px);
+    mask-image: radial-gradient(circle at 100% 0%, #000 0%, transparent 70%);
+    opacity: 0.8;
+    transition: opacity var(--sti-dur) var(--sti-ease);
+  }
+
+  // Red rule that draws across the top edge on hover.
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, var(--sti-red-600), var(--sti-red-400));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--sti-dur-slow) var(--sti-ease-out);
+  }
+
+  &:hover {
+    color: inherit;
+    transform: translateY(-4px);
+    border-color: var(--sti-blue-300);
+    box-shadow: var(--sti-shadow-lift);
+
+    &::before {
+      opacity: 1;
+    }
+
+    &::after {
+      transform: scaleX(1);
+    }
+
+    .cc__icon {
+      color: var(--sti-blue-900);
+      background: var(--sti-blue-100);
+    }
+
+    .cc__cta {
+      color: var(--sti-red-600);
+
+      sti-icon {
+        transform: translateX(4px);
+      }
+    }
+  }
+}
+
+.cc__ref {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  font-family: var(--sti-font-mono);
+  font-size: var(--sti-text-xs);
+  letter-spacing: 0.1em;
+  color: var(--sti-blue-400);
+}
+
+.cc__icon {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 20px;
+  border-radius: var(--sti-radius-md);
+  border: 1px solid var(--sti-blue-200);
+  background: var(--sti-blue-50);
+  color: var(--sti-blue-800);
+  transition:
+    background-color var(--sti-dur) var(--sti-ease),
+    color var(--sti-dur) var(--sti-ease);
+}
+
+.cc__name {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+  line-height: 1.1;
+}
+
+.cc__desc {
+  flex: 1;
+  margin: 0 0 18px;
+  font-size: var(--sti-text-sm);
+  line-height: 1.6;
+  color: var(--sti-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cc__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--sti-border-strong);
+}
+
+.cc__count {
+  font-family: var(--sti-font-mono);
+  font-size: var(--sti-text-xs);
+  letter-spacing: 0.04em;
+  color: var(--sti-muted);
+
+  strong {
+    font-weight: 500;
+    color: var(--sti-blue-900);
+  }
+}
+
+.cc__count-skel {
+  display: inline-block;
+  width: 72px;
+  height: 10px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--sti-blue-100), var(--sti-blue-50), var(--sti-blue-100));
+  background-size: 200% 100%;
+  animation: sti-shimmer 1.2s linear infinite;
+}
+
+.cc__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--sti-text-sm);
+  font-weight: 600;
+  color: var(--sti-blue-800);
+  transition: color var(--sti-dur) var(--sti-ease);
+
+  sti-icon {
+    transition: transform var(--sti-dur) var(--sti-ease);
+  }
+}
+
+// ── Phones: compact row (icon left) so seven categories don't fill five screens ──
+@media (max-width: 639.98px) {
+  .cc {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr);
+    column-gap: 16px;
+    padding: 18px 16px 14px;
+  }
+
+  .cc__icon {
+    grid-row: 1 / span 2;
+    width: 56px;
+    height: 56px;
+    margin: 0;
+
+    ::ng-deep svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .cc__ref {
+    top: 12px;
+    right: 14px;
+  }
+
+  .cc__name {
+    align-self: end;
+    margin: 0 28px 4px 0;
+    font-size: 1.2rem;
+  }
+
+  .cc__desc {
+    margin-bottom: 12px;
+    font-size: var(--sti-text-xs);
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  .cc__foot {
+    grid-column: 1 / -1;
+    padding-top: 10px;
+  }
+}

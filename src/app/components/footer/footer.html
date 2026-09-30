@@ -1,0 +1,145 @@
+<footer class="ftr" aria-labelledby="ftr-heading">
+  <h2 id="ftr-heading" class="sti-sr-only">{{ company.name }} — site footer</h2>
+
+  <div class="ftr__grid-bg" aria-hidden="true"></div>
+
+  <!-- CTA band -->
+  @if (showCta()) {
+  <div class="sti-container sti-container--wide">
+    <div class="ftr__cta">
+      <div class="ftr__cta-text">
+        <p class="ftr__cta-kicker">Request a quotation</p>
+        <p class="ftr__cta-title">Tell us the tool, size and quantity you need.</p>
+      </div>
+      <div class="ftr__cta-actions">
+        <a class="sti-btn sti-btn--primary sti-btn--lg" [routerLink]="quotePath">
+          Get A Quote
+          <sti-icon class="sti-btn__arrow" name="arrow-right" [size]="18" />
+        </a>
+        <a
+          class="sti-btn sti-btn--lg ftr__btn-outline"
+          [href]="links.whatsapp"
+          target="_blank"
+          rel="noopener"
+        >
+          <sti-icon name="chat" [size]="18" />
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  }
+
+  <!-- Main columns -->
+  <div class="sti-container sti-container--wide ftr__main">
+    <div class="ftr__brand">
+      <a class="ftr__logo-plate" routerLink="/" [attr.aria-label]="company.name + ' — home'">
+        <img
+          src="assets/brand/sti-logo-full.png"
+          [alt]="company.name + ' — ' + company.tagline"
+          width="765"
+          height="225"
+          loading="lazy"
+        />
+      </a>
+      <p class="ftr__about">
+        Machine tool accessories, revolving and dead centres, cutting tools, hand tools and workshop
+        equipment — {{ company.city }}, {{ company.tagline.toLowerCase() }}.
+      </p>
+      <p class="ftr__est">
+        <span class="ftr__est-label">Est.</span>
+        <span class="ftr__est-year">{{ company.foundedYear }}</span>
+      </p>
+    </div>
+
+    <nav class="ftr__col" aria-labelledby="ftr-quick">
+      <h3 id="ftr-quick" class="ftr__heading">Quick Links</h3>
+      <ul class="ftr__list" role="list">
+        @for (l of quickLinks; track l.path) {
+          <li><a class="ftr__link" [routerLink]="l.path">{{ l.label }}</a></li>
+        }
+      </ul>
+    </nav>
+
+    <nav class="ftr__col" aria-labelledby="ftr-cats">
+      <h3 id="ftr-cats" class="ftr__heading">Product Categories</h3>
+      <ul class="ftr__list" role="list">
+        @for (c of categories; track c.slug) {
+          <li>
+            <a class="ftr__link" routerLink="/products" [queryParams]="{ category: c.slug }">{{
+              c.name
+            }}</a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="ftr__col ftr__col--contact">
+      <h3 class="ftr__heading">Contact</h3>
+      <ul class="ftr__contact" role="list">
+        <li>
+          <span class="ftr__c-icon"><sti-icon name="phone" [size]="16" /></span>
+          <span>
+            <span class="ftr__c-label">Phone</span>
+            <a class="ftr__c-value" [href]="links.tel">{{ company.phoneDisplay }}</a>
+          </span>
+        </li>
+        <li>
+          <span class="ftr__c-icon"><sti-icon name="chat" [size]="16" /></span>
+          <span>
+            <span class="ftr__c-label">WhatsApp</span>
+            <a class="ftr__c-value" [href]="links.whatsapp" target="_blank" rel="noopener">{{
+              company.whatsappDisplay
+            }}</a>
+          </span>
+        </li>
+        <li>
+          <span class="ftr__c-icon"><sti-icon name="mail" [size]="16" /></span>
+          <span>
+            <span class="ftr__c-label">Email</span>
+            <a class="ftr__c-value ftr__c-value--email" [href]="links.mailto">{{ company.email }}</a>
+          </span>
+        </li>
+        <li>
+          <span class="ftr__c-icon"><sti-icon name="pin" [size]="16" /></span>
+          <span>
+            <span class="ftr__c-label">Address</span>
+            <address class="ftr__c-value ftr__address">
+              @for (line of company.address.lines; track line) {
+                {{ line }}<br />
+              }
+              {{ company.address.city }} {{ company.address.pincode }}<br />
+              {{ company.address.country }}
+            </address>
+            <a class="ftr__map" [href]="links.mapsSearch" target="_blank" rel="noopener">
+              Open in Maps <sti-icon name="arrow-up-right" [size]="14" />
+            </a>
+          </span>
+        </li>
+        <li>
+          <span class="ftr__c-icon"><sti-icon name="clock" [size]="16" /></span>
+          <span>
+            <span class="ftr__c-label">Hours</span>
+            <span class="ftr__c-value ftr__hours">
+              @for (h of company.hours; track h.short) {
+                <span><span class="ftr__hours-d">{{ h.short }}</span> {{ fmt(h) }}</span>
+              }
+            </span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="ftr__bottom">
+    <div class="sti-container sti-container--wide ftr__bottom-inner">
+      <p>© {{ year }} {{ company.name }}. All rights reserved. Powered by Mufaddal Maimoon.</p>
+      <p class="ftr__bottom-tag">
+        <span>{{ company.name }}</span><span class="ftr__sep" aria-hidden="true">/</span
+        ><span>{{ company.tagline }}</span>
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,146 @@
+<!-- Current selection -->
+<div class="vs-sel" [class.is-set]="selected()" aria-live="polite">
+  @if (selected(); as s) {
+    <span class="vs-sel__tick" aria-hidden="true"><sti-icon name="check" [size]="16" /></span>
+    <p class="vs-sel__text">
+      <span class="vs-sel__k">Selected</span>
+      <strong class="vs-sel__v">{{ s.label }}</strong>
+    </p>
+    <button type="button" class="vs-sel__clear" (click)="choose(null)">
+      Clear<span class="sti-sr-only"> selected size</span>
+    </button>
+  } @else {
+    <span class="vs-sel__tick vs-sel__tick--empty" aria-hidden="true"></span>
+    <p class="vs-sel__text">
+      <span class="vs-sel__k">No size selected</span>
+      <span class="vs-sel__hint">Choose one below and it's added to your WhatsApp / email enquiry.</span>
+    </p>
+  }
+</div>
+
+@if (mode() === 'chips') {
+  <!-- ═════ Chip mode: one axis, a handful of sizes ═════ -->
+  <fieldset class="vs-chips">
+    <legend class="vs-legend">{{ axes()[0] }}</legend>
+    <div class="vs-chips__list">
+      @for (v of variants(); track v.id) {
+        <label class="vs-chip vs-chip--pick" [class.is-on]="v.id === selectedId()">
+          <input
+            type="radio"
+            class="sti-sr-only"
+            [name]="'variant-' + product().slug"
+            [value]="v.id"
+            [checked]="v.id === selectedId()"
+            (change)="choose(v.id)"
+          />
+          <span>{{ v.label }}</span>
+        </label>
+      }
+    </div>
+  </fieldset>
+} @else {
+  <!-- ═════ Table mode ═════ -->
+  @if (showFind() || filterAxes().length) {
+    <div class="vs-tools">
+      @if (showFind()) {
+        <div class="vs-find">
+          <label class="vs-legend" [for]="'vs-find-' + product().slug">Find a size</label>
+          <div class="vs-find__box">
+            <sti-icon class="vs-find__icon" name="search" [size]="16" />
+            <input
+              [id]="'vs-find-' + product().slug"
+              class="vs-find__input"
+              type="search"
+              autocomplete="off"
+              spellcheck="false"
+              [placeholder]="axes()[0] === 'Product No.' ? 'Size or product no.' : 'e.g. 12, 1/2&quot;, M10…'"
+              [value]="query()"
+              (input)="query.set($any($event.target).value)"
+            />
+          </div>
+        </div>
+      }
+
+      @for (f of filterAxes(); track f.axis) {
+        <div class="vs-filter" role="group" [attr.aria-label]="'Filter by ' + f.axis">
+          <span class="vs-legend" aria-hidden="true">{{ f.axis }}</span>
+          <div class="vs-chips__list">
+            @for (o of f.values; track o.value) {
+              <button
+                type="button"
+                class="vs-chip"
+                [class.is-on]="filters()[f.axis] === o.value"
+                [attr.aria-pressed]="filters()[f.axis] === o.value"
+                [disabled]="o.count === 0 && filters()[f.axis] !== o.value"
+                (click)="toggleFilter(f.axis, o.value)"
+              >
+                {{ o.value }}
+              </button>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  }
+
+  <div class="vs-count">
+    <p aria-live="polite">
+      @if (rows().length === variants().length) {
+        {{ variants().length }} {{ variants().length === 1 ? 'size' : 'sizes' }} listed
+      } @else {
+        {{ rows().length }} of {{ variants().length }} sizes match
+      }
+    </p>
+    @if (hasFilters()) {
+      <button type="button" class="vs-link" (click)="clearFilters()">Reset filters</button>
+    }
+  </div>
+
+  @if (rows().length) {
+    <div class="vs-table-wrap" [style.max-width.px]="160 + axes().length * 200" role="region" [attr.aria-label]="product().name + ' sizes'" tabindex="0">
+      <table class="vs-table">
+        <thead>
+          <tr>
+            <th scope="col" class="vs-table__pick"><span class="sti-sr-only">Select</span></th>
+            @for (a of axes(); track a) {
+              <th scope="col">{{ a }}</th>
+            }
+          </tr>
+        </thead>
+        <tbody>
+          @for (v of visibleRows(); track v.id) {
+            <tr [class.is-selected]="v.id === selectedId()" (click)="choose(v.id)">
+              <td class="vs-table__pick">
+                <input
+                  type="radio"
+                  class="vs-radio"
+                  [name]="'variant-' + product().slug"
+                  [value]="v.id"
+                  [checked]="v.id === selectedId()"
+                  [attr.aria-label]="v.label"
+                  (change)="choose(v.id)"
+                  (click)="$event.stopPropagation()"
+                />
+              </td>
+              @for (a of axes(); track a) {
+                <td [class.is-empty]="cell(v, a) === '—'" [class.is-long]="cell(v, a).length > 40">{{ cell(v, a) }}</td>
+              }
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    @if (visibleRows().length < rows().length) {
+      <button type="button" class="sti-btn sti-btn--sm vs-more" (click)="expanded.set(true)">
+        Show all {{ rows().length }} sizes
+      </button>
+    }
+  } @else {
+    <div class="vs-none">
+      <p>No listed size matches “{{ query() }}”.</p>
+      <p>Try another value, or send us the size you need — we'll check it for you.</p>
+      <button type="button" class="vs-link" (click)="clearFilters()">Reset filters</button>
+    </div>
+  }
+}

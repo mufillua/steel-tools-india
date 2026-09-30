@@ -1,0 +1,74 @@
+@use 'sass:math';
+@use 'variables' as v;
+
+// ---- Media queries ----
+@mixin up($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin down($bp) {
+  @media (max-width: ($bp - 0.02px)) {
+    @content;
+  }
+}
+
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
+// ---- Focus ring used everywhere ----
+@mixin focus-ring($offset: 3px, $color: var(--sti-focus)) {
+  outline: 2px solid $color;
+  outline-offset: $offset;
+}
+
+// ---- Engineering / blueprint backgrounds ----
+// Fine technical grid: minor lines every $size, major every 4×$size.
+@mixin blueprint-grid($line: rgba(45, 86, 144, 0.07), $major: rgba(45, 86, 144, 0.11), $size: 24px) {
+  background-image:
+    linear-gradient($major 1px, transparent 1px),
+    linear-gradient(90deg, $major 1px, transparent 1px),
+    linear-gradient($line 1px, transparent 1px),
+    linear-gradient(90deg, $line 1px, transparent 1px);
+  background-size:
+    ($size * 4) ($size * 4),
+    ($size * 4) ($size * 4),
+    $size $size,
+    $size $size;
+}
+
+// Diagonal hatch — used sparingly as an accent strip.
+@mixin hatch($color: rgba(45, 86, 144, 0.12), $gap: 8px) {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    $color 0 1px,
+    transparent 1px $gap
+  );
+}
+
+// Visually hidden but available to screen readers.
+@mixin sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Small technical label: mono, spaced, uppercase.
+@mixin tech-label($color: var(--sti-blue-700)) {
+  font-family: var(--sti-font-mono);
+  font-size: var(--sti-text-xs);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $color;
+}

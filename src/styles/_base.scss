@@ -1,0 +1,339 @@
+@use 'variables' as v;
+@use 'mixins' as *;
+
+// ---------- Reset ----------
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--sti-header-h) + 16px);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--sti-font-body);
+  font-size: var(--sti-text-base);
+  line-height: 1.65;
+  color: var(--sti-text);
+  background: var(--sti-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+body.sti-scroll-locked {
+  overflow: hidden;
+}
+
+img,
+svg,
+video,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: var(--sti-blue-800);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--sti-dur-fast) var(--sti-ease);
+}
+
+a:hover {
+  color: var(--sti-red-600);
+}
+
+:focus-visible {
+  @include focus-ring;
+}
+
+::selection {
+  background: var(--sti-blue-200);
+  color: var(--sti-text-strong);
+}
+
+// ---------- Typography ----------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.5em;
+  font-family: var(--sti-font-display);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0.005em;
+  color: var(--sti-text-strong);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--sti-text-4xl);
+}
+h2 {
+  font-size: var(--sti-text-3xl);
+}
+h3 {
+  font-size: var(--sti-text-xl);
+  font-weight: 600;
+  line-height: 1.15;
+}
+h4 {
+  font-size: var(--sti-text-lg);
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 1em;
+  text-wrap: pretty;
+}
+
+.sti-lead {
+  font-size: var(--sti-text-md);
+  line-height: 1.7;
+  color: var(--sti-muted);
+  max-width: 62ch;
+}
+
+.sti-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  @include tech-label;
+
+  &::before {
+    content: '';
+    width: 22px;
+    height: 2px;
+    background: var(--sti-red-600);
+  }
+}
+
+.sti-mono {
+  font-family: var(--sti-font-mono);
+}
+
+// ---------- Layout ----------
+.sti-container {
+  width: 100%;
+  max-width: calc(var(--sti-container) + 2 * var(--sti-gutter));
+  margin-inline: auto;
+  padding-inline: var(--sti-gutter);
+}
+
+.sti-container--wide {
+  max-width: calc(var(--sti-container-wide) + 2 * var(--sti-gutter));
+}
+
+.sti-section {
+  padding-block: var(--sti-section-y);
+  position: relative;
+}
+
+.sti-section--tint {
+  background: var(--sti-blue-50);
+}
+
+.sti-section--grid {
+  background-color: var(--sti-blue-50);
+  @include blueprint-grid;
+}
+
+.sti-sr-only {
+  @include sr-only;
+}
+
+// ---------- Buttons ----------
+.sti-btn {
+  --btn-bg: var(--sti-surface);
+  --btn-fg: var(--sti-blue-900);
+  --btn-border: var(--sti-border-strong);
+  --btn-bg-hover: var(--sti-blue-50);
+  --btn-border-hover: var(--sti-blue-400);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 22px;
+  border: 1px solid var(--btn-border);
+  border-radius: var(--sti-radius-sm);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-family: var(--sti-font-body);
+  font-size: var(--sti-text-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background-color var(--sti-dur) var(--sti-ease),
+    border-color var(--sti-dur) var(--sti-ease),
+    color var(--sti-dur) var(--sti-ease),
+    box-shadow var(--sti-dur) var(--sti-ease),
+    transform var(--sti-dur) var(--sti-ease);
+
+  svg {
+    flex: none;
+    transition: transform var(--sti-dur) var(--sti-ease);
+  }
+
+  &:hover {
+    background: var(--btn-bg-hover);
+    border-color: var(--btn-border-hover);
+    color: var(--btn-fg);
+  }
+
+  &:hover .sti-btn__arrow {
+    transform: translateX(3px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.sti-btn--primary {
+  --btn-bg: var(--sti-red-600);
+  --btn-fg: #fff;
+  --btn-border: var(--sti-red-600);
+  --btn-bg-hover: var(--sti-red-700);
+  --btn-border-hover: var(--sti-red-700);
+  box-shadow: 0 6px 16px -8px rgba(207, 47, 58, 0.6);
+
+  &:hover {
+    box-shadow: 0 10px 22px -10px rgba(207, 47, 58, 0.7);
+  }
+}
+
+.sti-btn--blue {
+  --btn-bg: var(--sti-blue-800);
+  --btn-fg: #fff;
+  --btn-border: var(--sti-blue-800);
+  --btn-bg-hover: var(--sti-blue-900);
+  --btn-border-hover: var(--sti-blue-900);
+}
+
+// Outlined steel-blue (secondary actions: "Request Quote by Email", "View Product").
+.sti-btn--outline {
+  --btn-bg: var(--sti-surface);
+  --btn-fg: var(--sti-blue-800);
+  --btn-border: var(--sti-blue-800);
+  --btn-bg-hover: var(--sti-blue-800);
+  --btn-border-hover: var(--sti-blue-800);
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.sti-btn--whatsapp {
+  --btn-bg: var(--sti-whatsapp);
+  --btn-fg: #fff;
+  --btn-border: var(--sti-whatsapp);
+  --btn-bg-hover: var(--sti-whatsapp-hover);
+  --btn-border-hover: var(--sti-whatsapp-hover);
+  box-shadow: 0 6px 16px -8px rgba(26, 125, 68, 0.65);
+
+  &:hover {
+    box-shadow: 0 10px 22px -10px rgba(26, 125, 68, 0.7);
+  }
+}
+
+.sti-btn--ghost {
+  --btn-bg: transparent;
+  --btn-border: transparent;
+  --btn-bg-hover: var(--sti-blue-100);
+  --btn-border-hover: transparent;
+}
+
+.sti-btn--sm {
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 12px;
+  font-size: 0.8125rem;
+}
+
+.sti-btn--lg {
+  min-height: 52px;
+  padding: 0 28px;
+  font-size: var(--sti-text-base);
+}
+
+.sti-btn--xl {
+  min-height: 56px;
+  padding: 0 20px;
+  font-size: 0.9375rem;
+}
+
+.sti-btn--block {
+  width: 100%;
+}
+
+// Icon-only on phones (label stays available to screen readers via aria-label).
+@media (max-width: 639.98px) {
+  .sti-btn--icon-mobile {
+    padding-inline: 14px;
+
+    .sti-btn__label {
+      @include sr-only;
+    }
+  }
+}
+
+
+// ---- Section heading (shared by home, about, …) ----
+.sec-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px 48px;
+  margin-bottom: clamp(28px, 4vw, 44px);
+
+  > div {
+    min-width: 0;
+  }
+}
+
+.sec-head__title {
+  margin: 0;
+  font-size: var(--sti-text-3xl);
+}
+
+.sec-head__lead {
+  margin: 0;
+  max-width: 46ch;
+  color: var(--sti-muted);
+}
+

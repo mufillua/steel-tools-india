@@ -1,0 +1,117 @@
+<sti-page-intro
+  [crumbs]="crumbs"
+  [eyebrow]="company.name + ' · ' + company.tagline"
+  title="Contact Us"
+  lead="Call, WhatsApp or email us with the tool, size and quantity you need — or visit us in Kolkata."
+/>
+
+<!-- ═════ Contact cards ═════ -->
+<section class="sti-section contact" aria-label="Contact details">
+  <div class="sti-container sti-container--wide">
+    <ul class="cards" role="list">
+      <li class="card">
+        <span class="card__icon"><sti-icon name="phone" [size]="22" /></span>
+        <h2 class="card__k">Phone</h2>
+        <p class="card__v">{{ company.phoneDisplay }}</p>
+        <div class="card__actions">
+          <a class="sti-btn sti-btn--blue sti-btn--sm" [href]="links.tel">Call now</a>
+          <button type="button" class="card__copy" (click)="copy('phone', company.phoneDisplay)">
+            {{ copied() === 'phone' ? 'Copied' : 'Copy' }}<span class="sti-sr-only"> phone number</span>
+          </button>
+        </div>
+      </li>
+      <li class="card card--wa">
+        <span class="card__icon"><sti-icon name="chat" [size]="22" /></span>
+        <h2 class="card__k">WhatsApp</h2>
+        <p class="card__v">{{ company.whatsappDisplay }}</p>
+        <div class="card__actions">
+          <a class="sti-btn sti-btn--whatsapp sti-btn--sm" [href]="links.whatsapp" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </li>
+      <li class="card">
+        <span class="card__icon"><sti-icon name="mail" [size]="22" /></span>
+        <h2 class="card__k">Email</h2>
+        <p class="card__v">{{ company.email }}</p>
+        <div class="card__actions">
+          <a class="sti-btn sti-btn--blue sti-btn--sm" [href]="links.mailto">Send email</a>
+          <button type="button" class="card__copy" (click)="copy('email', company.email)">
+            {{ copied() === 'email' ? 'Copied' : 'Copy' }}<span class="sti-sr-only"> email address</span>
+          </button>
+        </div>
+      </li>
+      <li class="card">
+        <span class="card__icon"><sti-icon name="pin" [size]="22" /></span>
+        <h2 class="card__k">Address</h2>
+        <address class="card__v card__v--addr">
+          @for (l of company.address.lines; track l) { {{ l }}<br /> }
+          {{ company.address.city }} {{ company.address.pincode }}<br />
+          {{ company.address.country }}
+        </address>
+        <div class="card__actions">
+          <a class="sti-btn sti-btn--blue sti-btn--sm" [href]="links.mapsSearch" target="_blank" rel="noopener">Open in Maps</a>
+          <button type="button" class="card__copy" (click)="copy('address', address)">
+            {{ copied() === 'address' ? 'Copied' : 'Copy' }}<span class="sti-sr-only"> address</span>
+          </button>
+        </div>
+      </li>
+    </ul>
+    <p class="sti-sr-only" aria-live="polite">{{ copied() ? 'Copied to clipboard' : '' }}</p>
+  </div>
+</section>
+
+<!-- ═════ Enquiry + map ═════ -->
+<section class="sti-section enquire" aria-labelledby="enquire-title">
+  <div class="sti-container sti-container--wide enquire__grid">
+    <div class="enquire__form">
+      <p class="sti-eyebrow">Send an enquiry</p>
+      <h2 id="enquire-title" class="enquire__title">Tell us what you need</h2>
+      <p class="enquire__lead">
+        Your message opens in WhatsApp or your email app, ready to send. For a product from the
+        <a routerLink="/products">catalogue</a>, use the enquiry buttons on its page — the product and size are
+        added for you.
+      </p>
+      <sti-quote-form idPrefix="cf" />
+    </div>
+
+    <aside class="enquire__side" aria-labelledby="find-title">
+      <div class="hours" aria-labelledby="hours-title">
+        <h2 id="hours-title" class="hours__title"><sti-icon name="clock" [size]="18" /> Business hours</h2>
+        <sti-business-hours />
+      </div>
+
+      <div class="map">
+        <div class="map__head">
+          <h2 id="find-title" class="map__title">Find us</h2>
+          <p class="map__addr">{{ address }}</p>
+        </div>
+        <div class="map__frame">
+          @if (showMap()) {
+            <iframe
+              [src]="mapUrl"
+              [title]="'Map showing ' + address"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          } @else {
+            <div class="map__placeholder">
+              <span class="map__pin"><sti-icon name="pin" [size]="26" /></span>
+              <p>{{ company.address.lines[0] }}<br />{{ company.address.city }} {{ company.address.pincode }}</p>
+              <button type="button" class="sti-btn sti-btn--sm map__load" (click)="showMap.set(true)">Show map</button>
+              <p class="map__note">Loads Google Maps</p>
+            </div>
+          }
+        </div>
+        <a class="map__open" [href]="links.mapsSearch" target="_blank" rel="noopener">
+          Open in Google Maps <sti-icon name="arrow-up-right" [size]="14" />
+        </a>
+      </div>
+
+      <div class="since">
+        <span class="since__k">Est.</span>
+        <span class="since__y">{{ company.foundedYear }}</span>
+        <span class="since__t">{{ company.name }} · {{ company.city }}</span>
+      </div>
+    </aside>
+  </div>
+</section>

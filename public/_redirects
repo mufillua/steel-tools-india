@@ -1,0 +1,2 @@
+# Netlify / Cloudflare Pages: prerendered pages are served as-is; any other URL falls back to the app shell.
+/*    /index.csr.html    200

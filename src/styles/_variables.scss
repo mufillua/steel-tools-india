@@ -1,0 +1,115 @@
+// =============================================================
+// Steel Tools India — design tokens
+// Brand colours sampled from the supplied logo:
+//   logo blue  #2D5690   logo red  #DE343F
+// Everything else is a pastel/neutral interpretation of those two.
+// =============================================================
+
+// ---- Breakpoints (SCSS, for media queries) ----
+$bp-xs: 480px;
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-nav: 1100px; // below this the navbar collapses into the menu button
+$bp-xl: 1200px;
+$bp-xxl: 1440px;
+
+:root {
+  // ---- Steel blue (logo blue = 800) ----
+  --sti-blue-950: #182f52;
+  --sti-blue-900: #22457a;
+  --sti-blue-800: #2d5690;
+  --sti-blue-700: #43689e;
+  --sti-blue-600: #5e82a8;
+  --sti-blue-400: #8eabc5;
+  --sti-blue-300: #aec4d8;
+  --sti-blue-200: #c9dbe9;
+  --sti-blue-100: #e5eff6;
+  --sti-blue-50: #f1f6fa;
+
+  // ---- Signal red (logo red = --sti-red-logo) ----
+  --sti-red-700: #c02a35;
+  --sti-red-600: #cf2f3a; // logo red is #de343f; nudged darker so white-on-red and red text pass WCAG AA (≥4.5:1)
+  --sti-red-logo: #de343f;
+  --sti-red-400: #ee6f78;
+  --sti-red-200: #f6b7bc;
+  --sti-red-100: #fbe5e7;
+  --sti-red-50: #fdf2f3;
+
+  // ---- Neutrals ----
+  --sti-background: #f7fafc;
+  --sti-surface: #ffffff;
+  --sti-surface-alt: #f2f6f9;
+  --sti-text: #243447;
+  --sti-text-strong: #17263a;
+  --sti-muted: #5f7285; // darkened from #66788A to hold 4.5:1 on the pastel surfaces
+  --sti-border: #dce6ee;
+  --sti-border-strong: #c3d2de;
+
+  // ---- On-dark (footer / deep sections) ----
+  --sti-on-dark: #f1f6fa;
+  --sti-on-dark-muted: #b4c6d8;
+  --sti-on-dark-line: rgba(201, 219, 233, 0.16);
+
+  // ---- Feedback ----
+  --sti-success: #2f7d5b;
+
+  // ---- WhatsApp action (darkened from WhatsApp green so white text passes 4.5:1) ----
+  --sti-whatsapp: #1a7d44;
+  --sti-whatsapp-hover: #146636;
+  --sti-focus: #2d5690;
+
+  // ---- Typography ----
+  --sti-font-display: 'Barlow Condensed', 'Arial Narrow', 'Roboto Condensed', sans-serif;
+  --sti-font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --sti-font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --sti-text-xs: 0.75rem; // 12
+  --sti-text-sm: 0.875rem; // 14
+  --sti-text-base: 1rem; // 16
+  --sti-text-md: 1.125rem; // 18
+  --sti-text-lg: 1.25rem; // 20
+  --sti-text-xl: clamp(1.5rem, 1.3rem + 0.8vw, 1.875rem);
+  --sti-text-2xl: clamp(1.875rem, 1.5rem + 1.5vw, 2.5rem);
+  --sti-text-3xl: clamp(2.25rem, 1.7rem + 2.4vw, 3.5rem);
+  --sti-text-4xl: clamp(2.75rem, 2rem + 3.2vw, 4.5rem);
+
+  // ---- Radii (kept deliberately tight — industrial, not bubbly) ----
+  --sti-radius-xs: 3px;
+  --sti-radius-sm: 6px;
+  --sti-radius-md: 10px;
+  --sti-radius-lg: 16px;
+
+  // ---- Shadows (soft, blue-tinted) ----
+  --sti-shadow-xs: 0 1px 2px rgba(23, 38, 58, 0.06);
+  --sti-shadow-soft: 0 1px 2px rgba(23, 38, 58, 0.05), 0 6px 18px -6px rgba(34, 69, 122, 0.14);
+  --sti-shadow-lift: 0 2px 4px rgba(23, 38, 58, 0.05), 0 14px 30px -10px rgba(34, 69, 122, 0.22);
+  --sti-shadow-header: 0 1px 0 var(--sti-border), 0 8px 24px -14px rgba(34, 69, 122, 0.28);
+
+  // ---- Layout ----
+  --sti-container: 1200px;
+  --sti-container-wide: 1320px;
+  --sti-gutter: clamp(16px, 4vw, 32px);
+  --sti-section-y: clamp(56px, 7vw, 104px);
+  --sti-header-h: 78px;
+  --sti-header-h-compact: 62px;
+
+  // ---- Motion ----
+  --sti-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --sti-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --sti-dur-fast: 160ms;
+  --sti-dur: 260ms;
+  --sti-dur-slow: 520ms;
+
+  // ---- Z layers ----
+  --sti-z-header: 100;
+  --sti-z-menu: 90;
+  --sti-z-overlay: 80;
+}
+
+@media (max-width: 1099.98px) {
+  :root {
+    --sti-header-h: 68px;
+    --sti-header-h-compact: 60px;
+  }
+}
