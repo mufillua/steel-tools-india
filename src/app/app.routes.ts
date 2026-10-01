@@ -58,7 +58,7 @@ export const routes: Routes = [
     title: 'Contact',
     data: {
       seo: {
-        description: 'Contact Steel Tools India, Room No. 37, 67B, N. S. Road, Kolkata 700001. Phone / WhatsApp +91 98302 58198. Open Mon–Fri 10 am–6 pm, Sat 10 am–5 pm.',
+        description: 'Contact Steel Tools India, 67/B, N. S. Road, Room No. 37, Kolkata 700001. Phone / WhatsApp +91 98302 58198. Open Mon–Fri 10 am–6 pm, Sat 10 am–5 pm.',
         jsonLd: 'business',
       },
     },

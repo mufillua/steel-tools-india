@@ -84,7 +84,7 @@ export const COMPANY: CompanyConfig = {
   timeZone: 'Asia/Kolkata',
 
   address: {
-    lines: ['Room No. 37, 67B, N. S. Road'],
+    lines: ['67/B, N. S. Road, Room No. 37'],
     city: 'Kolkata',
     pincode: '700001',
     country: 'India',
@@ -93,7 +93,7 @@ export const COMPANY: CompanyConfig = {
   showPrices: false,
 
   // TODO(confirm): replace with the real domain before launch.
-  siteUrl: 'https://www.steeltoolsindia.com',
+  siteUrl: 'https://www.steeltoolsindia.in',
 };
 
 /** Convenience helpers so templates never build links by hand. */
