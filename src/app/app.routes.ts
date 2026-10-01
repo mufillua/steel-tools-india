@@ -15,7 +15,7 @@ export const routes: Routes = [
     path: '',
     resolve: { catalogue: catalogueResolver },
     pathMatch: 'full',
-    title: 'Precision Tools for Modern Manufacturing',
+    //title: 'Precision Tools for Modern Manufacturing',
     data: { seo: { jsonLd: 'business' } },
     loadComponent: () => import('./pages/home/home').then((m) => m.Home),
   },
