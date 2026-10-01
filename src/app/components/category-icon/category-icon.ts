@@ -151,6 +151,48 @@ import { CategoryIcon as CategoryIconName } from '../../models/category.model';
           <path d="M48 44 L54 40 L51 48 L57 46" class="cl" />
           <line x1="44" y1="50" x2="60" y2="38" />
         }
+        @case ('hoist') {
+          <!-- Chain pulley block: top hook, body, chain falls, load hook -->
+          <path d="M32 4 V8 M28 8 A4 4 0 1 0 32 4" />
+          <rect x="20" y="10" width="24" height="20" rx="3" />
+          <circle cx="32" cy="20" r="5" />
+          <path d="M26 30 V44 M38 30 V54" stroke-dasharray="2 2" />
+          <path d="M26 44 V48 A5 5 0 1 0 31 53" />
+          <line class="cl" x1="32" y1="2" x2="32" y2="60" />
+        }
+        @case ('hook') {
+          <!-- Eye sling hook with latch -->
+          <circle cx="32" cy="10" r="6" />
+          <path d="M28 15 L26 24 C16 28 12 38 16 46 C21 56 38 58 44 48 C47 43 46 38 42 35" />
+          <path d="M36 15 L36 24 C40 26 42 30 42 35" />
+          <path d="M42 35 L30 30" />
+          <line class="cl" x1="32" y1="2" x2="32" y2="60" />
+        }
+        @case ('sling') {
+          <!-- Webbing sling with eyes, lifting a load -->
+          <path d="M32 6 L16 30 M32 6 L48 30" />
+          <path d="M29 6 L13 30 M35 6 L51 30" opacity=".5" />
+          <circle cx="32" cy="6" r="3" />
+          <rect x="10" y="30" width="44" height="22" rx="1.5" />
+          <line class="cl" x1="6" y1="41" x2="58" y2="41" />
+        }
+        @case ('clamp') {
+          <!-- Vertical plate clamp gripping a plate -->
+          <circle cx="32" cy="9" r="5" />
+          <path d="M18 16 H46 V40 H38 V30 H26 V40 H18 Z" />
+          <path d="M26 34 L30 32 M38 34 L34 32" />
+          <rect x="29" y="30" width="6" height="28" />
+          <line class="cl" x1="32" y1="2" x2="32" y2="62" />
+        }
+        @case ('pallet-truck') {
+          <!-- Hand pallet truck: tiller, pump, forks, wheels -->
+          <path d="M14 6 H24 M19 6 V34" />
+          <path d="M14 34 H26 V44 H14 Z" />
+          <path d="M26 42 H58 V46 H26" />
+          <circle cx="20" cy="50" r="4" />
+          <circle cx="52" cy="50" r="2.5" />
+          <line class="cl" x1="4" y1="54" x2="60" y2="54" />
+        }
       }
     </svg>
   `,

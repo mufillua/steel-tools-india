@@ -53,8 +53,8 @@ export class Home {
         icon: 'layers',
         title: 'A wide tooling catalogue',
         text: products
-          ? `${products} products across ${cats} categories — from machine tool accessories to hand tools and gauges.`
-          : `Products across ${cats} categories — from machine tool accessories to hand tools and gauges.`,
+          ? `${products} products across ${cats} categories — from machine tool accessories and hand tools to lifting gear and material handling equipment.`
+          : `Products across ${cats} categories — from machine tool accessories and hand tools to lifting gear and material handling equipment.`,
       },
       {
         icon: 'grid',

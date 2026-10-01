@@ -13,7 +13,12 @@ export type CategoryIcon =
   | 'hammer'
   | 'toolbox'
   | 'disc'
-  | 'non-sparking';
+  | 'non-sparking'
+  | 'hoist'
+  | 'sling'
+  | 'hook'
+  | 'clamp'
+  | 'pallet-truck';
 
 export interface Category {
   slug: string;
@@ -21,7 +26,7 @@ export interface Category {
   /** Short factual description built only from the product groups present in the source PDFs. */
   description: string;
   icon: CategoryIcon;
-  /** Manufacturer brand(s) whose supplied price lists this category is drawn from. */
+  /** Manufacturer brand(s) whose supplied price lists this category is drawn from. Empty = not shown (lifting range). */
   brands: string[];
   /** Which supplied document(s) the category comes from — kept for traceability. */
   sources: string[];

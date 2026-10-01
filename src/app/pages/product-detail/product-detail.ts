@@ -32,6 +32,8 @@ const SOURCE_NAMES: Record<SourceDoc, string> = {
   'RR-HT': 'R★R Brand hand tools & punches catalogue',
   MIRANDA: 'Miranda products catalogue',
   TAPARIA: 'Taparia Tools catalogue (April 2026)',
+  // Lifting & material handling range: the source catalogue is deliberately not named (client request).
+  LIFTING: '',
 };
 
 /**
@@ -102,7 +104,7 @@ export class ProductDetail {
     ];
     if (p.standard) rows.push({ label: 'Standard', value: p.standard });
     if (p.variants.length) rows.push({ label: 'Sizes listed', value: String(p.variants.length) });
-    // rows.push({ label: 'Listed in', value: `${SOURCE_NAMES[p.source.doc]}, p. ${p.source.page}` });
+    //if (SOURCE_NAMES[p.source.doc]) rows.push({ label: 'Listed in', value: `${SOURCE_NAMES[p.source.doc]}, p. ${p.source.page}` });
     return rows.filter((r) => r.value);
   });
 

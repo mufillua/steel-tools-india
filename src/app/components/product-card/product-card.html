@@ -19,7 +19,8 @@
     <p class="pc__spec">{{ p.summary }}</p>
 
     <p class="pc__meta">
-      <span>{{ p.brand }}</span>
+      <!-- unbranded products (lifting range) show their type instead of a brand -->
+      <span>{{ p.brand || p.subcategory }}</span>
       @if (p.standard) {
         <span class="pc__dot" aria-hidden="true"></span>
         <span class="pc__std">{{ p.standard }}</span>

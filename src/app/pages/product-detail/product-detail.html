@@ -27,7 +27,9 @@
         <p class="pd-summary">{{ p.summary }}</p>
 
         <ul class="pd-tags" role="list">
-          <li class="pd-tag pd-tag--brand">{{ p.brand }}</li>
+          @if (p.brand) {
+            <li class="pd-tag pd-tag--brand">{{ p.brand }}</li>
+          }
           @if (p.standard) {
             <li class="pd-tag">{{ p.standard }}</li>
           }

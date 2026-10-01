@@ -92,7 +92,7 @@ export const COMPANY: CompanyConfig = {
 
   showPrices: false,
 
-  // TODO(confirm): replace with the real domain before launch.
+  // Live domain. Serve the site at this exact address (no www) and redirect www to it.
   siteUrl: 'https://www.steeltoolsindia.in',
 };
 

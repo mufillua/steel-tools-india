@@ -5,7 +5,7 @@
  * Every value here must come from the supplied catalogue documents; unknown = omitted, never guessed.
  */
 
-export type SourceDoc = 'RR-2025' | 'RR-2026' | 'RR-CT' | 'RR-HT' | 'MIRANDA' | 'TAPARIA';
+export type SourceDoc = 'RR-2025' | 'RR-2026' | 'RR-CT' | 'RR-HT' | 'MIRANDA' | 'TAPARIA' | 'LIFTING';
 
 export interface ProductSpec {
   label: string;
@@ -35,6 +35,7 @@ export interface Product {
   /** Category slug — see data/categories.ts */
   category: string;
   subcategory: string;
+  /** Manufacturer brand. Empty ('') when the brand must not be shown (lifting range, by client request); the UI hides it. */
   brand: string;
   /** Standard(s) printed with the product heading, e.g. "DIN 6499". */
   standard?: string;

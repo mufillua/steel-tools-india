@@ -1,0 +1,9153 @@
+[
+ {
+  "pdf_page": 4,
+  "half": "L",
+  "printed_page": 1,
+  "name": "HEAVY DUTY CHAIN PULLEY BLOCK",
+  "series": "T SERIES",
+  "features": [
+   "Grade 80 alloy Steel Load Chain for Strength and wear resistance",
+   "Unique Chain Guide Mechanism",
+   "Very Low Operational Effort",
+   "Rugged steel body construction yet lightweight & portable",
+   "Double cover protection for brake chamber",
+   "Heavy duty use for all Industrial Applications",
+   "Minimum maintenance for reduced downtime.",
+   "Safety factor is 4 time swl",
+   "Proof load tested to 1.5 times rated capacity",
+   "Endurance tested to over 1500 continuous cycles"
+  ],
+  "callouts": [
+   "Surface hardened gears",
+   "Anti corrosive powder coated finish",
+   "Double ratchet pawl for enhanced safety",
+   "Heavy duty load chain wheel",
+   "Strong Suspension plate",
+   "Heavy Duty Chain Pulley Block T Series (grey corner badge)"
+  ],
+  "standard": "IS 3832",
+  "certification": null,
+  "table": null,
+  "extra_tables": [],
+  "photos": [
+   "main product photo: red chain pulley block with black hooks and load/hand chains, '1 TON' nameplate, left side",
+   "five circular inset photos: gears, nameplate/finish, ratchet pawl, load chain wheel, suspension plate"
+  ],
+  "notes": [
+   "Badge: 'CONFIRMING TO IS 3832'"
+  ],
+  "flags": [
+   "No spec table on this page; the spec table for T series is on the facing page (PDF 4R, 'CHAIN PULLEY BLOCK T SERIES') - likely the same product",
+   "Brand-derived series name 'T / ' \\'T\\'' appears in series line and corner badge",
+   "Brand word '[maker]' appears on product nameplate in photo",
+   "Printed 'continuos' corrected to 'continuous'"
+  ]
+ },
+ {
+  "pdf_page": 4,
+  "half": "R",
+  "printed_page": 2,
+  "name": "CHAIN PULLEY BLOCK",
+  "series": "T SERIES",
+  "features": [
+   "Individual Spares readily available",
+   "Overload markings on hook",
+   "Range - 500kgs - 50,000kgs",
+   "Heat treated alloy steel triple spur gear & pinion shaft",
+   "Meets all international standards",
+   "Overload limit available as an option",
+   "Drop forged and heat treated alloy hooks"
+  ],
+  "callouts": [],
+  "standard": "IS 3832",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (Tonnes)",
+    "Running Test Load (KN)",
+    "Effort Required Lift Max Load (N)",
+    "Load Chain DIA (MM)",
+    "No. of Columns of Load Chain",
+    "Dimension A",
+    "Dimension B",
+    "Dimension C",
+    "Dimension D",
+    "Dimension K",
+    "Net Weight (KG)",
+    "Extra Weight Per Meter of Extra Lift"
+   ],
+   "rows": [
+    [
+     "CBST0053",
+     "0.5",
+     "6.3",
+     "210",
+     "6",
+     "1",
+     "135",
+     "128",
+     "310",
+     "34.8",
+     "21.2",
+     "4.76",
+     "1.15"
+    ],
+    [
+     "CBST0103",
+     "1",
+     "12.5",
+     "260",
+     "6",
+     "1",
+     "140",
+     "165",
+     "390",
+     "38.5",
+     "28.5",
+     "6.8",
+     "1.15"
+    ],
+    [
+     "CBST0203",
+     "2",
+     "25",
+     "272",
+     "8",
+     "1",
+     "180",
+     "210",
+     "470",
+     "50.5",
+     "37",
+     "12.85",
+     "1.65"
+    ],
+    [
+     "CBST0303",
+     "3",
+     "37.5",
+     "280",
+     "8",
+     "2",
+     "165",
+     "225",
+     "560",
+     "59.5",
+     "42",
+     "14.8",
+     "3.2"
+    ],
+    [
+     "CBST0503",
+     "5",
+     "62.5",
+     "358",
+     "10",
+     "2",
+     "185",
+     "265",
+     "690",
+     "66.5",
+     "48",
+     "25.3",
+     "4.65"
+    ],
+    [
+     "CBST7503",
+     "7.5",
+     "93.75",
+     "358",
+     "10",
+     "3",
+     "185",
+     "355",
+     "950",
+     "85",
+     "54",
+     "42",
+     "6.7"
+    ],
+    [
+     "CBST1003",
+     "10",
+     "125",
+     "370",
+     "10",
+     "4",
+     "180",
+     "410",
+     "880",
+     "84",
+     "53",
+     "48.5",
+     "9"
+    ],
+    [
+     "CBST1503",
+     "15",
+     "187.5",
+     "370x2",
+     "10",
+     "6",
+     "180",
+     "490",
+     "1050",
+     "105",
+     "77.5",
+     "89",
+     "13"
+    ],
+    [
+     "CBST2003",
+     "20",
+     "250",
+     "370x2",
+     "10",
+     "8",
+     "185",
+     "685",
+     "1010",
+     "110",
+     "81",
+     "117",
+     "17.5"
+    ],
+    [
+     "CBST3003",
+     "30",
+     "375",
+     "370x2",
+     "10",
+     "12",
+     "185",
+     "700",
+     "1030",
+     "113",
+     "76",
+     "150",
+     "25.8"
+    ],
+    [
+     "CBST5003",
+     "50",
+     "625",
+     "370x2",
+     "10",
+     "22",
+     "410",
+     "900",
+     "1950",
+     "170",
+     "130",
+     "1085",
+     "47.3"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "line drawings: two hoist views (side 'A' and front 'B', overall height 'C', hook dims 'D','K') shown for two hoist sizes"
+  ],
+  "notes": [
+   "Table heading: 'CONFIRMS TO IS 3832'"
+  ],
+  "flags": [
+   "Brand-derived series name 'T in series line",
+   "Printed 'Rang' corrected to 'Range' and 'pining shaft' corrected to 'pinion shaft'",
+   "Dimensions A-K have no unit printed (likely mm)",
+   "Extra Weight Per Meter of Extra Lift has no unit printed (likely kg)",
+   "Net Weight for 50 t printed as 1085 (looks inconsistent with other sizes, copied as printed)",
+   "Likely the spec page for the 'HEAVY DUTY CHAIN PULLEY BLOCK T SERIES' on PDF 4L"
+  ]
+ },
+ {
+  "pdf_page": 5,
+  "half": "L",
+  "printed_page": 3,
+  "name": "CHAIN PULLEY BLOCK",
+  "series": "REVOLVE SERIES",
+  "features": [
+   "This innovative and patented hand chain hoist the Revolve is designed for heavy industrial applications.",
+   "This 360 rotating hand chain guide allows hoist operations from various angles and helps the operator stay out of the danger zone.",
+   "Premium brake system ensures safe operation, low maintenance and is extremely quiet. Sealed Roller Bearings",
+   "Strength: Equipped with hardened load chain for optimum strength, flexibility and long wear life.",
+   "Low maintenance: Enclosed housing allows outdoor use. The load brake requires no lubrication.",
+   "Quality features: Wheel cover with guide slots guard against jamming and slipping of chain. Forged swivel hooks and latches prevent twisting of chain and reduce unintentional unhooking of the unit or the load. Chain guide and stripper ensures proper fit of chain over pocket wheel. Two-stage gear reduction with hardened gears and pinion."
+  ],
+  "callouts": [
+   "Use From Any Direction",
+   "360° Rotation"
+  ],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (Ton)",
+    "Test Load",
+    "Hand Chain Pull to Lift Rated Load (Kg)",
+    "Hand Chain Overhauled to Lift Load One Foot (Kg)",
+    "Dimension A (mm)",
+    "Dimension B (mm)",
+    "Dimension C (mm)",
+    "Dimension D (mm)",
+    "Dimension E (mm)",
+    "Dimension F (mm)",
+    "Net Weight (Kg)",
+    "Extra Weight Per Meter of Extra Lift"
+   ],
+   "rows": [
+    [
+     "CBRL0103",
+     "1",
+     "1.25",
+     "25.00",
+     "14.93",
+     "355.6",
+     "22",
+     "26.6",
+     "14.3",
+     "176",
+     "155.6",
+     "7.2",
+     "1.15"
+    ],
+    [
+     "CBRL0203",
+     "2",
+     "2.5",
+     "32.00",
+     "21.64",
+     "395",
+     "30",
+     "35.0",
+     "20.6",
+     "203",
+     "182.5",
+     "11",
+     "1.65"
+    ],
+    [
+     "CBRL0303",
+     "3",
+     "3.75",
+     "35.00",
+     "26.51",
+     "520",
+     "38",
+     "39.7",
+     "25.4",
+     "224",
+     "220.0",
+     "14.5",
+     "3.2"
+    ],
+    [
+     "CBRL0503",
+     "5",
+     "6.25",
+     "36.5",
+     "—",
+     "636",
+     "50",
+     "50",
+     "90",
+     "48",
+     "280",
+     "23.5",
+     "4.65"
+    ],
+    [
+     "CBRL1003",
+     "10",
+     "12.5",
+     "37.7",
+     "—",
+     "798",
+     "65",
+     "87",
+     "90",
+     "53",
+     "300",
+     "47",
+     "6.7"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "main photo: silver/grey chain pulley block with black hooks, '2 TON' nameplate, left side",
+   "photo of hoist lifting a wooden crate with purple slings",
+   "line drawing with dimensions A-F (side and front views)",
+   "diagram of hand chain usable from any direction",
+   "360° Rotation badge"
+  ],
+  "notes": [],
+  "flags": [
+   "Brand word '[maker]' appears in feature text ('the Revolve') and on nameplate in photo",
+   "Test Load column has no unit printed (values match tonnes)",
+   "Extra Weight Per Meter of Extra Lift has no unit printed",
+   "Item codes CBRL0103-CBRL1003 are identical to those used for the B SERIES table on PDF 5R"
+  ]
+ },
+ {
+  "pdf_page": 5,
+  "half": "R",
+  "printed_page": 4,
+  "name": "CHAIN PULLEY BLOCK",
+  "series": "B SERIES",
+  "features": [
+   "Surface hardened gears",
+   "Anti corrosive powder coated finish",
+   "Double ratchet pawl for enhanced safety",
+   "Heavy duty load chain wheel",
+   "Strong Suspension plate",
+   "Heavy duty use for all Industrial Applications",
+   "Grade 80 alloy Steel Load Chain for Strength and wear resistance",
+   "Minimum maintenance for reduced downtime.",
+   "Smooth passage of load chain and smooth hand chain operation",
+   "Japanese design and technology",
+   "Compact in size and light in weight for easy handling",
+   "Safety factor is 4 time swl",
+   "1 year warranty against manufacturing defects"
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": "CE CERTIFIED",
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (Tonnes)",
+    "Test Load (Tonnes)",
+    "Effort (KN)",
+    "Chain Dia (MM)",
+    "No of Columns of Load Chain",
+    "Dimension A",
+    "Dimension B",
+    "Dimension C",
+    "Dimension D",
+    "Dimension K",
+    "Weight (KG)",
+    "Extra Weight Per Meter of Extra Lift"
+   ],
+   "rows": [
+    [
+     "CBRL0103",
+     "1",
+     "1.25",
+     "330",
+     "6",
+     "1",
+     "140",
+     "145",
+     "360",
+     "36.5",
+     "22",
+     "6.14",
+     "1.15"
+    ],
+    [
+     "CBRL0203",
+     "2",
+     "2.5",
+     "365",
+     "8",
+     "1",
+     "155",
+     "185",
+     "400",
+     "46.3",
+     "31.5",
+     "10.7",
+     "1.65"
+    ],
+    [
+     "CBRL0303",
+     "3",
+     "3.75",
+     "360",
+     "8",
+     "2",
+     "150",
+     "205",
+     "515",
+     "48.5",
+     "32",
+     "13.1",
+     "3.2"
+    ],
+    [
+     "CBRL0503",
+     "5",
+     "6.25",
+     "410",
+     "10",
+     "2",
+     "190",
+     "255",
+     "660",
+     "64.8",
+     "42.5",
+     "23.9",
+     "4.65"
+    ],
+    [
+     "CBRL1003",
+     "10",
+     "12.5",
+     "410",
+     "10",
+     "4",
+     "190",
+     "390",
+     "850",
+     "85",
+     "50.3",
+     "47.24",
+     "9"
+    ],
+    [
+     "CBRL2003",
+     "20",
+     "25",
+     "410X2",
+     "10",
+     "8",
+     "225",
+     "490",
+     "1050",
+     "105",
+     "77.5",
+     "89",
+     "17.5"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "main photo: blue chain pulley block with black hooks and chains, '1 TON' nameplate, right side",
+   "line drawing with dimensions A, B, C, D, K"
+  ],
+  "notes": [],
+  "flags": [
+   "Brand-derived series name 'B' in series line (nameplate in photo reads 'B- SERIES' and '[maker]')",
+   "Effort unit printed as 'KN' with values 330-410 (likely N; copied as printed)",
+   "Dimensions A-K have no unit printed",
+   "Extra Weight Per Meter of Extra Lift has no unit printed",
+   "Item codes CBRL0103-CBRL1003 duplicate those of the REVOLVE SERIES on PDF 5L"
+  ]
+ },
+ {
+  "pdf_page": 6,
+  "half": "L",
+  "printed_page": 5,
+  "name": "RATCHET LEVER HOIST",
+  "series": null,
+  "features": [
+   "German Design and Technology",
+   "Grade 80 Alloy Steel Chain",
+   "Safety latch on Hooks",
+   "Light weight and Compact.",
+   "Superior Asbestos free Brake",
+   "Low Operation effort",
+   "Anti corrosive Powder Coated Finish",
+   "Use it to Lift, Lower Fasten and Pull"
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (Tons)",
+    "Standard Lift (Mtr)",
+    "Effort Required Lift (N)",
+    "Load Chain Diameter (mm)",
+    "Load Chain Fall",
+    "Dimension A (mm)",
+    "Dimension B (mm)",
+    "Dimension C (mm)",
+    "Dimension D (mm)",
+    "Dimension H (mm)",
+    "Dimension L (mm)",
+    "Dimension K (mm)",
+    "Net Weight (kg)",
+    "Extra Weight /Mtr of Extra"
+   ],
+   "rows": [
+    [
+     "RLSL0215",
+     "0.25",
+     "1.5",
+     "160",
+     "5",
+     "1",
+     "119",
+     "79",
+     "90.5",
+     "31",
+     "237",
+     "168",
+     "24",
+     "2.7",
+     "0.4"
+    ],
+    [
+     "RLSL0515",
+     "0.5",
+     "1.5",
+     "140",
+     "5",
+     "1",
+     "135",
+     "85",
+     "110",
+     "35",
+     "290",
+     "180",
+     "21",
+     "2.81",
+     "0.6"
+    ],
+    [
+     "RLSL0715",
+     "0.8",
+     "1.5",
+     "140",
+     "6",
+     "1",
+     "150",
+     "90",
+     "140",
+     "39",
+     "365",
+     "245",
+     "28.5",
+     "5.96",
+     "0.78"
+    ],
+    [
+     "RLSL1515",
+     "1.6",
+     "1.5",
+     "220",
+     "8",
+     "1",
+     "170",
+     "107",
+     "165",
+     "50.2",
+     "450",
+     "320",
+     "38.4",
+     "9.14",
+     "1.38"
+    ],
+    [
+     "RLSL3015",
+     "3.2",
+     "1.5",
+     "320",
+     "10",
+     "1",
+     "200",
+     "120",
+     "215",
+     "59.5",
+     "545",
+     "375",
+     "42.1",
+     "15.92",
+     "2.15"
+    ],
+    [
+     "RLSL6015",
+     "6.3",
+     "1.5",
+     "340",
+     "10",
+     "2",
+     "205",
+     "120",
+     "215",
+     "66.5",
+     "700",
+     "380",
+     "48",
+     "22.58",
+     "4.3"
+    ],
+    [
+     "RLSL9015",
+     "9",
+     "1.5",
+     "340",
+     "10",
+     "3",
+     "210",
+     "125",
+     "215",
+     "93.5",
+     "800",
+     "400",
+     "56",
+     "34.3",
+     "6.5"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "main photo: red ratchet lever hoist with black handle grip, hooks and zinc load chain, '3.2 TON' label, right side",
+   "line drawings: front and side views with dimensions A, B, C, D, H, K, L"
+  ],
+  "notes": [],
+  "flags": [
+   "Printed 'Break' corrected to 'Brake'",
+   "'Extra Weight /Mtr of Extra' label is truncated as printed and has no unit (likely kg)"
+  ]
+ },
+ {
+  "pdf_page": 6,
+  "half": "R",
+  "printed_page": 6,
+  "name": "GEAR TROLLEY",
+  "series": null,
+  "features": [
+   "Anti corrosive powder coated finish",
+   "Use of high quality bearings",
+   "Adjustable to various rail widths"
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity",
+    "I-Beam Width (mm)",
+    "Dimension A",
+    "Dimension B",
+    "Dimension C",
+    "Dimension H",
+    "Dimension F",
+    "Dimension M",
+    "Net Weight (Kgs)"
+   ],
+   "rows": [
+    [
+     "GTSL0103",
+     "1 TON",
+     "90-120",
+     "220",
+     "220",
+     "205",
+     "120",
+     "8",
+     "90",
+     "10.3"
+    ],
+    [
+     "GTSL0203",
+     "2 TON",
+     "100-125",
+     "230",
+     "235",
+     "220",
+     "125",
+     "10",
+     "100",
+     "14.5"
+    ],
+    [
+     "GTSL0303",
+     "3 TON",
+     "110-160",
+     "260",
+     "275",
+     "260",
+     "160",
+     "10",
+     "110",
+     "21.3"
+    ],
+    [
+     "GTSL0503",
+     "5 TON",
+     "140-160",
+     "320",
+     "360",
+     "345",
+     "210",
+     "14",
+     "140",
+     "38.8"
+    ],
+    [
+     "GTSL1003",
+     "10 TON",
+     "140-210",
+     "430",
+     "410",
+     "425",
+     "270",
+     "23",
+     "175",
+     "63.5"
+    ],
+    [
+     "GTSL2003",
+     "20 TON",
+     "122-210",
+     "475",
+     "798",
+     "575",
+     "300",
+     "—",
+     "—",
+     "—"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "main photo: red geared trolley with hand chain mounted on blue I-beam",
+   "line drawings: side view (B, C) and front view (A, F, M, H)"
+  ],
+  "notes": [],
+  "flags": [
+   "Dimensions A, B, C, H, F, M have no unit printed (likely mm)",
+   "20 TON I-beam width '122-210' is lower than 10 TON's lower bound - copied as printed"
+  ]
+ },
+ {
+  "pdf_page": 7,
+  "half": "L",
+  "printed_page": 7,
+  "name": "PULLING & LIFTING MACHINE HEAVY DUTY",
+  "series": null,
+  "features": [
+   "Adjustable handle for easy operation.",
+   "Backward lever & Forward lever placed in tandem providing a slim design and assuring power transfer along the center.",
+   "Spare shear pins: Two spare shear pins located in the carrying handle.",
+   "Built-in shearing pin prevent overload. It functions at approx. 50% overload and the pins can be replaced without removing the load.",
+   "Anchor bolt offers numerous and versatile connection possibilities with load hooks, sling ropes and sling chains.",
+   "Stamped serial number for easy identification.",
+   "High strength cast aluminum alloy body: Light weight, simple to operate. Smooth contour design with large flat bottom surface for increased stability in horizontal as well as vertical working position",
+   "Galv.steel wire rope mounted on a reel: Every ropes is operationally tested to 150% of the rated Capacity and issued with an individual test certificate."
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Rated Capacity (T)",
+    "Pulling Capacity (T)",
+    "Lifting Capacity (T)",
+    "Rope dia meter (mm)",
+    "Rated Forward Travel",
+    "Rated Forward Travel Hand Power (N)",
+    "Max Overall Size",
+    "Dimension A",
+    "Dimension B",
+    "Dimension C",
+    "Dimension D",
+    "Dimension E",
+    "Dimension F",
+    "Dimension G",
+    "WEIGHT (K.G.)"
+   ],
+   "rows": [
+    [
+     "PMIP0710",
+     "0.8",
+     "1.2",
+     "0.8",
+     "8.3",
+     ">52",
+     ">331",
+     "440x70x255mm",
+     "30",
+     "60",
+     "101",
+     "415",
+     "425",
+     "185",
+     "240",
+     "9.3"
+    ],
+    [
+     "PMIP2310",
+     "1.6",
+     "2.4",
+     "1.6",
+     "11",
+     ">55",
+     ">445",
+     "560x100x295mm",
+     "56",
+     "68",
+     "120",
+     "545",
+     "556",
+     "200",
+     "270",
+     "14.87"
+    ],
+    [
+     "PMIP3510",
+     "3.2",
+     "4.8",
+     "3.2",
+     "16",
+     ">28",
+     ">441",
+     "675x170x350mm",
+     "51",
+     "98",
+     "150",
+     "635",
+     "655",
+     "220",
+     "315",
+     "24.3"
+    ],
+    [
+     "PMIP5810",
+     "5.4",
+     "8",
+     "5.4",
+     "20",
+     ">25",
+     ">745",
+     "940x170x440mm",
+     "67",
+     "135",
+     "195",
+     "925",
+     "935",
+     "305",
+     "405",
+     "59.5"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "main photo: red pulling & lifting machine (wire rope hoist) with two levers, telescopic handle and wire rope with red hook",
+   "two smaller photos of red machine bodies (top right)",
+   "photo of coiled galvanised wire rope with red hook",
+   "line drawings: end view (A, B, C) and side view (D, E, F, G)"
+  ],
+  "notes": [],
+  "flags": [
+   "Brand word '[maker]' faintly embossed on machine body in a photo",
+   "Rated Forward Travel has no unit printed",
+   "Dimensions A-G have no unit printed (likely mm)"
+  ]
+ },
+ {
+  "pdf_page": 7,
+  "half": "R",
+  "printed_page": 8,
+  "name": "HEAVY DUTY ELECTRIC CHAIN HOIST",
+  "series": null,
+  "features": [],
+  "callouts": [
+   "Shell : It is made of light aluminum alloy shell, light but hard. The cooling fan is specially designed to ensure quick heat dissipation with the rate up to 40% and continuous service. The integral enclosed structure is applicable to places like chemical plant and electroplate factory.",
+   "Support Frame : The loading support frame consists of two steel plates, which is extremely sturdy",
+   "Transformer : 24V/36V transformer device. This device is used to prohibit unexpected accidents caused by electric leakage and guarantees the safe use while raining.",
+   "Side magnetic braking device : The magnetic force generator is the latest design which is featured for generating magnetic force. It allows instant brake as soon as the electric power cut is Off.Thus the braking safety while loading is guaranteed.",
+   "IP 55 Protection",
+   "Electromagnetic contractor : Electromagnetic contractor can be used safely under high frequency.",
+   "Chain : The chain shall adopt the G 80 ultra heat-treated steel alloy chain. It can be safely used in poor environments such as rain sea water and chemicals.",
+   "Inverse phases sequence protecting device : It is the special electrical installation which controls the circuit not to work in case of wiring error in the power supply.",
+   "Push button : Waterproof push button is supplied. It is light and durable.",
+   "Upper & Lower Limit switch is installed to prevent damage due to Excessing lifting or Lowering",
+   "Hook :It is drop forged with perfect strength that is hard to break. The operations safety of the lower hook is ensured by its 360 degrees rotation and safety latch"
+  ],
+  "standard": null,
+  "certification": null,
+  "table": null,
+  "extra_tables": [],
+  "photos": [
+   "central photo: orange electric chain hoist '2 TON' with black chain bag, yellow pendant push button and black hooks, with labelled leader lines to features"
+  ],
+  "notes": [],
+  "flags": [
+   "No spec table on this page; spec tables for electric chain hoists follow on PDF 8L (Single Speed) and 8R (Dual Speed)",
+   "Brand word '[maker]' appears on hoist nameplate in photo",
+   "'contractor' printed (likely 'contactor'); 'power cut is Of f.Thus' printed with stray spacing - transcribed as 'Off.Thus'; 'and safety latch' printed as 'anc safety latch' (typo fixed)"
+  ]
+ },
+ {
+  "pdf_page": 8,
+  "half": "L",
+  "printed_page": 9,
+  "name": "ELECTRIC CHAIN HOIST",
+  "series": "Single Speed",
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity in Tonnes",
+    "Lifting Speed (m/min)",
+    "Motor Power (Kw)",
+    "Rotation Speed (r/min)",
+    "Insulation Grade",
+    "Power Supply",
+    "Control Voltage",
+    "No. of Chain",
+    "Spec. Of Load Chain",
+    "Net Weight (Kg)"
+   ],
+   "rows": [
+    [
+     "MHSL00505",
+     "0.5",
+     "7.2",
+     "0.8",
+     "1440",
+     "F",
+     "3P220V~690V",
+     "24V/36V/48V",
+     "1",
+     "ϕ6.3",
+     "47"
+    ],
+    [
+     "MHSL0105",
+     "1",
+     "6.6",
+     "1.5",
+     "1440",
+     "F",
+     "3P220V~690V",
+     "24V/36V/48V",
+     "1",
+     "ϕ7.1",
+     "61"
+    ],
+    [
+     "MHSL0205",
+     "2",
+     "3.3",
+     "1.5",
+     "1440",
+     "F",
+     "3P220V~690V",
+     "24V/36V/48V",
+     "2",
+     "ϕ7.1",
+     "73"
+    ],
+    [
+     "MHSL0305",
+     "3",
+     "5.4",
+     "3.0",
+     "1440",
+     "F",
+     "3P220V~690V",
+     "24V/36V/48V",
+     "1",
+     "ϕ11.2",
+     "122"
+    ],
+    [
+     "MHSL0505",
+     "5",
+     "2.7",
+     "3.0",
+     "1440",
+     "F",
+     "3P220V~690V",
+     "24V/36V/48V",
+     "2",
+     "ϕ11.2",
+     "151"
+    ],
+    [
+     "MHSL7505",
+     "7.5",
+     "1.8",
+     "3.0",
+     "1440",
+     "F",
+     "3P220V~690V",
+     "24V/36V/48V",
+     "3",
+     "ϕ11.2",
+     "176"
+    ],
+    [
+     "MHSL1005",
+     "10",
+     "2.7",
+     "3.0X2",
+     "1440",
+     "F",
+     "3P220V~690V",
+     "24V/36V/48V",
+     "4",
+     "ϕ11.2",
+     "300"
+    ]
+   ]
+  },
+  "extra_tables": [
+   {
+    "title": "Size Specification (MM)",
+    "columns": [
+     "Capacity (T)",
+     "Dimension H (MM)",
+     "Dimension A (MM)",
+     "Dimension B (MM)",
+     "Dimension D (MM)",
+     "Dimension E (MM)"
+    ],
+    "rows": [
+     [
+      "0.5",
+      "530",
+      "460",
+      "230",
+      "288",
+      "178"
+     ],
+     [
+      "1",
+      "650",
+      "520",
+      "260",
+      "300",
+      "176"
+     ],
+     [
+      "2",
+      "835",
+      "520",
+      "260",
+      "300",
+      "236"
+     ],
+     [
+      "3",
+      "845",
+      "615",
+      "295",
+      "430",
+      "265"
+     ],
+     [
+      "5",
+      "1000",
+      "615",
+      "295",
+      "430",
+      "325"
+     ],
+     [
+      "7.5",
+      "1200",
+      "615",
+      "295",
+      "505",
+      "320"
+     ],
+     [
+      "10",
+      "1400",
+      "630",
+      "315",
+      "890",
+      "445"
+     ]
+    ]
+   }
+  ],
+  "photos": [
+   "photo: orange electric chain hoist '2 TON' with black chain bag, yellow pendant and black hooks, right side",
+   "line drawings: end and side views with dimensions A, B, D, E, H"
+  ],
+  "notes": [
+   "Main table titled 'Technical Specification'",
+   "Rotation Speed, Insulation Grade, Power Supply and Control Voltage are single merged cells across all capacities"
+  ],
+  "flags": [
+   "Brand word '[maker]' on hoist nameplate in photo",
+   "Lifting speed for 3 t (5.4) is higher than for 2 t (3.3) - copied as printed"
+  ]
+ },
+ {
+  "pdf_page": 8,
+  "half": "R",
+  "printed_page": 10,
+  "name": "ELECTRIC CHAIN HOIST",
+  "series": "Dual Speed",
+  "features": [],
+  "callouts": [
+   "0.5TON~5TON"
+  ],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (T)",
+    "Lifting Motor",
+    "Lifting Speed (m/min)",
+    "Travelling Motor Power (Kw)",
+    "Chain Size x falls (mm) x (nos)",
+    "Insulation",
+    "Power Input",
+    "Control Voltage"
+   ],
+   "rows": [
+    [
+     "DSEH00305",
+     "0.3",
+     "with inverter, Dual Speed Variable Speed",
+     "9.1/3.1 0.91-91",
+     "0.56",
+     "4.0x1",
+     "F",
+     "220V-690V",
+     "24V/36V/48/V"
+    ],
+    [
+     "DSEH00505",
+     "0.5",
+     "with inverter, Dual Speed Variable Speed",
+     "8.3/2.8 0.83-8.3",
+     "0.9",
+     "6.3x1",
+     "F",
+     "220V-690V",
+     "24V/36V/48/V"
+    ],
+    [
+     "DSEH0105",
+     "1 Ton",
+     "with inverter, Dual Speed Variable Speed",
+     "6.3/2.1 0.63-6.3",
+     "1.5",
+     "7.1x1",
+     "F",
+     "220V-690V",
+     "24V/36V/48/V"
+    ],
+    [
+     "DSEH0205",
+     "2 Ton",
+     "with inverter, Dual Speed Variable Speed",
+     "6.9/2.3 0.69-6.9",
+     "3",
+     "10.0x1",
+     "F",
+     "220V-690V",
+     "24V/36V/48/V"
+    ],
+    [
+     "DSEH0305",
+     "3 Ton",
+     "with inverter, Dual Speed Variable Speed",
+     "6.6/2.2 0.66-6.6",
+     "3",
+     "11.2x1",
+     "F",
+     "220V-690V",
+     "24V/36V/48/V"
+    ],
+    [
+     "DSEH0505",
+     "5 Ton",
+     "with inverter, Dual Speed Variable Speed",
+     "3.3/1.1 0.33-3.3",
+     "3",
+     "11.2x2",
+     "F",
+     "220V-690V",
+     "24V/36V/48/V"
+    ]
+   ]
+  },
+  "extra_tables": [
+   {
+    "title": "Size Specification (MM)",
+    "columns": [
+     "Capacity (T)",
+     "Dimension H (MM)",
+     "Dimension A (MM)",
+     "Dimension B (MM)",
+     "Dimension D (MM)",
+     "Dimension E (MM)",
+     "Dimension K (MM)",
+     "Dimension L (MM)"
+    ],
+    "rows": [
+     [
+      "0.3",
+      "354",
+      "475",
+      "260",
+      "290",
+      "190",
+      "20",
+      "28"
+     ],
+     [
+      "0.5",
+      "380",
+      "510",
+      "265",
+      "305",
+      "200",
+      "20",
+      "28"
+     ],
+     [
+      "1",
+      "410",
+      "620",
+      "326",
+      "295",
+      "175",
+      "24",
+      "34"
+     ],
+     [
+      "2",
+      "615",
+      "745",
+      "410",
+      "420",
+      "280",
+      "30",
+      "40"
+     ],
+     [
+      "3",
+      "615",
+      "745",
+      "410",
+      "420",
+      "280",
+      "35",
+      "48"
+     ],
+     [
+      "5",
+      "845",
+      "745",
+      "410",
+      "420",
+      "345",
+      "44",
+      "48"
+     ]
+    ]
+   }
+  ],
+  "photos": [
+   "photo: orange electric chain hoist '1 TON' with black chain bag, yellow pendant and black hook, right side",
+   "line drawings: side and end views with dimensions A, B, D, E, H, K, L"
+  ],
+  "notes": [
+   "Main table titled 'Technical Specification'",
+   "Lifting Motor cell is printed in two parts: 'with inverter' and 'Dual Speed / Variable Speed'",
+   "Each Lifting Speed cell is printed on two lines (e.g. '9.1/3.1' over '0.91-91')"
+  ],
+  "flags": [
+   "Brand word '[maker]' on hoist nameplate in photo",
+   "0.3 t lifting speed second line printed '0.91-91' (likely '0.91-9.1') - copied as printed",
+   "Control Voltage printed '24V/36V/48/V' (stray slash) - copied as printed",
+   "Badge says '0.5TON~5TON' but table starts at 0.3 t"
+  ]
+ },
+ {
+  "pdf_page": 9,
+  "half": "L",
+  "printed_page": 11,
+  "name": "ELECTRIC TROLLEY",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (Ton)",
+    "Dimension A (mm)",
+    "Dimension B (mm)",
+    "Dimension R (mm)",
+    "Dimension T (mm)",
+    "Speed 50Hz (m/min)",
+    "Motor (kw)",
+    "Plate Thickness",
+    "I-Beam",
+    "Minimum Radious of Turn (M)",
+    "Shaft (Dia & Length",
+    "Weight (Kgs)"
+   ],
+   "rows": [
+    [
+     "ETSL0055",
+     "0.5",
+     "315",
+     "210",
+     "140",
+     "230",
+     "11/21",
+     "0.4",
+     "10",
+     "170",
+     "0.8",
+     "30.5x260",
+     "46.5"
+    ],
+    [
+     "ETSL0105",
+     "1",
+     "315",
+     "210",
+     "140",
+     "230",
+     "11/21",
+     "0.4",
+     "10",
+     "170",
+     "0.8",
+     "30.5x260",
+     "46.5"
+    ],
+    [
+     "ETSL0205",
+     "2",
+     "320",
+     "220",
+     "140",
+     "225",
+     "11/21",
+     "0.4",
+     "12",
+     "200",
+     "0.8",
+     "36x290",
+     "52"
+    ],
+    [
+     "ETSL0305",
+     "3",
+     "340",
+     "250",
+     "140",
+     "230",
+     "11/21",
+     "0.75",
+     "14",
+     "200",
+     "1",
+     "42x290",
+     "64"
+    ],
+    [
+     "ETSL0505",
+     "5",
+     "400",
+     "290",
+     "140",
+     "230",
+     "11/21",
+     "0.75",
+     "16",
+     "240",
+     "1.8",
+     "53x350",
+     "88"
+    ],
+    [
+     "ETSL7505",
+     "7.5",
+     "430",
+     "305",
+     "140",
+     "230",
+     "11/21",
+     "0.75",
+     "16",
+     "240",
+     "1.8",
+     "53x415",
+     "102"
+    ],
+    [
+     "ETSL1005",
+     "10",
+     "500",
+     "375",
+     "140",
+     "230",
+     "11/21",
+     "0.75",
+     "20",
+     "270",
+     "2.0",
+     "70x490",
+     "143"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "main photo: orange electric trolley with motor, gearbox and wheels, '1 TON' nameplate",
+   "line drawings under 'Dimensions' showing R, T (side views) and A, B (end view)"
+  ],
+  "notes": [
+   "Dimensions A, B, R, T are printed under the group header 'Unit (mm)'"
+  ],
+  "flags": [
+   "Brand word '[maker]' on trolley nameplate in photo",
+   "Header 'Shaft (Dia & Length' printed without closing bracket and without unit; 'Radious' printed as such (likely 'Radius')",
+   "Plate Thickness and I-Beam columns have no unit printed (likely mm)",
+   "No feature bullets on this page"
+  ]
+ },
+ {
+  "pdf_page": 9,
+  "half": "R",
+  "printed_page": 12,
+  "name": "POLYESTER DUPLEX WEBBING SLING",
+  "series": null,
+  "features": [
+   "Can be single ply, double ply or four ply .",
+   "The specification can be adjusted according to the customer' needs.",
+   "Loading surface is wide, to reduce the weight at each loading point.",
+   "No damage to tender objects.",
+   "Various loading method.",
+   "High strength / weight ratio.",
+   "Anti-abrasion and anti-cutting protection sleeve can be attached.",
+   "Has special label, working load is differentiated by colors according to international standard.",
+   "Light and soft, can be used in small narrow space.",
+   "Non-conductive, no danger of electric stroke.",
+   "In compliance with European standard En 1492-1:2000, ASME B 30.9 & IS 15041."
+  ],
+  "callouts": [
+   "APPROVED BY ISI (ISI mark)"
+  ],
+  "standard": "En 1492-1:2000, ASME B 30.9, IS 15041",
+  "certification": "Approved by ISI (ISI mark)",
+  "table": {
+   "columns": [
+    "Single Max Working Load Limit - Upright (P 1.0)",
+    "Color",
+    "Single Max Working Load Limit - Chocked (P 0.8)",
+    "Single Max Working Load Limit - β 0°-7° (P 2.0)",
+    "Single Max Working Load Limit - β 7°- 45° (P 1.4)",
+    "Single Max Working Load Limit - β 45°- 60° (P 1.0)",
+    "Single Max Working Load Limit - β 45° (P 0.7)",
+    "2-Legs Max. Working Load Limit - Upright 45° (P 1.4)",
+    "2-Legs Max. Working Load Limit - Chocked 45° (P 1.12)",
+    "2-Legs Max. Working Load Limit - Upright 45°-60° (P 1.0)",
+    "2-Legs Max. Working Load Limit - Chocked 45°-60° (P 0.8)",
+    "Approx Width (mm) - 5:1",
+    "Approx Width (mm) - 6:1",
+    "Approx Width (mm) - 7:1"
+   ],
+   "rows": [
+    [
+     "1000",
+     "Violet",
+     "800",
+     "2000",
+     "1400",
+     "1000",
+     "700",
+     "1400",
+     "1120",
+     "1000",
+     "800",
+     "25",
+     "25",
+     "30"
+    ],
+    [
+     "2000",
+     "Green",
+     "1600",
+     "4000",
+     "2800",
+     "2000",
+     "1400",
+     "2800",
+     "2240",
+     "2000",
+     "1600",
+     "50",
+     "50",
+     "50"
+    ],
+    [
+     "3000",
+     "Yellow",
+     "2400",
+     "6000",
+     "4200",
+     "3000",
+     "2100",
+     "4200",
+     "3360",
+     "3000",
+     "2400",
+     "75",
+     "75",
+     "75"
+    ],
+    [
+     "4000",
+     "Grey",
+     "3200",
+     "8000",
+     "5600",
+     "4000",
+     "2800",
+     "5600",
+     "4480",
+     "4000",
+     "3200",
+     "100",
+     "100",
+     "100"
+    ],
+    [
+     "5000",
+     "Red",
+     "4000",
+     "10000",
+     "7000",
+     "5000",
+     "3500",
+     "7000",
+     "5600",
+     "5000",
+     "4000",
+     "125",
+     "125",
+     "125"
+    ],
+    [
+     "6000",
+     "Brown",
+     "4800",
+     "12000",
+     "8400",
+     "6000",
+     "4200",
+     "8400",
+     "6720",
+     "6000",
+     "4800",
+     "150",
+     "150",
+     "150"
+    ],
+    [
+     "8000",
+     "Blue",
+     "6400",
+     "16000",
+     "11200",
+     "8000",
+     "5600",
+     "11200",
+     "8960",
+     "8000",
+     "6400",
+     "200",
+     "200",
+     "200"
+    ],
+    [
+     "10000",
+     "Orange",
+     "8000",
+     "20000",
+     "14000",
+     "10000",
+     "7000",
+     "14000",
+     "11200",
+     "10000",
+     "8000",
+     "250",
+     "250",
+     "250"
+    ],
+    [
+     "12000",
+     "Orange",
+     "9600",
+     "24000",
+     "16800",
+     "12000",
+     "8400",
+     "16800",
+     "13440",
+     "12000",
+     "9600",
+     "300",
+     "300",
+     "300"
+    ],
+    [
+     "16000",
+     "Blue",
+     "12800",
+     "32000",
+     "22400",
+     "16000",
+     "11200",
+     "22400",
+     "17920",
+     "16000",
+     "12800",
+     "200",
+     "200",
+     "200"
+    ],
+    [
+     "20000",
+     "Orange",
+     "16000",
+     "60000",
+     "42000",
+     "20000",
+     "21000",
+     "42000",
+     "33600",
+     "20000",
+     "16000",
+     "250",
+     "250",
+     "250"
+    ],
+    [
+     "24000",
+     "Orange",
+     "20000",
+     "50000",
+     "35000",
+     "25000",
+     "17500",
+     "35000",
+     "28000",
+     "25000",
+     "20000",
+     "300",
+     "300",
+     "300"
+    ],
+    [
+     "30000",
+     "Orange",
+     "24000",
+     "60000",
+     "42000",
+     "30000",
+     "21000",
+     "42000",
+     "33600",
+     "30000",
+     "24000",
+     "300",
+     "250",
+     "—"
+    ],
+    [
+     "40000",
+     "Orange",
+     "32000",
+     "80000",
+     "56000",
+     "40000",
+     "28000",
+     "56000",
+     "44800",
+     "40000",
+     "32000",
+     "—",
+     "250",
+     "—"
+    ],
+    [
+     "50000",
+     "Orange",
+     "40000",
+     "100000",
+     "70000",
+     "50000",
+     "35000",
+     "70000",
+     "56000",
+     "50000",
+     "40000",
+     "—",
+     "—",
+     "—"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "grey and red long webbing slings printed '[maker]', right side",
+   "small red/blue sling loop",
+   "orange/salmon round sling printed '[maker]'",
+   "blue flat sling printed '[maker]'",
+   "small pictograms in table header showing each lifting method (upright, chocked, basket angles, 2-leg)"
+  ],
+  "notes": [
+   "Table caption: 'Webbing Sling's lifting method and maximum safety working Load parameter.'",
+   "Table header: 'Max.SWL=Mode Coefficient P x Working Load Limit' (single) and 'Max.SWL of lifting method' (2-legs)",
+   "Mode coefficients printed under pictograms: 1.0, 0.8, 2.0, 1.4, 1.0, 0.7 (single) and 1.4, 1.12, 1.0, 0.8 (2-legs)",
+   "Colour code per WLL: Violet 1000, Green 2000, Yellow 3000, Grey 4000, Red 5000, Brown 6000, Blue 8000, Orange 10000+ (Blue also printed for 16000)",
+   "Approx Width sub-columns 5:1, 6:1, 7:1 are safety-factor ratios"
+  ],
+  "flags": [
+   "Brand word '[maker]' printed on slings in all photos",
+   "First column is the Single Upright WLL (P 1.0), used as the capacity identifier; colour moved to second column (colours repeat). No units printed for the WLL values (likely kg)",
+   "Row 20000: β 0°-7° = 60000, β 45° = 21000, 2-leg Upright 45° = 42000, Chocked 45° = 33600 do not match the coefficients (looks copied from the 30000 row) - copied as printed",
+   "Row 24000: Chocked 20000, β 0°-7° 50000, 7°-45° 35000, 45°-60° 25000, 45° 17500 etc. do not match the coefficients (look like 25000-based values) - copied as printed",
+   "Row 16000 colour printed Blue (out of sequence with Orange rows) - copied as printed",
+   "Single β column headed '45°' (last) and '45°- 60°' overlap as printed",
+   "Printed 'Non-conuctive' corrected to 'Non-conductive'"
+  ]
+ },
+ {
+  "pdf_page": 10,
+  "half": "L",
+  "printed_page": 13,
+  "name": "POLYESTER ROUND SLING",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Single Max Working Load Limit - Upright (P 1.0)",
+    "Color",
+    "Single Max Working Load Limit - Chocked (P 0.8)",
+    "Single Max Working Load Limit - β 0°-7° (P 2.0)",
+    "Single Max Working Load Limit - β 7°- 45° (P 1.4)",
+    "Single Max Working Load Limit - β 45°- 60° (P 1.0)",
+    "Single Max Working Load Limit - β 45° (P 0.7)",
+    "2-Legs Max. Working Load Limit - Upright 45° (P 1.4)",
+    "2-Legs Max. Working Load Limit - Chocked 45° (P 1.12)",
+    "Unlabelled column 1",
+    "Unlabelled column 2",
+    "Unlabelled column 3"
+   ],
+   "rows": [
+    [
+     "1000",
+     "Violet",
+     "800",
+     "2000",
+     "1400",
+     "1000",
+     "700",
+     "1400",
+     "1120",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "2000",
+     "Green",
+     "1600",
+     "4000",
+     "2800",
+     "2000",
+     "1400",
+     "2800",
+     "2240",
+     "2000",
+     "1600",
+     "60"
+    ],
+    [
+     "3000",
+     "Yellow",
+     "2400",
+     "6000",
+     "4200",
+     "3000",
+     "2100",
+     "4200",
+     "3360",
+     "3000",
+     "2400",
+     "70"
+    ],
+    [
+     "4000",
+     "Grey",
+     "3200",
+     "8000",
+     "5600",
+     "4000",
+     "2800",
+     "5600",
+     "4480",
+     "4000",
+     "3200",
+     "75"
+    ],
+    [
+     "5000",
+     "Red",
+     "4000",
+     "10000",
+     "7000",
+     "5000",
+     "3500",
+     "7000",
+     "5600",
+     "5000",
+     "4000",
+     "80"
+    ],
+    [
+     "6000",
+     "Brown",
+     "4800",
+     "12000",
+     "8400",
+     "6000",
+     "4200",
+     "8400",
+     "6720",
+     "6000",
+     "4800",
+     "90"
+    ],
+    [
+     "8000",
+     "Blue",
+     "6400",
+     "16000",
+     "11200",
+     "8000",
+     "5600",
+     "11200",
+     "8960",
+     "8000",
+     "6400",
+     "100"
+    ],
+    [
+     "10000",
+     "Orange",
+     "8000",
+     "20000",
+     "14000",
+     "10000",
+     "7000",
+     "14000",
+     "11200",
+     "10000",
+     "8000",
+     "110"
+    ],
+    [
+     "12000",
+     "Orange",
+     "9600",
+     "24000",
+     "16800",
+     "12000",
+     "8400",
+     "16800",
+     "13440",
+     "12000",
+     "9600",
+     "125"
+    ],
+    [
+     "15000",
+     "Blue",
+     "12000",
+     "40000",
+     "28000",
+     "15000",
+     "14000",
+     "28000",
+     "22400",
+     "15000",
+     "12000",
+     "150"
+    ],
+    [
+     "20000",
+     "Orange",
+     "16000",
+     "60000",
+     "42000",
+     "20000",
+     "21000",
+     "42000",
+     "33600",
+     "20000",
+     "16000",
+     "180"
+    ],
+    [
+     "25000",
+     "Orange",
+     "20000",
+     "50000",
+     "35000",
+     "25000",
+     "17500",
+     "35000",
+     "28000",
+     "25000",
+     "20000",
+     "200"
+    ],
+    [
+     "30000",
+     "Orange",
+     "24000",
+     "60000",
+     "42000",
+     "30000",
+     "21000",
+     "42000",
+     "33600",
+     "30000",
+     "24000",
+     "220"
+    ],
+    [
+     "40000",
+     "Orange",
+     "32000",
+     "80000",
+     "56000",
+     "40000",
+     "28000",
+     "56000",
+     "44800",
+     "40000",
+     "32000",
+     "250"
+    ],
+    [
+     "50000",
+     "Orange",
+     "40000",
+     "100000",
+     "70000",
+     "50000",
+     "35000",
+     "70000",
+     "56000",
+     "50000",
+     "40000",
+     "270"
+    ],
+    [
+     "60000",
+     "Orange",
+     "48000",
+     "120000",
+     "84000",
+     "60000",
+     "42000",
+     "84000",
+     "67200",
+     "60000",
+     "48000",
+     "280"
+    ],
+    [
+     "80000",
+     "Orange",
+     "64000",
+     "160000",
+     "112000",
+     "80000",
+     "56000",
+     "112000",
+     "89600",
+     "80000",
+     "64000",
+     "300"
+    ],
+    [
+     "100000",
+     "Orange",
+     "80000",
+     "200000",
+     "140000",
+     "100000",
+     "70000",
+     "140000",
+     "112000",
+     "100000",
+     "80000",
+     "320"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "green round sling with black protective sleeve section, top left",
+   "large greyscale background photo of a grey round sling printed '[maker]' in use on heavy steel machinery"
+  ],
+  "notes": [
+   "Table caption: 'A Round Sling's lifting method and maximum safety working load parameter.'",
+   "Table header: 'Max.SWL=Mode Coefficient P x Working Load Limit' (single) and 'Max.SWL of lifting method' (2-legs)",
+   "Mode coefficients printed under pictograms: 1.0, 0.8, 2.0, 1.4, 1.0, 0.7 (single) and 1.4, 1.12 (2-legs)"
+  ],
+  "flags": [
+   "Brand word '[maker]' printed on the sling in the background photo",
+   "Last three columns have no header printed. Columns 1 and 2 match Upright 45°-60° (P 1.0) and Chocked 45°-60° (P 0.8) as on the webbing sling table; column 3 (60-320) is probably an approximate width/size - unconfirmed",
+   "Violet row has no values in the three unlabelled columns (written as —)",
+   "First column is the Single Upright WLL (P 1.0), used as the capacity identifier; colour moved to second column. No units printed for WLL values (likely kg)",
+   "Row 15000: β 0°-7° 40000, 7°-45° 28000, 45° 14000, 2-leg 28000/22400 do not match the coefficients - copied as printed",
+   "Row 20000: β 0°-7° 60000, β 45° 21000, 2-leg Upright 45° 42000, Chocked 45° 33600 do not match the coefficients - copied as printed",
+   "Row 25000: β 0°-7° 50000 does not match coefficient 2.0 - copied as printed",
+   "Row 15000 colour printed Blue among Orange rows - copied as printed",
+   "No feature bullets on this page"
+  ]
+ },
+ {
+  "pdf_page": 10,
+  "half": "R",
+  "printed_page": 14,
+  "name": "INSTRUCTIONS FOR WEBBING SLINGS AND ROUND SLINGS",
+  "series": null,
+  "features": [],
+  "callouts": [
+   "Sling should be examined before using. if intact.",
+   "Use a protection sleeve in case of lifting items with sharp edges.",
+   "Watch the angle.",
+   "Do not allow the load to rest on the sling. Do not drag the load on the sling.",
+   "Do not over load the sling and take notice of the temperature.",
+   "Be careful with chemicals.",
+   "Slings should never be knotted or twisted.",
+   "Do not use damaged slings."
+  ],
+  "standard": null,
+  "certification": null,
+  "table": null,
+  "extra_tables": [],
+  "photos": [
+   "eight instruction pictograms in a 4x2 grid (worker examining sling, protection sleeve on sharp edge, sling angle, crossed-out dragging load, weight and thermometer +100°C/0°C/-40°C, hand with chemical, crossed-out knotted sling, crossed-out damaged sling)"
+  ],
+  "notes": [],
+  "flags": [
+   "This is an instructions/usage section, not a product",
+   "Printed 'Sing should be examined' corrected to 'Sling should be examined'"
+  ]
+ },
+ {
+  "pdf_page": 10,
+  "half": "R",
+  "printed_page": 14,
+  "name": "Anti Abbrassive Sleeve",
+  "series": null,
+  "features": [
+   "These type of woven fabric sleeves help protect the life of the slings when exposed to wide abrasive surfaces such as concrete.",
+   "The padding efficiently saves the slings from any possible damage."
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": null,
+  "extra_tables": [],
+  "photos": [
+   "yellow woven fabric sleeve, and red, black and yellow sleeves stacked"
+  ],
+  "notes": [],
+  "flags": [
+   "Heading printed 'Anti Abbrassive' (likely 'Anti Abrasive') - kept as printed",
+   "No spec table"
+  ]
+ },
+ {
+  "pdf_page": 10,
+  "half": "R",
+  "printed_page": 14,
+  "name": "Anti Cutting Sleeve",
+  "series": null,
+  "features": [
+   "These sleeves are specially designed to make them susceptible to cutting.",
+   "These sleeves protect slings from sharp edges during rigging.",
+   "It is a must for rigging loads with sharp or razor like edges."
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": null,
+  "extra_tables": [],
+  "photos": [
+   "stack of coloured (pink, green, yellow, grey, red) channel-shaped protective sleeves"
+  ],
+  "notes": [],
+  "flags": [
+   "Text says 'susceptible to cutting' (probably meant 'resistant to cutting') - copied as printed",
+   "No spec table"
+  ]
+ },
+ {
+  "pdf_page": 10,
+  "half": "R",
+  "printed_page": 14,
+  "name": "Edge Protector",
+  "series": null,
+  "features": [
+   "Specially designed for handling steel fabricated structure where the edge protector sticks to the steel surface and the sling avoids direct contact with the product."
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": null,
+  "extra_tables": [],
+  "photos": [
+   "beige/cream corner edge protector with metal fittings holding a green webbing sling"
+  ],
+  "notes": [],
+  "flags": [
+   "No spec table"
+  ]
+ },
+ {
+  "pdf_page": 11,
+  "half": "L",
+  "printed_page": 15,
+  "name": "CARGO LASHING RATCHET",
+  "series": null,
+  "features": [
+   "Cargo Lashing Ratchet are the modern, light weight and throughly reliable method of securing all types of load across an entire spectrum of requirements. They offer significant advantages over steel banding, rope or chains, having superior performance and properties as detailed below.",
+   "Ratchet lashing are used to fix the cargo while transporting, shifting or moving storage. It being more secure, reliable and much lighter in weight as compared to chains, wire and jute rope which were traditionally used. It has become a more reliable method of securing all type of load across as entire spectrum of requirements. it also offers a significant advantage over steel branding, the latter being much heavier and more prone to damaging the finished goods, it provides a superior level of cargo control through high pre-tensioning.",
+   "Depending upon the loading requirements, the webbing of the lashing system is available in 25mm, 35mm, 50mm, 75mm and 100mm. There are different types ratch systems which are carefully designed and tested to expert the right amount of pre-tensioning of the lashing. These are manufactures as pre the BS5759 & EN 12195-2:2000 standards.",
+   "The Ratchet Lashings have certain advantage over its counter parts :",
+   "Load restraint using a tensioning device (Ratchet)",
+   "Effective and safe control of load being tied down.",
+   "No damage to the load being tied down.",
+   "Extremely quick & efficiently tie down & release of load thus save time.",
+   "Lower weight also means lower transportation cost.",
+   "Suppleness of polyester accommodates irregularities of the load. Chain may damage the load or grip in the wrong place.",
+   "Cost Effective than chain slings user friendly Zero maintenance"
+  ],
+  "callouts": [],
+  "standard": "BS5759, EN 12195-2:2000",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Webbing Width (mm)",
+    "Minimum Break Strength - Two Parts (Kg)",
+    "Minimum Break Strength - Tendless (Kg)",
+    "Rated Assembly Strength - Two Parts (Kg)",
+    "Rated Assembly Strength - Tendless (Kg)"
+   ],
+   "rows": [
+    [
+     "25",
+     "1200",
+     "2400",
+     "600",
+     "1200"
+    ],
+    [
+     "35",
+     "2000",
+     "4000",
+     "1000",
+     "2000"
+    ],
+    [
+     "50",
+     "3000",
+     "6000",
+     "1500",
+     "3000"
+    ],
+    [
+     "50",
+     "5000",
+     "10000",
+     "2500",
+     "5000"
+    ],
+    [
+     "75",
+     "10000",
+     "20000",
+     "5000",
+     "10000"
+    ],
+    [
+     "100",
+     "12000",
+     "24000",
+     "6000",
+     "12000"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "greyscale photo of ratchet lashing strap securing a vehicle wheel on a transport deck",
+   "orange ratchet lashing strap with ratchet buckle, roll of webbing and claw/J hooks"
+  ],
+  "notes": [],
+  "flags": [
+   "Sub-header 'Tendless (Kg)' printed (likely 'Endless') - kept as printed",
+   "Two rows with webbing width 50 (3000/6000 and 5000/10000) - no item codes to distinguish them",
+   "Original text has typos kept as printed: 'throughly', 'steel branding', 'ratch systems', 'to expert the right amount', 'manufactures as pre the'"
+  ]
+ },
+ {
+  "pdf_page": 11,
+  "half": "R",
+  "printed_page": 16,
+  "name": "G80 ALLOY STEEL CHAIN",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": "EN1677",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (Ton)",
+    "Chain Size",
+    "INN Length (Y)",
+    "Outer Length (X)",
+    "INN Width (R)",
+    "Outer Width (W)",
+    "MTR/ Weight (KGS)"
+   ],
+   "rows": [
+    [
+     "LCSL0806",
+     "1",
+     "6",
+     "18",
+     "29.7",
+     "8.7",
+     "20.5",
+     "0.78"
+    ],
+    [
+     "LCSL8063",
+     "1.3",
+     "6.3",
+     "18",
+     "31.2",
+     "8.7",
+     "21.3",
+     "0.84"
+    ],
+    [
+     "LCSL0807",
+     "1.5",
+     "7.1",
+     "21",
+     "35",
+     "9.7",
+     "23.8",
+     "1.1"
+    ],
+    [
+     "LCSL0808",
+     "2",
+     "8",
+     "24",
+     "39.5",
+     "10.42",
+     "26.32",
+     "1.38"
+    ],
+    [
+     "LCSL0810",
+     "3",
+     "10",
+     "30",
+     "49.5",
+     "13.9",
+     "33.7",
+     "2.15"
+    ],
+    [
+     "LCSL0811",
+     "3.3",
+     "11.2",
+     "33",
+     "55.8",
+     "15.2",
+     "37.6",
+     "2.68"
+    ],
+    [
+     "LCSL0812",
+     "5",
+     "12",
+     "36",
+     "59.5",
+     "18.3",
+     "41.5",
+     "3.00"
+    ],
+    [
+     "LCSL0814",
+     "6.3",
+     "14",
+     "42",
+     "69.2",
+     "19.1",
+     "46.3",
+     "4.00"
+    ],
+    [
+     "LCSL0816",
+     "8",
+     "16",
+     "48",
+     "79.1",
+     "22.2",
+     "53.6",
+     "5.30"
+    ],
+    [
+     "LCSL0818",
+     "10",
+     "18",
+     "54",
+     "88.7",
+     "25.9",
+     "61.4",
+     "6.95"
+    ],
+    [
+     "LCSL0820",
+     "12.5",
+     "20",
+     "60",
+     "99.1",
+     "31.1",
+     "69.9",
+     "8.6"
+    ],
+    [
+     "LCSL0822",
+     "15",
+     "22",
+     "66",
+     "108.5",
+     "33.6",
+     "76.4",
+     "10.3"
+    ],
+    [
+     "LCSL0826",
+     "21",
+     "26",
+     "78",
+     "126.7",
+     "34.9",
+     "87.2",
+     "14.5"
+    ],
+    [
+     "LCSL0828",
+     "25",
+     "28",
+     "84",
+     "135",
+     "35",
+     "90.6",
+     "17.3"
+    ],
+    [
+     "LCSL0832",
+     "31.5",
+     "32",
+     "96",
+     "155",
+     "40",
+     "102.1",
+     "22.29"
+    ]
+   ]
+  },
+  "extra_tables": [
+   {
+    "title": "WORKING LOAD LIMITS ACC. TO EN1677",
+    "columns": [
+     "Chain Size (Ø MM)",
+     "Single Leg (KG)",
+     "Double Leg β 0-45° / α 0-90° (KG)",
+     "Double Leg β 45-60° / α 90-120° (KG)",
+     "Triple or Quadriple Leg β 0-45° / α 0-90° (KG)",
+     "Triple or Quadriple Leg β 45-60° / α 90-120° (KG)",
+     "Endless Choking (KG)"
+    ],
+    "rows": [
+     [
+      "6",
+      "1120",
+      "1600",
+      "1120",
+      "2360",
+      "1700",
+      "1800"
+     ],
+     [
+      "7",
+      "1500",
+      "2120",
+      "1500",
+      "3150",
+      "2240",
+      "2500"
+     ],
+     [
+      "8",
+      "2000",
+      "2800",
+      "2000",
+      "4250",
+      "3000",
+      "3150"
+     ],
+     [
+      "10",
+      "3150",
+      "4250",
+      "3150",
+      "6700",
+      "4750",
+      "5000"
+     ],
+     [
+      "13",
+      "5300",
+      "7500",
+      "5300",
+      "11200",
+      "8000",
+      "8500"
+     ],
+     [
+      "16",
+      "8000",
+      "11200",
+      "8000",
+      "17000",
+      "11800",
+      "12500"
+     ],
+     [
+      "20",
+      "12500",
+      "17000",
+      "12500",
+      "26500",
+      "19000",
+      "18000"
+     ],
+     [
+      "22",
+      "15000",
+      "21200",
+      "15000",
+      "31500",
+      "22400",
+      "23600"
+     ],
+     [
+      "26",
+      "21200",
+      "30000",
+      "21200",
+      "45000",
+      "31500",
+      "33500"
+     ],
+     [
+      "32",
+      "31500",
+      "45000",
+      "31500",
+      "67000",
+      "47500",
+      "50000"
+     ],
+     [
+      "36",
+      "40000",
+      "56000",
+      "40000",
+      "85000",
+      "60000",
+      "—"
+     ],
+     [
+      "40",
+      "50000",
+      "71000",
+      "50000",
+      "106000",
+      "75000",
+      "—"
+     ]
+    ]
+   }
+  ],
+  "photos": [
+   "large blue/black chain links down the right edge",
+   "line drawing of chain links with dimensions W, R, Y, X"
+  ],
+  "notes": [
+   "WLL table factor row (printed at bottom): Single Leg 1, Double Leg 1,4 and 1, Triple or Quadriple Leg 2,1 and 1,5, Endless Choking 0,8",
+   "WLL table header shows pictograms for each sling configuration (single leg 90°, double leg, 3/4-leg, endless choking)"
+  ],
+  "flags": [
+   "Item code for 6.3 chain printed 'LCSL8063' (pattern of others suggests e.g. 'LCSL0863') - copied as printed",
+   "Chain dimension columns (INN Length, Outer Length, INN Width, Outer Width) and Chain Size have no unit printed (likely mm)",
+   "Endless Choking blank for 36 and 40 mm (written as —)",
+   "WLL table chain sizes (6,7,8,10,13,16,20,22,26,32,36,40) differ from main table sizes",
+   "'Quadriple' printed (likely 'Quadruple') - kept as printed"
+  ]
+ },
+ {
+  "pdf_page": 12,
+  "half": "L",
+  "printed_page": 17,
+  "name": "DEE SHACKLES",
+  "series": "Screw Pin Dee Shackle",
+  "features": [
+   "Working Load Limits Are Permanently Shown On Every Shackle",
+   "All Shackles Meet The Performance Requirements Of Federal Specification RR-C-271F, Type IVA, Grade 2, Class 2, In General",
+   "All Shackles Are Galvanised",
+   "All Shackles Are Drop Forged"
+  ],
+  "callouts": [],
+  "standard": "Federal Specification RR-C-271F, Type IVA, Grade 2, Class 2",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L",
+    "SIZE (IN)",
+    "C (Body)",
+    "D (Pin)",
+    "L (Inn Length)",
+    "W (Width)",
+    "Weight (KG)"
+   ],
+   "rows": [
+    [
+     "DSSL08003",
+     "0.5",
+     "1/4",
+     "6.09",
+     "7.9",
+     "21",
+     "12.2",
+     "0.04"
+    ],
+    [
+     "DSSL08007",
+     "0.75",
+     "5/16",
+     "8",
+     "9.6",
+     "25.3",
+     "12.6",
+     "0.07"
+    ],
+    [
+     "DSSL0801",
+     "1",
+     "3/8",
+     "9.8",
+     "11.05",
+     "31.2",
+     "15.7",
+     "0.12"
+    ],
+    [
+     "DSSL0815",
+     "1.5",
+     "7/16",
+     "11.1",
+     "12.7",
+     "36.6",
+     "17.6",
+     "0.17"
+    ],
+    [
+     "DSSL0802",
+     "2",
+     "1/2",
+     "12.8",
+     "16",
+     "37.6",
+     "19.5",
+     "0.28"
+    ],
+    [
+     "DSSL0803",
+     "3.25",
+     "5/8",
+     "16.5",
+     "19.8",
+     "49.4",
+     "26.9",
+     "0.58"
+    ],
+    [
+     "DSSL0805",
+     "4.75",
+     "3/4",
+     "19.1",
+     "21.9",
+     "63.6",
+     "31.6",
+     "0.95"
+    ],
+    [
+     "DSSL0806",
+     "6.5",
+     "7/8",
+     "21.6",
+     "25.3",
+     "70",
+     "36.7",
+     "1.42"
+    ],
+    [
+     "DSSL0808",
+     "8.5",
+     "1",
+     "24.2",
+     "28.5",
+     "79.3",
+     "42.8",
+     "2.01"
+    ],
+    [
+     "DSSL0810",
+     "9.5",
+     "1.1/8",
+     "28.5",
+     "32.5",
+     "92.3",
+     "45.7",
+     "3.05"
+    ],
+    [
+     "DSSL0812",
+     "12",
+     "1.1/4",
+     "30.8",
+     "35.2",
+     "97",
+     "50.5",
+     "4"
+    ],
+    [
+     "DSSL0813",
+     "13.5",
+     "1.3/8",
+     "34.3",
+     "38.5",
+     "113.5",
+     "57.4",
+     "5.27"
+    ],
+    [
+     "DSSL0817",
+     "17",
+     "1.1/2",
+     "37.8",
+     "40.5",
+     "125.5",
+     "61.2",
+     "6.9"
+    ],
+    [
+     "DSSL0825",
+     "25",
+     "1.3/4",
+     "45.2",
+     "50.3",
+     "154",
+     "74.2",
+     "11.7"
+    ],
+    [
+     "DSSL0835",
+     "35",
+     "2",
+     "51.6",
+     "55.3",
+     "163",
+     "82.5",
+     "18.3"
+    ],
+    [
+     "DSSL0855",
+     "55",
+     "2.1/2",
+     "65.2",
+     "69.7",
+     "195",
+     "106",
+     "32.9"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "galvanised screw pin dee shackle with orange pin, body embossed with '[maker]', 'CE' and WLL markings",
+   "line drawing with dimensions C, D, L, W"
+  ],
+  "notes": [],
+  "flags": [
+   "Brand word '[maker]' embossed on shackle body in photo",
+   "W.L.L column has no unit printed (likely tonnes); C, D, L, W have no unit printed (likely mm)",
+   "Sizes such as '1.1/8' are printed with a dot meaning 1-1/8 - copied as printed"
+  ]
+ },
+ {
+  "pdf_page": 12,
+  "half": "R",
+  "printed_page": 18,
+  "name": "NUT BOLT DEE SHACKLE",
+  "series": null,
+  "features": [
+   "Working Load Limits Are Permanently Shown On Every Shackle",
+   "All Shackles Meet The Performance Requirements Of Federal Specification RR-C-271F, Type IVA, Grade 2, Class 2, In General",
+   "All Shackles Are Galvanised",
+   "All Shackles Are Drop Forged"
+  ],
+  "callouts": [],
+  "standard": "Federal Specification RR-C-271F, Type IVA, Grade 2, Class 2",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L",
+    "SIZE (In)",
+    "C (Body)",
+    "D (Pin)",
+    "L (Inn Length)",
+    "W (Width)",
+    "Weight ( KG )"
+   ],
+   "rows": [
+    [
+     "DNSL0801",
+     "1",
+     "3/8",
+     "9.8",
+     "11.05",
+     "32",
+     "15.8",
+     "0.13"
+    ],
+    [
+     "DNSL0802",
+     "2",
+     "1/2",
+     "11.5",
+     "15.3",
+     "41.5",
+     "19.8",
+     "0.27"
+    ],
+    [
+     "DNSL0803",
+     "3.25",
+     "5/8",
+     "16.6",
+     "20",
+     "50",
+     "26.5",
+     "0.64"
+    ],
+    [
+     "DNSL0805",
+     "4.75",
+     "3/4",
+     "18.7",
+     "22.1",
+     "60",
+     "31.2",
+     "0.96"
+    ],
+    [
+     "DNSL0806",
+     "6.5",
+     "7/8",
+     "21.7",
+     "25.4",
+     "71.8",
+     "37.3",
+     "1.56"
+    ],
+    [
+     "DNSL0808",
+     "8.5",
+     "1",
+     "25.3",
+     "28.3",
+     "80.2",
+     "42.7",
+     "2.2"
+    ],
+    [
+     "DNSL0810",
+     "9.5",
+     "1.1/8",
+     "28.3",
+     "32.5",
+     "91.6",
+     "46.1",
+     "3.24"
+    ],
+    [
+     "DNSL0812",
+     "12",
+     "1.1/4",
+     "30.9",
+     "34.8",
+     "97.1",
+     "49.7",
+     "4.34"
+    ],
+    [
+     "DNSL0813",
+     "13.5",
+     "1.3/8",
+     "35.3",
+     "38.4",
+     "114.5",
+     "56.5",
+     "6.05"
+    ],
+    [
+     "DNSL0817",
+     "17",
+     "1.1/2",
+     "37.8",
+     "41.1",
+     "124.5",
+     "61.6",
+     "7.77"
+    ],
+    [
+     "DNSL0825",
+     "25",
+     "1.3/4",
+     "45.5",
+     "50.4",
+     "154.8",
+     "75.5",
+     "13.1"
+    ],
+    [
+     "DNSL0835",
+     "35",
+     "2",
+     "51.5",
+     "55.3",
+     "160",
+     "87",
+     "19.07"
+    ],
+    [
+     "DNSL0855",
+     "55",
+     "2.1/2",
+     "70.5",
+     "66.1",
+     "195",
+     "115.5",
+     "35.09"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "galvanised bolt-type dee shackle with orange bolt, nut and cotter pin, body embossed with '[maker]', 'CE' and WLL markings",
+   "line drawing with dimensions C, D, L, W"
+  ],
+  "notes": [],
+  "flags": [
+   "Brand word '[maker]' embossed on shackle body in photo",
+   "W.L.L column has no unit printed (likely tonnes); C, D, L, W have no unit printed (likely mm)",
+   "55 t row: C (Body) 70.5 is larger than D (Pin) 66.1, unlike all other rows - copied as printed"
+  ]
+ },
+ {
+  "pdf_page": 13,
+  "half": "L",
+  "printed_page": 19,
+  "name": "SCREW PIN BOW SHACKLES",
+  "series": null,
+  "features": [
+   "Working Load Limits Are Permanently Shown On Every Shackle",
+   "All Shackles Meet The Performance Requirements Of Federal Specification RR-C-271F, Type IVA, Grade 2, Class 2, In General",
+   "All Shackles Are Galvanised",
+   "All Shackles Are Drop Forged"
+  ],
+  "callouts": [],
+  "standard": "Federal Specification RR-C-271F, Type IVA, Grade 2, Class 2",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L",
+    "Size (In)",
+    "d (Body)",
+    "D (Pin)",
+    "L (Inn Length)",
+    "W (Width)",
+    "B (Inn Width)",
+    "Weight ( KG )"
+   ],
+   "rows": [
+    [
+     "BSSL0801",
+     "1",
+     "3/8",
+     "9.98",
+     "10.99",
+     "34.8",
+     "15.29",
+     "25.70",
+     "0.13"
+    ],
+    [
+     "BSSL0802",
+     "2",
+     "1/2",
+     "13.3",
+     "16",
+     "48",
+     "18.3",
+     "32",
+     "0.33"
+    ],
+    [
+     "BSSL0803",
+     "3.25",
+     "5/8",
+     "16.3",
+     "20.1",
+     "59.6",
+     "27.4",
+     "42.4",
+     "0.63"
+    ],
+    [
+     "BSSL0805",
+     "4.75",
+     "3/4",
+     "18.6",
+     "22",
+     "72.7",
+     "32.3",
+     "50.5",
+     "0.99"
+    ],
+    [
+     "BSSL0806",
+     "6.5",
+     "7/8",
+     "21.7",
+     "25.3",
+     "85.3",
+     "36.3",
+     "57.5",
+     "1.54"
+    ],
+    [
+     "BSSL0808",
+     "8.5",
+     "1",
+     "24.7",
+     "28.4",
+     "95",
+     "42.7",
+     "67.6",
+     "2.22"
+    ],
+    [
+     "BSSL0810",
+     "9.5",
+     "1.1/8",
+     "29.05",
+     "32.3",
+     "105",
+     "44.6",
+     "71.7",
+     "3.37"
+    ],
+    [
+     "BSSL0812",
+     "12",
+     "1.1/4",
+     "31.9",
+     "35.3",
+     "117.1",
+     "49",
+     "80",
+     "4.45"
+    ],
+    [
+     "BSSL0813",
+     "13.5",
+     "1.3/8",
+     "34.6",
+     "38.4",
+     "135.5",
+     "56.7",
+     "90.6",
+     "5.80"
+    ],
+    [
+     "BSSL0817",
+     "17",
+     "1.1/2",
+     "38.1",
+     "40.8",
+     "150.5",
+     "62.1",
+     "97.5",
+     "7.57"
+    ],
+    [
+     "BSSL0825",
+     "25",
+     "1.3/4",
+     "45.5",
+     "50.5",
+     "170.5",
+     "75.4",
+     "126",
+     "12.77"
+    ],
+    [
+     "BSSL0835",
+     "35",
+     "2",
+     "50.7",
+     "55.6",
+     "198",
+     "85.5",
+     "143.5",
+     "18.9"
+    ],
+    [
+     "BSSL0855",
+     "55",
+     "2.1/2",
+     "66",
+     "70",
+     "245",
+     "105",
+     "170",
+     "37.7"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "galvanised screw pin bow (anchor) shackle with orange pin, body embossed with '[maker]', 'CE' and WLL markings",
+   "line drawing with dimensions B, d, L, D, W"
+  ],
+  "notes": [],
+  "flags": [
+   "Brand word '[maker]' embossed on shackle body in photo",
+   "W.L.L column has no unit printed (likely tonnes); d, D, L, W, B have no unit printed (likely mm)"
+  ]
+ },
+ {
+  "pdf_page": 13,
+  "half": "R",
+  "printed_page": 20,
+  "name": "NUT BOLT BOW SHACKLES",
+  "series": null,
+  "features": [
+   "Working Load Limits Are Permanently Shown On Every Shackle",
+   "All Shackles Meet The Performance Requirements Of Federal Specification RR-C-271F, Type IVA, Grade 2, Class 2, In General",
+   "All Shackles Are Galvanised",
+   "All Shackles Are Drop Forged"
+  ],
+  "callouts": [],
+  "standard": "Federal Specification RR-C-271F, Type IVA, Grade 2, Class 2",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L",
+    "Size (In)",
+    "d (Body)",
+    "D (Pin)",
+    "L (Inn Length)",
+    "W (Width)",
+    "B (Inn Width)",
+    "Weight ( KG )"
+   ],
+   "rows": [
+    [
+     "BNSL0801",
+     "1",
+     "3/8",
+     "10.1",
+     "10.9",
+     "35.6",
+     "15.6",
+     "25.5",
+     "0.15"
+    ],
+    [
+     "BNSL0802",
+     "2",
+     "1/2",
+     "11.5",
+     "15.3",
+     "49",
+     "19.6",
+     "32.5",
+     "0.32"
+    ],
+    [
+     "BNSL0803",
+     "3.25",
+     "5/8",
+     "15.8",
+     "19.4",
+     "59.4",
+     "27.5",
+     "41.4",
+     "0.61"
+    ],
+    [
+     "BNSL0805",
+     "4.75",
+     "3/4",
+     "18.5",
+     "21.9",
+     "72.5",
+     "31.5",
+     "50.4",
+     "1.09"
+    ],
+    [
+     "BNSL0806",
+     "6.5",
+     "7/8",
+     "22.6",
+     "25.2",
+     "85.3",
+     "36.6",
+     "57.7",
+     "1.71"
+    ],
+    [
+     "BNSL0808",
+     "8.5",
+     "1",
+     "24.2",
+     "28.4",
+     "96.5",
+     "42.9",
+     "67.5",
+     "2.35"
+    ],
+    [
+     "BNSL0810",
+     "9.5",
+     "1.1/8",
+     "31.8",
+     "32.5",
+     "106",
+     "45.1",
+     "71.5",
+     "3.64"
+    ],
+    [
+     "BNSL0812",
+     "12",
+     "1.1/4",
+     "32.2",
+     "35.5",
+     "118.1",
+     "49.5",
+     "80.5",
+     "4.85"
+    ],
+    [
+     "BNSL0813",
+     "13.5",
+     "1.3/8",
+     "34.7",
+     "38.3",
+     "129",
+     "59.1",
+     "90.1",
+     "6"
+    ],
+    [
+     "BNSL0817",
+     "17",
+     "1.1/2",
+     "37.7",
+     "40.5",
+     "148.5",
+     "60.4",
+     "98.1",
+     "8.3"
+    ],
+    [
+     "BNSL0825",
+     "25",
+     "1.3/4",
+     "45.5",
+     "50.5",
+     "167",
+     "76",
+     "125.5",
+     "13.70"
+    ],
+    [
+     "BNSL0835",
+     "35",
+     "2",
+     "50.8",
+     "55.5",
+     "197",
+     "81.5",
+     "142.8",
+     "20.66"
+    ],
+    [
+     "BNSL0855",
+     "55",
+     "2.1/2",
+     "65.8",
+     "69.9",
+     "241",
+     "104.5",
+     "172",
+     "40"
+    ],
+    [
+     "BNSL0885",
+     "85",
+     "3",
+     "78.9",
+     "80",
+     "301",
+     "135",
+     "192",
+     "63.6"
+    ],
+    [
+     "BNSL08120",
+     "120",
+     "3.1/2",
+     "90.6",
+     "92.3",
+     "375",
+     "143",
+     "220",
+     "104"
+    ],
+    [
+     "BNSL08150",
+     "150",
+     "4",
+     "102",
+     "104",
+     "365",
+     "155",
+     "235",
+     "145"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "galvanised bolt-type bow (anchor) shackle with orange bolt, nut and cotter pin, body embossed with '[maker]', 'CE' and WLL markings",
+   "line drawing with dimensions B, d, L, D, W"
+  ],
+  "notes": [],
+  "flags": [
+   "Brand word '[maker]' embossed on shackle body in photo",
+   "W.L.L column has no unit printed (likely tonnes); d, D, L, W, B have no unit printed (likely mm)",
+   "150 t row L (Inn Length) 365 is smaller than the 120 t row (375) - copied as printed"
+  ]
+ },
+ {
+  "pdf_page": 14,
+  "half": "L",
+  "printed_page": 21,
+  "name": "G100 INTEGRATED SHORTENING HOOK ASSEMBLY WITH MASTER LINK 2-LEG",
+  "series": null,
+  "features": [
+   "Material: Forged super alloy steel",
+   "100% tested at 2.5 times working Load Limit",
+   "100% magnaflux crack detection",
+   "Sampling break test for each lot",
+   "Fatigue tested at 1.5 times working Load Limit for 20000 cycles",
+   "Pins are 100 % eddy-current test flaw detection",
+   "Suitable for G100 chain"
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L. (T)",
+    "Chain Size (mm)",
+    "Dimension A (mm)",
+    "Dimension B (mm)",
+    "Dimension ϕ (mm)",
+    "Weight (Kgs)"
+   ],
+   "rows": [
+    [
+     "ML021002",
+     "2",
+     "6",
+     "110",
+     "60",
+     "13",
+     "0.94"
+    ],
+    [
+     "ML021003",
+     "3.55",
+     "8",
+     "135",
+     "75",
+     "18",
+     "2.3"
+    ],
+    [
+     "ML021005",
+     "5.6",
+     "10",
+     "160",
+     "90",
+     "23",
+     "4.33"
+    ],
+    [
+     "ML021009",
+     "9.5",
+     "13",
+     "180",
+     "100",
+     "29.5",
+     "9.74"
+    ],
+    [
+     "MI021014",
+     "14",
+     "16",
+     "290",
+     "165",
+     "40",
+     "12.93"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "blue 2-leg master link assembly with integrated shortening hooks, right",
+   "dimension drawing showing A, B and ϕ"
+  ],
+  "notes": [
+   "Dimensions header printed as 'Dimensions' over A, B, ϕ with no unit; mm assumed"
+  ],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Last item code printed as 'MI021014' (capital I, not L) unlike the others 'ML0210..' — copied as printed, likely typo for ML021014",
+   "Dimension unit not printed (assumed mm)"
+  ]
+ },
+ {
+  "pdf_page": 14,
+  "half": "L",
+  "printed_page": 21,
+  "name": "G100 INTEGRATED SHORTENING HOOK ASSEMBLY WITH MASTER LINK 4-LEG",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L. (T)",
+    "Chain Size (mm)",
+    "Dimension A (mm)",
+    "Dimension B (mm)",
+    "Dimension ϕ (mm)",
+    "Weight (Kgs)"
+   ],
+   "rows": [
+    [
+     "ML041003",
+     "3",
+     "6",
+     "135",
+     "75",
+     "19",
+     "2.46"
+    ],
+    [
+     "ML041005",
+     "5.3",
+     "8",
+     "160",
+     "90",
+     "23",
+     "5.34"
+    ],
+    [
+     "ML041008",
+     "8",
+     "10",
+     "180",
+     "100",
+     "27",
+     "9.24"
+    ],
+    [
+     "ML041014",
+     "14",
+     "13",
+     "200",
+     "110",
+     "33",
+     "16.1"
+    ],
+    [
+     "MI041021",
+     "21.2",
+     "16",
+     "260",
+     "140",
+     "36",
+     "28.5"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "dark blue 4-leg master link assembly with integrated shortening hooks, right",
+   "dimension drawing showing A, B and ϕ"
+  ],
+  "notes": [
+   "No feature bullets printed for this product; it shares the page with the 2-leg version above"
+  ],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Last item code printed as 'MI041021' (capital I) unlike the others 'ML0410..' — copied as printed, likely typo for ML041021",
+   "Dimension unit not printed (assumed mm)"
+  ]
+ },
+ {
+  "pdf_page": 14,
+  "half": "R",
+  "printed_page": 22,
+  "name": "G100 WEBBING SLING HOOK 100 WK",
+  "series": null,
+  "features": [
+   "Forged super alloy steel-quenched and Tempered",
+   "25% Stronger than G80",
+   "Individually proof test at 2.5 times working Load Limit",
+   "Fatigue tested at 1.5 times working Load Limit for 20000 cycles",
+   "Breakage test",
+   "100% magnaflux crack detection",
+   "All load pins are 100% individually inspected and tested",
+   "Surface finish Powder plastified",
+   "Colour Code"
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L. (T)",
+    "B.L.",
+    "Dimension A ±1",
+    "Dimension B ±1",
+    "Dimension C ±1",
+    "Dimension D ±1",
+    "Dimension M ±1",
+    "Dimension N ±0.5",
+    "Dimension E ±0.5 (1st column)",
+    "Dimension E ±0.5 (2nd column)",
+    "Dimension L ±3 (1st column)",
+    "Dimension L ±3 (2nd column)",
+    "Dimension H ±1",
+    "Weight (Kgs)"
+   ],
+   "rows": [
+    [
+     "WSHS1001",
+     "1",
+     "4",
+     "11.5",
+     "40",
+     "78",
+     "28",
+     "75.7",
+     "17",
+     "33",
+     "30",
+     "124",
+     "87",
+     "21",
+     "0.73"
+    ],
+    [
+     "WSHS1002",
+     "2",
+     "8",
+     "18.5",
+     "44.5",
+     "91",
+     "35",
+     "90",
+     "21",
+     "40",
+     "39",
+     "148",
+     "103",
+     "27",
+     "1.27"
+    ],
+    [
+     "WSHS1003",
+     "3",
+     "12",
+     "21.5",
+     "54",
+     "114",
+     "45",
+     "110",
+     "26",
+     "41",
+     "48",
+     "175",
+     "115",
+     "33",
+     "2.3"
+    ],
+    [
+     "WSHS1005",
+     "5",
+     "20",
+     "40.5",
+     "76",
+     "133",
+     "56",
+     "139",
+     "32",
+     "50.5",
+     "60",
+     "223.5",
+     "147",
+     "40.5",
+     "4.73"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "green webbing sling hook with grey/green sling and latch",
+   "yellow webbing sling hook with yellow sling and latch",
+   "two dimension drawings (side and front views)"
+  ],
+  "notes": [
+   "'Colour Code' bullet has no further text; photos show green and yellow hooks"
+  ],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Feature text printed 'maganaflux' — corrected to 'magnaflux'",
+   "Header has two columns both labelled 'E±0.5' and two both labelled 'L±3' — kept as 1st/2nd column",
+   "No unit printed for dimensions or B.L. (presumably mm and t)"
+  ]
+ },
+ {
+  "pdf_page": 14,
+  "half": "R",
+  "printed_page": 22,
+  "name": "G100 CLEVIS SLING HOOK WITH LATCH",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L. (T)",
+    "Chain Size (mm)",
+    "Dimension K (mm)",
+    "Dimension P1 (mm)",
+    "Dimension A (mm)",
+    "Dimension T (mm)",
+    "Dimension H (mm)",
+    "Weight (kgs)"
+   ],
+   "rows": [
+    [
+     "CHSL1001",
+     "1.4",
+     "6",
+     "69.6",
+     "16",
+     "7.5",
+     "15",
+     "21",
+     "0.29"
+    ],
+    [
+     "CHSL1002",
+     "2.5",
+     "8",
+     "93.3",
+     "21",
+     "9.5",
+     "19",
+     "28.9",
+     "0.59"
+    ],
+    [
+     "CHSL1004",
+     "4",
+     "10",
+     "108.7",
+     "27",
+     "12",
+     "26",
+     "35",
+     "1.25"
+    ],
+    [
+     "CHSL1006",
+     "6.7",
+     "13",
+     "134.2",
+     "35",
+     "15.8",
+     "35",
+     "42",
+     "2.38"
+    ],
+    [
+     "CHSL1010",
+     "10",
+     "16",
+     "156.0",
+     "43",
+     "18.5",
+     "38",
+     "49",
+     "3.55"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "dark blue clevis sling hook with latch, right",
+   "blue dimension drawing showing K, P1, A, T, H"
+  ],
+  "notes": [
+   "No feature bullets printed for this product"
+  ],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Item codes contain 'SL' (e.g. CHSL1001), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 15,
+  "half": "L",
+  "printed_page": 23,
+  "name": "G80 EYE SLING HOOK",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 2.5 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Ultimate Break Load Tested",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "Suitable For En818-8 Gr.80 Chain",
+   "All Shackles Are Drop Forged"
+  ],
+  "callouts": [],
+  "standard": "En818-8",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L",
+    "Chain Size (mm)",
+    "Dimension E",
+    "Dimension D",
+    "Dimension L",
+    "Dimension Q1",
+    "Dimension Q",
+    "Weight"
+   ],
+   "rows": [
+    [
+     "EHSL0801",
+     "1.12",
+     "6",
+     "21.8",
+     "20",
+     "116",
+     "10.3",
+     "20",
+     "0.32"
+    ],
+    [
+     "EHSL0802",
+     "2",
+     "7,8",
+     "27",
+     "26",
+     "141",
+     "12",
+     "24",
+     "0.5"
+    ],
+    [
+     "EHSL0803",
+     "3.15",
+     "10",
+     "32",
+     "35",
+     "173",
+     "17",
+     "35",
+     "1.03"
+    ],
+    [
+     "EHSL0805",
+     "5.3",
+     "12",
+     "45",
+     "40",
+     "215",
+     "20",
+     "41",
+     "1.99"
+    ],
+    [
+     "EHSL0808",
+     "8",
+     "16",
+     "46",
+     "64.5",
+     "245",
+     "24",
+     "48",
+     "3.26"
+    ],
+    [
+     "EHSL0812",
+     "12.5",
+     "18, 20",
+     "54",
+     "83",
+     "300",
+     "26",
+     "60",
+     "6.76"
+    ],
+    [
+     "EHSL0815",
+     "15",
+     "22",
+     "71",
+     "76",
+     "341",
+     "30",
+     "62",
+     "9.71"
+    ],
+    [
+     "EHSL0822",
+     "21.2",
+     "26",
+     "86.5",
+     "90",
+     "382",
+     "36.8",
+     "63.4",
+     "13.5"
+    ],
+    [
+     "EHSL0831",
+     "31.5",
+     "32",
+     "105",
+     "117",
+     "470",
+     "37",
+     "85",
+     "21.62"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red eye sling hook with latch, embossed '[maker]' and 'S45'",
+   "line drawing showing ϕ1, E, D, L"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker]' embossed on hook",
+   "No units printed for W.L.L, dimensions or Weight (presumably t, mm, kg)",
+   "Drawing labels ϕ1 but table has Q1/Q columns",
+   "Item codes contain 'SL' (e.g. EHSL0801), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 15,
+  "half": "R",
+  "printed_page": 24,
+  "name": "G80 CLEVIS SLING HOOK",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 2.5 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Ultimate Break Load Tested",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "Suitable For En818-8 Gr.80 Chain",
+   "All Shackles Are Drop Forged"
+  ],
+  "callouts": [],
+  "standard": "En818-8",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L",
+    "Chain Size (mm)",
+    "Dimension A",
+    "Dimension B",
+    "Dimension E",
+    "Dimension H",
+    "Dimension R",
+    "Dimension L",
+    "WEIGHT"
+   ],
+   "rows": [
+    [
+     "CHSL0801",
+     "1.12",
+     "6",
+     "7.25",
+     "31.6",
+     "69.5",
+     "21.7",
+     "29.6",
+     "22.1",
+     "0.24"
+    ],
+    [
+     "CHSL0802",
+     "2",
+     "8",
+     "9.1",
+     "37.3",
+     "88.4",
+     "26.2",
+     "38.1",
+     "26.8",
+     "0.48"
+    ],
+    [
+     "CHSL0803",
+     "3.15",
+     "10",
+     "11.7",
+     "47.7",
+     "105",
+     "35.1",
+     "44.1",
+     "33.1",
+     "1.1"
+    ],
+    [
+     "CHSL0805",
+     "53",
+     "12",
+     "15.4",
+     "56.7",
+     "125.3",
+     "42.1",
+     "55.2",
+     "46.1",
+     "1.81"
+    ],
+    [
+     "CHSL0808",
+     "8",
+     "16",
+     "17.8",
+     "71.2",
+     "156",
+     "50.1",
+     "63.7",
+     "51.5",
+     "3.15"
+    ],
+    [
+     "CHSL0812",
+     "12.5",
+     "18, 20",
+     "25",
+     "71",
+     "71",
+     "175",
+     "49",
+     "59",
+     "6.01"
+    ],
+    [
+     "CHSL0815",
+     "15",
+     "22",
+     "28",
+     "95",
+     "95",
+     "210",
+     "65",
+     "61",
+     "10.1"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red clevis sling hook with latch, embossed '[maker]' and 'S45'",
+   "line drawing showing A, B, E, H, R, L"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker]' embossed on hook",
+   "W.L.L for CHSL0805 (12 mm) printed as '53' — almost certainly a typo for 5.3; copied as printed",
+   "Rows CHSL0812 and CHSL0815 look column-shifted versus the rows above (B and E both 71 / both 95; H 175/210 fits E's trend) — copied exactly as printed",
+   "No units printed for W.L.L, dimensions or WEIGHT (presumably t, mm, kg)",
+   "Item codes contain 'SL' (e.g. CHSL0801), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 16,
+  "half": "L",
+  "printed_page": 25,
+  "name": "G80 EYE SELF LOCKING HOOK",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 2.5 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Ultimate Break Load Tested",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "Suitable For En818-8 Gr.80 Chain",
+   "All Shackles Are Drop Forged"
+  ],
+  "callouts": [],
+  "standard": "En818-8",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Ton",
+    "Dimension E",
+    "Dimension O",
+    "Dimension D",
+    "Dimension K",
+    "Dimension H",
+    "Dimension R",
+    "WEIGHT"
+   ],
+   "rows": [
+    [
+     "SLHSL081",
+     "1.12",
+     "31.5",
+     "21.4",
+     "10.8",
+     "108.3",
+     "20.1",
+     "32.6",
+     "0.47"
+    ],
+    [
+     "SLHSL082",
+     "2",
+     "43.1",
+     "24.4",
+     "12.5",
+     "136.3",
+     "28",
+     "41.4",
+     "0.87"
+    ],
+    [
+     "SLHSL083",
+     "3.15",
+     "52.4",
+     "31.6",
+     "15.2",
+     "165.3",
+     "30.3",
+     "54.5",
+     "1.41"
+    ],
+    [
+     "SLHSL085",
+     "5.3",
+     "67.5",
+     "39.5",
+     "20.3",
+     "210",
+     "38.6",
+     "65.5",
+     "3.14"
+    ],
+    [
+     "SLHSL088",
+     "8",
+     "78.3",
+     "55.3",
+     "22.3",
+     "250",
+     "51.5",
+     "80.4",
+     "5.75"
+    ],
+    [
+     "SLHSL812",
+     "12.5",
+     "77.5",
+     "62.1",
+     "28.1",
+     "275.2",
+     "54.7",
+     "96",
+     "8.2"
+    ],
+    [
+     "SLHSL815",
+     "15",
+     "80",
+     "70",
+     "32",
+     "312",
+     "67",
+     "77",
+     "12.6"
+    ],
+    [
+     "SLHSL822",
+     "21.2",
+     "109",
+     "80",
+     "34",
+     "362",
+     "75",
+     "97",
+     "21.9"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red eye self-locking hook, embossed '[maker]' and 'S45'",
+   "line drawing showing O, D, K, E, R, H"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker]' embossed on hook",
+   "No units printed for dimensions or WEIGHT (presumably mm, kg)",
+   "SLHSL812 E=77.5 is smaller than SLHSL088 E=78.3, and SLHSL815 R=77 smaller than SLHSL812 R=96 — copied as printed",
+   "Item codes contain 'SL' (e.g. SLHSL081), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 16,
+  "half": "R",
+  "printed_page": 26,
+  "name": "G80 CLEVIS SELF LOCKING HOOK",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 2.5 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Ultimate Break Load Tested",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "Pins Are 100% Eddy-current Flaw Detection",
+   "Suitable For En818-8 Gr.80 Chain",
+   "All Shackles Are Drop Forged"
+  ],
+  "callouts": [],
+  "standard": "En818-8",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Ton",
+    "Chain size",
+    "B.L",
+    "Dimension B",
+    "Dimension H",
+    "Dimension L",
+    "Dimension O",
+    "Dimension R",
+    "Weight (KG)"
+   ],
+   "rows": [
+    [
+     "CSHSL081",
+     "1.12",
+     "6",
+     "4.48",
+     "8.8",
+     "20",
+     "29",
+     "32.8",
+     "95.5",
+     "0.48"
+    ],
+    [
+     "CSHSL082",
+     "2",
+     "7,8",
+     "8",
+     "9.2",
+     "28",
+     "33.8",
+     "41.5",
+     "120",
+     "0.89"
+    ],
+    [
+     "CSHSL083",
+     "3.15",
+     "10",
+     "12.6",
+     "12.3",
+     "30",
+     "44",
+     "54.5",
+     "143",
+     "1.46"
+    ],
+    [
+     "CSHSL085",
+     "5.3",
+     "12",
+     "21.2",
+     "14.4",
+     "39.5",
+     "53.1",
+     "66.3",
+     "192",
+     "3.1"
+    ],
+    [
+     "CSHSL088",
+     "8",
+     "16",
+     "32",
+     "18.6",
+     "50.5",
+     "65.5",
+     "80.7",
+     "218",
+     "5.9"
+    ],
+    [
+     "CSHSL812",
+     "12.5",
+     "20",
+     "50",
+     "24.5",
+     "53.5",
+     "70",
+     "97.5",
+     "231",
+     "7.25"
+    ],
+    [
+     "CSHSL815",
+     "15",
+     "22",
+     "60",
+     "26.5",
+     "66",
+     "80.1",
+     "93.5",
+     "260",
+     "10.9"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red clevis self-locking hook, embossed '[maker]' and 'S45'",
+   "line drawing showing B, R, L, O, H"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker]' embossed on hook",
+   "No units printed for Ton, Chain size, B.L or dimensions (presumably t, mm, t, mm)",
+   "Item codes contain 'SL' (e.g. CSHSL081), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 17,
+  "half": "L",
+  "printed_page": 27,
+  "name": "G80 SWIVEL SELF LOCKING HOOK",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 2.5 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Ultimate Break Load Tested",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "Suitable For En818-8 Gr.80 Chain",
+   "All Shackles Are Drop Forged"
+  ],
+  "callouts": [],
+  "standard": "En818-8",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Ton",
+    "Chain Size (mm)",
+    "Dimension A",
+    "Dimension B",
+    "Dimension D",
+    "Dimension K",
+    "Dimension E",
+    "Dimension R",
+    "Dimension H",
+    "WEIGHT"
+   ],
+   "rows": [
+    [
+     "SSHSL081",
+     "1",
+     "6",
+     "24.2",
+     "32.3",
+     "11.3",
+     "150",
+     "45.6",
+     "32.7",
+     "19.5",
+     "0.71"
+    ],
+    [
+     "SSHSL082",
+     "2",
+     "8",
+     "26.5",
+     "34.6",
+     "13.1",
+     "185",
+     "52.5",
+     "41.5",
+     "25.6",
+     "1.2"
+    ],
+    [
+     "SSHSL083",
+     "3",
+     "10",
+     "31.8",
+     "41.2",
+     "15.7",
+     "220",
+     "67",
+     "54.1",
+     "30",
+     "1.99"
+    ],
+    [
+     "SSHSL085",
+     "5",
+     "13",
+     "43",
+     "48.5",
+     "17",
+     "270",
+     "67.2",
+     "65.5",
+     "37",
+     "3.79"
+    ],
+    [
+     "SSHSL088",
+     "8",
+     "16",
+     "55.5",
+     "60.2",
+     "21.5",
+     "330",
+     "94.5",
+     "81",
+     "46.5",
+     "7.41"
+    ],
+    [
+     "SSHSL812",
+     "12.5",
+     "20",
+     "65",
+     "70",
+     "25.8",
+     "365",
+     "95",
+     "95.1",
+     "57.6",
+     "10.2"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red swivel self-locking hook with swivel eye, embossed '[maker]' and 'S45'",
+   "line drawing showing A, B, D, K, E"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker]' embossed on hook",
+   "No units printed for Ton, dimensions or WEIGHT (presumably t, mm, kg)",
+   "Item codes contain 'SL' (e.g. SSHSL081), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 17,
+  "half": "R",
+  "printed_page": 28,
+  "name": "G80 SWIVEL EYE HOOK",
+  "series": "Screw Pin Bow Shackle",
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 2.5 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Ultimate Break Load Tested",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "Suitable For En818-8 Gr.80 Chain",
+   "All Shackles Are Drop Forged"
+  ],
+  "callouts": [],
+  "standard": "En818-8",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity",
+    "Dimension A",
+    "Dimension B",
+    "Dimension C",
+    "Dimension D",
+    "Dimension E",
+    "Dimension H",
+    "Dimension K",
+    "WEIGHT"
+   ],
+   "rows": [
+    [
+     "SEHSL081",
+     "1",
+     "29",
+     "23.5",
+     "10.4",
+     "11.2",
+     "19.5",
+     "21.2",
+     "110.2",
+     "0.43"
+    ],
+    [
+     "SEHSL082",
+     "2",
+     "41",
+     "37.8",
+     "21.1",
+     "14.6",
+     "21.5",
+     "29",
+     "146.5",
+     "1.05"
+    ],
+    [
+     "SEHSL083",
+     "3",
+     "44.1",
+     "40.6",
+     "23.5",
+     "16.2",
+     "24.5",
+     "30",
+     "161",
+     "1.3"
+    ],
+    [
+     "SEHSL085",
+     "4.5",
+     "49.5",
+     "42.5",
+     "28.4",
+     "19.1",
+     "31.5",
+     "37.5",
+     "190",
+     "2.3"
+    ],
+    [
+     "SEHSL087",
+     "7",
+     "62",
+     "55.4",
+     "35.3",
+     "25.4",
+     "38.4",
+     "48",
+     "247",
+     "4.9"
+    ],
+    [
+     "SEHSL811",
+     "11",
+     "68.5",
+     "61.5",
+     "41.2",
+     "28.4",
+     "47.5",
+     "57.1",
+     "292",
+     "7.29"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red swivel eye hook with latch, embossed '[maker]' and '308'",
+   "line drawing showing A max, B, E, K, H, C, d"
+  ],
+  "notes": [
+   "Drawing labels A as 'A max' and shows a lower-case 'd'"
+  ],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker]' embossed on hook",
+   "Sub-heading 'Screw Pin Bow Shackle' printed under the heading looks like a leftover/mismatch for a swivel eye hook — copied as printed",
+   "No units printed for Capacity, dimensions or WEIGHT (presumably t, mm, kg)",
+   "Item codes contain 'SL' (e.g. SEHSL081), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 18,
+  "half": "L",
+  "printed_page": 29,
+  "name": "G80 EYE GRAB HOOK",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 2.5 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Ultimate Break Load Tested",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "Suitable For En818-8 Gr.80 Chain",
+   "All Shackles Are Drop Forged"
+  ],
+  "callouts": [],
+  "standard": "En818-8",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L",
+    "Chain Size (mm)",
+    "Dimension A",
+    "Dimension B",
+    "Dimension C",
+    "Dimension D",
+    "Dimension E",
+    "Dimension F",
+    "WEIGHT"
+   ],
+   "rows": [
+    [
+     "GHSL0801",
+     "1.12",
+     "6",
+     "13.2",
+     "48.5",
+     "76.5",
+     "7.6",
+     "9.8",
+     "25.3",
+     "0.17"
+    ],
+    [
+     "GHSL0802",
+     "2",
+     "8",
+     "16",
+     "59.1",
+     "90.5",
+     "10.8",
+     "9.75",
+     "31.2",
+     "0.28"
+    ],
+    [
+     "GHSL0803",
+     "3.15",
+     "10",
+     "20.1",
+     "78.5",
+     "120",
+     "13.1",
+     "13.3",
+     "44.6",
+     "0.65"
+    ],
+    [
+     "GHSL0805",
+     "5.3",
+     "12",
+     "25.7",
+     "96",
+     "195.5",
+     "15.6",
+     "17.5",
+     "57.1",
+     "1.45"
+    ],
+    [
+     "GHSL0808",
+     "8",
+     "16",
+     "29.3",
+     "106",
+     "167",
+     "18.7",
+     "18.1",
+     "66.3",
+     "2.16"
+    ],
+    [
+     "GHSL0812",
+     "12.5",
+     "18, 20",
+     "36.2",
+     "142",
+     "223",
+     "23.3",
+     "23.1",
+     "72.2",
+     "4.21"
+    ],
+    [
+     "GHSL0815",
+     "15",
+     "22",
+     "44",
+     "162",
+     "255",
+     "28",
+     "—",
+     "—",
+     "8.2"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red eye grab hook, embossed '[maker]' and 'S45'",
+   "line drawings (side and front) showing A, B, C, D, E, F"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker]' embossed on hook",
+   "GHSL0805 C=195.5 is larger than GHSL0808 C=167 — copied as printed",
+   "Item codes GHSL0801–GHSL0815 are the same codes used for G80 CLEVIS SHORTENING GRAB HOOK on the next page",
+   "No units printed for W.L.L, dimensions or WEIGHT (presumably t, mm, kg)",
+   "Item codes contain 'SL' (e.g. GHSL0801), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 18,
+  "half": "R",
+  "printed_page": 30,
+  "name": "G80 CLEVIS SHORTENING GRAB HOOK",
+  "series": null,
+  "features": [
+   "Material: Forged super alloy steel",
+   "100% tested at 2.5 times working Load Limit",
+   "100% magnaflux crack detection",
+   "Breakage test",
+   "Fatigue tested at 1.5 times working Load Limit for 20000 cycles",
+   "Pins are 100 % eddy-current test flaw detection",
+   "Suitable for EN818-2 G80 Chain"
+  ],
+  "callouts": [],
+  "standard": "EN818-2",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L. (T)",
+    "Chain Size (mm)",
+    "Dimension A (in)",
+    "Dimension E (in)",
+    "Dimension H (in)",
+    "Dimension L (in)",
+    "Weight (Kgs)"
+   ],
+   "rows": [
+    [
+     "GHSL0801",
+     "1.12",
+     "6",
+     "8",
+     "8",
+     "18.5",
+     "76.5",
+     "0.21"
+    ],
+    [
+     "GHSL0802",
+     "2",
+     "7/8",
+     "9.5",
+     "11",
+     "21",
+     "90.7",
+     "0.32"
+    ],
+    [
+     "GHSL0803",
+     "3.15",
+     "10",
+     "12.5",
+     "13.5",
+     "29.5",
+     "124.5",
+     "0.78"
+    ],
+    [
+     "GHSL0805",
+     "5.3",
+     "13",
+     "15.3",
+     "17",
+     "42",
+     "160.5",
+     "1.65"
+    ],
+    [
+     "GHSL0808",
+     "8",
+     "16",
+     "19.5",
+     "20",
+     "44",
+     "182",
+     "2.86"
+    ],
+    [
+     "GHSL0812",
+     "12.5",
+     "20",
+     "24",
+     "24",
+     "54.8",
+     "215.7",
+     "5.05"
+    ],
+    [
+     "GHSL0815",
+     "15",
+     "22",
+     "27",
+     "28",
+     "67.5",
+     "152",
+     "6.32"
+    ],
+    [
+     "GHSL0821",
+     "21.2",
+     "26",
+     "30",
+     "30",
+     "78.5",
+     "304.5",
+     "14.50"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "orange clevis shortening grab hook, left",
+   "orange dimension drawing showing A, E, H, L"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Dimensions header printed as 'Dimensions (in)' but values look like millimetres — copied unit as printed",
+   "Chain Size for GHSL0802 printed '7/8' (likely meaning 7 or 8 mm, written '7,8' elsewhere)",
+   "GHSL0815 L=152 is smaller than GHSL0812 L=215.7 — copied as printed",
+   "Item codes GHSL0801–GHSL0815 duplicate the codes of G80 EYE GRAB HOOK on the previous page",
+   "Chain size 13 mm for 5.3 t here vs 12 mm on the eye grab hook — copied as printed",
+   "Item codes contain 'SL' (e.g. GHSL0801), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 19,
+  "half": "L",
+  "printed_page": 31,
+  "name": "G80 FOUNDRY HOOK",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 2.5 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Ultimate Break Load Tested",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "Suitable For En818-8 Gr.80 Chain",
+   "All Shackles Are Drop Forged"
+  ],
+  "callouts": [],
+  "standard": "En818-8",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity",
+    "Dimension Q",
+    "Dimension R1",
+    "Dimension E",
+    "Dimension B",
+    "Dimension H",
+    "Dimension R",
+    "Dimension L",
+    "WEIGHT"
+   ],
+   "rows": [
+    [
+     "FHSL0802",
+     "2",
+     "23.7",
+     "12.5",
+     "58.5",
+     "108",
+     "19.7",
+     "116",
+     "136",
+     "0.73"
+    ],
+    [
+     "FHSL0803",
+     "3.2",
+     "30.5",
+     "14.4",
+     "58.5",
+     "115",
+     "23.6",
+     "126",
+     "172",
+     "1"
+    ],
+    [
+     "FHSL0805",
+     "5.3",
+     "39.5",
+     "20.1",
+     "82.5",
+     "164",
+     "34.3",
+     "182",
+     "243",
+     "2.7"
+    ],
+    [
+     "FHSL0808",
+     "8",
+     "32.3",
+     "21.2",
+     "96.8",
+     "195",
+     "44.5",
+     "198",
+     "270",
+     "4.72"
+    ],
+    [
+     "FHSL0812",
+     "12.5",
+     "61",
+     "26",
+     "106",
+     "252",
+     "46",
+     "247",
+     "330",
+     "6.65"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red foundry hook (open eye hook), embossed '[maker]' and 'S45'",
+   "line drawing showing G, R1, E, H, R, L, B"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker]' embossed on hook",
+   "Table column 'Q' is not labelled on the drawing (drawing shows G instead)",
+   "FHSL0808 Q=32.3 is smaller than FHSL0805 Q=39.5 — copied as printed",
+   "No units printed for Capacity, dimensions or WEIGHT (presumably t, mm, kg)",
+   "Item codes contain 'SL' (e.g. FHSL0802), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 19,
+  "half": "R",
+  "printed_page": 32,
+  "name": "G80 MASTER LINK",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 2.5 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Ultimate Break Load Tested",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "As Per En1677-4 Standard",
+   "Suitable For 1 & 2 Leg Gr-80 Chain Sling As Per En818-4"
+  ],
+  "callouts": [],
+  "standard": "En1677-4; En818-4",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L",
+    "Chain Size (mm)",
+    "Dimension A",
+    "Dimension B",
+    "Dimension D",
+    "Dimension S",
+    "Dimension L",
+    "Weight"
+   ],
+   "rows": [
+    [
+     "MLSL0801",
+     "1.6",
+     "6",
+     "109.4",
+     "60.2",
+     "14.5",
+     "10",
+     "36.1",
+     "0.41"
+    ],
+    [
+     "MLSL0802",
+     "2.12",
+     "8",
+     "110.3",
+     "60.2",
+     "16.2",
+     "10.7",
+     "37.3",
+     "0.54"
+    ],
+    [
+     "MLSL0803",
+     "3.15",
+     "10",
+     "135.6",
+     "75.5",
+     "18.2",
+     "11.6",
+     "41",
+     "0.82"
+    ],
+    [
+     "MLSL0805",
+     "5.3",
+     "13",
+     "160",
+     "89.5",
+     "22.2",
+     "14.8",
+     "44.7",
+     "1.48"
+    ],
+    [
+     "MLSL0808",
+     "8",
+     "16",
+     "180",
+     "100.4",
+     "25.2",
+     "16",
+     "47.5",
+     "2.12"
+    ],
+    [
+     "MLSL0811",
+     "11.2",
+     "18",
+     "202",
+     "109",
+     "32.2",
+     "18.5",
+     "54",
+     "4"
+    ],
+    [
+     "MLSL0817",
+     "17",
+     "22",
+     "300",
+     "160",
+     "40",
+     "23.2",
+     "58.5",
+     "8.9"
+    ],
+    [
+     "MLSL0821",
+     "21.2",
+     "26",
+     "340",
+     "180",
+     "45.5",
+     "27",
+     "71.2",
+     "13"
+    ],
+    [
+     "MLSL0831",
+     "31.5",
+     "32",
+     "351",
+     "190",
+     "50",
+     "29",
+     "79",
+     "16.45"
+    ],
+    [
+     "MLSL0845",
+     "45",
+     "36",
+     "397",
+     "200",
+     "55.2",
+     "31.5",
+     "79",
+     "22.1"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red oval master link",
+   "line drawing (front and side) showing A, B, D, S"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Column 'L' is not labelled on the drawing",
+   "No units printed for W.L.L, dimensions or Weight (presumably t, mm, kg)",
+   "Item codes contain 'SL' (e.g. MLSL0801), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 20,
+  "half": "L",
+  "printed_page": 33,
+  "name": "G80 MASTER LINK ASSEMBLY",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 2.5 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Ultimate Break Load Tested",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "As Per En1677-4 Standard",
+   "Suitable For 1 & 2 Leg Gr-80 Chain Sling As Per En818-4"
+  ],
+  "callouts": [],
+  "standard": "En1677-4; En818-4",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L",
+    "Chain Size (mm)",
+    "A (I.LENGTH) [1st group]",
+    "B (I.WIDTH) [1st group]",
+    "D (DIA) [1st group]",
+    "A (I.LENGTH) [2nd group]",
+    "B (I.W) [2nd group]",
+    "D (DIA) [2nd group]",
+    "Weight (KG)"
+   ],
+   "rows": [
+    [
+     "MLASL803",
+     "3.5",
+     "6",
+     "135",
+     "74.5",
+     "18.1",
+     "60.3",
+     "37.4",
+     "14.1",
+     "1.35"
+    ],
+    [
+     "MLASL804",
+     "4.25",
+     "8",
+     "158",
+     "88.5",
+     "22.2",
+     "71.3",
+     "33.7",
+     "15.9",
+     "2.2"
+    ],
+    [
+     "MLASL806",
+     "6.7",
+     "10",
+     "178",
+     "99.8",
+     "25.2",
+     "85",
+     "39.8",
+     "18.1",
+     "3.2"
+    ],
+    [
+     "MLASL811",
+     "11.2",
+     "13",
+     "200",
+     "110.5",
+     "32.5",
+     "115.3",
+     "51",
+     "22.1",
+     "6.1"
+    ],
+    [
+     "MLASL817",
+     "17",
+     "16",
+     "260",
+     "138.8",
+     "36.3",
+     "141.3",
+     "64.6",
+     "25.1",
+     "9.7"
+    ],
+    [
+     "MLASL821",
+     "21.2",
+     "18",
+     "337",
+     "182",
+     "45.4",
+     "180",
+     "99.5",
+     "32",
+     "20.14"
+    ],
+    [
+     "MLASL826",
+     "26.5",
+     "20",
+     "346",
+     "188",
+     "49.7",
+     "181",
+     "99.8",
+     "32",
+     "23.8"
+    ],
+    [
+     "MLASL831",
+     "31.5",
+     "22",
+     "350",
+     "186",
+     "49.7",
+     "181",
+     "110.3",
+     "37.5",
+     "27.2"
+    ],
+    [
+     "MLASL845",
+     "45",
+     "26",
+     "392",
+     "195",
+     "55",
+     "200",
+     "110",
+     "40",
+     "34.8"
+    ],
+    [
+     "MLASL850",
+     "50",
+     "28",
+     "425",
+     "220",
+     "60",
+     "205",
+     "110",
+     "45",
+     "45"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red master link assembly with two sub-links",
+   "line drawing of master link (A, B, D) and side view of sub-link (a, b, d)"
+  ],
+  "notes": [
+   "Header repeats 'A (I.LENGTH)', 'B (I.W…)', 'D (DIA)' twice; the drawing labels the master link A/B/D and the sub-link a/b/d, so the 2nd group is presumably the sub-link"
+  ],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Duplicate column headers A/B/D printed twice (upper-case both times) — kept as 1st/2nd group; 2nd group presumably sub-link a/b/d",
+   "MLASL804 2nd-group B (33.7) is smaller than MLASL803's (37.4) — copied as printed",
+   "No units printed for W.L.L, dimensions (presumably t, mm)",
+   "Item codes MLASL804–MLASL826 also appear on the next page (enlarged sublinks version) with different W.L.L/dimensions",
+   "Item codes contain 'SL' (e.g. MLASL803), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 20,
+  "half": "R",
+  "printed_page": 34,
+  "name": "G 80 MASTER LINK ASSEMBLY WITH ENLARGED SUBLINKS",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 2.5 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Ultimate Break Load Tested",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "As Per En1677-4 Standard",
+   "Suitable For 1 & 2 Leg Gr-80 Chain Sling As Per En818-4"
+  ],
+  "callouts": [],
+  "standard": "En1677-4; En818-4",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L",
+    "A (I.LENGTH)",
+    "B (I.WIDTH)",
+    "D (DIA)",
+    "a (I.L)",
+    "b (I.W)",
+    "d (Dia)",
+    "Weight (Kg)"
+   ],
+   "rows": [
+    [
+     "MLASL804",
+     "4.25",
+     "158",
+     "88.7",
+     "20.3",
+     "99.6",
+     "59.1",
+     "14.2",
+     "1.98"
+    ],
+    [
+     "MLASL806",
+     "6.7",
+     "179.5",
+     "100.3",
+     "22",
+     "149.6",
+     "70.5",
+     "18",
+     "3.36"
+    ],
+    [
+     "MLASL811",
+     "11.2",
+     "266.5",
+     "138.5",
+     "28",
+     "161",
+     "89.4",
+     "22",
+     "6.62"
+    ],
+    [
+     "MLASL817",
+     "17",
+     "268.3",
+     "139.6",
+     "32.3",
+     "181",
+     "100",
+     "25.2",
+     "9.45"
+    ],
+    [
+     "MLASL821",
+     "23.6",
+     "300",
+     "160",
+     "40.1",
+     "275",
+     "140",
+     "32",
+     "19"
+    ],
+    [
+     "MLASL826",
+     "31.5",
+     "337",
+     "186",
+     "45.3",
+     "185",
+     "143",
+     "36.2",
+     "24.46"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red master link assembly with two enlarged sub-links",
+   "line drawing of master link (A, B, D) and side view of sub-link (a, b, d)"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Item codes MLASL804–MLASL826 duplicate codes on the previous page (standard master link assembly) with different values",
+   "MLASL821 W.L.L 23.6 vs MLASL826 W.L.L 31.5 — code suffix 826 does not match 31.5 (on the previous page MLASL826 = 26.5) — copied as printed",
+   "MLASL821 a=275 is larger than MLASL826 a=185 — copied as printed",
+   "No chain size column; no units printed for W.L.L or dimensions (presumably t, mm)",
+   "Item codes contain 'SL' (e.g. MLASL804), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 21,
+  "half": "L",
+  "printed_page": 35,
+  "name": "G80 CHAIN CONNECTING LINK",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 2.5 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Break test",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "Pins are 100% eddy-current test flaw detection",
+   "Suitable for EN818-2 G80 chain"
+  ],
+  "callouts": [],
+  "standard": "EN818-2",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L",
+    "Dimension B1",
+    "Dimension D1",
+    "Dimension H1",
+    "Dimension H",
+    "Weight (Kg)"
+   ],
+   "rows": [
+    [
+     "CLSL0806",
+     "6",
+     "15.3",
+     "7.3",
+     "21.9",
+     "48.2",
+     "0.09"
+    ],
+    [
+     "CLSL0808",
+     "8",
+     "19.3",
+     "8.92",
+     "27.1",
+     "59.4",
+     "0.15"
+    ],
+    [
+     "CLSL0810",
+     "10",
+     "25.1",
+     "12.2",
+     "31.6",
+     "70.4",
+     "0.33"
+    ],
+    [
+     "CLSL0813",
+     "13",
+     "30.6",
+     "16.1",
+     "40.6",
+     "90",
+     "0.71"
+    ],
+    [
+     "CLSL0816",
+     "16",
+     "35.6",
+     "19.7",
+     "45.1",
+     "100",
+     "1.25"
+    ],
+    [
+     "CLSL0818",
+     "18",
+     "40.5",
+     "21.5",
+     "47.5",
+     "109.1",
+     "1.46"
+    ],
+    [
+     "CLSL0820",
+     "20",
+     "42.2",
+     "23.1",
+     "52.6",
+     "119",
+     "1.86"
+    ],
+    [
+     "CLSL0822",
+     "22",
+     "48.5",
+     "25.5",
+     "68.5",
+     "151.5",
+     "2.92"
+    ],
+    [
+     "CLSL0826",
+     "26",
+     "59.4",
+     "31.7",
+     "71.3",
+     "162",
+     "4.92"
+    ],
+    [
+     "CLSL0832",
+     "32",
+     "67.3",
+     "39.1",
+     "86.3",
+     "195",
+     "9.4"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red chain connecting link (hammerlock) with black pin, embossed '[maker]' and 'S45'",
+   "line drawing showing H1, H, D1, B1"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker]' embossed on link",
+   "Column headed 'W.L.L' contains 6, 8, 10 … 32 which match the item-code suffixes and look like chain sizes (mm), not working load limits — copied as printed",
+   "No units printed for dimensions (presumably mm)",
+   "Item codes contain 'SL' (e.g. CLSL0806), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 21,
+  "half": "L",
+  "printed_page": 35,
+  "name": "G80 WEBBING CONNECTING LINK",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 2.5 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Break test",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "Pins are 100% eddy-current test flaw detection",
+   "Suitable for EN1492-2 web sling and EN818-2 G80 chain"
+  ],
+  "callouts": [],
+  "standard": "EN1492-2; EN818-2",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (T)",
+    "Dimension A (mm)",
+    "Dimension B (mm)",
+    "Dimension K (mm)",
+    "Dimension W (mm)",
+    "Dimension G (mm)",
+    "Dimension E (mm)",
+    "W.L.L (T)",
+    "Weight (kg)"
+   ],
+   "rows": [
+    [
+     "WSCLSL08",
+     "2",
+     "27",
+     "65.5",
+     "81",
+     "35",
+     "14",
+     "10.6",
+     "3.15",
+     "0.47"
+    ],
+    [
+     "WSCLSL10",
+     "3",
+     "31.3",
+     "85.5",
+     "96.5",
+     "52",
+     "16.8",
+     "15.7",
+     "5.3",
+     "0.96"
+    ],
+    [
+     "WSCLSL13",
+     "5",
+     "36.2",
+     "107.1",
+     "119",
+     "63.5",
+     "20.7",
+     "19.6",
+     "8.0",
+     "1.88"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red webbing connecting link with triangular web-sling eye and black pin, embossed '[maker]'",
+   "line drawing showing A, E, K, G, W, B"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker]' embossed on link",
+   "Table has both 'Capacity (T)' (2/3/5) and 'W.L.L (T)' (3.15/5.3/8.0) with different values — copied as printed",
+   "Item codes contain 'SL' (e.g. WSCLSL08), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 21,
+  "half": "R",
+  "printed_page": 36,
+  "name": "G80 CHAIN SHORTNER",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 2.5 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Break test. Ultimate Break Load Tested",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "Pins are 100% eddy-current test flaw detection",
+   "Suitable for EN818-2 G80 chain"
+  ],
+  "callouts": [],
+  "standard": "EN818-2",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "TON",
+    "SIZE (mm)",
+    "Dimension A",
+    "Dimension B",
+    "Dimension E",
+    "Dimension C",
+    "Dimension L",
+    "Weight (kg)"
+   ],
+   "rows": [
+    [
+     "CSSL0806",
+     "1.2",
+     "6",
+     "7.4",
+     "7.4",
+     "31",
+     "33.8",
+     "72.5",
+     "0.17"
+    ],
+    [
+     "CSSL0808",
+     "2",
+     "8",
+     "9.1",
+     "9.3",
+     "36.2",
+     "45.2",
+     "100",
+     "0.39"
+    ],
+    [
+     "CSSL0810",
+     "3.15",
+     "10",
+     "12.6",
+     "12.8",
+     "48",
+     "55.3",
+     "136.5",
+     "1"
+    ],
+    [
+     "CSSL0813",
+     "5.3",
+     "13",
+     "15.4",
+     "15.7",
+     "59.3",
+     "75.1",
+     "180",
+     "1.85"
+    ],
+    [
+     "CSSL0816",
+     "8",
+     "16",
+     "20.6",
+     "20.6",
+     "73.1",
+     "90.8",
+     "228",
+     "3.69"
+    ],
+    [
+     "CSSL0820",
+     "12.5",
+     "20",
+     "22.5",
+     "22.5",
+     "80.2",
+     "100",
+     "237",
+     "4.5"
+    ],
+    [
+     "CSSL0822",
+     "15",
+     "22",
+     "25.8",
+     "25.1",
+     "98.3",
+     "118",
+     "295",
+     "8.4"
+    ],
+    [
+     "CSSL0826",
+     "21",
+     "26",
+     "31.3",
+     "31.3",
+     "110",
+     "144",
+     "365",
+     "15.3"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red clevis chain shortener (grab), embossed '13-8', 'WLL5.3T', '[maker] 308'",
+   "line drawing showing E, B, L, A, C"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker] 308' embossed on the shortener",
+   "Heading spelled 'SHORTNER' (as printed; probably 'SHORTENER')",
+   "No units printed for dimensions (presumably mm)",
+   "Item codes contain 'SL' (e.g. CSSL0806), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 21,
+  "half": "R",
+  "printed_page": 36,
+  "name": "REGULAR SWIVEL",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (T)",
+    "Dimension A",
+    "Dimension D",
+    "Dimension H",
+    "Dimension L",
+    "Weight"
+   ],
+   "rows": [
+    [
+     "RSWIVEL3",
+     "3.15",
+     "15.4",
+     "41.2",
+     "34.5",
+     "198",
+     "1.43"
+    ],
+    [
+     "RSWIVEL5",
+     "5.3",
+     "17",
+     "49",
+     "42.5",
+     "230",
+     "2.01"
+    ],
+    [
+     "RSWIVEL8",
+     "8",
+     "21.5",
+     "70",
+     "64.5",
+     "300",
+     "4.21"
+    ],
+    [
+     "RSWIVEL21",
+     "21",
+     "41.5",
+     "122",
+     "122.5",
+     "491.6",
+     "—"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red eye-to-eye swivel, embossed '[maker] 319' and 'CE'",
+   "line drawing showing D, H, L, A"
+  ],
+  "notes": [
+   "No feature bullets printed",
+   "Weight for RSWIVEL21 printed as '-'"
+  ],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker] 319' embossed on swivel",
+   "No units printed for dimensions or Weight (presumably mm, kg)"
+  ]
+ },
+ {
+  "pdf_page": 22,
+  "half": "L",
+  "printed_page": 37,
+  "name": "WELD ON RING",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 4 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Ultimate Break Load Tested",
+   "Fatigue Tested At 1.5 Times Working Load For 20000 Cycles",
+   "Pins are 100% eddy-current flaw detection"
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (T)",
+    "Dimension A",
+    "Dimension B",
+    "Dimension D",
+    "Dimension M",
+    "Weight (kg)"
+   ],
+   "rows": [
+    [
+     "WRSL0801",
+     "1",
+     "40.6",
+     "78.2",
+     "13.2",
+     "37.4",
+     "0.39"
+    ],
+    [
+     "WRSL0802",
+     "2",
+     "42",
+     "88.1",
+     "14.1",
+     "40.5",
+     "0.49"
+    ],
+    [
+     "WRSL0803",
+     "3",
+     "44.8",
+     "94.1",
+     "17.3",
+     "42.7",
+     "0.71"
+    ],
+    [
+     "WRSL0805",
+     "5",
+     "55",
+     "119",
+     "22.4",
+     "51.3",
+     "1.78"
+    ],
+    [
+     "WRSL0808",
+     "8",
+     "69.5",
+     "141",
+     "26.1",
+     "66.1",
+     "2.5"
+    ],
+    [
+     "WRSL0810",
+     "10",
+     "84.4",
+     "165",
+     "28.2",
+     "76.7",
+     "3.52"
+    ],
+    [
+     "WRSL0815",
+     "15",
+     "97.5",
+     "270",
+     "34",
+     "90",
+     "5.8"
+    ],
+    [
+     "WRSL0820",
+     "20",
+     "146.5",
+     "270",
+     "46.5",
+     "120",
+     "15.26"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red D-shaped weld-on ring with black weld-on block marked 'WLL 10T', embossed 'S45' and '[maker]'",
+   "line drawing showing A, D, B, M"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker]' embossed on ring",
+   "Second bullet is cut off in print as 'Working Load Lim' — completed to 'Working Load Limit'",
+   "WRSL0815 and WRSL0820 both have B=270 — copied as printed",
+   "No units printed for dimensions (presumably mm)",
+   "Item codes contain 'SL' (e.g. WRSL0801), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 22,
+  "half": "L",
+  "printed_page": 37,
+  "name": "G80 WELD ON HOOK",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 4 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Ultimate Break Load Tested",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "Pins are 100% eddy-current flaw detection"
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (Ton)",
+    "Dimension A (1st column)",
+    "Dimension G",
+    "Dimension H",
+    "Dimension B",
+    "Dimension C",
+    "Dimension A (2nd column)",
+    "Dimension L",
+    "Weight"
+   ],
+   "rows": [
+    [
+     "WHSL0801",
+     "1",
+     "9.1",
+     "20.5",
+     "80",
+     "25.3",
+     "19.6",
+     "24",
+     "89.1",
+     "0.56"
+    ],
+    [
+     "WHSL0802",
+     "2",
+     "11",
+     "26.3",
+     "93.1",
+     "34",
+     "21",
+     "24.4",
+     "81.5",
+     "0.9"
+    ],
+    [
+     "WHSL0803",
+     "3",
+     "13",
+     "30.5",
+     "107.5",
+     "36.5",
+     "24.5",
+     "31",
+     "115.5",
+     "1.3"
+    ],
+    [
+     "WHSL0805",
+     "5",
+     "11",
+     "37",
+     "134",
+     "44",
+     "28.3",
+     "44.2",
+     "154.2",
+     "2.4"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red weld-on hook with spring latch, embossed '[maker] S45'",
+   "line drawings showing A, G, H, L (side) and C, B (end)"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker]' embossed on hook",
+   "Header has two columns both labelled 'A' — kept as 1st/2nd column",
+   "WHSL0802 L=81.5 is smaller than WHSL0801 L=89.1, and WHSL0805 first A=11 is smaller than WHSL0803's 13 — copied as printed",
+   "No units printed for dimensions or Weight (presumably mm, kg)",
+   "Item codes contain 'SL' (e.g. WHSL0801), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 22,
+  "half": "R",
+  "printed_page": 38,
+  "name": "GALV HEAVY DUTY WIRE ROPE CLAMP",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Size (MM)",
+    "Dimension A (MM)",
+    "Dimension B (MM)",
+    "Dimension C (MM)",
+    "Dimension D (MM)",
+    "Dimension F (MM)",
+    "Dimension G (MM)",
+    "WT/PC (KG)"
+   ],
+   "rows": [
+    [
+     "UBSLGI06",
+     "6",
+     "13",
+     "18.5",
+     "15",
+     "5.6",
+     "23",
+     "24",
+     "0.03"
+    ],
+    [
+     "UBSLGI08",
+     "8",
+     "18.3",
+     "24",
+     "19.5",
+     "7.5",
+     "32.2",
+     "34",
+     "0.07"
+    ],
+    [
+     "UBSLGI10",
+     "10",
+     "21.2",
+     "28",
+     "20",
+     "9.5",
+     "38.2",
+     "40",
+     "0.12"
+    ],
+    [
+     "UBSLGI12",
+     "12",
+     "25.6",
+     "33",
+     "25.5",
+     "11.7",
+     "44.5",
+     "49",
+     "0.2"
+    ],
+    [
+     "UBSLGI15",
+     "15",
+     "29.4",
+     "37.5",
+     "33.6",
+     "13.5",
+     "51",
+     "59.1",
+     "0.31"
+    ],
+    [
+     "UBSLGI20",
+     "20",
+     "36.5",
+     "43.5",
+     "40.5",
+     "15.5",
+     "60.3",
+     "735",
+     "0.49"
+    ],
+    [
+     "UBSLGI22",
+     "22",
+     "40.5",
+     "48.7",
+     "45.5",
+     "17.5",
+     "66.5",
+     "79",
+     "0.68"
+    ],
+    [
+     "UBSLGI25",
+     "25",
+     "45.5",
+     "55.5",
+     "48",
+     "19.5",
+     "74",
+     "85",
+     "0.91"
+    ],
+    [
+     "UBSLGI28",
+     "28",
+     "51.5",
+     "62",
+     "62.5",
+     "21.5",
+     "83",
+     "112",
+     "1.53"
+    ],
+    [
+     "UBSLGI32",
+     "32",
+     "56",
+     "71.3",
+     "71",
+     "22.8",
+     "91",
+     "121",
+     "2.07"
+    ],
+    [
+     "UBSLGI36",
+     "36",
+     "64",
+     "75.5",
+     "74",
+     "23.1",
+     "95.3",
+     "130.5",
+     "2.46"
+    ],
+    [
+     "UBSLGI40",
+     "40",
+     "66",
+     "77.5",
+     "81",
+     "23.1",
+     "100",
+     "150",
+     "2.73"
+    ],
+    [
+     "UBSLGI45",
+     "45",
+     "72",
+     "88",
+     "70",
+     "27",
+     "123",
+     "137",
+     "4.75"
+    ],
+    [
+     "UBSLGI50",
+     "50",
+     "85.5",
+     "94.7",
+     "105.5",
+     "29.5",
+     "133.5",
+     "195",
+     "6.67"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "galvanised heavy-duty wire rope clamp (U-bolt with saddle and two hex nuts), embossed '[maker]' on the U-bolt",
+   "line drawing (front and top) showing A, C, D, F, G, B",
+   "row of five smaller photos of galvanised wire rope clamps from different angles"
+  ],
+  "notes": [
+   "No feature bullets printed"
+  ],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photos show '[maker]' embossed on the U-bolt",
+   "UBSLGI20 G printed as '735' (no decimal point visible) — almost certainly 73.5; copied as printed",
+   "UBSLGI45 C=70 is smaller than UBSLGI40 C=81, and UBSLGI45 G=137 smaller than UBSLGI40 G=150 — copied as printed",
+   "Item codes use 'GI' (letters G, I), read as UBSLGI..",
+   "Item codes contain 'SL' (e.g. UBSLGI06), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 23,
+  "half": "L",
+  "printed_page": 39,
+  "name": "EYE BOLT DIN 580 GALVANISED",
+  "series": null,
+  "features": [
+   "DIN580",
+   "Forged Carbon Steel Galvanised"
+  ],
+  "callouts": [],
+  "standard": "DIN 580",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L (O deg)",
+    "W.L.L (90 deg)",
+    "SIZE (mm)",
+    "Dimension D1",
+    "Dimension D2",
+    "Dimension D3",
+    "Dimension B",
+    "Dimension E",
+    "Dimension K",
+    "Weight (KG)"
+   ],
+   "rows": [
+    [
+     "EBSL0806",
+     "0.07",
+     "0.05",
+     "M6",
+     "20",
+     "36",
+     "19",
+     "13",
+     "8",
+     "7.5",
+     "0.05"
+    ],
+    [
+     "EBSL0808",
+     "0.14",
+     "0.095",
+     "M8",
+     "20",
+     "36.3",
+     "19.6",
+     "14",
+     "7.2",
+     "8.2",
+     "0.06"
+    ],
+    [
+     "EBSL0810",
+     "0.23",
+     "0.17",
+     "M10",
+     "25.2",
+     "45.2",
+     "25",
+     "18",
+     "8.1",
+     "10.3",
+     "0.1"
+    ],
+    [
+     "EBSL0812",
+     "1.34",
+     "0.24",
+     "M12",
+     "30.2",
+     "53.7",
+     "29.2",
+     "21",
+     "10.3",
+     "12.2",
+     "0.18"
+    ],
+    [
+     "EBSL0816",
+     "0.7",
+     "0.5",
+     "M16",
+     "35",
+     "62.4",
+     "34",
+     "26",
+     "14.5",
+     "14.2",
+     "0.29"
+    ],
+    [
+     "EBSL0820",
+     "1.2",
+     "0.83",
+     "M20",
+     "40.4",
+     "71.5",
+     "39",
+     "28.7",
+     "15.6",
+     "16",
+     "0.46"
+    ],
+    [
+     "EBSL0824",
+     "1.8",
+     "1.27",
+     "M24",
+     "49.8",
+     "90",
+     "49.2",
+     "35.5",
+     "17.2",
+     "20",
+     "0.83"
+    ],
+    [
+     "EBSL0830",
+     "3.6",
+     "2.6",
+     "M30",
+     "65.7",
+     "108.1",
+     "59.3",
+     "46.5",
+     "18",
+     "25.2",
+     "1.58"
+    ],
+    [
+     "EBSL0836",
+     "5.1",
+     "3.7",
+     "M36",
+     "75.5",
+     "126.1",
+     "68.4",
+     "54",
+     "25.3",
+     "29",
+     "2.67"
+    ],
+    [
+     "EBSL0842",
+     "7",
+     "5",
+     "M42",
+     "85",
+     "144",
+     "78.5",
+     "61",
+     "31",
+     "32.6",
+     "4.35"
+    ],
+    [
+     "EBSL0856",
+     "11.5",
+     "8.3",
+     "M56",
+     "111",
+     "100",
+     "79",
+     "78",
+     "37",
+     "43.5",
+     "8.68"
+    ],
+    [
+     "EBSL0864",
+     "16",
+     "11",
+     "M64",
+     "120",
+     "205",
+     "109",
+     "90",
+     "43",
+     "50",
+     "12.2"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "galvanised eye bolt with '[maker]', 'C15E', 'CE' and 'M42' embossed",
+   "line drawing (front and side) showing D2, D3, E, B, K, D1"
+  ],
+  "notes": [
+   "Caption under drawing: 'DIN580 / Forged Carbon Steel Galvanised' (copied into features)",
+   "W.L.L columns headed '(O deg)' and '(90 deg)' — presumably 0° (axial) and 90°; no unit printed (presumably t)"
+  ],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker]' embossed on eye bolt",
+   "M12 W.L.L (O deg) printed as '1.34' — out of sequence (M16 is 0.7); likely 0.34 — copied as printed",
+   "M56 D2 printed as '100', smaller than M42's 144 — copied as printed",
+   "Header W.L.L '(O deg)' printed with what looks like letter O rather than zero",
+   "No units printed for dimensions (presumably mm)",
+   "Item codes contain 'SL' (e.g. EBSL0806), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 23,
+  "half": "R",
+  "printed_page": 40,
+  "name": "G80 ROTATING LIFTING EYE BOLT",
+  "series": null,
+  "features": [
+   "Forged Super Alloy Steel",
+   "100% Tested At 2.5 Times Working Load Limit",
+   "100% Magnaflux Crack Detection",
+   "Break test",
+   "Fatigue Tested At 1.5 Times Working Load Limit For 20000 Cycles",
+   "Pins are 100% eddy-current test flaw detection",
+   "Suitable for EN818-2 G80 chain"
+  ],
+  "callouts": [],
+  "standard": "EN818-2",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity",
+    "SIZE (mm)",
+    "Dimension A",
+    "Dimension B",
+    "Dimension C",
+    "Dimension D",
+    "Dimension E",
+    "Dimension K",
+    "Dimension M",
+    "Dimension N",
+    "Dimension R",
+    "Weight (kg)"
+   ],
+   "rows": [
+    [
+     "RBSL0808",
+     "0.3",
+     "M8",
+     "44.5",
+     "36.3",
+     "16.5",
+     "7.9",
+     "12.5",
+     "52.5",
+     "52.5",
+     "29.2",
+     "13.5",
+     "0.45"
+    ],
+    [
+     "RBSL0810",
+     "0.45",
+     "M10",
+     "45.5",
+     "36.4",
+     "16.1",
+     "9.91",
+     "18.5",
+     "54.56",
+     "53.5",
+     "30.3",
+     "13.5",
+     "0.45"
+    ],
+    [
+     "RBSL0812",
+     "0.5",
+     "M12",
+     "46.2",
+     "36.3",
+     "16.3",
+     "11.75",
+     "18.5",
+     "53.8",
+     "56.6",
+     "27.8",
+     "13.5",
+     "0.45"
+    ],
+    [
+     "RBSL0816",
+     "1.12",
+     "M16",
+     "46.2",
+     "36.3",
+     "16.7",
+     "15.87",
+     "19.87",
+     "73.1",
+     "53.5",
+     "28.04",
+     "13.3",
+     "0.45"
+    ],
+    [
+     "RBSL0820",
+     "2",
+     "M20",
+     "73",
+     "60.2",
+     "24.5",
+     "19.75",
+     "30.1",
+     "82",
+     "85.5",
+     "41.2",
+     "18.6",
+     "1.54"
+    ],
+    [
+     "RBSL0824",
+     "3.15",
+     "M24",
+     "73",
+     "60.3",
+     "28.5",
+     "23.8",
+     "30.1",
+     "82",
+     "85.5",
+     "41.5",
+     "18.6",
+     "1.55"
+    ],
+    [
+     "RBSL0830",
+     "5.3",
+     "M30",
+     "95.5",
+     "80.3",
+     "26.5",
+     "29.8",
+     "50.5",
+     "111.5",
+     "113.5",
+     "47.8",
+     "25",
+     "4.01"
+    ],
+    [
+     "RBSL0830",
+     "8",
+     "M30",
+     "90",
+     "80",
+     "30",
+     "30",
+     "50",
+     "110",
+     "115",
+     "50",
+     "25",
+     "3.75"
+    ],
+    [
+     "RBSL0836",
+     "8",
+     "M36",
+     "90",
+     "80",
+     "36",
+     "36",
+     "54",
+     "110",
+     "115",
+     "50",
+     "25",
+     "3.81"
+    ],
+    [
+     "RBSL0842",
+     "10",
+     "M42",
+     "106.5",
+     "93",
+     "41.7",
+     "41.7",
+     "63.5",
+     "124.5",
+     "135.2",
+     "63",
+     "28",
+     "6.32"
+    ],
+    [
+     "RBSL0848",
+     "10",
+     "M48",
+     "92",
+     "80",
+     "47.5",
+     "47.5",
+     "50.2",
+     "113",
+     "111",
+     "52",
+     "25.3",
+     "4.2"
+    ],
+    [
+     "RBSL0856",
+     "15",
+     "M56",
+     "137",
+     "105.3",
+     "56",
+     "56",
+     "84.5",
+     "155",
+     "157",
+     "68.5",
+     "32.2",
+     "10.1"
+    ],
+    [
+     "RBSL0864",
+     "15",
+     "M64",
+     "138",
+     "105.3",
+     "63.5",
+     "63.5",
+     "95.5",
+     "160",
+     "157",
+     "68",
+     "32.2",
+     "10.9"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red rotating lifting eye bolt (swivel eye on hex body), embossed '[maker] 348' and 'M30X50 WLL5.3T'",
+   "line drawings showing C, B, K, A, E, D and the ring with N, M, R"
+  ],
+  "notes": [],
+  "flags": [
+   "Company logo '[maker]' with 'ISO 9001 CE Certified' and '[website] printed in the page header",
+   "Product photo shows '[maker]' embossed on eye",
+   "Item code RBSL0830 appears twice (M30 at 5.3 and M30 at 8) with different dimensions — copied as printed",
+   "No unit printed for Capacity or dimensions (presumably t, mm)",
+   "M48 row (10 t, A 92, weight 4.2) is smaller than M42 row — copied as printed",
+   "Item codes contain 'SL' (e.g. RBSL0808), which may be derived from the [maker] brand name"
+  ]
+ },
+ {
+  "pdf_page": 24,
+  "half": "L",
+  "printed_page": 41,
+  "name": "DROP FORGED HEAVY DUTY GALVANIZED TURN BUCKLE (JAW & JAW TURN BUCKLE)",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity",
+    "Size",
+    "Dia (D)",
+    "Dimension B",
+    "Dimension C",
+    "Dimension E",
+    "Dimension G",
+    "Dimension BB",
+    "Dimension J (Open)",
+    "Dimension K (Closed)",
+    "Dimension A",
+    "Weight (KG)"
+   ],
+   "rows": [
+    [
+     "TBJJ1006",
+     "0.5",
+     "3/8”x6”",
+     "8.8",
+     "12.5",
+     "23.8",
+     "65",
+     "23",
+     "150",
+     "440",
+     "270",
+     "180",
+     "0.38"
+    ],
+    [
+     "TBJJ1206",
+     "1",
+     "1/2”x6”",
+     "12",
+     "16.7",
+     "29.1",
+     "80",
+     "28.3",
+     "151",
+     "510",
+     "280",
+     "190",
+     "0.71"
+    ],
+    [
+     "TBJJ1609",
+     "1.6",
+     "5/8”x9”",
+     "15.5",
+     "19",
+     "37.2",
+     "100",
+     "36.5",
+     "230",
+     "700",
+     "460",
+     "275",
+     "1.55"
+    ],
+    [
+     "TBJJ2009",
+     "2.3",
+     "3/4”x9”",
+     "18.5",
+     "23.5",
+     "43.6",
+     "100",
+     "42",
+     "230",
+     "740",
+     "465",
+     "285",
+     "2.33"
+    ],
+    [
+     "TBJJ2212",
+     "3.3",
+     "7/8”x12”",
+     "21.6",
+     "28.5",
+     "49.1",
+     "125",
+     "46.4",
+     "310",
+     "935",
+     "560",
+     "365",
+     "3.72"
+    ],
+    [
+     "TBJJ2412",
+     "4.5",
+     "1”x12”",
+     "24.5",
+     "31.5",
+     "57",
+     "150",
+     "56.7",
+     "300",
+     "965",
+     "595",
+     "370",
+     "5.45"
+    ],
+    [
+     "TBJJ3018",
+     "6.9",
+     "1.1/4x12”",
+     "30.4",
+     "45.8",
+     "67.5",
+     "185",
+     "75",
+     "450",
+     "1330",
+     "800",
+     "530",
+     "11.26"
+    ],
+    [
+     "TBJJ3918",
+     "9.7",
+     "1.1/2”x12”",
+     "36.5",
+     "57.2",
+     "77.5",
+     "190",
+     "78",
+     "455",
+     "1400",
+     "840",
+     "540",
+     "16.3"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "dimension line drawing of jaw & jaw turnbuckle (A, B, BB, D, E closed, G, J open, K closed)",
+   "main photo of galvanized jaw & jaw turnbuckle, diagonal"
+  ],
+  "notes": [],
+  "flags": [
+   "Table prints no units for Capacity or the lettered dimensions (presumably t and mm); columns left without units",
+   "Size '1.1/4x12”' printed without the inch mark after 1.1/4 (copied as printed)"
+  ]
+ },
+ {
+  "pdf_page": 24,
+  "half": "R",
+  "printed_page": 42,
+  "name": "G80 CONTAINER LIFTING HOOK",
+  "series": null,
+  "features": [
+   "Forged super alloy steel-Quenched and Tempered.",
+   "Suitable for web sling and G80 chain EN818-2.",
+   "Individually proof test at 2.5 times working load limit.",
+   "Fatigue tested at 1.5 times working load limit for 20000 cycles.",
+   "Breakage test",
+   "100% magnaflux crack detection.",
+   "Ultimate load is 4 times the working load limit."
+  ],
+  "callouts": [],
+  "standard": "EN818-2",
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "W.L.L",
+    "Type",
+    "Dimension A",
+    "Dimension D",
+    "Dimension E",
+    "Dimension M",
+    "Dimension R",
+    "Dimension H",
+    "Dimension L",
+    "Dimension H (2nd)",
+    "Dimension D (2nd)",
+    "Weight/Kg"
+   ],
+   "rows": [
+    [
+     "CLHSL812L",
+     "12.5",
+     "Left Type",
+     "45.5",
+     "67.5",
+     "48.3",
+     "76.5",
+     "59.5",
+     "165.2",
+     "260",
+     "26.4",
+     "27",
+     "4.4"
+    ],
+    [
+     "CLHSL812R",
+     "12.5",
+     "Right Type",
+     "45.5",
+     "67.5",
+     "48.3",
+     "76.5",
+     "59.5",
+     "165.2",
+     "260",
+     "26.2",
+     "26.2",
+     "4.38"
+    ],
+    [
+     "CLHSL812S",
+     "12.5",
+     "Straight Type",
+     "45.5",
+     "67.5",
+     "48.3",
+     "76.5",
+     "59.5",
+     "165.2",
+     "260",
+     "26.5",
+     "26.2",
+     "4.36"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "three red container lifting hooks (left, straight, right variants) stacked on left side",
+   "dimension line drawing with A, D, R, h, H, d, L, M, E"
+  ],
+  "notes": [
+   "Printed as three separate one-row tables titled 'Left Type', 'Right Type', 'Straight Type'; merged here with a Type column"
+  ],
+  "flags": [
+   "Item codes CLHSL812L/R/S contain 'SL', likely derived from brand [maker]",
+   "Header repeats 'H' and 'D' (columns 9 and 10); the drawing labels these lowercase 'h' and 'd' — named 'Dimension H (2nd)' / 'Dimension D (2nd)'",
+   "No units printed for W.L.L or dimensions (presumably t and mm)",
+   "Feature text printed 'fo 20000 cycles' corrected to 'for'"
+  ]
+ },
+ {
+  "pdf_page": 24,
+  "half": "R",
+  "printed_page": 42,
+  "name": "WIRE ROPE EDGE PROTECTOR WITH MAGNET",
+  "series": null,
+  "features": [
+   "Strong magnet used so it can be attached with the steel object being lifted.",
+   "Edge Protector can absorb sharp or angular contact on objects.",
+   "Can absorb other acting forces while material is being lifted.",
+   "Position of the product can be changed as required.",
+   "Various Sizes of edge protector as per use"
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Wire Rope Dia (mm)",
+    "Dimension A",
+    "Dimension B",
+    "Weight (Kg)"
+   ],
+   "rows": [
+    [
+     "WREP 10",
+     "Upto 10",
+     "23",
+     "36",
+     "1.9"
+    ],
+    [
+     "WREP 20",
+     "10 to 20",
+     "28",
+     "50",
+     "1.96"
+    ],
+    [
+     "WREP 30",
+     "20 to 30",
+     "44",
+     "66",
+     "2.4"
+    ],
+    [
+     "WREP 40",
+     "30 to 40",
+     "52",
+     "85",
+     "4.94"
+    ],
+    [
+     "WREP 50",
+     "40 to 50",
+     "61",
+     "88",
+     "9.5"
+    ],
+    [
+     "WREP 60",
+     "50 to 60",
+     "69",
+     "98",
+     "12.7"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "two blue wire rope edge protectors with magnet",
+   "line drawing with dimensions A and B"
+  ],
+  "notes": [],
+  "flags": [
+   "No unit printed for dimensions A and B (presumably mm)"
+  ]
+ },
+ {
+  "pdf_page": 25,
+  "half": "L",
+  "printed_page": 43,
+  "name": "DRUM LIFTER",
+  "series": null,
+  "features": [
+   "For safe lifting and transporting of steel (oil) drums.",
+   "With automatic locking mechanism.",
+   "The drum clamps can be used single or pair as well.",
+   "Avoid snatch or shock loading",
+   "This clamp is extremely light weight and very quick and easy to use"
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Rated Capacity (t)",
+    "Model",
+    "Jaw Opening (mm)",
+    "N.W (kg)"
+   ],
+   "rows": [
+    [
+     "DLSL0105",
+     "400 kg",
+     "0.5",
+     "0-25",
+     "3.6"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "drum lifter: red master link with two chain legs and red drum clamps"
+  ],
+  "notes": [],
+  "flags": [
+   "Item code DLSL0105 contains 'SL', likely derived from brand [maker]",
+   "Rated Capacity column header says (t) but value printed '400 kg'; Model printed '0.5' — inconsistent as printed"
+  ]
+ },
+ {
+  "pdf_page": 25,
+  "half": "L",
+  "printed_page": 43,
+  "name": "CABLE PULLER",
+  "series": null,
+  "features": [
+   "Drum and ratchet wheel are casted as one unit from aluminum alloy.",
+   "Steel hand and frame finished with galvanization to resist chips and corrosion.",
+   "Spring loaded ratchet control lever permits operation in any position and allows you to easily switch from lifting to lowering.",
+   "Conforms to CE safety standard."
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": "Conforms to CE safety standard",
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (T)",
+    "Description",
+    "Dia. of wire Rope (MM)",
+    "Length of wire rope (Mtr)",
+    "Unit Weight (kgs)"
+   ],
+   "rows": [
+    [
+     "CPSL0010",
+     "1",
+     "Cable Puller",
+     "4.5",
+     "1.5",
+     "2.16"
+    ],
+    [
+     "CPSL0020",
+     "2",
+     "Cable Puller",
+     "5",
+     "2",
+     "2.50"
+    ],
+    [
+     "CPSL0030",
+     "3",
+     "Cable Puller",
+     "5",
+     "3",
+     "3.21"
+    ],
+    [
+     "CPSL0050",
+     "4",
+     "Cable Puller",
+     "5",
+     "2.5",
+     "3.6"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "cable puller (come-along) with red handle grip, two hooks and wire rope"
+  ],
+  "notes": [],
+  "flags": [
+   "Item codes CPSL0010/20/30/50 contain 'SL', likely derived from brand [maker]",
+   "Capacity 4 row has item code CPSL0050 (not CPSL0040) and shorter rope 2.5 m — copied as printed",
+   "'Description' merged cell 'Cable Puller' visually spans the first three rows; the 4th row's cell appears blank but repeated here"
+  ]
+ },
+ {
+  "pdf_page": 25,
+  "half": "R",
+  "printed_page": 44,
+  "name": "PERMANENT MAGNET LIFTER",
+  "series": null,
+  "features": [
+   "Safety factor 3:1.",
+   "Strong permanent magnetic circuit.",
+   "Stable and lasting working performance.",
+   "Strong pull-off strength.",
+   "High safety factor and reliable quality."
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (T)",
+    "Dimension L",
+    "Dimension B",
+    "Dimension H",
+    "Dimension R",
+    "Weight (KG)"
+   ],
+   "rows": [
+    [
+     "MAGSL001",
+     "100",
+     "55",
+     "95",
+     "73",
+     "180",
+     "3.2"
+    ],
+    [
+     "MAGSL004",
+     "400",
+     "75",
+     "160",
+     "95",
+     "200",
+     "9.71"
+    ],
+    [
+     "MAGSL006",
+     "600",
+     "120",
+     "260",
+     "118",
+     "235",
+     "21.2"
+    ],
+    [
+     "MAGSL010",
+     "1000",
+     "130",
+     "310",
+     "140",
+     "280",
+     "35.1"
+    ],
+    [
+     "MAGSL020",
+     "2000",
+     "150",
+     "420",
+     "168",
+     "355",
+     "66.78"
+    ],
+    [
+     "MAGSL030",
+     "3000",
+     "150",
+     "510",
+     "170",
+     "355",
+     "82.1"
+    ],
+    [
+     "MAGSL050",
+     "5000",
+     "235",
+     "530",
+     "230",
+     "510",
+     "200"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "orange permanent magnet lifter on a steel plate",
+   "line drawings (side and front) showing L, B, H, R"
+  ],
+  "notes": [],
+  "flags": [
+   "Item codes MAGSL001…MAGSL050 contain 'SL', likely derived from brand [maker]",
+   "Capacity header says (T) but values 100–5000 are evidently kg — copied as printed",
+   "No unit printed for dimensions L, B, H, R (presumably mm)"
+  ]
+ },
+ {
+  "pdf_page": 25,
+  "half": "R",
+  "printed_page": 44,
+  "name": "INDUSTRIAL SKATES",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (T)",
+    "Platform Size (mm)",
+    "Height (mm)",
+    "Wheel Size",
+    "Handle Length (mm)",
+    "Weight (KG)"
+   ],
+   "rows": [
+    [
+     "SKSL1806",
+     "6",
+     "270x185",
+     "110",
+     "4 (80x75mm)",
+     "900",
+     "15.3"
+    ],
+    [
+     "SKSL1812",
+     "12",
+     "350x270",
+     "110",
+     "8 (80x75mm)",
+     "900",
+     "25.5"
+    ],
+    [
+     "SKSL1818",
+     "18",
+     "480x260",
+     "110",
+     "12 (80x75mm)",
+     "900",
+     "41.5"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red industrial skate (roller dolly) with black top plate and long red steering handle"
+  ],
+  "notes": [],
+  "flags": [
+   "Item codes SKSL1806/1812/1818 contain 'SL', likely derived from brand [maker]"
+  ]
+ },
+ {
+  "pdf_page": 26,
+  "half": "L",
+  "printed_page": 45,
+  "name": "SPRING BALANCER",
+  "series": null,
+  "features": [],
+  "callouts": [
+   "The Lifting instruction",
+   "The plug-in type cable",
+   "The spring box",
+   "The Cydariform locking device",
+   "The Ratchet device",
+   "The device for preventing dropping.",
+   "The Springback protection",
+   "The manual spring-loaded governor",
+   "The Cover",
+   "The worm gear spring-loaded governor",
+   "The ratchet system spring-load governor",
+   "CE Certificate"
+  ],
+  "standard": null,
+  "certification": "CE Certificate (icon)",
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (kg)",
+    "Trave (m)",
+    "Cable (φmm)",
+    "N.W (kg)"
+   ],
+   "rows": [
+    [
+     "SB001003",
+     "1-3",
+     "1.5",
+     "3.2",
+     "1.5"
+    ],
+    [
+     "SB003005",
+     "3-5",
+     "1.5",
+     "3.2",
+     "1.5"
+    ],
+    [
+     "SB005009",
+     "5-9",
+     "1.5",
+     "4.2",
+     "4.5"
+    ],
+    [
+     "SB009015",
+     "9-15",
+     "1.5",
+     "4.2",
+     "4.5"
+    ],
+    [
+     "SB015022",
+     "15-22",
+     "1.5",
+     "5.2",
+     "8.5"
+    ],
+    [
+     "SB022030",
+     "22-30",
+     "1.5",
+     "5.2",
+     "9"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "large photo of yellow spring balancer with top hook and bottom carabiner; dial label reads 15-22 kg, 'SPRING BALANCER' with brand logo",
+   "grid of 12 feature icons with labels"
+  ],
+  "notes": [],
+  "flags": [
+   "Column header printed 'Trave (m)' (likely 'Travel'); kept as printed",
+   "Product photo label shows the '[maker]' brand logo on the balancer body"
+  ]
+ },
+ {
+  "pdf_page": 26,
+  "half": "R",
+  "printed_page": 46,
+  "name": "RATCHET LOAD BINDER",
+  "series": null,
+  "features": [
+   "Upgraded for use with grade 70,80 and 100 chain.",
+   "One piece forged handle.",
+   "Continuous take-up features provides finite adjustment to tie down load.",
+   "Each binder individually proof tested.",
+   "Easy operation positive ratchet"
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Min-Max Chain Size (in)",
+    "Working Load Limit (lbs)",
+    "Proof Load (lbs)",
+    "Minium Ultimate Load (lbs)",
+    "Weight Each (lbs)",
+    "Handle Length (in)",
+    "Dimension L1 (mm)",
+    "Dimension L2 (mm)",
+    "Dimension L3 (mm)",
+    "Dimension L4 (mm)",
+    "Dimension L5 (mm)",
+    "Dimension L6 (mm)",
+    "Dimension L7 (mm)",
+    "Dimension L8 (mm)"
+   ],
+   "rows": [
+    [
+     "RBSL1305",
+     "3/8-1/2",
+     "9200",
+     "18400",
+     "33000",
+     "12.9",
+     "13.92",
+     "13.92",
+     "1.3",
+     "2.6",
+     "24.13",
+     "32.13",
+     "27.04",
+     "35.04",
+     "0.59"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "main photo of red ratchet load binder with grab hooks",
+   "line drawing with L1–L8 (L5 open/L4 closed, L7 open/L6 closed)",
+   "inset close-up of ratchet mechanism",
+   "inset close-up of grab hook"
+  ],
+  "notes": [
+   "Feature list headed 'Technical specialities' (heading printed twice)",
+   "Table header group: 'Specifications'; L1–L8 grouped under 'Dimensions ( mm )'"
+  ],
+  "flags": [
+   "Item code RBSL1305 contains 'SL', likely derived from brand [maker]",
+   "Column header printed 'Minium Ultimate Load (lbs)' (likely 'Minimum'); kept as printed",
+   "Feature text printed 'Continues take-up' corrected to 'Continuous'",
+   "Dimension values (e.g. L1 13.92 = Handle Length 13.92 in) look like inches despite the '(mm)' header — copied as printed"
+  ]
+ },
+ {
+  "pdf_page": 27,
+  "half": "L",
+  "printed_page": 47,
+  "name": "WIRE ROPE PULLEY BLOCK SINGLE CLOSED HEAVY DUTY",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Size",
+    "Dimension L",
+    "Dimension B",
+    "Dimension C",
+    "Dimension T",
+    "Dimension T2",
+    "Dimension L1",
+    "Dimension B1",
+    "Dimension H1",
+    "Dimension H2",
+    "Weight",
+    "Plate thickness",
+    "Sheave",
+    "Max Rope"
+   ],
+   "rows": [
+    [
+     "WRPSL101",
+     "1",
+     "—",
+     "—",
+     "—",
+     "—",
+     "—",
+     "—",
+     "—",
+     "—",
+     "—",
+     "—",
+     "—",
+     "—",
+     "—"
+    ],
+    [
+     "WRPSL102",
+     "2",
+     "410",
+     "160",
+     "29.5",
+     "23.5",
+     "40.5",
+     "265",
+     "75",
+     "130",
+     "90",
+     "5.2",
+     "2.5",
+     "145",
+     "18"
+    ],
+    [
+     "WRPSL103",
+     "3",
+     "475",
+     "180",
+     "33.5",
+     "29.5",
+     "48.5",
+     "300",
+     "90",
+     "155",
+     "103",
+     "8.8",
+     "4.1",
+     "170",
+     "20"
+    ],
+    [
+     "WRPSL105",
+     "5",
+     "575",
+     "215",
+     "41",
+     "36",
+     "60",
+     "370",
+     "102",
+     "190",
+     "130",
+     "14.8",
+     "4.1",
+     "200",
+     "28"
+    ],
+    [
+     "WRPSL110",
+     "10",
+     "820",
+     "320",
+     "52",
+     "50",
+     "79",
+     "510",
+     "90",
+     "280",
+     "190",
+     "39",
+     "6",
+     "300",
+     "40"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "small line drawings of single-sheave pulley blocks (hook type and eye type, front and side views)"
+  ],
+  "notes": [],
+  "flags": [
+   "Item codes WRPSL101…WRPSL110 contain 'SL', likely derived from brand [maker]",
+   "Row for Size 1 (WRPSL101) has all values blank as printed",
+   "No units printed in table (Size presumably t; dimensions presumably mm; Weight presumably kg)"
+  ]
+ },
+ {
+  "pdf_page": 27,
+  "half": "L",
+  "printed_page": 47,
+  "name": "WIRE ROPE PULLEY BLOCK DOUBLE SLEEVE HEAVY DUTY",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Size",
+    "Dimension L",
+    "Dimension B",
+    "Dimension C",
+    "Dimension T",
+    "Dimension T2",
+    "Dimension L1",
+    "Dimension B1",
+    "Dimension H1",
+    "Dimension H2",
+    "Weight",
+    "Plate thickness",
+    "Sheave",
+    "Max Rope"
+   ],
+   "rows": [
+    [
+     "WRPSL202",
+     "2",
+     "435",
+     "116",
+     "30",
+     "23.5",
+     "40",
+     "310",
+     "105",
+     "100",
+     "70",
+     "5.6",
+     "4.15",
+     "110",
+     "12"
+    ],
+    [
+     "WRPSL203",
+     "3",
+     "525",
+     "155",
+     "35",
+     "28",
+     "45",
+     "380",
+     "120",
+     "133",
+     "90",
+     "11",
+     "5",
+     "140",
+     "18"
+    ],
+    [
+     "WRPSL205",
+     "5",
+     "620",
+     "180",
+     "41.5",
+     "35.5",
+     "51",
+     "310",
+     "128",
+     "130",
+     "100",
+     "18.5",
+     "6",
+     "170",
+     "22"
+    ],
+    [
+     "WRPSL210",
+     "10",
+     "900",
+     "245",
+     "53",
+     "51",
+     "81",
+     "410",
+     "170",
+     "190",
+     "140",
+     "46",
+     "7.5",
+     "230",
+     "26.5"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "orange double-sheave pulley block with black eye on top and becket at bottom",
+   "line drawings of double-sheave blocks (hook type and eye type, front and side views)"
+  ],
+  "notes": [],
+  "flags": [
+   "Item codes WRPSL202…WRPSL210 contain 'SL', likely derived from brand [maker]",
+   "Heading says 'DOUBLE SLEEVE' (likely 'double sheave'); kept as printed",
+   "No units printed in table (Size presumably t; dimensions presumably mm; Weight presumably kg)"
+  ]
+ },
+ {
+  "pdf_page": 27,
+  "half": "R",
+  "printed_page": 48,
+  "name": "MANILA ROPE PULLEY",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Size",
+    "Dimension B",
+    "Dimension B1",
+    "Dimension C",
+    "Dimension H1",
+    "Dimension L",
+    "Dimension T1",
+    "Dimension R",
+    "WT (KG)"
+   ],
+   "rows": [
+    [
+     "MPSB2004",
+     "3/4”X4” (S)",
+     "103",
+     "50",
+     "19",
+     "95",
+     "300",
+     "31.5",
+     "19",
+     "1.89"
+    ],
+    [
+     "MPSB2506",
+     "1”X6” (S)",
+     "145.5",
+     "61",
+     "25",
+     "131",
+     "360",
+     "31.5",
+     "30",
+     "3.19"
+    ],
+    [
+     "MPSB3808",
+     "1.1/2” X8” (S)",
+     "200",
+     "75.5",
+     "25",
+     "178",
+     "470",
+     "25",
+     "30",
+     "6.47"
+    ],
+    [
+     "MPDB2004",
+     "3/4”X4” (D)",
+     "103",
+     "83.5",
+     "28.5",
+     "95",
+     "300",
+     "31.5",
+     "19",
+     "2.8"
+    ],
+    [
+     "MPDB2506",
+     "1”X6” (D)",
+     "145.7",
+     "94",
+     "28.3",
+     "131",
+     "360",
+     "31.5",
+     "30",
+     "5"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red fibre rope pulley block with black hook and safety latch; body stencilled '[maker] FIBRE ROPE PULLEY BLOCK SIZE 3/4\" X 4\" CAPACITY 0.5 TON'",
+   "line drawing front and side views with T2, L, B, B1, H1"
+  ],
+  "notes": [],
+  "flags": [
+   "Product photo shows brand word '[maker]' stencilled on the pulley body",
+   "Drawing labels 'T2' but table column is 'T1' — copied as printed",
+   "No units printed for dimensions (presumably mm); (S)/(D) presumably single/double sheave"
+  ]
+ },
+ {
+  "pdf_page": 28,
+  "half": "L",
+  "printed_page": 49,
+  "name": "HORIZONTAL PLATE LIFTING CLAMP PDB TYPE",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity",
+    "Dimension A",
+    "Dimension B",
+    "Dimension C",
+    "Dimension D",
+    "Dimension E",
+    "JAW Opening",
+    "Weight (kgs)"
+   ],
+   "rows": [
+    [
+     "HZPCSL01",
+     "1",
+     "155",
+     "195",
+     "44",
+     "16.2",
+     "24.8",
+     "30",
+     "3.67"
+    ],
+    [
+     "HZPCSL02",
+     "2",
+     "165",
+     "230",
+     "47.2",
+     "18.2",
+     "24.7",
+     "40",
+     "4.62"
+    ],
+    [
+     "HZPCSL03",
+     "3",
+     "165",
+     "250",
+     "49.2",
+     "18.2",
+     "28",
+     "45",
+     "5.84"
+    ],
+    [
+     "HZPCSL05",
+     "5",
+     "175",
+     "270",
+     "55",
+     "28",
+     "28",
+     "55",
+     "7.48"
+    ],
+    [
+     "HZPCSL10",
+     "10",
+     "330",
+     "510",
+     "74.5",
+     "28",
+     "45",
+     "125",
+     "32.92"
+    ],
+    [
+     "HZPCSL16",
+     "16",
+     "410",
+     "665",
+     "65",
+     "30",
+     "59",
+     "150",
+     "46"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red and black horizontal plate lifting clamp",
+   "line drawing front and side views with A, B, C, D, E"
+  ],
+  "notes": [],
+  "flags": [
+   "Item codes HZPCSL01…HZPCSL16 contain 'SL', likely derived from brand [maker]",
+   "No units printed for Capacity, dimensions or Jaw Opening (presumably t and mm)",
+   "'PDB TYPE' printed as second line of heading; treated as part of name"
+  ]
+ },
+ {
+  "pdf_page": 28,
+  "half": "L",
+  "printed_page": 49,
+  "name": "LATERAL PLATE CLAMP",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (Tonnes)",
+    "Test Load (KN)",
+    "Jaw Opening",
+    "Dimension A (mm)",
+    "Dimension B (mm)",
+    "Dimension C (mm)",
+    "Dimension D (mm)",
+    "Dimension E (mm)",
+    "Dimension F (mm)",
+    "Dimension G (mm)",
+    "Net Weight (kg)"
+   ],
+   "rows": [
+    [
+     "LPLCSL01",
+     "1",
+     "14.70",
+     "0-25",
+     "25",
+     "240",
+     "119",
+     "240",
+     "42",
+     "60",
+     "16",
+     "—"
+    ],
+    [
+     "LPLCSL02",
+     "2",
+     "29.41",
+     "0-30",
+     "30",
+     "289",
+     "128",
+     "300",
+     "56",
+     "75",
+     "20",
+     "7.1"
+    ],
+    [
+     "LPLCSL03",
+     "3",
+     "44.11",
+     "0-40",
+     "40",
+     "321",
+     "137",
+     "340",
+     "58",
+     "90",
+     "22",
+     "12.1"
+    ],
+    [
+     "LPLCSL05",
+     "5",
+     "73.52",
+     "0-50",
+     "50",
+     "376",
+     "137",
+     "372",
+     "60",
+     "100",
+     "25",
+     "—"
+    ],
+    [
+     "LPLCSL10",
+     "10",
+     "147",
+     "0-75",
+     "75",
+     "533",
+     "148",
+     "553",
+     "75",
+     "18",
+     "30",
+     "—"
+    ],
+    [
+     "LPLCSL12",
+     "12",
+     "—",
+     "—",
+     "—",
+     "—",
+     "—",
+     "—",
+     "—",
+     "—",
+     "—",
+     "—"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "yellow lateral plate clamp with black cam and handle",
+   "line drawing front and side views"
+  ],
+  "notes": [
+   "Table printed transposed (capacities across the top)"
+  ],
+  "flags": [
+   "Item codes LPLCSL01…LPLCSL12 contain 'SL', likely derived from brand [maker]",
+   "12 t model (LPLCSL12) has only an item code; all other values blank as printed",
+   "Net Weight row has values only under the 2 t (7.1) and 3 t (12.1) columns; others blank — alignment may be off in the source",
+   "Dimension F for 10 t printed '18' (out of sequence with 60/75/90/100) — copied as printed",
+   "Dimension A row sits outside the 'Dimensions (mm)' label block; mm assumed",
+   "Jaw Opening has no unit printed"
+  ]
+ },
+ {
+  "pdf_page": 28,
+  "half": "R",
+  "printed_page": 50,
+  "name": "VERTICAL PLATE LIFTING CLAMP",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity",
+    "Dimension B",
+    "Dimension H",
+    "Dimension L",
+    "Dimension b1",
+    "Dimension b2",
+    "Dimension h1",
+    "Dimension h2",
+    "Dimension h3",
+    "Dimension d1",
+    "Dimension d2",
+    "Dimension t",
+    "Dimension t1",
+    "Dimension t2",
+    "JAW Opening",
+    "Weight (kgs)"
+   ],
+   "rows": [
+    [
+     "VPLCSL01",
+     "1",
+     "150",
+     "185",
+     "305",
+     "45.7",
+     "35",
+     "85",
+     "71",
+     "45",
+     "41.8",
+     "95.5",
+     "14",
+     "72.3",
+     "59.6",
+     "22",
+     "5.04"
+    ],
+    [
+     "VPLCSL02",
+     "2",
+     "160",
+     "205",
+     "340",
+     "56",
+     "35",
+     "95.2",
+     "78",
+     "49",
+     "45",
+     "96.5",
+     "15.5",
+     "79",
+     "59.5",
+     "30",
+     "7.18"
+    ],
+    [
+     "VPLCSL03",
+     "3",
+     "185",
+     "222",
+     "390",
+     "61",
+     "41",
+     "101",
+     "77",
+     "45",
+     "50",
+     "103",
+     "18.2",
+     "96.5",
+     "76.5",
+     "35",
+     "10.78"
+    ],
+    [
+     "VPLCSL05",
+     "5",
+     "225",
+     "270",
+     "440",
+     "67",
+     "59",
+     "110",
+     "90",
+     "50",
+     "50.5",
+     "120",
+     "19.6",
+     "98",
+     "80.5",
+     "50",
+     "16.3"
+    ],
+    [
+     "VPLCSL10",
+     "10",
+     "295",
+     "365",
+     "590",
+     "76",
+     "76",
+     "145",
+     "117",
+     "61",
+     "71",
+     "144.5",
+     "24.75",
+     "130",
+     "100",
+     "80",
+     "35"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red and black vertical plate lifting clamp; small nameplate with brand logo",
+   "line drawing (yellow body, pink shackle) front and side views with D1, D2, L, H, h1–h3, b1, b2, B, t, T1, T2"
+  ],
+  "notes": [],
+  "flags": [
+   "Item codes VPLCSL01…VPLCSL10 contain 'SL', likely derived from brand [maker]",
+   "Nameplate on product photo shows '[maker]' logo",
+   "No units printed for Capacity, dimensions or Jaw Opening (presumably t and mm)",
+   "Drawing labels D1/D2 and T1/T2 but table headers are d1/d2 and t1/t2 — table headers copied as printed"
+  ]
+ },
+ {
+  "pdf_page": 28,
+  "half": "R",
+  "printed_page": 50,
+  "name": "UNIVERSAL PLATE LIFTING CLAMP",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity",
+    "Dimension A",
+    "Dimension B",
+    "Dimension C",
+    "Dimension D",
+    "Dimension E",
+    "Dimension F",
+    "Dimension G",
+    "Dimension H",
+    "Dimension J",
+    "Dimension K",
+    "NG (Catal)",
+    "Actual",
+    "Weight (kgs)"
+   ],
+   "rows": [
+    [
+     "UPLCSL01",
+     "1",
+     "34",
+     "55",
+     "155",
+     "300",
+     "46.5",
+     "140.8",
+     "62.3",
+     "39",
+     "30.5",
+     "13.4",
+     "15mm",
+     "22mm",
+     "4.4"
+    ],
+    [
+     "UPLCSL02",
+     "2",
+     "34",
+     "70",
+     "195",
+     "375",
+     "64.6",
+     "170",
+     "69.251",
+     "51",
+     "31.5",
+     "18",
+     "25mm",
+     "18mm",
+     "7.55"
+    ],
+    [
+     "UPLCSL03",
+     "3",
+     "43",
+     "77",
+     "230",
+     "430",
+     "73.2",
+     "205",
+     "80",
+     "54",
+     "39",
+     "20.5",
+     "—",
+     "—",
+     "13.5"
+    ],
+    [
+     "UPLCSL05",
+     "5",
+     "51",
+     "90",
+     "255",
+     "485",
+     "79.5",
+     "240",
+     "86.4",
+     "57.5",
+     "48",
+     "25",
+     "30mm",
+     "35mm",
+     "18.05"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red and black universal plate lifting clamp",
+   "line drawing front and side views with A–K"
+  ],
+  "notes": [],
+  "flags": [
+   "Item codes UPLCSL01…UPLCSL05 contain 'SL', likely derived from brand [maker]",
+   "Dimension G for 2 t printed '69.251' (odd precision) — copied as printed",
+   "Columns 'NG (Catal)' and 'Actual' are unexplained in the source; 3 t row blank in both",
+   "No units printed for Capacity or lettered dimensions (presumably t and mm)"
+  ]
+ },
+ {
+  "pdf_page": 29,
+  "half": "L",
+  "printed_page": 51,
+  "name": "PIPE LIFTING CLAMP TPH TYPE",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity",
+    "Dimension A",
+    "Dimension B",
+    "Dimension C",
+    "Dimension D",
+    "Dimension E",
+    "Dimension R",
+    "Dimension T",
+    "Weight (kgs)"
+   ],
+   "rows": [
+    [
+     "PLCLSL03",
+     "3",
+     "117.5",
+     "30.1",
+     "210",
+     "66.5",
+     "7.89",
+     "36.5",
+     "24.5",
+     "2.01"
+    ],
+    [
+     "PLCLSL06",
+     "6",
+     "122.8",
+     "32.2",
+     "230",
+     "66.6",
+     "11.6",
+     "45.3",
+     "29.5",
+     "3.3"
+    ],
+    [
+     "PLCLSL01",
+     "1.5",
+     "118.5",
+     "33",
+     "211",
+     "66.5",
+     "33.7",
+     "36.2",
+     "24.5",
+     "1.53"
+    ],
+    [
+     "PLCLSL08",
+     "8",
+     "122.3",
+     "33",
+     "230",
+     "66.5",
+     "39.5",
+     "66",
+     "29.5",
+     "3.51"
+    ],
+    [
+     "PLCLSL10",
+     "10",
+     "144",
+     "48",
+     "330",
+     "69",
+     "54.5",
+     "68.5",
+     "39.5",
+     "8.75"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red pipe lifting clamp with teal jaw pad; small nameplate with brand logo",
+   "line drawing side and edge views with A, B, C, D, E, R, T"
+  ],
+  "notes": [],
+  "flags": [
+   "Item codes PLCLSL01…PLCLSL10 contain 'SL', likely derived from brand [maker]",
+   "Rows printed out of capacity order (3, 6, 1.5, 8, 10) — kept in printed order",
+   "No units printed for Capacity or dimensions (presumably t and mm)",
+   "'TPH TYPE' printed as second line of heading; treated as part of name"
+  ]
+ },
+ {
+  "pdf_page": 29,
+  "half": "L",
+  "printed_page": 51,
+  "name": "BEAM CLAMP",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity",
+    "Dimension A Max",
+    "Dimension A Min",
+    "Dimension B Max",
+    "Dimension B Min",
+    "Dimension C",
+    "Dimension D",
+    "Dimension E",
+    "Dimension F",
+    "Dimension G",
+    "Dimension H",
+    "Weight (kgs)"
+   ],
+   "rows": [
+    [
+     "BEAMSL01",
+     "1",
+     "175",
+     "72",
+     "270",
+     "170",
+     "65.5",
+     "18",
+     "220",
+     "160",
+     "24.5",
+     "25.4",
+     "3.36"
+    ],
+    [
+     "BEAMSL02",
+     "2",
+     "170",
+     "87.5",
+     "270",
+     "185",
+     "67.5",
+     "18",
+     "220",
+     "160",
+     "29.5",
+     "25.4",
+     "4.02"
+    ],
+    [
+     "BEAMSL03",
+     "3",
+     "300",
+     "95.5",
+     "440",
+     "230",
+     "95.5",
+     "24.2",
+     "270",
+     "190",
+     "24.5",
+     "32",
+     "9.3"
+    ],
+    [
+     "BEAMSL05",
+     "5",
+     "310",
+     "100",
+     "450",
+     "240",
+     "108.5",
+     "24.5",
+     "250",
+     "215",
+     "29.5",
+     "32",
+     "11.1"
+    ],
+    [
+     "BEAMSL10",
+     "10",
+     "430",
+     "145",
+     "620",
+     "360",
+     "110",
+     "25.2",
+     "330",
+     "315",
+     "39.5",
+     "40",
+     "22.6"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red beam clamp with screw spindle and tommy bar; small brand nameplate",
+   "line drawing front and side views with A, B, C, D, E, F, G, H"
+  ],
+  "notes": [],
+  "flags": [
+   "Item codes BEAMSL01…BEAMSL10 contain 'SL', likely derived from brand [maker]",
+   "A Max for 2 t (170) is smaller than for 1 t (175) — copied as printed",
+   "No units printed for Capacity or dimensions (presumably t and mm)"
+  ]
+ },
+ {
+  "pdf_page": 29,
+  "half": "R",
+  "printed_page": 52,
+  "name": "SCISSOR LIFT PALLET TRUCK",
+  "series": null,
+  "features": [
+   "Scissor lift pallet truck designed to load and unload conveyor, feed presses, or any applications requiring moving and positioning pallets or containers of Materials",
+   "Quick - Lift Operation: Quick-lift function doubles the lifting speed when lifting loads less than 250kg.",
+   "Improved safety: Automatic activation of self adjusting stabilizers when lifting loads higher than 400mm for maximum stability.",
+   "Great stability: Extra long front legs increase the stability when handling unevenly loaded pallets.",
+   "When lifting height below 400mm, it is as easy to move as a pallet truck, Above 400mm the truck is automatically locked by triggering the supports at both sides of the steering wheels."
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (kg)",
+    "Fork width (mm)",
+    "Fork length (mm)",
+    "Min. fork height (mm)",
+    "Max. fork height (mm)",
+    "Steering wheel",
+    "Fork wheel",
+    "Self weight"
+   ],
+   "rows": [
+    [
+     "SLPT1000",
+     "1000/1500",
+     "540/680",
+     "1150",
+     "85",
+     "800",
+     "Polyurethane",
+     "Nylon/Polyurethane",
+     "125-135"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "orange scissor lift pallet truck with black scissor legs and yellow/black hazard stripes, raised"
+  ],
+  "notes": [
+   "Table printed transposed under the title 'Specifications'"
+  ],
+  "flags": [
+   "Item code SLPT1000 begins with 'SL', likely derived from brand [maker]",
+   "Self weight printed without unit (presumably kg)"
+  ]
+ },
+ {
+  "pdf_page": 30,
+  "half": "L",
+  "printed_page": 53,
+  "name": "HAND PALLET TRUCK",
+  "series": null,
+  "features": [
+   "Hand Pallet Truck is the ideal “storage aid” and “handling partner” for all manual transport tasks over short distances, excellently suitable for using on lorries, in small warehouse and market etc.",
+   "5.0 Ton Hand Pallet Truck is an economic & effortless solution for loading and unloading super-heavy goods. The heavy duty steel construction and effortless pump unit with super-large piston help to reduce operating efforts.",
+   "The special lowering valve facilitates loads being particularly sensitively and proportioned.",
+   "The flexible steering wheel reduces the actual pulling effort required.",
+   "Adjustable solid steel push rods.",
+   "Ergonomic large rubber handle ensures a comfortable hold and easy operation.",
+   "Lower Position: Pull up the fingertip for lowering.",
+   "Neutral Position: Keep in the position to push & pull the truck.",
+   "Lifting Position: Push down the fingertip for pump lifting.",
+   "Steering: Easy to maneuver with 210 degrees turning radius.",
+   "All pivots points are greased ensures excellent maneuverability with effortless steering.",
+   "Spray Finishing: Standard painting system ensures the best powder coating and painting quality.",
+   "Controlled Speed: Speed lowering valve can adjust the descent speed freely.",
+   "Reliable Construction: Heavy gauge steel construction, drop forged lift link arms provide available strength and durability.",
+   "Easy lowering operation: Foot and hand control the lowering function to ensure easy operation.",
+   "Option of different coating material for both steering wheel and fork rollers.",
+   "Polyurethane---ideal for delicate floors with hard wearing and non-marking properly, quiet and durable",
+   "Nylon---low drag efforts, high resistance to chemicals, non-marking, preferred in food, finishing and chemical industries with smooth level floors.",
+   "Rubber---Best choice for quiet and durable demands, ideal for smooth and rough floors."
+  ],
+  "callouts": [
+   "handle A",
+   "Heavy Duty Galvanized pump",
+   "Tandem Fork Wheels",
+   "Nylon",
+   "Polyurethane",
+   "Rubber"
+  ],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (kg)",
+    "Model",
+    "Min.fork height (mm)",
+    "Max.fork height (mm)",
+    "Lifting height (mm)",
+    "Fork length (mm)",
+    "Single fork width (mm)",
+    "Width overall forks (mm)",
+    "Fork wheel-Tandam (mm)",
+    "Steering wheel (mm)",
+    "Truck Weight (KG)",
+    "Piston Dia (mm)",
+    "Plate Thickness (mm)"
+   ],
+   "rows": [
+    [
+     "HPT25550",
+     "2500",
+     "2.5 Ton",
+     "80",
+     "190",
+     "110",
+     "1150",
+     "160",
+     "550",
+     "80x70",
+     "180x50",
+     "67",
+     "35",
+     "4"
+    ],
+    [
+     "HPT30685",
+     "3000",
+     "3 Ton",
+     "80",
+     "190",
+     "110",
+     "1220",
+     "160",
+     "685",
+     "80x70",
+     "180x50",
+     "72.5",
+     "35",
+     "4"
+    ],
+    [
+     "HPT50685",
+     "5000",
+     "5 Ton",
+     "85",
+     "190",
+     "110",
+     "1220",
+     "178",
+     "685",
+     "80x70",
+     "180x50",
+     "135",
+     "40",
+     "8"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "orange hand pallet truck with black tiller handle (body marked 5000kg)",
+   "close-up of handle ('handle A') with lowering/neutral/lifting position pictograms",
+   "inset: heavy duty galvanized pump",
+   "inset: tandem fork wheels",
+   "line drawings side and top views (H, H2, A, L1, L, R1400, W, W1, 114°)",
+   "fork tip with nylon, polyurethane and rubber wheel samples"
+  ],
+  "notes": [
+   "Table printed transposed under 'Specifications' with columns 2.5 Ton / 3 Ton / 5 Ton",
+   "PDF page 30 right half (printed page 54) is a continuation feature page for this product headed 'ERGONOMIC LARGE RUBBER HANDLE ENSURES A COMFORTABLE HOLD AND EASY OPERATION.'; its text, callouts and photos are merged here"
+  ],
+  "flags": [
+   "Printed page 54 (pdf 30R) has no separate product — its heading is a feature line and its content was merged into HAND PALLET TRUCK",
+   "Typos corrected in features: 'pump until' → 'pump unit', 'pully effort' → 'pulling effort', 'power coating' → 'powder coating'; 'non-marking properly' and 'All pivots points' left as printed",
+   "Column header 'Fork wheel-Tandam (mm)' kept as printed ('Tandem')",
+   "Main product photo shows a faint brand logo on the pallet truck body"
+  ]
+ },
+ {
+  "pdf_page": 31,
+  "half": "L",
+  "printed_page": 55,
+  "name": "ROUGH TERRAIN TRUCK",
+  "series": null,
+  "features": [
+   "1000kg capacity adjustable forks rough Terrain Truck.",
+   "Fitted with Pneumatic tires for use on undulating surfaces.",
+   "Powder coated heavy duty steel Frame.",
+   "Fitted with adjustable 860mm long forks, can lower down to a minimum fork height of 70 mm.",
+   "Ideal for open and close pallets.",
+   "Hand release trigger, easy to maneuver with 210 degrees turning radius.",
+   "Low maintenance pump unit.",
+   "Hand release trigger to control the rate of lowering."
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (kg)",
+    "Fork Length (mm)",
+    "Load Center (mm)",
+    "Single Fork width (mm)",
+    "Adjustable Fork Width (mm)",
+    "Max Fork Height (mm)",
+    "Min Fork Height (mm)",
+    "Max. Pump Stroke (mm)",
+    "Overall size LxWxH (mm)",
+    "Front Wheel Dia x Width (mm)",
+    "Rear Wheel Dia x Width (mm)",
+    "Turn Radius (mm)",
+    "Net weight (kg)"
+   ],
+   "rows": [
+    [
+     "RTT1000",
+     "1000",
+     "800/860",
+     "400/430",
+     "100",
+     "216-680",
+     "240",
+     "70",
+     "170",
+     "1406x1670x1280",
+     "568x145",
+     "250",
+     "1500",
+     "210"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "yellow rough terrain pallet truck with two large pneumatic wheels, black forks and tiller handle"
+  ],
+  "notes": [
+   "Table printed transposed under 'Specifications' with a separate unit column"
+  ],
+  "flags": [
+   "Rear Wheel Dia x Width printed as single value '250' — copied as printed"
+  ]
+ },
+ {
+  "pdf_page": 31,
+  "half": "R",
+  "printed_page": 56,
+  "name": "HYDRAULIC LIFTING TABLE",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Capacity (kg)",
+    "Max. Height (mm)",
+    "Min. Height (mm)",
+    "Lifting Height (mm)",
+    "Platform Size (mm)",
+    "Distance to Handle (mm)",
+    "Overall Length (mm)",
+    "Step times when lifting",
+    "Wheel Diameter (mm)",
+    "Self-Weight (kg)"
+   ],
+   "rows": [
+    [
+     "HLTSL005",
+     "500KG X 1M",
+     "900",
+     "320",
+     "580",
+     "810X515X50",
+     "970",
+     "1020",
+     "36",
+     "125X45",
+     "87"
+    ],
+    [
+     "HLTSL010",
+     "1000KG X 1M",
+     "1000",
+     "385",
+     "615",
+     "1000X510X55",
+     "990",
+     "1110",
+     "74",
+     "150X45",
+     "111"
+    ],
+    [
+     "HLTS1505",
+     "500KG X 1.5M",
+     "1600",
+     "465",
+     "1135",
+     "1200X610X60",
+     "1100",
+     "1550",
+     "80",
+     "150X45",
+     "155"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "yellow/orange hydraulic scissor lift table with push handle; brand label on handle panel"
+  ],
+  "notes": [
+   "Table printed transposed under 'Specifications'"
+  ],
+  "flags": [
+   "Item codes HLTSL005/HLTSL010 contain 'SL', likely derived from brand [maker]; third code printed 'HLTS1505' (no 'L') — copied as printed",
+   "Product photo shows '[maker]' brand label on the handle panel"
+  ]
+ },
+ {
+  "pdf_page": 31,
+  "half": "R",
+  "printed_page": 56,
+  "name": "DRUM TROLLEY",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Reted Lifting capacity (kg)",
+    "Lifting Height (mm)",
+    "Ovearall Dimensions (mm)",
+    "Self Weight (kg)"
+   ],
+   "rows": [
+    [
+     "DTSL0400",
+     "300",
+     "200",
+     "1060x880x930",
+     "50"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "yellow hydraulic drum trolley carrying a blue drum, with foot pump and handles"
+  ],
+  "notes": [
+   "Table printed transposed under 'Specifications'"
+  ],
+  "flags": [
+   "Item code DTSL0400 contains 'SL', likely derived from brand [maker]",
+   "Column headers printed with typos 'Reted' (Rated) and 'Ovearall' (Overall) — kept as printed",
+   "Item code suggests 400 but capacity printed 300 kg — copied as printed"
+  ]
+ },
+ {
+  "pdf_page": 32,
+  "half": "L",
+  "printed_page": 57,
+  "name": "DRUM LIFTER CUM TILTER",
+  "series": null,
+  "features": [
+   "Ergonomics lifts, transport and places, steel or fiber drum on or off pallets.",
+   "A Spring-load clamp securely holds any rimmed drum.",
+   "It has swivel steering wheels for easy positioning and precision roller bearing load wheels for maximum stability.",
+   "Easily glide over pallet to quickly load or unload 30 or 50 -gallon drum, grabs from the middle of a standard pallet with a drum clawgrab, raises the drum up, and redistributes them throughout the facility"
+  ],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Load lifting capacity (kg)",
+    "Lifting height (mm)",
+    "Overall dimension (mm)",
+    "Self weight (kg)",
+    "Overall Height (mm)",
+    "Net Weight (kg)"
+   ],
+   "rows": [
+    [
+     "DLCT0116",
+     "350",
+     "1600",
+     "1190x890x2000",
+     "160",
+     "2020",
+     "155"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red/orange drum lifter cum tilter with black drum clamp and tilting hand wheel, holding a green drum"
+  ],
+  "notes": [
+   "Table printed transposed under 'Specifications'"
+  ],
+  "flags": [
+   "Feature text printed 'precsion' corrected to 'precision'; two sentences split over separate printed lines were joined",
+   "Table gives both Self weight 160 kg and Net Weight 155 kg, and Overall dimension height 2000 vs Overall Height 2020 — copied as printed"
+  ]
+ },
+ {
+  "pdf_page": 32,
+  "half": "R",
+  "printed_page": 58,
+  "name": "HAND STACKER",
+  "series": null,
+  "features": [
+   "Hand stacker is hand push & hand lift stacker which provides cost-efficient handling for both vehicle loading and production areas.",
+   "Easy maintenance and low running costs"
+  ],
+  "callouts": [
+   "Easy and comfortable handling through ergonomically handles, effortless pulling during transport with long tiller.",
+   "Ergonomic rubber handle ensures a comfortable easy operation.",
+   "Effortless and quick lifting for using foot pedal without loads."
+  ],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Rated lifting capacity (kg)",
+    "Max lifting height (mm)",
+    "Lowered height of forks (mm)",
+    "Fork length (mm)",
+    "Adjustable width of forks",
+    "Lifting speed (mm/s)",
+    "Outer Width of Front Legs (mm)",
+    "Operation power of hand crank (kg)",
+    "Min.refuel volume for fuel tank (L)",
+    "Front wheel size (mm)",
+    "Rear wheel size (mm)",
+    "Overall size (mm)",
+    "Truck weight (kg)"
+   ],
+   "rows": [
+    [
+     "HHSSL216",
+     "2000",
+     "1600",
+     "90",
+     "890",
+     "320x770",
+     "24",
+     "690",
+     "32",
+     "2",
+     "78x60",
+     "180x50",
+     "1270x750x2040",
+     "167"
+    ],
+    [
+     "HHSSL116",
+     "1000",
+     "1600",
+     "90",
+     "830",
+     "300x770",
+     "—",
+     "700",
+     "24",
+     "1.5",
+     "75x50",
+     "160x50",
+     "1290x800x2040",
+     "136.5"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "orange/black manual hand stacker with mesh guard and forks; brand name printed vertically on mast",
+   "inset: tiller handle",
+   "inset: ergonomic rubber handle",
+   "inset: foot pedal"
+  ],
+  "notes": [
+   "Table printed transposed under 'Specifications'"
+  ],
+  "flags": [
+   "Item codes HHSSL216/HHSSL116 contain 'SL', likely derived from brand [maker]",
+   "Product photo shows '[maker]' brand printed on the mast",
+   "Lifting speed blank for HHSSL116 as printed"
+  ]
+ },
+ {
+  "pdf_page": 33,
+  "half": "L",
+  "printed_page": 59,
+  "name": "ELECTRIC STACKER",
+  "series": null,
+  "features": [
+   "Lift function is electro hydraulic while movement is motorized suitable for all your lifting needs (racking, shelving, unloading etc). Compact design with strong steel construction."
+  ],
+  "callouts": [
+   "Timer & Emergency Stop switch & Power switch",
+   "Curtic Controller",
+   "Driving Wheel"
+  ],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Load Capacity Q (kg)",
+    "Lift height H (mm)",
+    "Lift Height h1 (mm)",
+    "Load center C (mm)",
+    "Forks clearance from the ground-h (mm)",
+    "Fork length L (mm)",
+    "Maximum forks width W3 (mm)",
+    "Minimum ground clearance x (mm)",
+    "Traction speed (unlade/lade) (km/h)",
+    "Lifting speed (unlade) (mm/s)",
+    "Lifting speed ( lade) (mm/s)",
+    "Lowering speed (lade) (mm/s)",
+    "Minimum turning radius r (mm)",
+    "aisle width for pallets 1000x1000 (mm)",
+    "Front wheel dimensions d1 (mm)",
+    "Rear wheel dimension d2 (mm)",
+    "Total length L1 (mm)",
+    "Total width W (mm)",
+    "Battery volts/ampere (V/Ah)",
+    "battery charger",
+    "Lift motor (kw)",
+    "Traction motor (kw)",
+    "Gear pump (ml/r)",
+    "Battery weight (± 5%) (kg)",
+    "Truck weight (without battery) (kg)"
+   ],
+   "rows": [
+    [
+     "FESSL130",
+     "1500",
+     "3000",
+     "2080",
+     "500",
+     "85",
+     "1150",
+     "550",
+     "25",
+     "4.5/3",
+     "90±10%",
+     "60",
+     "<300",
+     "1500",
+     "2350",
+     "±80x93",
+     "±180x50",
+     "1800±20",
+     "820",
+     "24/80",
+     "AC22oV/50Hz DC24V/10A",
+     "DC24V-2.2KW",
+     "DC24V-0.75KW",
+     "CBWn-F2.5",
+     "45",
+     "440"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "red/black electric walkie stacker with forks",
+   "inset: timer, emergency stop switch and power switch",
+   "inset: controller",
+   "inset: driving wheel",
+   "line drawing side view (H, h1, L)",
+   "line drawing top view (W, W3, aisle width)"
+  ],
+  "notes": [
+   "Table printed transposed under 'Specifications' with a separate unit column"
+  ],
+  "flags": [
+   "Item code FESSL130 contains 'SL', likely derived from brand [maker]",
+   "Wheel dimensions printed '±80x93' and '±180x50' — the '±' is probably meant to be 'φ' (diameter); copied as printed",
+   "Battery charger printed 'AC22oV' (letter o, likely 220V) — copied as printed",
+   "Callout 'Curtic Controller' likely means 'Curtis Controller' — kept as printed"
+  ]
+ },
+ {
+  "pdf_page": 33,
+  "half": "R",
+  "printed_page": 60,
+  "name": "WIRE MESH CONATINER",
+  "series": null,
+  "features": [],
+  "callouts": [],
+  "standard": null,
+  "certification": null,
+  "table": {
+   "columns": [
+    "Item Code",
+    "Size (Length X Width X Height)",
+    "Weight (Kgs)"
+   ],
+   "rows": [
+    [
+     "WMCN0806",
+     "800 x 600 x 640 mm",
+     "24"
+    ],
+    [
+     "WMCW0806",
+     "800 x 600 x 640 mm (Wheel)",
+     "33.5"
+    ],
+    [
+     "WMCN1008",
+     "1000 x 800 x 840 mm",
+     "35.3"
+    ],
+    [
+     "WMCW1008",
+     "1000 x 800 x 840 mm (Wheel)",
+     "46"
+    ],
+    [
+     "WMCN1210",
+     "1200 x 1000 x 890 mm",
+     "50"
+    ],
+    [
+     "WMCW1210",
+     "1200 x 1000 x 890 mm (Wheel )",
+     "59.3"
+    ]
+   ]
+  },
+  "extra_tables": [],
+  "photos": [
+   "galvanized collapsible wire mesh container on castor wheels",
+   "galvanized wire mesh container on fixed feet"
+  ],
+  "notes": [],
+  "flags": [
+   "Heading printed 'WIRE MESH CONATINER' (typo for 'CONTAINER') — kept as printed"
+  ]
+ }
+]

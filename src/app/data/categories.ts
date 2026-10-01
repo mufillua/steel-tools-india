@@ -8,6 +8,8 @@ import { Category } from '../models/category.model';
  *   RR-HT     R★R Brand Hand Tools & Letter / Figure Punchings, w.e.f. 01-06-2026 (16 pp) — page 3 only, by client request
  *   MIRANDA   Miranda Products Price List DPM01052026 v3 (Dormer Pramet India) — text only
  *   TAPARIA   Taparia Tools Ltd. Price List April 2026 (44 pp) — all product tables (sections 1–55)
+ *   LIFTING   Lifting & material handling brochure supplied 01-10-2026 (35 pp) — every product table. By client
+ *             request the maker / brand of this range is never shown, so these categories list no brand.
  *
  * Product records reference these slugs. Prices are intentionally not carried.
  */
@@ -161,5 +163,55 @@ export const CATEGORIES: Category[] = [
     brands: ['Taparia'],
     sources: ['TAPARIA'],
     highlights: ['Spanners', 'Pliers & hammers', 'Sockets', 'BE-CU / AL-BR'],
+  },
+{
+    slug: 'hoists-pulley-blocks',
+    name: 'Hoists, Pulley Blocks & Trolleys',
+    description:
+      'Chain pulley blocks, ratchet lever hoists, single and dual speed electric chain hoists, gear and electric trolleys, pulling & lifting machines, cable pullers, spring balancers and rope pulley blocks.',
+    icon: 'hoist',
+    brands: [],
+    sources: ['LIFTING'],
+    highlights: ['Chain pulley blocks', 'Electric chain hoists', 'Lever hoists', 'Trolleys'],
+  },
+  {
+    slug: 'lifting-chain-rigging',
+    name: 'Lifting Chain, Hooks & Rigging',
+    description:
+      'G80 alloy lifting chain, G80 and G100 hooks, master links and assemblies, connecting links, shortening hooks, shackles, eye bolts, turnbuckles, wire rope clamps and weld-on fittings.',
+    icon: 'hook',
+    brands: [],
+    sources: ['LIFTING'],
+    highlights: ['G80 hooks', 'Shackles', 'Master links', 'Eye bolts'],
+  },
+  {
+    slug: 'slings-lashing',
+    name: 'Slings & Lashing',
+    description:
+      'Polyester duplex webbing slings and round slings, sling sleeves and edge protectors, cargo lashing ratchets and ratchet load binders.',
+    icon: 'sling',
+    brands: [],
+    sources: ['LIFTING'],
+    highlights: ['Webbing slings', 'Round slings', 'Cargo lashing', 'Sling protection'],
+  },
+  {
+    slug: 'lifting-clamps-magnets',
+    name: 'Lifting Clamps & Magnets',
+    description:
+      'Horizontal, vertical, lateral and universal plate lifting clamps, pipe lifting clamps, beam clamps, drum lifters and permanent magnet lifters.',
+    icon: 'clamp',
+    brands: [],
+    sources: ['LIFTING'],
+    highlights: ['Plate clamps', 'Beam clamps', 'Magnet lifters', 'Drum lifters'],
+  },
+  {
+    slug: 'material-handling',
+    name: 'Material Handling Equipment',
+    description:
+      'Hand, scissor lift and rough terrain pallet trucks, hand and electric stackers, hydraulic lifting tables, drum trolleys and tilters, industrial skates and wire mesh containers.',
+    icon: 'pallet-truck',
+    brands: [],
+    sources: ['LIFTING'],
+    highlights: ['Pallet trucks', 'Stackers', 'Lifting tables', 'Drum handling'],
   },
 ];

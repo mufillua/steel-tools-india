@@ -14,7 +14,7 @@ describe('ProductService (catalogue data)', () => {
   it('loads the full catalogue', () => {
     expect(svc.status()).toBe('ready');
     expect(svc.products().length).toBeGreaterThan(250);
-    expect(svc.categories().length).toBe(15);
+    expect(svc.categories().length).toBe(20);
   });
 
   it('has unique slugs and every product in a known category', () => {
@@ -59,6 +59,17 @@ describe('ProductService (catalogue data)', () => {
     for (const c of svc.categories()) expect(c.productCount).toBeGreaterThan(0);
     const nonSparking = svc.getProductBySlug('taparia-non-sparking-adjustable-wrenches')!;
     expect(nonSparking.variants.some((v) => v.attributes['Material']?.includes('BE-CU'))).toBeTrue();
+  });
+
+  it('shows no brand for the lifting & material handling range (client request)', () => {
+    const lifting = svc.products().filter((p) => p.source.doc === 'LIFTING');
+    expect(lifting.length).toBeGreaterThan(60);
+    expect(lifting.every((p) => p.brand === '')).toBeTrue();
+    expect(svc.brands()).not.toContain('');
+    // the brochure's maker name must not appear anywhere in the catalogue text
+    const text = JSON.stringify(svc.products()).toLowerCase();
+    expect(/safelift|\bsaif\b/.test(text)).toBeFalse();
+    for (const slug of ['material-handling', 'lifting-chain-rigging']) expect(svc.categories().find((c) => c.slug === slug)?.brands).toEqual([]);
   });
 
   it('uses 12 products per page', () => {

@@ -57,7 +57,7 @@ export class ProductService {
 
   readonly featured = computed(() => this._products().filter((p) => p.featured));
 
-  readonly brands = computed(() => [...new Set(this._products().map((p) => p.brand))].sort());
+  readonly brands = computed(() => [...new Set(this._products().map((p) => p.brand).filter(Boolean))].sort());
 
   /** Total listed sizes / variants across the catalogue (same figure everywhere on the site). */
   readonly variantCount = computed(() => this._products().reduce((n, p) => n + p.variants.length, 0));

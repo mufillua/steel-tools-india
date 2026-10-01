@@ -72,6 +72,13 @@
             }}</a>
           </li>
         }
+        @if (moreCategories) {
+          <li>
+            <a class="ftr__link ftr__link--all" routerLink="/categories">
+              All Categories <sti-icon name="arrow-right" [size]="14" />
+            </a>
+          </li>
+        }
       </ul>
     </nav>
 

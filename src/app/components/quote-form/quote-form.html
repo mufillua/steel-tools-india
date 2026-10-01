@@ -54,7 +54,7 @@
         <div class="qf-product__body">
           <p class="qf-product__k">Product from our catalogue</p>
           <p class="qf-product__name"><a [routerLink]="['/products', p.slug]">{{ p.name }}</a></p>
-          <p class="qf-product__meta">{{ catalogue.categoryName(p.category) }} · {{ p.brand }}</p>
+          <p class="qf-product__meta">{{ catalogue.categoryName(p.category) }}@if (p.brand) { · {{ p.brand }} }</p>
 
           @if (p.variants.length > 1) {
             <div class="qf-field qf-field--inline">

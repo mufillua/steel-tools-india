@@ -5,6 +5,7 @@ import { RR_2026_PRODUCTS } from './rr-2026';
 import { RR_CENTRE_PRODUCTS } from './rr-centres';
 import { RR_CT_PRODUCTS } from './rr-ct';
 import { RR_HT_PRODUCTS } from './rr-ht';
+import { LIFTING_PRODUCTS } from './lifting';
 import { TAPARIA_PRODUCTS } from './taparia';
 
 /**
@@ -20,4 +21,5 @@ export const ALL_PRODUCTS: Product[] = [
   ...RR_CT_PRODUCTS,
   ...MIRANDA_PRODUCTS,
   ...TAPARIA_PRODUCTS,
+  ...LIFTING_PRODUCTS,
 ];

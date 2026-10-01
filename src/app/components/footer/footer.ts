@@ -6,6 +6,9 @@ import { filter, map } from 'rxjs';
 import { COMPANY, COMPANY_LINKS } from '../../config/company.config';
 import { CONTACT_PATH, PRIMARY_NAV, QUOTE_PATH } from '../../config/navigation.config';
 import { CATEGORIES } from '../../data/categories';
+
+/** How many categories the footer lists before the "All Categories" link. */
+const FOOTER_CATEGORY_LIMIT = 10;
 import { formatHours } from '../business-hours/business-hours.util';
 import { Icon } from '../icon/icon';
 
@@ -20,7 +23,9 @@ export class Footer {
   protected readonly company = COMPANY;
   protected readonly links = COMPANY_LINKS;
   protected readonly quotePath = QUOTE_PATH;
-  protected readonly categories = CATEGORIES;
+  /** The footer lists the first categories (catalogue order) and links to the full list on /categories. */
+  protected readonly categories = CATEGORIES.slice(0, FOOTER_CATEGORY_LIMIT);
+  protected readonly moreCategories = CATEGORIES.length > FOOTER_CATEGORY_LIMIT;
   protected readonly year = new Date().getFullYear();
   protected readonly fmt = formatHours;
 

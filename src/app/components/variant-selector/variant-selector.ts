@@ -64,8 +64,13 @@ export class VariantSelector {
   /** Axes worth filtering by: 2–10 distinct values that actually group rows. */
   private readonly filterAxisNames = computed(() => {
     if (this.mode() !== 'table' || this.variants().length < 7) return [];
+    // Tables keyed by an item code (lifting range) carry many dimension columns: only offer the columns a buyer
+    // actually chooses by (capacity / size / colour / type), never dimensions or weights.
+    const coded = /^Item Code/i.test(this.axes()[0] ?? '');
     return this.axes().filter((axis) => {
-      if (/^Product No/i.test(axis)) return false; // catalogue codes are searched, not filtered
+      if (/^(Product No|Item Code)/i.test(axis)) return false; // catalogue codes are searched, not filtered
+      if (coded && !/capacity|w\.?l\.?l|^ton|size|colou?r|type|model|width \(mm\)$/i.test(axis)) return false;
+      if (coded && /dimension|weight|approx/i.test(axis)) return false;
       if (this.variants().some((v) => (v.attributes[axis] ?? '').length > 26)) return false; // long text (set contents)
       const n = new Set(this.variants().map((v) => v.attributes[axis]).filter((x) => x && x !== '—')).size;
       return n >= 2 && n <= 10 && n < this.variants().length;

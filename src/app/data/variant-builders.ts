@@ -39,6 +39,22 @@ export function rows(
 }
 
 /**
+ * Rows with a ready-made label per row (e.g. "CBST0103 · 1 t"). Ids come from the labels and are made unique.
+ */
+export function labelled(axes: string[], data: string[][], labels: string[]): ProductVariant[] {
+  const seen = new Map<string, number>();
+  return data.map((r, i) => {
+    const attributes = Object.fromEntries(axes.map((a, j) => [a, r[j]]));
+    const label = labels[i];
+    let id = slug(label) || 'item';
+    const n = (seen.get(id) ?? 0) + 1;
+    seen.set(id, n);
+    if (n > 1) id = `${id}-${n}`;
+    return { id, label, attributes };
+  });
+}
+
+/**
  * Taparia tables: the first column is the Taparia product number. The label is the product number plus up to two
  * short attributes (and the material/finish option, shortened to its code), e.g. "1170/1170N · 150 · Chrome plated".
  * Long cells (set contents, descriptions) stay in the table but are kept out of the label. Ids are made unique.

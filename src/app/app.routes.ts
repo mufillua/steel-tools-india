@@ -15,7 +15,7 @@ export const routes: Routes = [
     path: '',
     resolve: { catalogue: catalogueResolver },
     pathMatch: 'full',
-    //title: 'Precision Tools for Modern Manufacturing',
+    title: 'Precision Tools for Modern Manufacturing',
     data: { seo: { jsonLd: 'business' } },
     loadComponent: () => import('./pages/home/home').then((m) => m.Home),
   },
@@ -23,7 +23,7 @@ export const routes: Routes = [
     path: 'products',
     resolve: { catalogue: catalogueResolver },
     title: 'Products',
-    data: { seo: { description: 'Search the Steel Tools India catalogue by product, size, taper or standard — R★R Brand, Taparia and Miranda tools, with every listed size. Enquire on WhatsApp or email.' } },
+    data: { seo: { description: 'Search the Steel Tools India catalogue by product, size, taper or standard — R★R Brand, Taparia and Miranda tools plus lifting and material handling equipment, with every listed size. Enquire on WhatsApp or email.' } },
     loadComponent: () => import('./pages/products/products').then((m) => m.Products),
   },
   {
@@ -37,7 +37,7 @@ export const routes: Routes = [
     path: 'categories',
     resolve: { catalogue: catalogueResolver },
     title: 'Categories',
-    data: { seo: { description: 'Steel Tools India product categories — machine tool accessories, revolving & dead centres, hand tools and punches, solid carbide, indexable, HSS and carbide tipped tools.' } },
+    data: { seo: { description: 'Steel Tools India product categories — machine tool accessories, revolving & dead centres, hand tools and punches, solid carbide, indexable, HSS and carbide tipped tools, plus hoists, slings, rigging hardware, lifting clamps and material handling equipment.' } },
     loadComponent: () => import('./pages/categories/categories').then((m) => m.Categories),
   },
   {

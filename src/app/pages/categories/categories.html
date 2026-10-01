@@ -2,7 +2,7 @@
   [crumbs]="crumbs"
   eyebrow="Catalogue"
   title="Product Categories"
-  lead="Every product group from the R★R Brand, Taparia and Miranda ranges. Open a category to see every product in it, or jump straight to a product type."
+  lead="Every product group from the R★R Brand, Taparia and Miranda ranges, plus lifting and material handling equipment. Open a category to see every product in it, or jump straight to a product type."
 />
 
 <!-- Jump links -->
@@ -50,10 +50,12 @@
                 <dt>Sizes listed</dt>
                 <dd>@if (ready()) { {{ v.sizes.toLocaleString('en-IN') }} } @else { <span class="skel" aria-hidden="true"></span> }</dd>
               </div>
-              <div>
-                <dt>{{ c.brands.length > 1 ? 'Brands' : 'Brand' }}</dt>
-                <dd class="sheet__brands">{{ c.brands.join(' · ') }}</dd>
-              </div>
+              @if (c.brands.length) {
+                <div>
+                  <dt>{{ c.brands.length > 1 ? 'Brands' : 'Brand' }}</dt>
+                  <dd class="sheet__brands">{{ c.brands.join(' · ') }}</dd>
+                </div>
+              }
             </dl>
 
             <a class="sti-btn sti-btn--blue sheet__cta" routerLink="/products" [queryParams]="{ category: c.slug }">

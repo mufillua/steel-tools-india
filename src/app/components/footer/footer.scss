@@ -356,3 +356,24 @@ a.ftr__c-value:hover {
   min-width: 72px;
   color: var(--sti-on-dark-muted);
 }
+
+/* "All Categories" — closes the category list; stands out from the plain links */
+.ftr__link--all {
+  gap: 6px;
+  margin-top: 4px;
+  color: #fff;
+  font-weight: 600;
+
+  /* no hover dash: it would add the flex gap before the text and misalign it with the links above */
+  &::before {
+    content: none;
+  }
+
+  sti-icon {
+    transition: transform var(--sti-dur) var(--sti-ease-out);
+  }
+
+  &:hover sti-icon {
+    transform: translateX(3px);
+  }
+}
