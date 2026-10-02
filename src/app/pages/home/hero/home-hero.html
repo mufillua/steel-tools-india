@@ -16,8 +16,9 @@
       </h1>
 
       <p class="sti-lead hero__lead sti-anim-fade-up sti-delay-2">
-        Machine tool accessories, revolving and dead centres, carbide and HSS cutting tools, hand tools
-        and workshop equipment. Browse the catalogue by size and request a quote on WhatsApp or email.
+        Machine tool accessories, revolving and dead centres, carbide and HSS cutting tools, hand tools,
+        lifting gear and material handling equipment. Browse the catalogue by size and request a quote on
+        WhatsApp or email.
       </p>
 
       <div class="hero__actions sti-anim-fade-up sti-delay-3">
@@ -60,37 +61,18 @@
         <span class="sheet__mark sheet__mark--br" aria-hidden="true"></span>
 
         <div class="sheet__canvas">
-          @if (main(); as m) {
-            <img
-              class="sheet__img"
-              [src]="m.images[0]"
-              [alt]="m.name"
-              width="600"
-              height="600"
-              fetchpriority="high"
-            />
-
-            <!-- vertical dimension: collet range -->
-            <span class="dim dim--v" aria-hidden="true">
-              <span class="dim__line"></span>
-              <span class="dim__label">{{ callouts().collet }}</span>
-            </span>
-
-            <!-- horizontal dimension: lengths -->
-            <span class="dim dim--h" aria-hidden="true">
-              <span class="dim__line"></span>
-              <span class="dim__label">{{ callouts().length }}</span>
-            </span>
-
-            <!-- leader callout -->
-            <span class="leader" aria-hidden="true">
-              <span class="leader__dot"></span>
-              <span class="leader__line"></span>
-              <span class="leader__label">{{ m.standard }}</span>
-            </span>
-          } @else {
-            <span class="sheet__loading" aria-hidden="true"></span>
-          }
+          <!-- One product from each catalogue category — the range at a glance. -->
+          <img
+            class="sheet__img"
+            src="assets/hero/product-range.webp"
+            srcset="assets/hero/product-range-800.webp 800w, assets/hero/product-range.webp 1500w"
+            sizes="(min-width: 1024px) 580px, 400px"
+            [alt]="rangeAlt"
+            width="1500"
+            height="1200"
+            fetchpriority="high"
+          />
+          <a class="sheet__link" routerLink="/categories" [attr.aria-label]="'Browse all ' + categoryCount + ' categories'"></a>
         </div>
 
         <figcaption class="tblock">
@@ -102,8 +84,8 @@
             <span class="tblock__v">{{ company.name }}</span>
           </span>
           <span class="tblock__cell tblock__cell--drg">
-            <span class="tblock__k">Drg.</span>
-            <span class="tblock__v">{{ main()?.name ?? '—' }}</span>
+            <span class="tblock__k">Range</span>
+            <span class="tblock__v">{{ categoryCount }} categories</span>
           </span>
           <span class="tblock__cell tblock__cell--est">
             <span class="tblock__k">Est.</span>
@@ -111,17 +93,6 @@
           </span>
         </figcaption>
       </figure>
-
-      @if (detailA(); as a) {
-        <a class="detail detail--a" [routerLink]="['/products', a.slug]">
-          <span class="detail__img"><img [src]="a.images[0]" alt="" width="120" height="120" /></span>
-          <span class="detail__text">
-            <span class="detail__k">Detail A</span>
-            <span class="detail__name">Revolving Centre</span>
-            <span class="detail__v">{{ callouts().detailA }}</span>
-          </span>
-        </a>
-      }
     </div>
   </div>
 </section>
