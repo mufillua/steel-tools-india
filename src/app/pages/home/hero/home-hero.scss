@@ -64,6 +64,15 @@
   gap: 48px;
   align-items: center;
 
+  // Phones: one column, with the product scene right after the buttons and the stats below it.
+  // (.hero__copy is unwrapped so its children and the visual can be ordered together.)
+  @include down(v.$bp-sm) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
   @include up(v.$bp-lg) {
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
     gap: clamp(40px, 5vw, 72px);
@@ -72,6 +81,10 @@
 
 .hero__copy {
   min-width: 0;
+
+  @include down(v.$bp-sm) {
+    display: contents;
+  }
 }
 
 .hero__sep {
@@ -135,6 +148,7 @@
   border-top: 1px solid var(--sti-border-strong);
 
   @include down(v.$bp-sm) {
+    order: 2;
     margin-top: 32px;
 
     dd {
@@ -212,9 +226,12 @@
   max-width: 400px;
   justify-self: center;
 
-  // On phones the drawing sheet would push the catalogue too far down — copy + CTAs only.
+  // Phones: the product scene sits under the copy and buttons, full width.
   @include down(v.$bp-sm) {
-    display: none;
+    order: 1;
+    max-width: none;
+    margin-top: 32px;
+    padding-bottom: 0;
   }
 
   @include up(v.$bp-lg) {
