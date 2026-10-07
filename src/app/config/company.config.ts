@@ -93,7 +93,7 @@ export const COMPANY: CompanyConfig = {
   showPrices: false,
 
   // Live domain. Serve the site at this exact address (no www) and redirect www to it.
-  siteUrl: 'https://www.steeltoolsindia.in',
+  siteUrl: 'https://www.steeltoolsind.com',
 };
 
 /** Convenience helpers so templates never build links by hand. */
