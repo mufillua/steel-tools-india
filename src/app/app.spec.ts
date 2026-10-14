@@ -13,13 +13,14 @@ describe('App shell', () => {
     }).compileComponents();
   });
 
-  it('renders the exact navbar: Products, Categories, About Us, Ph. No., Get A Quote', () => {
+  it('renders the exact navbar: Products, Categories, About Us, phone number, Get A Quote', () => {
     const fixture = TestBed.createComponent(App);
     fixture.detectChanges();
     const el: HTMLElement = fixture.nativeElement;
     const nav = el.querySelector('.hdr__nav')!;
     const text = nav.textContent!.replace(/\s+/g, ' ');
-    const order = ['Products', 'Categories', 'About Us', 'Ph. No.', 'Get A Quote'].map((t) => text.indexOf(t));
+    // The phone slot shows the number itself (the "Ph. No." label was removed by the client).
+    const order = ['Products', 'Categories', 'About Us', COMPANY.phoneDisplay, 'Get A Quote'].map((t) => text.indexOf(t));
     expect(order.every((i) => i >= 0)).toBeTrue();
     expect([...order].sort((a, b) => a - b)).toEqual(order);
     expect(el.querySelector(`a[href="tel:${COMPANY.phoneE164}"]`)).toBeTruthy();

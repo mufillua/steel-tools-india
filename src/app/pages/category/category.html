@@ -1,0 +1,126 @@
+@if (category(); as c) {
+  <sti-page-intro
+    [crumbs]="crumbs()"
+    [eyebrow]="'Category · ' + company.city"
+    [title]="c.name"
+    [lead]="lead()"
+  >
+    <a class="sti-btn sti-btn--blue" routerLink="/products" [queryParams]="{ category: c.slug }">
+      View &amp; filter all {{ products().length }} products <sti-icon class="sti-btn__arrow" name="arrow-right" [size]="16" />
+    </a>
+    <a class="sti-btn sti-btn--whatsapp" [href]="whatsapp()" target="_blank" rel="noopener">
+      <sti-icon name="chat" [size]="16" /> Enquire on WhatsApp
+    </a>
+  </sti-page-intro>
+
+  <!-- ═════ Facts ═════ -->
+  <section class="cat-facts" aria-label="Category facts">
+    <div class="sti-container sti-container--wide">
+      <dl class="facts">
+        <div><dt>Products</dt><dd>{{ products().length }}</dd></div>
+        <div><dt>Sizes listed</dt><dd>{{ sizes().toLocaleString('en-IN') }}</dd></div>
+        <div><dt>Product types</dt><dd>{{ groups().length }}</dd></div>
+        @if (c.brands.length) {
+          <div><dt>{{ c.brands.length > 1 ? 'Brands' : 'Brand' }}</dt><dd class="facts__brands">{{ c.brands.join(' · ') }}</dd></div>
+        }
+      </dl>
+    </div>
+  </section>
+
+  <!-- ═════ Highlights ═════ -->
+  <section class="sti-section cat-sec" aria-labelledby="cat-popular">
+    <div class="sti-container sti-container--wide">
+      <header class="cat-sec__head">
+        <div>
+          <p class="sti-eyebrow">{{ c.name }}</p>
+          <h2 id="cat-popular" class="cat-sec__title">Popular products</h2>
+        </div>
+        <a class="sti-btn cat-sec__all" routerLink="/products" [queryParams]="{ category: c.slug }">
+          See all {{ products().length }} <sti-icon class="sti-btn__arrow" name="arrow-right" [size]="16" />
+        </a>
+      </header>
+      <ul class="cat-grid" role="list">
+        @for (p of highlights(); track p.slug) {
+          <li><sti-product-card [product]="p" [headingLevel]="3" /></li>
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═════ Every product, grouped by type ═════ -->
+  <section class="sti-section cat-sec cat-sec--all" aria-labelledby="cat-all">
+    <div class="sti-container sti-container--wide">
+      <header class="cat-sec__head">
+        <div>
+          <p class="sti-eyebrow">Complete list</p>
+          <h2 id="cat-all" class="cat-sec__title">All {{ c.name }}</h2>
+        </div>
+      </header>
+      <div class="types">
+        @for (g of groups(); track g.name) {
+          <section class="type" [attr.aria-labelledby]="'type-' + $index">
+            <h3 class="type__title" [id]="'type-' + $index">
+              <a routerLink="/products" [queryParams]="{ category: c.slug, type: g.name }">{{ g.name }}</a>
+              <span class="type__count">{{ g.items.length }}</span>
+            </h3>
+            <ul class="type__list" role="list">
+              @for (p of g.items; track p.slug) {
+                <li>
+                  <a class="type__link" [routerLink]="['/products', p.slug]">
+                    <span class="type__name">{{ p.name }}</span>
+                    <span class="type__spec">{{ p.summary }}</span>
+                  </a>
+                </li>
+              }
+            </ul>
+          </section>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ═════ Why buy here ═════ -->
+  <section class="sti-section cat-why" aria-labelledby="cat-why">
+    <div class="sti-container sti-container--wide">
+     <div class="cat-why__inner">
+      <div>
+        <h2 id="cat-why" class="cat-sec__title">{{ c.name }} from {{ company.name }}, {{ company.city }}</h2>
+        <p>
+          {{ company.name }} has supplied tools to workshops and industry from {{ company.address.lines[0].split(', ').pop() }},
+          {{ company.city }} since {{ company.foundedYear }}. Every product in this category lists the sizes printed in the
+          manufacturer's catalogue — pick the exact size and send it to us with the quantity you need. We reply with price
+          and availability on WhatsApp, phone or email.
+        </p>
+      </div>
+      <div class="cat-why__actions">
+        <a class="sti-btn sti-btn--whatsapp" [href]="whatsapp()" target="_blank" rel="noopener">
+          <sti-icon name="chat" [size]="16" /> WhatsApp {{ company.phoneDisplay }}
+        </a>
+        <a class="sti-btn sti-btn--primary" [routerLink]="quotePath">Get A Quote</a>
+      </div>
+     </div>
+    </div>
+  </section>
+
+  <!-- ═════ Other categories ═════ -->
+  <nav class="sti-section cat-others" aria-labelledby="cat-others">
+    <div class="sti-container sti-container--wide">
+      <h2 id="cat-others" class="cat-sec__title">Other categories</h2>
+      <ul class="others" role="list">
+        @for (o of others(); track o.slug) {
+          <li><a [routerLink]="['/categories', o.slug]">{{ o.name }} <span>{{ o.productCount }}</span></a></li>
+        }
+      </ul>
+    </div>
+  </nav>
+} @else {
+  <sti-page-intro
+    [crumbs]="crumbs()"
+    eyebrow="Category"
+    title="Category not found"
+    lead="This category isn't in our catalogue. Browse all categories or search the products."
+  >
+    <a class="sti-btn sti-btn--blue" routerLink="/categories">All categories</a>
+    <a class="sti-btn" routerLink="/products">All products</a>
+  </sti-page-intro>
+}

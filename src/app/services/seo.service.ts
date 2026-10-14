@@ -1,7 +1,8 @@
 import { DOCUMENT, Injectable, inject } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
 
-import { COMPANY } from '../config/company.config';
+import { COMPANY, COMPANY_LINKS } from '../config/company.config';
+import { CATEGORIES } from '../data/categories';
 
 /** Per-route SEO data. Supplied as route `data.seo` (static or resolved). */
 export interface SeoData {
@@ -10,37 +11,46 @@ export interface SeoData {
   image?: string;
   type?: 'website' | 'product';
   noindex?: boolean;
-  /** schema.org JSON-LD object(s) for this page; 'business' = the Steel Tools India store record. */
-  jsonLd?: object | object[] | 'business';
+  /**
+   * schema.org JSON-LD object(s) for this page. 'business' = the Steel Tools India store record;
+   * 'home' = store record + WebSite (the site name Google shows in results).
+   */
+  jsonLd?: object | object[] | 'business' | 'home';
 }
 
 export const DEFAULT_DESCRIPTION =
-  `${COMPANY.name}, ${COMPANY.city} — since ${COMPANY.foundedYear}. Machine tool accessories, lathe centres, ` +
-  'cutting tools, hand tools and workshop equipment. Browse the catalogue and request a quote on WhatsApp or email.';
+  `${COMPANY.name}, ${COMPANY.city} — industrial tools supplier since ${COMPANY.foundedYear}: machine tool accessories, ` +
+  'cutting tools, Taparia hand tools, hoists and lifting equipment.';
 
 const DEFAULT_IMAGE = 'assets/brand/sti-logo-full.png';
+const HERO_IMAGE = 'assets/hero/product-range.webp';
 
 const DAY_URI = ['', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].map(
   (d) => `https://schema.org/${d}`,
 );
 
-/** schema.org business record built only from company.config.ts (used on Home, About and Contact). */
+/** schema.org business record built only from company.config.ts and the category list (Home, About, Contact). */
 export function localBusinessJsonLd(siteUrl = COMPANY.siteUrl): object {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Store',
+    '@type': 'HardwareStore',
+    '@id': `${siteUrl}/#business`,
     name: COMPANY.name,
     slogan: COMPANY.tagline,
+    description: DEFAULT_DESCRIPTION,
     foundingDate: String(COMPANY.foundedYear),
     url: siteUrl,
     logo: `${siteUrl}/${DEFAULT_IMAGE}`,
-    image: `${siteUrl}/${DEFAULT_IMAGE}`,
+    image: [`${siteUrl}/${DEFAULT_IMAGE}`, `${siteUrl}/${HERO_IMAGE}`],
     telephone: COMPANY.phoneE164,
     email: COMPANY.email,
+    hasMap: COMPANY_LINKS.mapsSearch,
+    //sameAs: [COMPANY_LINKS.instagram],
     address: {
       '@type': 'PostalAddress',
       streetAddress: COMPANY.address.lines.join(', '),
       addressLocality: COMPANY.address.city,
+      addressRegion: 'West Bengal',
       postalCode: COMPANY.address.pincode,
       addressCountry: 'IN',
     },
@@ -52,6 +62,35 @@ export function localBusinessJsonLd(siteUrl = COMPANY.siteUrl): object {
         opens: h.opens,
         closes: h.closes,
       })),
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: COMPANY.phoneE164,
+      email: COMPANY.email,
+      contactType: 'sales',
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: `${COMPANY.name} product catalogue`,
+      itemListElement: CATEGORIES.map((c) => ({
+        '@type': 'OfferCatalog',
+        name: c.name,
+        url: `${siteUrl}/categories/${c.slug}`,
+      })),
+    },
+  };
+}
+
+/** WebSite record — gives Google the site name to show next to the URL. */
+export function websiteJsonLd(siteUrl = COMPANY.siteUrl): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${siteUrl}/#website`,
+    name: COMPANY.name,
+    alternateName: ['Steel Tools Ind', siteUrl.replace(/^https?:\/\//, '')],
+    url: `${siteUrl}/`,
+    inLanguage: 'en-IN',
+    publisher: { '@id': `${siteUrl}/#business` },
   };
 }
 
@@ -66,13 +105,15 @@ export class SeoService {
 
   apply(title: string, path: string, seo: SeoData = {}): void {
     if (seo.jsonLd === 'business') seo = { ...seo, jsonLd: localBusinessJsonLd() };
+    if (seo.jsonLd === 'home') seo = { ...seo, jsonLd: [websiteJsonLd(), localBusinessJsonLd()], image: seo.image ?? HERO_IMAGE };
     const description = seo.description ?? DEFAULT_DESCRIPTION;
-    const url = this.absolute(path.split('#')[0].split('?')[0]);
+    const url = this.absolute(this.canonicalPath(path));
     const image = this.absolute(`/${seo.image ?? DEFAULT_IMAGE}`);
 
     this.meta.updateTag({ name: 'description', content: description });
     this.meta.updateTag({ name: 'robots', content: seo.noindex ? 'noindex, follow' : 'index, follow' });
     this.meta.updateTag({ property: 'og:site_name', content: COMPANY.name });
+    this.meta.updateTag({ property: 'og:locale', content: 'en_IN' });
     this.meta.updateTag({ property: 'og:title', content: title });
     this.meta.updateTag({ property: 'og:description', content: description });
     this.meta.updateTag({ property: 'og:type', content: seo.type === 'product' ? 'product' : 'website' });
@@ -91,6 +132,21 @@ export class SeoService {
   absolute(path: string): string {
     const base = COMPANY.siteUrl.replace(/\/$/, '');
     return `${base}${path.startsWith('/') ? path : `/${path}`}`;
+  }
+
+  /**
+   * Canonical path: query strings are dropped, except that a product list filtered to exactly one category
+   * (/products?category=x) points at that category's landing page, /categories/x.
+   */
+  private canonicalPath(path: string): string {
+    const [base, query = ''] = path.split('#')[0].split('?');
+    if (base === '/products' && query) {
+      const params = new URLSearchParams(query);
+      const keys = [...params.keys()].filter((k) => !(k === 'page' && params.get('page') === '1'));
+      const cat = params.get('category') ?? '';
+      if (keys.length === 1 && keys[0] === 'category' && /^[a-z0-9-]+$/.test(cat)) return `/categories/${cat}`;
+    }
+    return base;
   }
 
   private setCanonical(url: string): void {
