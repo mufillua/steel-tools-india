@@ -44,8 +44,8 @@
         />
       </a>
       <p class="ftr__about">
-        Machine tool accessories, revolving and dead centres, cutting tools, hand tools and workshop
-        equipment — {{ company.city }}, {{ company.tagline.toLowerCase() }}.
+        Industrial tools supplier in {{ company.city }}, {{ company.tagline.toLowerCase() }} — machine tool
+        accessories, centres, cutting tools, hand tools, lifting gear and material handling equipment.
       </p>
       <p class="ftr__est">
         <span class="ftr__est-label">Est.</span>
@@ -67,7 +67,7 @@
       <ul class="ftr__list" role="list">
         @for (c of categories; track c.slug) {
           <li>
-            <a class="ftr__link" routerLink="/products" [queryParams]="{ category: c.slug }">{{
+            <a class="ftr__link" [routerLink]="['/categories', c.slug]">{{
               c.name
             }}</a>
           </li>
@@ -110,7 +110,7 @@
             <span class="ftr__c-label">Instagram</span>
             <a
               class="ftr__c-value"
-              href="https://www.instagram.com/steeltoolsindia/"
+              [href]="links.instagram"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -131,7 +131,7 @@
     <ul class="supply__grid" role="list">
       @for (c of catalogue.categories(); track c.slug) {
         <li>
-          <a class="supply__item" routerLink="/products" [queryParams]="{ category: c.slug }">
+          <a class="supply__item" [routerLink]="['/categories', c.slug]">
             <sti-category-icon [name]="c.icon" [size]="40" />
             <span class="supply__name">{{ c.name }}</span>
             @if (ready()) { <span class="supply__n">{{ c.productCount }} products</span> }

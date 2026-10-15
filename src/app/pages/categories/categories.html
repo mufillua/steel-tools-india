@@ -37,7 +37,7 @@
             </div>
 
             <h2 class="sheet__name">
-              <a routerLink="/products" [queryParams]="{ category: c.slug }">{{ c.name }}</a>
+              <a [routerLink]="['/categories', c.slug]">{{ c.name }}</a>
             </h2>
             <p class="sheet__desc">{{ c.description }}</p>
 
@@ -58,7 +58,7 @@
               }
             </dl>
 
-            <a class="sti-btn sti-btn--blue sheet__cta" routerLink="/products" [queryParams]="{ category: c.slug }">
+            <a class="sti-btn sti-btn--blue sheet__cta" [routerLink]="['/categories', c.slug]">
               View Products <sti-icon class="sti-btn__arrow" name="arrow-right" [size]="16" />
             </a>
           </div>

@@ -40,7 +40,7 @@ export const productSeoResolver: ResolveFn<SeoData> = async (route) => {
   const category = catalogue.getCategory(p.category);
   const url = seo.absolute(`/products/${p.slug}`);
   const description = clip(
-    `${p.name}${p.standard ? ` (${p.standard})` : ''} — ${p.summary}. ${p.description} Enquire with ${COMPANY.name}, ${COMPANY.city}.`,
+    `${p.name}${p.standard ? ` (${p.standard})` : ''} — ${p.summary}. Available from ${COMPANY.name}, ${COMPANY.city}. ${p.description}`,
   );
 
   return {
@@ -65,7 +65,7 @@ export const productSeoResolver: ResolveFn<SeoData> = async (route) => {
           { '@type': 'ListItem', position: 1, name: 'Home', item: seo.absolute('/') },
           { '@type': 'ListItem', position: 2, name: 'Products', item: seo.absolute('/products') },
           ...(category
-            ? [{ '@type': 'ListItem', position: 3, name: category.name, item: seo.absolute(`/products?category=${category.slug}`) }]
+            ? [{ '@type': 'ListItem', position: 3, name: category.name, item: seo.absolute(`/categories/${category.slug}`) }]
             : []),
           { '@type': 'ListItem', position: category ? 4 : 3, name: p.name, item: url },
         ],

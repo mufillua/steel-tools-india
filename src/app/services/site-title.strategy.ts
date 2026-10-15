@@ -16,7 +16,8 @@ export class SiteTitleStrategy extends TitleStrategy {
 
   override updateTitle(snapshot: RouterStateSnapshot): void {
     const page = this.buildTitle(snapshot);
-    const full = page ? `${page} | ${COMPANY.name}` : `${COMPANY.name} | ${COMPANY.tagline}`;
+    // A title that already starts with the brand (the home page) is used as it is.
+    const full = !page ? `${COMPANY.name} | ${COMPANY.tagline}` : page.startsWith(COMPANY.name) ? page : `${page} | ${COMPANY.name}`;
     this.title.setTitle(full);
 
     let route: ActivatedRouteSnapshot = snapshot.root;

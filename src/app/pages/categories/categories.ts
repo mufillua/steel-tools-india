@@ -24,7 +24,8 @@ interface CategoryView {
 
 /**
  * /categories — every catalogue category with its icon, photos, product types and counts.
- * Everything is derived from the product data; clicking goes to /products?category=… (and &type=…).
+ * Everything is derived from the product data; each category links to its landing page /categories/<slug>
+ * (product types link to the filtered list /products?category=…&type=…).
  */
 @Component({
   selector: 'sti-categories',

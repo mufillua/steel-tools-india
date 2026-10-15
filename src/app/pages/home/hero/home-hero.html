@@ -7,21 +7,22 @@
   <div class="sti-container sti-container--wide hero__grid">
     <!-- ── Copy ───────────────────────────── -->
     <div class="hero__copy">
-      <p class="sti-eyebrow sti-anim-fade-up">
-        {{ company.name }} <span class="hero__sep" aria-hidden="true">/</span> {{ company.tagline }}
+      <p class="sti-eyebrow">
+        {{ company.name }} <span class="hero__sep" aria-hidden="true">/</span> {{ company.city }}
+        <span class="hero__sep" aria-hidden="true">/</span> {{ company.tagline }}
       </p>
 
-      <h1 id="hero-title" class="hero__title sti-anim-fade-up sti-delay-1">
+      <h1 id="hero-title" class="hero__title">
         Precision Tools for <span class="hero__accent">Modern Manufacturing</span>
       </h1>
 
-      <p class="sti-lead hero__lead sti-anim-fade-up sti-delay-2">
+      <p class="sti-lead hero__lead">
         Machine tool accessories, revolving and dead centres, carbide and HSS cutting tools, hand tools,
-        lifting gear and material handling equipment. Browse the catalogue by size and request a quote on
-        WhatsApp or email.
+        lifting gear and material handling equipment — supplied from N. S. Road, Kolkata since 1957. Browse the
+        catalogue by size and request a quote on WhatsApp or email.
       </p>
 
-      <div class="hero__actions sti-anim-fade-up sti-delay-3">
+      <div class="hero__actions">
         <a class="sti-btn sti-btn--blue sti-btn--lg" routerLink="/products">
           Explore Products
           <sti-icon class="sti-btn__arrow" name="arrow-right" [size]="18" />
@@ -32,7 +33,7 @@
         </a>
       </div>
 
-      <dl class="hero__stats sti-anim-fade-up sti-delay-4">
+      <dl class="hero__stats">
         @for (s of stats(); track s.label) {
           <div class="hero__stat">
             <dt>{{ s.label }}</dt>
@@ -53,7 +54,7 @@
     </div>
 
     <!-- ── Drawing sheet ───────────────────── -->
-    <div class="hero__visual sti-anim-fade-in sti-delay-2">
+    <div class="hero__visual">
       <figure class="sheet">
         <span class="sheet__mark sheet__mark--tl" aria-hidden="true"></span>
         <span class="sheet__mark sheet__mark--tr" aria-hidden="true"></span>
@@ -64,12 +65,12 @@
           <!-- One product from each catalogue category — the range at a glance. -->
           <img
             class="sheet__img"
-            src="assets/hero/product-range.png"
-            srcset="assets/hero/product-range.png 800w, assets/hero/product-range.png 1500w"
+            src="assets/hero/product-range.webp"
+            srcset="assets/hero/product-range-800.webp 800w, assets/hero/product-range.webp 1403w"
             sizes="(min-width: 1024px) 580px, (min-width: 640px) 400px, calc(100vw - 32px)"
             [alt]="rangeAlt"
-            width="1500"
-            height="1200"
+            width="1403"
+            height="1121"
             fetchpriority="high"
           />
           <a class="sheet__link" routerLink="/categories" [attr.aria-label]="'Browse all ' + categoryCount + ' categories'"></a>

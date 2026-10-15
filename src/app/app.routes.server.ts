@@ -18,6 +18,14 @@ export const serverRoutes: ServerRoute[] = [
     },
   },
   { path: 'categories', renderMode: RenderMode.Prerender },
+  {
+    path: 'categories/:slug',
+    renderMode: RenderMode.Prerender,
+    async getPrerenderParams() {
+      const { CATEGORIES } = await import('./data/categories');
+      return CATEGORIES.map((c) => ({ slug: c.slug }));
+    },
+  },
   { path: 'about-us', renderMode: RenderMode.Prerender },
   { path: 'contact', renderMode: RenderMode.Prerender },
   { path: 'get-a-quote', renderMode: RenderMode.Prerender },

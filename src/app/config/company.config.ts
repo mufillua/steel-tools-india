@@ -92,7 +92,7 @@ export const COMPANY: CompanyConfig = {
 
   showPrices: false,
 
-  // Live domain. Serve the site at this exact address (no www) and redirect www to it.
+  // Live address (www). steeltoolsind.com and steeltoolsindia.in (no www) redirect here (see public/.htaccess).
   siteUrl: 'https://www.steeltoolsindia.in',
 };
 
@@ -108,6 +108,8 @@ export const COMPANY_LINKS = {
   mapsEmbed: `https://www.google.com/maps?q=${encodeURIComponent(
     [...COMPANY.address.lines, `${COMPANY.address.city} ${COMPANY.address.pincode}`, COMPANY.address.country].join(', '),
   )}&output=embed`,
+  /** Official social profile (footer link; also listed as `sameAs` in the business structured data). */
+  instagram: 'https://www.instagram.com/steeltoolsindia/',
 } as const;
 
 export const COMPANY_ADDRESS_ONE_LINE = [
