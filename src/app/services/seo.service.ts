@@ -44,8 +44,6 @@ export function localBusinessJsonLd(siteUrl = COMPANY.siteUrl): object {
     image: [`${siteUrl}/${DEFAULT_IMAGE}`, `${siteUrl}/${HERO_IMAGE}`],
     telephone: COMPANY.phoneE164,
     email: COMPANY.email,
-    hasMap: COMPANY_LINKS.mapsSearch,
-    sameAs: [COMPANY_LINKS.instagram],
     address: {
       '@type': 'PostalAddress',
       streetAddress: COMPANY.address.lines.join(', '),
