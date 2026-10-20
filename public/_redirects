@@ -1,2 +1,7 @@
-# Netlify / Cloudflare Pages: prerendered pages are served as-is; any other URL falls back to the app shell.
+# Netlify / Cloudflare Pages.
+# One address for search engines: the bare domain goes permanently to https://www.steeltoolsindia.in (Netlify;
+# on Cloudflare Pages set this up as a Bulk Redirect or a redirect rule instead — Pages skips domain-level lines).
+https://steeltoolsindia.in/*    https://www.steeltoolsindia.in/:splat    301!
+http://steeltoolsindia.in/*     https://www.steeltoolsindia.in/:splat    301!
+# Prerendered pages are served as-is; any other URL falls back to the app shell.
 /*    /index.csr.html    200

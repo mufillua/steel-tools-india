@@ -44,6 +44,8 @@ export function localBusinessJsonLd(siteUrl = COMPANY.siteUrl): object {
     image: [`${siteUrl}/${DEFAULT_IMAGE}`, `${siteUrl}/${HERO_IMAGE}`],
     telephone: COMPANY.phoneE164,
     email: COMPANY.email,
+    hasMap: COMPANY_LINKS.mapsSearch,
+    sameAs: [COMPANY_LINKS.instagram],
     address: {
       '@type': 'PostalAddress',
       streetAddress: COMPANY.address.lines.join(', '),
@@ -133,16 +135,21 @@ export class SeoService {
   }
 
   /**
-   * Canonical path: query strings are dropped, except that a product list filtered to exactly one category
-   * (/products?category=x) points at that category's landing page, /categories/x.
+   * Canonical path: query strings are dropped, except that
+   * - a product list filtered to exactly one category (/products?category=x, any page) points at that category's
+   *   landing page, /categories/x, which lists every product in it;
+   * - a plain list page (/products?page=3) keeps its page number, so Google treats each page as its own page and
+   *   follows the product links on it (pointing page 3 at page 1 would tell Google to ignore it).
    */
   private canonicalPath(path: string): string {
     const [base, query = ''] = path.split('#')[0].split('?');
     if (base === '/products' && query) {
       const params = new URLSearchParams(query);
-      const keys = [...params.keys()].filter((k) => !(k === 'page' && params.get('page') === '1'));
+      const page = params.get('page') ?? '';
+      const keys = [...params.keys()].filter((k) => k !== 'page');
       const cat = params.get('category') ?? '';
       if (keys.length === 1 && keys[0] === 'category' && /^[a-z0-9-]+$/.test(cat)) return `/categories/${cat}`;
+      if (keys.length === 0 && /^[1-9]\d{0,3}$/.test(page) && page !== '1') return `/products?page=${page}`;
     }
     return base;
   }

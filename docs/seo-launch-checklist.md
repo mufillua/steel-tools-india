@@ -3,20 +3,24 @@
 What the website already does (built in):
 
 - Every page is prerendered HTML with its own title, description and canonical link on https://www.steeltoolsindia.in.
-- Home title: "Steel Tools India — Industrial Tools Supplier in Kolkata since 1957".
+- Home title: "Steel Tools India | Industrial Tools Supplier in Kolkata, Since 1957".
 - 20 category landing pages (`/categories/<slug>`, e.g. `/categories/hoists-pulley-blocks`) titled
   "<Category> Supplier in Kolkata", each linking to every product in the category.
 - Google structured data: business record (HardwareStore: name, address, phone, email, hours, map link, catalogue),
   WebSite (site name), Product + breadcrumb on every product page, CollectionPage + item list on category pages.
-- `sitemap.xml` (689 pages + 500 product photos for Google Images) and `robots.txt`.
+- `sitemap.xml` (689 pages + 500 product photos for Google Images) and `robots.txt`. Each page's `<lastmod>` is the date
+  its content last changed (kept in `scripts/sitemap-lastmod.json`), so Google can trust it and re-crawl changed pages first.
+- Every page is at most 2 clicks from the home page (home → category page → product).
 - Lighthouse (mobile): SEO 100, Accessibility 100, Best practices 100 on home, category and product pages.
 
 What only the owner can do — in this order:
 
 1. **Upload the new build** (`dist/steel-tools-india/browser/`, including the hidden `.htaccess` file) to the host for
    www.steeltoolsindia.in, replacing the old files.
-2. **One address**: on Apache/cPanel hosting the new `.htaccess` sends http:// and steeltoolsindia.in (no www) to
-   https://www.steeltoolsindia.in. Keep steeltoolsind.com forwarding (301, permanent) to https://www.steeltoolsindia.in at the registrar.
+2. **One address**: steeltoolsindia.in (no www) must redirect permanently to https://www.steeltoolsindia.in.
+   Apache/cPanel: done by `.htaccess`. Vercel: done by `vercel.json` (or Settings → Domains → steeltoolsindia.in →
+   "Redirect to www.steeltoolsindia.in", 308). Netlify: done by `_redirects`. Cloudflare Pages: add a redirect rule in the
+   Cloudflare dashboard. Check: opening https://steeltoolsindia.in must change the address bar to https://www.steeltoolsindia.in. Keep steeltoolsind.com forwarding (301, permanent) to https://www.steeltoolsindia.in at the registrar.
 3. **Google Search Console** (property steeltoolsindia.in): Sitemaps → submit `https://www.steeltoolsindia.in/sitemap.xml`,
    then URL Inspection → "Request indexing" for the home page and a few category pages
    (e.g. https://www.steeltoolsindia.in/categories/hoists-pulley-blocks).
@@ -27,11 +31,25 @@ What only the owner can do — in this order:
    name exactly "Steel Tools India", address exactly as on the site (67/B, N. S. Road, Room No. 37, Kolkata 700001),
    phone +91 98302 58198, website https://www.steeltoolsindia.in, hours Mon–Fri 10–6, Sat 10–5, Sun closed.
    Add shop and product photos and ask regular customers for Google reviews.
-6. **Bing Webmaster Tools** (bing.com/webmasters): sign in and import the site from Search Console.
+6. **Bing Webmaster Tools** (bing.com/webmasters): sign in and import the site from Search Console. After each deploy run
+   `npm run indexnow` — it tells Bing (also used by ChatGPT search, DuckDuckGo, Yahoo) about every page at once.
 7. **Business listings** — IndiaMART, TradeIndia, JustDial: these rank high for generic tool searches in Kolkata.
    Use the same name, address and phone everywhere and link to https://www.steeltoolsindia.in.
-8. **Social profiles** (Instagram, Facebook, LinkedIn): put the website in the bio. Send the profile links to the developer
-   so they can be added to the site's structured data (`sameAs`).
+8. **Social profiles**: Instagram (@steeltoolsindia) is already in the structured data (`sameAs`). Put the website in its bio.
+   Add any new profile (Facebook, LinkedIn) to `COMPANY_LINKS` and the `sameAs` list in `seo.service.ts`.
+
+## Getting the remaining pages indexed
+
+Search Console's "Discovered – currently not indexed" / "Crawled – currently not indexed" lists are normal for a new site:
+Google found the URLs (sitemap, links) and is spreading the crawling out over weeks. It cannot be forced. What speeds it up:
+
+- **Sitemap**: Search Console → Sitemaps → submit `https://www.steeltoolsindia.in/sitemap.xml` again after each deploy.
+- **Request indexing** (URL Inspection, about 10 a day): start with the 20 category pages — each one links to every product in
+  its category, so one crawl leads Google to many products. Then /products, /categories, /contact.
+- **Links from other websites** are what make Google crawl a new domain faster: Google Business Profile, IndiaMART/TradeIndia/
+  JustDial listings, Instagram bio, supplier/customer sites. A brand-new domain with no outside links is crawled slowly.
+- **Do not** click "Validate fix" on these reports, change URLs, or re-upload the same pages under new names — that resets the queue.
+- Re-check the Pages report every 1–2 weeks; the "Indexed" count should climb steadily.
 
 What to expect: searches for the business name ("Steel Tools India", "Steel Tools India Kolkata") normally show the site
 first within days to a few weeks of Google indexing it. Generic searches ("chain pulley block Kolkata") take months and

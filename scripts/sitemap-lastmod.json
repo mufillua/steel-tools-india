@@ -1,0 +1,2758 @@
+{
+ "/": {
+  "hash": "8392e7ee2071",
+  "lastmod": "2026-10-15"
+ },
+ "/products": {
+  "hash": "4ce4da6d8534",
+  "lastmod": "2026-10-15"
+ },
+ "/categories": {
+  "hash": "5ffb3fdf2ffe",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/machine-tool-accessories": {
+  "hash": "b2d03b5ed480",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/lathe-centres": {
+  "hash": "642745d41aba",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/solid-carbide-tools": {
+  "hash": "40cef2c0dfd1",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/indexable-tooling": {
+  "hash": "6d2c308691ad",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/hss-cutting-tools": {
+  "hash": "8496a8ef9855",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/carbide-tipped-tools-burrs": {
+  "hash": "1f1a9daf3027",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/power-tool-accessories": {
+  "hash": "d48904cfdab3",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/pliers-cutting-tools": {
+  "hash": "e1074f8cb043",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/spanners-wrenches": {
+  "hash": "28a758eecbb9",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/sockets-accessories": {
+  "hash": "1289e6b26466",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/screwdrivers-bits": {
+  "hash": "51ccc26d40a8",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/hammers-chisels-files": {
+  "hash": "3bce2148d629",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/industrial-hand-tools": {
+  "hash": "532174371ee4",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/workshop-equipment": {
+  "hash": "4d0bde2ee449",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/non-sparking-tools": {
+  "hash": "b02082f43bde",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/hoists-pulley-blocks": {
+  "hash": "6469f267efc1",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/lifting-chain-rigging": {
+  "hash": "c2ae2d073cae",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/slings-lashing": {
+  "hash": "13cdee230ca7",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/lifting-clamps-magnets": {
+  "hash": "a0b70c5fc5b8",
+  "lastmod": "2026-10-15"
+ },
+ "/categories/material-handling": {
+  "hash": "8e73bf4df96e",
+  "lastmod": "2026-10-15"
+ },
+ "/about-us": {
+  "hash": "0cea8389d160",
+  "lastmod": "2026-10-15"
+ },
+ "/contact": {
+  "hash": "0ae77d109b34",
+  "lastmod": "2026-10-15"
+ },
+ "/get-a-quote": {
+  "hash": "0ae77d109b34",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-50-er-collet-chuck": {
+  "hash": "f07d6219a869",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-50-stub-milling-arbor": {
+  "hash": "ca4f3b09b26b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-50-stub-milling-arbor-flange-type": {
+  "hash": "2d7c04f062d1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-50-side-lock-holder": {
+  "hash": "9de1e69a94a4",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-50-milling-reduction-socket": {
+  "hash": "568ca15fb855",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-50-bt-40-reduction-adaptor": {
+  "hash": "24d1d264b9a2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-50-drill-chuck-arbor": {
+  "hash": "26c75159a5a6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/t-slot-nut": {
+  "hash": "7392144451b7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/flange-nut": {
+  "hash": "1f1050642b7b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/e-40-collets": {
+  "hash": "820ea2533653",
+  "lastmod": "2026-10-15"
+ },
+ "/products/r8-m1tr-collets": {
+  "hash": "f3dfdd57cfc1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/traub-collets": {
+  "hash": "59cdefefa399",
+  "lastmod": "2026-10-15"
+ },
+ "/products/traub-collet-fingers": {
+  "hash": "4b860b8c8c27",
+  "lastmod": "2026-10-15"
+ },
+ "/products/cnc-lathe-turret-sleeve-with-collar": {
+  "hash": "b03a17df9e4a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/cnc-lathe-turret-sleeve-morse-taper": {
+  "hash": "a1198ec34be3",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ejecting-drift": {
+  "hash": "fdfe3c353a3d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/drill-sleeve": {
+  "hash": "fb83fec3dc45",
+  "lastmod": "2026-10-15"
+ },
+ "/products/drill-chuck-arbor-morse-taper": {
+  "hash": "f25fbff0a43d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/extension-socket": {
+  "hash": "b0592a08e39f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/quick-change-chuck": {
+  "hash": "6e55ba797c8b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/quick-change-chuck-collet": {
+  "hash": "7f717b7bf113",
+  "lastmod": "2026-10-15"
+ },
+ "/products/turret-socket": {
+  "hash": "4dc79f3baac9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/iso-e-40-collet-chuck": {
+  "hash": "68149c5031e0",
+  "lastmod": "2026-10-15"
+ },
+ "/products/iso-er-collet-chuck": {
+  "hash": "15d6fef7ded9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/iso-stub-milling-arbor": {
+  "hash": "654bddfe223a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/iso-stub-milling-arbor-flange-type": {
+  "hash": "61e23c68cdb7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/iso-side-lock-holder": {
+  "hash": "4de1a9c1fcc9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/iso-milling-reduction-socket": {
+  "hash": "2c4881fdee75",
+  "lastmod": "2026-10-15"
+ },
+ "/products/iso-drill-chuck-arbor": {
+  "hash": "257b2ce4c2ca",
+  "lastmod": "2026-10-15"
+ },
+ "/products/e-40-spares": {
+  "hash": "24e21f5a5a41",
+  "lastmod": "2026-10-15"
+ },
+ "/products/mt-e-40-collet-chuck-drawbolt-type": {
+  "hash": "df0357255063",
+  "lastmod": "2026-10-15"
+ },
+ "/products/mt-er-collet-chuck-drawbolt-type": {
+  "hash": "9793354ae005",
+  "lastmod": "2026-10-15"
+ },
+ "/products/mt-stub-milling-arbor-drawbolt-type": {
+  "hash": "13e282f4c44a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/morse-taper-spare-tang": {
+  "hash": "2506b0fa8bca",
+  "lastmod": "2026-10-15"
+ },
+ "/products/mt-e-40-collet-chuck-tang-type": {
+  "hash": "47931500bb88",
+  "lastmod": "2026-10-15"
+ },
+ "/products/mt-er-collet-chuck-tang-type": {
+  "hash": "dab635bd371e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/mt-stub-milling-arbor-tang-type": {
+  "hash": "a05b84dbc9b2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/mt-side-lock-holder-tang-type": {
+  "hash": "6adad14abcc6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/r8-m1tr-e-40-collet-chuck": {
+  "hash": "a85964e98e3a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/r8-m1tr-er-collet-chuck": {
+  "hash": "083e8ab55617",
+  "lastmod": "2026-10-15"
+ },
+ "/products/r8-m1tr-stub-milling-arbor": {
+  "hash": "4562ce1b39fa",
+  "lastmod": "2026-10-15"
+ },
+ "/products/r8-m1tr-side-lock-holder": {
+  "hash": "819195e68fcb",
+  "lastmod": "2026-10-15"
+ },
+ "/products/r8-m1tr-milling-reduction-socket": {
+  "hash": "c57a5ce6b3c9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/r8-m1tr-drill-chuck-arbor": {
+  "hash": "d902b6d2da20",
+  "lastmod": "2026-10-15"
+ },
+ "/products/keyed-drill-chuck": {
+  "hash": "b3267d43b4e7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/drill-chuck-spare-key": {
+  "hash": "9001cc0ac343",
+  "lastmod": "2026-10-15"
+ },
+ "/products/er-collet": {
+  "hash": "24c617507dec",
+  "lastmod": "2026-10-15"
+ },
+ "/products/er-collet-special-size": {
+  "hash": "7518dfb59681",
+  "lastmod": "2026-10-15"
+ },
+ "/products/er-collet-set": {
+  "hash": "5920e1985b90",
+  "lastmod": "2026-10-15"
+ },
+ "/products/collet-and-adaptor-set": {
+  "hash": "c06d51848a2f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/erg-tap-collet": {
+  "hash": "1a8ef554e90f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/erc-sealed-collet": {
+  "hash": "e846a4ccb62e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ers-waterjet-coolant-collet": {
+  "hash": "642005a73cca",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hsk-er-collet-chuck": {
+  "hash": "f5f50840e5bc",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hsk-stub-milling-arbor": {
+  "hash": "c45075101d5a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hsk-side-lock-holder": {
+  "hash": "42ee89b1fe90",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-30-er-collet-chuck": {
+  "hash": "8d77e0f43c2d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-30-stub-milling-arbor": {
+  "hash": "ab4ff5d32f87",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-30-side-lock-holder": {
+  "hash": "ba30ec79eceb",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-30-milling-reduction-socket": {
+  "hash": "b3174af811b1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-30-drill-chuck-arbor": {
+  "hash": "75e5ecdd0bd6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-40-er-collet-chuck": {
+  "hash": "46a390668df0",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-40-stub-milling-arbor": {
+  "hash": "eaca60da38c6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-40-side-lock-holder": {
+  "hash": "05df4396a64b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-40-milling-reduction-socket": {
+  "hash": "f0c1a4878a77",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-40-bt-30-reduction-adaptor": {
+  "hash": "358988cff612",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bt-40-drill-chuck-arbor": {
+  "hash": "8d485bed8423",
+  "lastmod": "2026-10-15"
+ },
+ "/products/cat-er-collet-chuck": {
+  "hash": "0778da9d34f6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/cat-stub-milling-arbor": {
+  "hash": "3bec95d05779",
+  "lastmod": "2026-10-15"
+ },
+ "/products/cat-side-lock-holder": {
+  "hash": "88e01068ff3f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/cat-milling-reduction-socket": {
+  "hash": "c049caf8e480",
+  "lastmod": "2026-10-15"
+ },
+ "/products/sk-er-collet-chuck": {
+  "hash": "cc5a2525b540",
+  "lastmod": "2026-10-15"
+ },
+ "/products/sk-stub-milling-arbor": {
+  "hash": "cfd6239a4e93",
+  "lastmod": "2026-10-15"
+ },
+ "/products/sk-side-lock-holder": {
+  "hash": "7f9c0dd64b88",
+  "lastmod": "2026-10-15"
+ },
+ "/products/sk-milling-reduction-socket": {
+  "hash": "5e4d914a6c1d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/rbt-er-collet-chuck": {
+  "hash": "486f0ee66578",
+  "lastmod": "2026-10-15"
+ },
+ "/products/rbt-stub-milling-arbor": {
+  "hash": "10f94102dc07",
+  "lastmod": "2026-10-15"
+ },
+ "/products/rbt-side-lock-holder": {
+  "hash": "4d200ad9033a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/rbt-milling-reduction-socket": {
+  "hash": "b67193204ee2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/straight-shank-baby-collet-chuck": {
+  "hash": "e7b92b61ca94",
+  "lastmod": "2026-10-15"
+ },
+ "/products/sdc-collet": {
+  "hash": "980b8ce1ae9d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/sdc-collet-chuck": {
+  "hash": "04bd5ce82861",
+  "lastmod": "2026-10-15"
+ },
+ "/products/sdc-extension-collet-chuck": {
+  "hash": "605c815c67f3",
+  "lastmod": "2026-10-15"
+ },
+ "/products/power-mill-straight-collet": {
+  "hash": "af5cb393051f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/power-mill-chuck": {
+  "hash": "21b6d390a795",
+  "lastmod": "2026-10-15"
+ },
+ "/products/power-mill-chuck-spanner": {
+  "hash": "97c37a0164e8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/er-collet-nut": {
+  "hash": "9e3db572e645",
+  "lastmod": "2026-10-15"
+ },
+ "/products/er-collet-chuck-spanner": {
+  "hash": "e3b3b1b90f67",
+  "lastmod": "2026-10-15"
+ },
+ "/products/pull-stud": {
+  "hash": "254a93f77f74",
+  "lastmod": "2026-10-15"
+ },
+ "/products/tool-locking-device-heavy-duty": {
+  "hash": "815c25f41fae",
+  "lastmod": "2026-10-15"
+ },
+ "/products/cnc-spindle-cleaner": {
+  "hash": "2a459bec286e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/quick-change-tapping-adaptor": {
+  "hash": "76ddc8a1de6a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/quick-change-tap-collet": {
+  "hash": "2b0db896e454",
+  "lastmod": "2026-10-15"
+ },
+ "/products/gt-tap-reducer-and-spanner": {
+  "hash": "f1166fc480aa",
+  "lastmod": "2026-10-15"
+ },
+ "/products/keyless-drill-chuck": {
+  "hash": "6fa779dc4392",
+  "lastmod": "2026-10-15"
+ },
+ "/products/tin-coated-jaws-heavy-duty-keyless-drill-chuck": {
+  "hash": "5be134581cde",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ti-jaws-keyless-drill-chuck": {
+  "hash": "787ce592b8c9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/keyless-drill-chuck-spanner": {
+  "hash": "640ddd402f47",
+  "lastmod": "2026-10-15"
+ },
+ "/products/integral-shank-keyless-drill-chuck": {
+  "hash": "854ab4b42613",
+  "lastmod": "2026-10-15"
+ },
+ "/products/micro-boring-head": {
+  "hash": "1922e816a1e1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/boring-head-shank": {
+  "hash": "3a6ff143d82b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ckb-boring-head-chuck": {
+  "hash": "970dc7190c50",
+  "lastmod": "2026-10-15"
+ },
+ "/products/master-mandrel-spindle-tester": {
+  "hash": "0e73db2b0d1e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/flange-type-adaptor": {
+  "hash": "7f71a6bf4de1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/mechanical-edge-finder": {
+  "hash": "a2da53925d84",
+  "lastmod": "2026-10-15"
+ },
+ "/products/electronic-edge-finder": {
+  "hash": "264dee1d38d1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/clamping-kit-58-pcs": {
+  "hash": "33b3af4563c6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/male-revolving-centre-carbide-tipped-standard": {
+  "hash": "2f9e005e6af4",
+  "lastmod": "2026-10-15"
+ },
+ "/products/male-revolving-centre-triple-bearing-heavy-duty": {
+  "hash": "6e19a2d710f9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/male-revolving-centre-four-bearing-extra-heavy-duty": {
+  "hash": "4d0a58f3dac6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/cnc-heavy-duty-revolving-centre": {
+  "hash": "0e4bd8583273",
+  "lastmod": "2026-10-15"
+ },
+ "/products/cnc-hd-r-centre-interchangeable": {
+  "hash": "81c19cb2ef0c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/carbide-tipped-spare-point-interchangeable": {
+  "hash": "9d5e09ab083e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/wedge-for-interchangeable-point": {
+  "hash": "976d86f3581e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/pipe-revolving-centre": {
+  "hash": "0282568c882d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/dead-centre-carbide-tipped": {
+  "hash": "d8709783c954",
+  "lastmod": "2026-10-15"
+ },
+ "/products/cnc-dead-centre-with-draw-off-nut": {
+  "hash": "9f79c9428419",
+  "lastmod": "2026-10-15"
+ },
+ "/products/special-carbide-tipped-dead-centre": {
+  "hash": "8cc347094031",
+  "lastmod": "2026-10-15"
+ },
+ "/products/full-carbide-dead-centre": {
+  "hash": "75166dc938ec",
+  "lastmod": "2026-10-15"
+ },
+ "/products/adjustable-tap-handle-steel": {
+  "hash": "05030ecec675",
+  "lastmod": "2026-10-15"
+ },
+ "/products/round-die-handle": {
+  "hash": "ce112aba7bf5",
+  "lastmod": "2026-10-15"
+ },
+ "/products/engineers-precision-try-square": {
+  "hash": "6f405f107337",
+  "lastmod": "2026-10-15"
+ },
+ "/products/expanding-adjustable-hand-reamer": {
+  "hash": "a166a1fcf08e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/t-handle-tap-wrench": {
+  "hash": "7111b5468f2e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/protractor-with-graduated-steel-ruler": {
+  "hash": "5fb82220c55c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/depth-gauge": {
+  "hash": "4d9005912218",
+  "lastmod": "2026-10-15"
+ },
+ "/products/thread-gauge": {
+  "hash": "accd36511bc5",
+  "lastmod": "2026-10-15"
+ },
+ "/products/radius-gauge": {
+  "hash": "b67afd1db730",
+  "lastmod": "2026-10-15"
+ },
+ "/products/marking-letter-figure-punches": {
+  "hash": "6f19cb0892bc",
+  "lastmod": "2026-10-15"
+ },
+ "/products/dotted-letter-figure-punches": {
+  "hash": "bf3e83a333cc",
+  "lastmod": "2026-10-15"
+ },
+ "/products/reverse-letter-figure-punch-sets": {
+  "hash": "6aeccc80a2ed",
+  "lastmod": "2026-10-15"
+ },
+ "/products/solid-carbide-drill-hrc55": {
+  "hash": "55a1b0d9408a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/spot-drill-90-hrc55": {
+  "hash": "7b645071d18c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/square-endmill-hrc45-4-flute": {
+  "hash": "ca17298c6c27",
+  "lastmod": "2026-10-15"
+ },
+ "/products/square-endmill-hrc55-4-flute": {
+  "hash": "bdee7f2aba43",
+  "lastmod": "2026-10-15"
+ },
+ "/products/square-endmill-hrc65-4-flute": {
+  "hash": "26bc61ab83a9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/key-way-endmill-hrc55": {
+  "hash": "02a0eff15cc3",
+  "lastmod": "2026-10-15"
+ },
+ "/products/endmill-for-aluminium-hrc55": {
+  "hash": "e3e8c24df2bd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/long-neck-endmill-hrc55": {
+  "hash": "ccc7f1da7253",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ballnose-endmill-hrc45-2-flute": {
+  "hash": "6b070d750fe8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ballnose-endmill-hrc55-2-flute": {
+  "hash": "c43f89489a63",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ballnose-endmill-hrc55-4-flute": {
+  "hash": "9fda90cffb6f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bap-indexable-endmill": {
+  "hash": "1fa6adf7e689",
+  "lastmod": "2026-10-15"
+ },
+ "/products/bap-face-mill-cutter": {
+  "hash": "c02235235985",
+  "lastmod": "2026-10-15"
+ },
+ "/products/emr-indexable-endmill": {
+  "hash": "33f56b8d1868",
+  "lastmod": "2026-10-15"
+ },
+ "/products/emr-face-mill-cutter": {
+  "hash": "3314b2043958",
+  "lastmod": "2026-10-15"
+ },
+ "/products/exn-indexable-endmill": {
+  "hash": "d60972ffddf8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/exn-face-mill-cutter": {
+  "hash": "5baa65039fd0",
+  "lastmod": "2026-10-15"
+ },
+ "/products/u-drill-spmg": {
+  "hash": "621597f17882",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-square-toolbit-blank-inch": {
+  "hash": "53606c1e0e91",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-square-toolbit-blank-mm": {
+  "hash": "d3d112ef3051",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-round-toolbit-blank-inch": {
+  "hash": "25d043b40f0c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-round-toolbit-blank-mm": {
+  "hash": "2a344c8d257b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-flat-toolbit-blank-inch": {
+  "hash": "695c4f3f05f3",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-parting-toolbit": {
+  "hash": "cfa6fd7bc392",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-flat-toolbit-blank-mm": {
+  "hash": "aed04a4e9b47",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-toolbit-blank-zedd-p": {
+  "hash": "7d3f1c8d476f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-parallel-shank-jobber-drill": {
+  "hash": "95272177ab72",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-parallel-shank-stub-drill": {
+  "hash": "7ac1214c390e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-intermediate-length-drill": {
+  "hash": "dd3992820717",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-jobber-drill-steam-tempered": {
+  "hash": "1390bae282bd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-jobber-drill-set": {
+  "hash": "2a630fdbe4e7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-jobber-drill-tin-coated": {
+  "hash": "b2cf1c60e4ee",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-e-jobber-drill-tin-coated": {
+  "hash": "ecc979cbcbe7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-parallel-shank-long-series-drill": {
+  "hash": "bdb7f1c82064",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-parallel-shank-extra-long-drill": {
+  "hash": "b90ce7d46caa",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-e-extra-length-drill": {
+  "hash": "e149a7fee12d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-centre-drill": {
+  "hash": "8ab3433c20c9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-taper-shank-drill": {
+  "hash": "4375731f8727",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-taper-shank-drill-long-series": {
+  "hash": "201803c3cbae",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-taper-shank-drill-extra-long": {
+  "hash": "511dbc48b2e1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/masonry-drill": {
+  "hash": "4f964354638f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-endmill-centre-cut": {
+  "hash": "e5278c181393",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-endmill-non-centre-cut": {
+  "hash": "ffa599139000",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-slot-drill": {
+  "hash": "580c1a7f1cf7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-endmill-long-series": {
+  "hash": "081ab726db7d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-roughing-endmill-m42": {
+  "hash": "12a0b4d2d4bc",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-ball-nose-endmill": {
+  "hash": "4087a1e2cfab",
+  "lastmod": "2026-10-15"
+ },
+ "/products/m42-tialn-coated-centre-cut-endmill": {
+  "hash": "47ec6d82d45f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-reamer-h7": {
+  "hash": "fd8322ca4191",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-taper-pin-hand-reamer": {
+  "hash": "5a5a65ca5033",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-taper-shank-core-drill": {
+  "hash": "f53c3bc94065",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-annular-cutter": {
+  "hash": "6278dc3bf210",
+  "lastmod": "2026-10-15"
+ },
+ "/products/tct-annular-cutter": {
+  "hash": "5afc7b8c9dfc",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-hand-tap-metric-coarse": {
+  "hash": "4f3da019b682",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-tap-retapping-6g-metric-coarse": {
+  "hash": "2659484b31de",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-spiral-point-spiral-flute-tap-metric-coarse": {
+  "hash": "b2186a23f69d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/m35-m42-hss-tap-metric-coarse": {
+  "hash": "a9612d6647e0",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-long-shank-machine-tap": {
+  "hash": "bc32bfee20f1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/left-hand-tap-metric-coarse": {
+  "hash": "35fd5da3e549",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-straight-flute-tap-metric-fine": {
+  "hash": "c778629c9ccd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/left-hand-tap-metric-fine": {
+  "hash": "e718a7d8c4e3",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-machine-tap-metric-fine": {
+  "hash": "d6cd28f7fdab",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-tap-bsw": {
+  "hash": "71b188673166",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-tap-bsf": {
+  "hash": "ef2543cd1da8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-tap-ba": {
+  "hash": "1b66d6e65186",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-tap-unc": {
+  "hash": "1ca82febdd15",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-tap-unf": {
+  "hash": "5bc86c88bad1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-pipe-tap": {
+  "hash": "65fd871f16ee",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-tap-npt": {
+  "hash": "6ae8d0630989",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-un-tap": {
+  "hash": "eba892f5340c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-e-nib-tap-alcrn": {
+  "hash": "3df470274f92",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hss-helicoil-tap-metric-coarse": {
+  "hash": "beecbe9687d2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/din-standard-tap": {
+  "hash": "beff4fa84102",
+  "lastmod": "2026-10-15"
+ },
+ "/products/high-performance-tap-platinum-cut": {
+  "hash": "f998abe3b3df",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-iso-1-110-bar-turning-tools": {
+  "hash": "a784a458b66d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-iso-2-111-cranked-turning-facing-tools": {
+  "hash": "aaa782af6c7e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-iso-3-123-cranked-finishing-tools": {
+  "hash": "d7cfe57a64eb",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-iso-5-126-cranked-facing-tools": {
+  "hash": "ee61bb5f5091",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-iso-6-117-cranked-knife-tools": {
+  "hash": "dad69fa72c00",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-iso-7-150-parting-off-tools": {
+  "hash": "6078293dd93b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-iso-8-130-boring-tools-square": {
+  "hash": "356d4febc447",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-iso-8-131-boring-tools-round": {
+  "hash": "aa2dac74e0d7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-iso-9-135-boring-tools-square": {
+  "hash": "01d7fbc1f100",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-iso-9-136-boring-tools-round": {
+  "hash": "4df42d48a22e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-115-cranked-round-nose-turning-tools": {
+  "hash": "9e729cde39cd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-116-bar-turning-tools": {
+  "hash": "542735749e35",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-140-60-boring-tools-square": {
+  "hash": "b89b1468d1fb",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-140-60-boring-tools-round": {
+  "hash": "7f0c81c715ee",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-141-90-boring-tools-square": {
+  "hash": "85d572cb663a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-141-90-boring-tools-round": {
+  "hash": "aa94206c7827",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-142-45-boring-tools-square": {
+  "hash": "967d49e1c91d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-142-45-boring-tools-round": {
+  "hash": "32290c478442",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-156-cranked-internal-recessing-tools": {
+  "hash": "6339c912e748",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-165-straight-threading-tools-55": {
+  "hash": "dbacab02c41c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-165-straight-threading-tools-60": {
+  "hash": "165e9eb52677",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-166-internal-threading-tools-60": {
+  "hash": "a710670d64d8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-ind-2-external-threading-tools": {
+  "hash": "9d10913eb50d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-113-straight-round-nose-turning-tool": {
+  "hash": "97f28d49c221",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-122-pointed-turning-tools": {
+  "hash": "edd891d9df6a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-iso-4-127-recessing-tools": {
+  "hash": "a2bd536ac690",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ctt-163-straight-turning-grooving-tools": {
+  "hash": "bf691693d1f9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/tungsten-carbide-rotary-burr-conical": {
+  "hash": "cbc52d514114",
+  "lastmod": "2026-10-15"
+ },
+ "/products/tungsten-carbide-rotary-burr-cylindrical-radius-end": {
+  "hash": "b201c7ae7eff",
+  "lastmod": "2026-10-15"
+ },
+ "/products/tungsten-carbide-rotary-burr-cylindrical": {
+  "hash": "3c47c6c90b4b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/tungsten-carbide-rotary-burr-flame": {
+  "hash": "14aa3879b151",
+  "lastmod": "2026-10-15"
+ },
+ "/products/tungsten-carbide-rotary-burr-cone-radius": {
+  "hash": "97e042604c90",
+  "lastmod": "2026-10-15"
+ },
+ "/products/tungsten-carbide-rotary-burr-oval": {
+  "hash": "3ef29108c1b4",
+  "lastmod": "2026-10-15"
+ },
+ "/products/tungsten-carbide-rotary-burr-rim": {
+  "hash": "f170c37fdc97",
+  "lastmod": "2026-10-15"
+ },
+ "/products/tungsten-carbide-rotary-burr-ball": {
+  "hash": "019a04fcb7f8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/tungsten-carbide-rotary-burr-tree-pointed-end": {
+  "hash": "1eb0b5c157a5",
+  "lastmod": "2026-10-15"
+ },
+ "/products/tungsten-carbide-rotary-burr-tree-radius-end": {
+  "hash": "825230b733bd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/tungsten-carbide-rotary-burr-inverted-cone": {
+  "hash": "98b17f223d7f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/tungsten-carbide-rotary-burr-set": {
+  "hash": "07c78fe15bdf",
+  "lastmod": "2026-10-15"
+ },
+ "/products/miranda-2-flute-solid-carbide-end-mill": {
+  "hash": "e820635cc09b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/miranda-4-flute-solid-carbide-end-mill-standard": {
+  "hash": "079086d04f36",
+  "lastmod": "2026-10-15"
+ },
+ "/products/miranda-4-flute-solid-carbide-end-mill-long": {
+  "hash": "4171541d51dc",
+  "lastmod": "2026-10-15"
+ },
+ "/products/miranda-4-flute-solid-carbide-end-mill-extra-long": {
+  "hash": "3224efeacbf8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/miranda-2-flute-solid-carbide-ball-nose-standard": {
+  "hash": "4517980e10d6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/miranda-4-flute-solid-carbide-ball-nose-standard": {
+  "hash": "7b7750c84cb5",
+  "lastmod": "2026-10-15"
+ },
+ "/products/miranda-4-flute-solid-carbide-ball-nose-long": {
+  "hash": "a47075d8dba9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/miranda-4-flute-solid-carbide-ball-nose-extra-long": {
+  "hash": "6af9fc694387",
+  "lastmod": "2026-10-15"
+ },
+ "/products/maxx-pro-4-flute-sc-square-end-mill-standard": {
+  "hash": "d3e4aee1c4fb",
+  "lastmod": "2026-10-15"
+ },
+ "/products/maxx-pro-4-flute-sc-square-end-mill-long": {
+  "hash": "6c31bd4de695",
+  "lastmod": "2026-10-15"
+ },
+ "/products/maxx-pro-2-flute-sc-ball-nose-standard": {
+  "hash": "27e4372988dd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/maxx-pro-4-flute-sc-ball-nose-standard": {
+  "hash": "5e50a7c397da",
+  "lastmod": "2026-10-15"
+ },
+ "/products/maxx-pro-4-flute-sc-ball-nose-long": {
+  "hash": "3cc308a248e2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/maxx-pro-4-flute-sc-ball-nose-extra-long": {
+  "hash": "b817e4912b92",
+  "lastmod": "2026-10-15"
+ },
+ "/products/miranda-solid-carbide-jobber-drill": {
+  "hash": "d6b75328a9f4",
+  "lastmod": "2026-10-15"
+ },
+ "/products/miranda-solid-carbide-stub-drill": {
+  "hash": "64659824a3ed",
+  "lastmod": "2026-10-15"
+ },
+ "/products/miranda-solid-carbide-centre-drill": {
+  "hash": "0ea27356de07",
+  "lastmod": "2026-10-15"
+ },
+ "/products/miranda-solid-carbide-reamer-h7": {
+  "hash": "cbaccb4a9d88",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-adjustable-wrenches": {
+  "hash": "326066b5da66",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-adjustable-spanners-with-soft-grip": {
+  "hash": "559660af3cbb",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-combination-side-cutting-pliers": {
+  "hash": "ccfcf0b41c29",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-long-nose-pliers": {
+  "hash": "b2b48517158e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-bent-nose-pliers-econ": {
+  "hash": "44164801dfb1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-side-cutting-pliers": {
+  "hash": "e02e4d41cf46",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-circlip-pliers-insulated-with-thick-c-a-sleeve": {
+  "hash": "3e21d4ffb3a9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-circlip-pliers-pvc-deep-coated-sleeve": {
+  "hash": "4c2f4bef5d97",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-vde-pliers": {
+  "hash": "fb50aafb5fa2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-vde-pliers-set": {
+  "hash": "02f297e1ba5f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-mini-pliers-two-colour-dip-coated-sleeve": {
+  "hash": "8cd86bf5b54f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-micro-jewellery-pliers": {
+  "hash": "3c5b5f0bd7ea",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-long-reach-mini-pliers": {
+  "hash": "2205f807b47c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-pincers": {
+  "hash": "2297e9a6dfa0",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-tower-pincer": {
+  "hash": "40514be1aa34",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-water-pump-pliers": {
+  "hash": "815ab3cb79a2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-locking-pliers": {
+  "hash": "ae3e9471953b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-nippers": {
+  "hash": "a75d4ad36257",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-plastic-cutting-pliers": {
+  "hash": "f7746239bec5",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-slip-joint-pliers": {
+  "hash": "3140030fa99a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-wire-stripping-pliers": {
+  "hash": "fff451255306",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-auto-wire-stripper-and-cutter": {
+  "hash": "d990f53b1b40",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-flat-screw-driver": {
+  "hash": "638b667327a4",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-insulated-screw-drivers": {
+  "hash": "a0c3730002d5",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-phillips-screw-drivers": {
+  "hash": "d193de3cb137",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-black-tip-phillips-screw-drivers": {
+  "hash": "ca7949b2ecaa",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-black-tip-two-in-one-screw-drivers": {
+  "hash": "e969c370897b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-two-in-one-screw-drivers": {
+  "hash": "b6eca91d6b77",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hexagonal-screw-drivers": {
+  "hash": "f5147129eb8a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hexagonal-screw-driver-with-insulation-and-opaque-handle-two-in-one": {
+  "hash": "4d51c134f88a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-two-in-one-screw-driver": {
+  "hash": "408f4515be1e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-torx-screw-drivers": {
+  "hash": "eb850cd5defe",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-t-handle-torx-keys": {
+  "hash": "58a513e21466",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-striking-screw-drivers": {
+  "hash": "36f3cb167b81",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-stubby-screw-driver": {
+  "hash": "84e6b8190891",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-two-in-one-stubby-screw-driver": {
+  "hash": "8dcefcbefded",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-poker-screw-driver": {
+  "hash": "3b0cf0463bcd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-precision-screw-driver-sets": {
+  "hash": "29496453819f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-screw-driver-sets": {
+  "hash": "428692497502",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-screw-driver-set": {
+  "hash": "af8f9d343f8e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-line-testers": {
+  "hash": "52da2f51b7ba",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-two-in-one-line-tester": {
+  "hash": "8482bfe1189e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-digital-testers": {
+  "hash": "2e7c62af34cd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-screw-driver-kits": {
+  "hash": "cdc1ebfee0bd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-crimping-tools": {
+  "hash": "7c88197672c9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-pvc-insulation-tapes": {
+  "hash": "e2930a490d1e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-phillips-head-screw-driver-bits": {
+  "hash": "b06e335b74c1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-phillips-double-head-screw-driver-bits": {
+  "hash": "9e1323376523",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-torx-head-screw-driver-bits": {
+  "hash": "75a43db7d048",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-flat-head-bits": {
+  "hash": "de899e8c43d5",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hexagonal-head-bits-metric-series": {
+  "hash": "40003b3ea3af",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hexagonal-head-bits-50mm-length": {
+  "hash": "f8184e7070e6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-two-in-one-screw-driver-bits": {
+  "hash": "565187a46c92",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-screw-driver-bits-pozidrive": {
+  "hash": "3d498d9d6d58",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-bit-driver": {
+  "hash": "81226de392ab",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-bit-driver-sets": {
+  "hash": "a559b77c1d96",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-power-tool-bits-set-32-pcs": {
+  "hash": "8f1f7046f922",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-screw-driver-bits-set-80-pcs": {
+  "hash": "6bceb45e2fb1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-bit-driver-set": {
+  "hash": "348c190e4cf2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-impact-driver-bit-set": {
+  "hash": "0a465411a819",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-sockets-6-3mm-1-4-square-drive-flank-drive": {
+  "hash": "ed13776237fd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-socket-accessories-6-3mm-1-4-square-drive": {
+  "hash": "9f06378c847a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-sockets-sets-6-3mm-1-4-square-drive": {
+  "hash": "ec8b22d0a1da",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-1-4-dr-socket-set-in-blow-moulding-box-23-pcs-socket-set": {
+  "hash": "39671c1922b7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-1-4-square-drive-deep-sockets": {
+  "hash": "e8cfefb3ec99",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-1-4-square-drive-bit-sockets": {
+  "hash": "fda4c38feb5a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-1-4-dr-socket-set-in-blow-moulding-box-46-pcs-socket-set": {
+  "hash": "2a4932648894",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-sockets-9-5mm-3-8-square-drive-flank-drive": {
+  "hash": "36a74935c01e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-sockets-accessories-9-5mm-3-8-square-drive-flank-drive": {
+  "hash": "8b7c6b6e0544",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-3-8-dr-20-pcs-socket-set-in-blow-moulding-box": {
+  "hash": "f0c7ba5d4b61",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-socket-sets-9-5mm-3-8-square-drive": {
+  "hash": "3691600b7f30",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-sockets-12-7mm-1-2-square-drive-flank-drive": {
+  "hash": "d3f73ac37eee",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-deep-sockets-12-7mm-1-2-square-drive": {
+  "hash": "5e170340a699",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-1-2-dr-deep-socket-set-11-pcs": {
+  "hash": "54015465800d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-extra-long-socket-12-7-mm-1-2-square-drive": {
+  "hash": "70ca59314da1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-t-socket-wrenches": {
+  "hash": "a1192a4d2952",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-spark-plug-sockets-12-7mm-1-2-square-drive-crv": {
+  "hash": "35293878157f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hex-bit-sockets-12-7mm-1-2-sq-drive": {
+  "hash": "86add340fcf7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hex-bit-socket-set-12-7mm-1-2-square-drive-8-pcs-set": {
+  "hash": "4875b771a4fb",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-impact-sockets-12-7mm-1-2-square-drive-flank-drive-hexagonal": {
+  "hash": "4dbfb231943b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-deep-impact-sockets-12-7mm-1-2-square-drive": {
+  "hash": "0304de565838",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-torx-bit-sockets-12-7mm-1-2-square-drive": {
+  "hash": "13dc1626a5e0",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-torx-bit-socket-set-12-7mm-1-2-square-drive-9-pcs-set": {
+  "hash": "d363950f6606",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-e-sockets-12-7mm-1-2-square-drive": {
+  "hash": "9bb36553735a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-e-sockets-set-12-7mm-1-2-square-drive-9-pcs-set": {
+  "hash": "0c09f9447c4a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-torx-bit-sockets-and-e-sockets-set-12-7mm-1-2-sq-dr-19-pcs-set": {
+  "hash": "38352ea80879",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-socket-accessories-12-7mm-1-2-square-drive": {
+  "hash": "eee2fe9f7e26",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-socket-sets-12-7mm-1-2-square-drive-bi-hexagonal-and-hexagonal": {
+  "hash": "b1e7cb0c6878",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-socket-sets-12-7mm-1-2-square-drive-in-blow-moulding-box-bi-hexagonal": {
+  "hash": "f20635137781",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-wheel-sockets-loose-1-2-sq-drive": {
+  "hash": "aa1883015726",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-wheel-sockets-set-1-2-sq-drive": {
+  "hash": "3c9be7ee25bd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-socket-accessories-19mm-3-4-square-drive": {
+  "hash": "e14f5398a961",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-sockets-set-19mm-3-4-square-drive-bi-hexagonal-and-hexagonal": {
+  "hash": "39d2d0246528",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-sockets-19mm-3-4-sq-dr-flank-drive-bi-hexagonal-and-hexagonal": {
+  "hash": "a7a3c0db31e4",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-impact-sockets-19mm-3-4-sq-dr-flank-drive-hexagonal": {
+  "hash": "e51d0b169158",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-sockets-25-4mm-1-sq-dr-bi-hexagonal": {
+  "hash": "c02c844a7125",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-socket-accessories-25-4mm-1-square-drive": {
+  "hash": "9589add9e9df",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-impact-sockets-25-4mm-1-sq-dr": {
+  "hash": "9867c698cda8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-bi-hexagonal-socket-set-25-4mm-1-square-drive": {
+  "hash": "060ade5c2b00",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-double-side-socket-wrench": {
+  "hash": "1ab5e902e5c1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-torque-wrenches-standard-type": {
+  "hash": "406ca65ab1ce",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-torque-wrenches-ratchet-type-professional-range": {
+  "hash": "045fe32600c5",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-general-purpose-pipe-wrenches": {
+  "hash": "eaca49e454ae",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-heavy-duty-pipe-wrenches": {
+  "hash": "cef52a4baa00",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-aluminum-handle-pipe-wrenches": {
+  "hash": "6cbba340168d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-chain-pipe-wrenches": {
+  "hash": "3dd43b7b0250",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-spares-for-chain-pipe-wrenches": {
+  "hash": "8a1d19757a3a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hammer-with-handle-ball-pein-and-cross-pein": {
+  "hash": "04d43e1e5080",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-claw-hammer-with-handle": {
+  "hash": "b7a1913b5626",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-club-hammer-with-handle": {
+  "hash": "67b29ae35d38",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-machinist-hammer-with-handle": {
+  "hash": "be52cc7159dd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-sledge-hammer-with-hickory-wood-handle": {
+  "hash": "ffc85732e08e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-sledge-hammer-head-only": {
+  "hash": "9d59790cc7b9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-electrician-hammer": {
+  "hash": "0e0e0a066645",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-soft-faced-hammer-with-handle": {
+  "hash": "f1e0be9dea2e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-soft-faced-hammer-spares": {
+  "hash": "26047fadeb48",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-fiberglass-handle-hammer": {
+  "hash": "fbe1a8669f30",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-c-clamps": {
+  "hash": "17af224cd8c5",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-f-clamps-light-duty": {
+  "hash": "3853855883d7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-f-clamps-heavy-duty": {
+  "hash": "aeb2e3953752",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-pipe-vices": {
+  "hash": "147a3cedfea9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-l-spanners": {
+  "hash": "7b8c81ddd042",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-l-spanners-with-jack-hole": {
+  "hash": "f0fbec94d6b9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-box-spanners": {
+  "hash": "33ff424fc7f2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-tubular-box-spanners": {
+  "hash": "13e4ae5468a8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-tubular-spanner-sets-with-tommy-bar": {
+  "hash": "79c44efe8a40",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-cross-rim-wrenches": {
+  "hash": "6ff7fbdf9046",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-double-ended-open-jaw-spanners-general-purpose-chrome-plated": {
+  "hash": "1b3184fcb085",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-double-ended-open-jaw-spanners-general-purpose-ribbed-chrome-plated": {
+  "hash": "10c7676aa3d7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-double-ended-open-jaw-spanners-general-purpose-ribbed-phosphated": {
+  "hash": "d071ff7d6f05",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-double-ended-open-jaw-spanner-sets": {
+  "hash": "1c6eba273772",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-double-ended-open-jaw-spanner-sets-hanger-packing": {
+  "hash": "ca1d60721ac4",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-ring-spanners-chrome-plated": {
+  "hash": "1fba9534b2c9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-ring-spanners-phosphated": {
+  "hash": "f1cada34bdc2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-ring-spanner-sets": {
+  "hash": "700ca718316b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-ring-spanner-sets-inch-series": {
+  "hash": "d4cc69473b87",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-single-ended-open-jaw-spanners": {
+  "hash": "cb4a0afdc4c3",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-combination-spanners-chrome-plated": {
+  "hash": "c17090eea1f0",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-combination-spanner-sets": {
+  "hash": "47fbc922fc4b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-combination-spanners-mirror-finish-chrome-plated": {
+  "hash": "9e9f21ec37da",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-gear-wrench-combination-spanner": {
+  "hash": "005392f84b9a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-half-moon-spanner": {
+  "hash": "a36d564b3eaf",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-slugging-open-ended-spanners": {
+  "hash": "8a5f3dd14a81",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-slugging-ring-spanners": {
+  "hash": "fa3e18471b07",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-slugging-ring-offset-spanner-with-box-handle": {
+  "hash": "bcbfef888f85",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-slugging-ring-offset-spanner-with-round-handle": {
+  "hash": "4f23c354a439",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-octagonal-chisels": {
+  "hash": "bf0a75a6eeea",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-flat-chisels": {
+  "hash": "d507bbfb9a7f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-chisels-with-rubber-grip": {
+  "hash": "fd6534004f7b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-pneumatic-chisels": {
+  "hash": "f0294761cff5",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-sds-chisels": {
+  "hash": "95c24cd38278",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-center-punches-and-drift-punches": {
+  "hash": "c492aa985b8b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-leather-punches": {
+  "hash": "3838b7cbd280",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-drift-center-and-leather-punch-set": {
+  "hash": "22dd1f8e11cd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-magnetic-products": {
+  "hash": "aada54306809",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-aviation-tin-cutter": {
+  "hash": "10016c787051",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-bolt-cutters": {
+  "hash": "e1c0f13d85cd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-spare-blade-set-for-bolt-cutters": {
+  "hash": "409a908c2656",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-cable-cutters": {
+  "hash": "b7c74df3c53d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-tin-cutters-with-spring": {
+  "hash": "24af9ba1329a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-wire-rope-cutters": {
+  "hash": "370fcc7f7073",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-pruning-shear": {
+  "hash": "49e302345c00",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-fiberglass-handle-steel-axe": {
+  "hash": "c060356862be",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-pvc-plastic-pipe-cutters": {
+  "hash": "52491a3222ac",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-snap-off-cutter": {
+  "hash": "be52150f992b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-snap-off-cutters": {
+  "hash": "d794307b79df",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-snap-off-cutter-blades": {
+  "hash": "17b62de8e240",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-utility-knife": {
+  "hash": "442d38296d57",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-spare-blade-for-uk-3": {
+  "hash": "b1e1ed92a793",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hacksaw-frame": {
+  "hash": "8f82055f1f6b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hacksaw-blades-carbon-steel-all-hard": {
+  "hash": "d8e621add5e6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-flexible-hacksaw-blades-carbon-steel": {
+  "hash": "93132fbb1ffe",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hacksaw-blades-carbon-steel-double-side-cutting": {
+  "hash": "36e6e870297a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hacksaw-blades-bi-metal": {
+  "hash": "49b1ad879068",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-bearing-pullers": {
+  "hash": "72e2209add2d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-keys-brown-finish-mm": {
+  "hash": "3bbb30424746",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-keys-brown-finish-inch": {
+  "hash": "514323a667f4",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-key-sets-brown-finish-mm": {
+  "hash": "487c56833f31",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-key-sets-brown-finish-inch": {
+  "hash": "4e2bafe351cd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-keys-long-ball-point-mm": {
+  "hash": "3278a11a9b72",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-keys-black-finish-mm": {
+  "hash": "e3716b6442d4",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-keys-black-finish-inch": {
+  "hash": "55bbd2e38a85",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-key-sets-black-finish-mm": {
+  "hash": "aa32f288914b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-key-sets-black-finish-inch": {
+  "hash": "0710d409a15f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-keys-long-ball-point-inch": {
+  "hash": "7477fa3c39fa",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-key-long-ball-point-set-mm": {
+  "hash": "1813b44b344a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-key-long-ball-point-set-inch": {
+  "hash": "890de57c1321",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-keys-extra-long-ball-point-mm": {
+  "hash": "8afc06e4a34b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-keys-extra-long-ball-point-inch": {
+  "hash": "669f1d3af40e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-key-extra-long-ball-point-set-mm": {
+  "hash": "40b09380b386",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-allen-key-extra-long-ball-point-set-inch": {
+  "hash": "12aa43fdc38c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-torx-keys-short-series": {
+  "hash": "518e16ed5311",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-torx-key-sets-short-series": {
+  "hash": "9bba8ffb1d93",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-folding-type-keys-set": {
+  "hash": "5c8c69eef39d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-t-handle-hex-keys-mm": {
+  "hash": "2a841f6ec763",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-9-pcs-t-handle-allen-keys-set": {
+  "hash": "2229defab836",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-t-handle-hex-keys-inch": {
+  "hash": "06a66ff7d43b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-t-handle-ball-point-allen-keys": {
+  "hash": "c8b58129308a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-t-handle-ball-point-allen-keys-set": {
+  "hash": "1a9fa734948a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-tool-bags": {
+  "hash": "0f2bf0c2f847",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-silver-series-tool-bags": {
+  "hash": "b401b7ec2305",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-backpack-tool-bag": {
+  "hash": "5dfa648ee568",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-universal-sets": {
+  "hash": "827a70fe3c16",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-professional-tool-kit": {
+  "hash": "69c2f04be9f2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-two-wheeler-tool-kit-1": {
+  "hash": "f3c2b732ff46",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-plumber-tool-kit": {
+  "hash": "5fead7bc26bd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-tool-kits": {
+  "hash": "eb4b55c1cfd7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-cantilever-tool-box": {
+  "hash": "f0339f5ba1bf",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-plastic-tool-box-with-organizer": {
+  "hash": "48f9cb7de682",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-tools-trolley": {
+  "hash": "3d33b6b9d77a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-tools-trolley-spares": {
+  "hash": "fe8babee30f2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-strap-filter-wrench": {
+  "hash": "baa79c3ed0f8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hand-oil-pump": {
+  "hash": "908d8ee1fece",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-grease-gun-lever-type": {
+  "hash": "260456599955",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-rotary-barrel-pump": {
+  "hash": "04dea424ea6c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-bucket-grease-pump": {
+  "hash": "d0a2383514a0",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-spares-for-bucket-grease-pump": {
+  "hash": "8633aef467f1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hydraulic-bottle-jack": {
+  "hash": "7caff5b9969c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-spare-kit-for-hydraulic-bottle-jack": {
+  "hash": "205fdbf6ab89",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hydraulic-trolley-jack": {
+  "hash": "cf2410e49c60",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-spare-kit-for-hydraulic-trolley-jack": {
+  "hash": "751cf4405ee3",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-jack-stand": {
+  "hash": "6feea04fd6e7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-jack-plane": {
+  "hash": "6be7496ff9d3",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-jack-planes-spare-blades": {
+  "hash": "6ced5ec76257",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-block-plane": {
+  "hash": "379b7ba800b6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-block-planes-spare-blades": {
+  "hash": "fed483cd7576",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-spoke-shave": {
+  "hash": "0e6b828a75b9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-spoke-shave-spare-blades": {
+  "hash": "51070214ea3b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-beveled-edge-chisels": {
+  "hash": "f5a9ad5ac5e4",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-wood-working-chisels-set": {
+  "hash": "dba3d873cd1e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-calipers-and-spring-dividers": {
+  "hash": "abb2b502948a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hand-riveters": {
+  "hash": "c499d8374895",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-spirit-level-1-0-mm-accuracy-without-magnet": {
+  "hash": "223d7ea437ca",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-spirit-level-1-0-mm-accuracy-with-magnet": {
+  "hash": "0801684c5f01",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-spirit-level-0-50-mm-accuracy-without-magnet": {
+  "hash": "3b1fcf27edf8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-spirit-level-0-50-mm-accuracy-with-magnet": {
+  "hash": "7a116f2c03a9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-bench-vice-fixed-base": {
+  "hash": "c87122adc8d8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-diamond-cutting-blade-segmented-cut": {
+  "hash": "c3d5968f714e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-diamond-cutting-blade-continuous-cut": {
+  "hash": "a472794e9d9e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-diamond-cutting-blade-turbo-cut": {
+  "hash": "91efb5ff28a9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-tile-cutter-blade-continuous-cut": {
+  "hash": "73530829ec2c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-tile-cutter-blade-segmented-cut": {
+  "hash": "0bfd1d19e170",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-tile-cutter-blade-turbo-cut": {
+  "hash": "b0b98b331e46",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-tile-cutter-blade-turbo-cut-gold-series": {
+  "hash": "11feb0ccf739",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-granite-cutting-blade-segmented-cut": {
+  "hash": "0ed241ebe9be",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-cup-wheels": {
+  "hash": "723df7e682ea",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-tct-wood-cutting-blade-silver-series": {
+  "hash": "e5c3058200be",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-cut-off-wheel-gold-series": {
+  "hash": "dbb21d9e992b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-cut-off-wheel-silver-series": {
+  "hash": "1cd1dd237d8b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-cut-off-wheel-gold-series-4-green-2-net": {
+  "hash": "f64cf506efc0",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-cut-off-wheel-silver-series-4-green-2-net": {
+  "hash": "347d43c58884",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-cut-off-wheel": {
+  "hash": "26b3754ff74f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-abrasive-latex-paper": {
+  "hash": "b896f5d8439a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-velcro-disc-gold-series": {
+  "hash": "5daef97552ca",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-bi-metal-mini-hole-saw-with-arbor": {
+  "hash": "f1cb937cf03e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-deep-hole-saw-and-arbors": {
+  "hash": "477351cd08bf",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-tungsten-carbide-tip-hole-saw": {
+  "hash": "d24f0724b6b8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-chalk-line-reel-set": {
+  "hash": "727a2f2b16fd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-masonry-drill-bits": {
+  "hash": "6369ec06a1ee",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-masonry-drill-sets": {
+  "hash": "7e0c59711b65",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hss-drills-jobbers-series-mm": {
+  "hash": "4e1c18f8a282",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hss-drills-jobbers-series-inch": {
+  "hash": "f3d0e11dab3d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-heavy-duty-sds-hammer-drills": {
+  "hash": "f61de249a709",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-plus-hammer-drill-bits-flat-tip": {
+  "hash": "15938b503a3c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-plus-hammer-drill-bits-cross-tip": {
+  "hash": "3811d4906442",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-flat-files": {
+  "hash": "7c227dc4e1ad",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-hand-files": {
+  "hash": "900ad9e41b0f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-round-files": {
+  "hash": "31b26ad1eb29",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-half-round-files": {
+  "hash": "e4b544480299",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-three-square-files": {
+  "hash": "b6c7d8e3cbe4",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-square-files": {
+  "hash": "9f27773f7f38",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-knife-files": {
+  "hash": "a69fb931cc97",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-pillar-narrow-files": {
+  "hash": "192e08e1f913",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-flat-handle-files": {
+  "hash": "599a16a9e72f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-warding-files": {
+  "hash": "33c6859adf7d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-flat-super-light-files": {
+  "hash": "8d8c3bc37ea7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-feather-edge-files": {
+  "hash": "4e57a572c230",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-pit-saw-files": {
+  "hash": "868860b99561",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-flat-wood-rasp-files": {
+  "hash": "03bf1bacda75",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-half-round-wood-rasp-files": {
+  "hash": "712924face3d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-saw-files": {
+  "hash": "cdcaae80a63d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-mill-files": {
+  "hash": "5ea068a849ee",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-needle-files": {
+  "hash": "8634bd2d45e2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-needle-files-sets": {
+  "hash": "2a40c062863c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-adjustable-wrenches": {
+  "hash": "23051a444092",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-cutting-pliers": {
+  "hash": "77a8f6980204",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-lineman-pliers": {
+  "hash": "1a3ddd54d227",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-long-nose-pliers": {
+  "hash": "cb680cdfac42",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-diagonal-cutting-pliers": {
+  "hash": "e2322ca63927",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-snap-ring-internal-pliers": {
+  "hash": "f6e7755871c0",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-snap-ring-external-pliers": {
+  "hash": "fd35148f52f6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-hammer-with-handle-ball-pein": {
+  "hash": "6bd24db2608c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-double-ended-open-jaw-spanners": {
+  "hash": "ee9db44bc7a5",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-double-ended-open-jaw-spanner-set": {
+  "hash": "bf1970ccc46f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-double-ended-open-jaw-spanners-ww": {
+  "hash": "b2947990987a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-ring-spanners": {
+  "hash": "96e34fd432f4",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-ring-spanner-set": {
+  "hash": "7a604ab29739",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-ring-spanners-ww": {
+  "hash": "6c3449a90b83",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-single-ended-open-jaw-spanners": {
+  "hash": "4a54c14b50dc",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-slugging-ring-spanners": {
+  "hash": "2687703d9326",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-combination-spanners": {
+  "hash": "141f9c3a88d0",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-slugging-open-ended-spanners": {
+  "hash": "313be6d627b2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-slotted-screwdrivers": {
+  "hash": "e74686f4368d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-phillips-screwdrivers": {
+  "hash": "3addc5993b79",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-flat-chisel": {
+  "hash": "2033e58bd084",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-allen-keys-mm": {
+  "hash": "a64364f8610b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-allen-keys-inch": {
+  "hash": "f499cff33fb2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-hacksaw-blades": {
+  "hash": "e3e125003e41",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-hacksaw-frames": {
+  "hash": "3e1a011747f2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-pipe-wrench": {
+  "hash": "ac4afca8f05a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-sledge-hammer-with-handle": {
+  "hash": "27d745ef2ead",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-12-7-mm-1-2-square-drive-sockets": {
+  "hash": "4a02479752eb",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-12-7mm-1-2-square-drive-socket-set-28-pcs": {
+  "hash": "83ee9c2b678b",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-12-7mm-1-2-square-drive-socket-set-32-pcs": {
+  "hash": "81637abe0ad8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-19mm-3-4-square-drive-sockets": {
+  "hash": "8be234b1432a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-19mm-3-4-square-drive-socket-set-15-pcs": {
+  "hash": "4506eb9fd57e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-19mm-3-4-square-drive-socket-set-20-pcs": {
+  "hash": "1cc9f3ab53c7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-socket-accessories-9-37mm-3-8-12-7mm-1-2-19mm-3-4": {
+  "hash": "a11169604121",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-universal-joint": {
+  "hash": "2faf7daf2f5d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-sliding-t-handle": {
+  "hash": "47075768fcbd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-driver-extension": {
+  "hash": "f3f54f5fef3d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-speed-handle": {
+  "hash": "f0dd16d53e54",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-oxygen-bottle-key": {
+  "hash": "5d62d88305bc",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-flat-files": {
+  "hash": "d2f1c5fb7f05",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-half-round-files": {
+  "hash": "8bf184e91569",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-triangle-files": {
+  "hash": "2905f795f583",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-round-files": {
+  "hash": "36a725521db2",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-non-sparking-square-files": {
+  "hash": "14c9d0540afd",
+  "lastmod": "2026-10-15"
+ },
+ "/products/taparia-fencing-pliers": {
+  "hash": "4e50fdf6bf23",
+  "lastmod": "2026-10-15"
+ },
+ "/products/heavy-duty-chain-pulley-block-t-series": {
+  "hash": "1ca390a3e1e5",
+  "lastmod": "2026-10-15"
+ },
+ "/products/chain-pulley-block-revolve-series": {
+  "hash": "796a91d09a89",
+  "lastmod": "2026-10-15"
+ },
+ "/products/chain-pulley-block-b-series": {
+  "hash": "9227715045e5",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ratchet-lever-hoist": {
+  "hash": "991b65dfebcf",
+  "lastmod": "2026-10-15"
+ },
+ "/products/gear-trolley": {
+  "hash": "b5ac8dfcb927",
+  "lastmod": "2026-10-15"
+ },
+ "/products/pulling-lifting-machine-heavy-duty": {
+  "hash": "c70839a27088",
+  "lastmod": "2026-10-15"
+ },
+ "/products/electric-chain-hoist-single-speed": {
+  "hash": "45134eadc735",
+  "lastmod": "2026-10-15"
+ },
+ "/products/electric-chain-hoist-dual-speed": {
+  "hash": "1bb4f82d6cda",
+  "lastmod": "2026-10-15"
+ },
+ "/products/electric-trolley": {
+  "hash": "70e864b3486f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/polyester-duplex-webbing-sling": {
+  "hash": "f1bf5e66c389",
+  "lastmod": "2026-10-15"
+ },
+ "/products/polyester-round-sling": {
+  "hash": "7acb07542dc6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/anti-abrasive-sling-sleeve": {
+  "hash": "b0a979874686",
+  "lastmod": "2026-10-15"
+ },
+ "/products/anti-cutting-sling-sleeve": {
+  "hash": "6d906e19db8f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/sling-edge-protector": {
+  "hash": "656626acf00d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/cargo-lashing-ratchet": {
+  "hash": "7a8b2d6965ed",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-alloy-steel-lifting-chain": {
+  "hash": "5d1898c67d55",
+  "lastmod": "2026-10-15"
+ },
+ "/products/screw-pin-dee-shackle": {
+  "hash": "4a807072c739",
+  "lastmod": "2026-10-15"
+ },
+ "/products/nut-bolt-dee-shackle": {
+  "hash": "e53453eff364",
+  "lastmod": "2026-10-15"
+ },
+ "/products/screw-pin-bow-shackle": {
+  "hash": "d6764bc74be7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/nut-bolt-bow-shackle": {
+  "hash": "b1342a51da43",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g100-shortening-hook-assembly-master-link-2-leg": {
+  "hash": "61d0104717c0",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g100-shortening-hook-assembly-master-link-4-leg": {
+  "hash": "797fdd448e75",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g100-webbing-sling-hook-100-wk": {
+  "hash": "ab3c522533e9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g100-clevis-sling-hook-with-latch": {
+  "hash": "fb7e602bb184",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-eye-sling-hook": {
+  "hash": "9927fd6af7de",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-clevis-sling-hook": {
+  "hash": "eb339d8f987d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-eye-self-locking-hook": {
+  "hash": "30b50eaa121e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-clevis-self-locking-hook": {
+  "hash": "ef18e8047add",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-swivel-self-locking-hook": {
+  "hash": "d8658166e8d1",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-swivel-eye-hook": {
+  "hash": "10ebef377a9c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-eye-grab-hook": {
+  "hash": "fda91f853e0a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-clevis-shortening-grab-hook": {
+  "hash": "09c666335dae",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-foundry-hook": {
+  "hash": "dbbe525375c9",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-container-lifting-hook": {
+  "hash": "d952e79d8562",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-master-link": {
+  "hash": "7c6efacc0e44",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-master-link-assembly": {
+  "hash": "3413fb316cb3",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-master-link-assembly-enlarged-sublinks": {
+  "hash": "11ed1d087600",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-chain-connecting-link": {
+  "hash": "1fc33a59fa6c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-webbing-connecting-link": {
+  "hash": "ceffcc40956f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-chain-shortener": {
+  "hash": "54b4e00fbcd7",
+  "lastmod": "2026-10-15"
+ },
+ "/products/regular-swivel": {
+  "hash": "42417e8d005f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/weld-on-ring": {
+  "hash": "4d2ab215afd8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-weld-on-hook": {
+  "hash": "8141a22d7694",
+  "lastmod": "2026-10-15"
+ },
+ "/products/galvanised-heavy-duty-wire-rope-clamp": {
+  "hash": "b0f3a9e3dbf8",
+  "lastmod": "2026-10-15"
+ },
+ "/products/eye-bolt-din-580-galvanised": {
+  "hash": "50944b3a3c96",
+  "lastmod": "2026-10-15"
+ },
+ "/products/g80-rotating-lifting-eye-bolt": {
+  "hash": "4c0d92d0be73",
+  "lastmod": "2026-10-15"
+ },
+ "/products/drop-forged-galvanised-turnbuckle-jaw-and-jaw": {
+  "hash": "cfee909b375f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/wire-rope-edge-protector-with-magnet": {
+  "hash": "b50a8f18defb",
+  "lastmod": "2026-10-15"
+ },
+ "/products/drum-lifter": {
+  "hash": "e0fd17c190c6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/cable-puller": {
+  "hash": "856758cb01f6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/permanent-magnet-lifter": {
+  "hash": "09f841ecc445",
+  "lastmod": "2026-10-15"
+ },
+ "/products/industrial-skates": {
+  "hash": "8362d74c9a7a",
+  "lastmod": "2026-10-15"
+ },
+ "/products/spring-balancer": {
+  "hash": "46815872bec4",
+  "lastmod": "2026-10-15"
+ },
+ "/products/ratchet-load-binder": {
+  "hash": "97a09a79058f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/wire-rope-pulley-block-single-sheave": {
+  "hash": "0dd80b5b149e",
+  "lastmod": "2026-10-15"
+ },
+ "/products/wire-rope-pulley-block-double-sheave": {
+  "hash": "46a8e1fa4c10",
+  "lastmod": "2026-10-15"
+ },
+ "/products/manila-rope-pulley": {
+  "hash": "6eb706932c77",
+  "lastmod": "2026-10-15"
+ },
+ "/products/horizontal-plate-lifting-clamp-pdb-type": {
+  "hash": "417d67bfbdc6",
+  "lastmod": "2026-10-15"
+ },
+ "/products/lateral-plate-clamp": {
+  "hash": "2e81ca599652",
+  "lastmod": "2026-10-15"
+ },
+ "/products/vertical-plate-lifting-clamp": {
+  "hash": "c522b65f539c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/universal-plate-lifting-clamp": {
+  "hash": "4b18385abe27",
+  "lastmod": "2026-10-15"
+ },
+ "/products/pipe-lifting-clamp-tph-type": {
+  "hash": "3ed38f2fed26",
+  "lastmod": "2026-10-15"
+ },
+ "/products/beam-clamp": {
+  "hash": "e507aaf95a50",
+  "lastmod": "2026-10-15"
+ },
+ "/products/scissor-lift-pallet-truck": {
+  "hash": "09a67f7ce02c",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hand-pallet-truck": {
+  "hash": "5bb2abe49881",
+  "lastmod": "2026-10-15"
+ },
+ "/products/rough-terrain-truck": {
+  "hash": "afeb33b96d1d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hydraulic-lifting-table": {
+  "hash": "2b0fdc33f24f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/drum-trolley": {
+  "hash": "ad297376e56d",
+  "lastmod": "2026-10-15"
+ },
+ "/products/drum-lifter-cum-tilter": {
+  "hash": "9d9f40f5536f",
+  "lastmod": "2026-10-15"
+ },
+ "/products/hand-stacker": {
+  "hash": "b04fac015897",
+  "lastmod": "2026-10-15"
+ },
+ "/products/electric-stacker": {
+  "hash": "bc294b160692",
+  "lastmod": "2026-10-15"
+ },
+ "/products/wire-mesh-container": {
+  "hash": "3f5ccf2f72e7",
+  "lastmod": "2026-10-15"
+ }
+}

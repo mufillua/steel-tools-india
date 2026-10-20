@@ -22,6 +22,15 @@ describe('SeoService', () => {
     expect(COMPANY.siteUrl).toBe('https://www.steeltoolsindia.in');
   });
 
+  it('keeps the page number on plain list pages only', () => {
+    seo.apply('x', '/products?page=3');
+    expect(canonical()).toBe(`${COMPANY.siteUrl}/products?page=3`);
+    seo.apply('x', '/products?page=1');
+    expect(canonical()).toBe(`${COMPANY.siteUrl}/products`);
+    seo.apply('x', '/products?category=slings-lashing&page=2');
+    expect(canonical()).toBe(`${COMPANY.siteUrl}/categories/slings-lashing`);
+  });
+
   it('points a single-category product list at that category landing page', () => {
     seo.apply('x', '/products?category=slings-lashing');
     expect(canonical()).toBe(`${COMPANY.siteUrl}/categories/slings-lashing`);

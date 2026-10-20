@@ -9,7 +9,8 @@
     "test": "ng test",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCI",
     "validate": "node scripts/validate-catalogue.mjs",
-    "prebuild": "node scripts/generate-seo-files.mjs"
+    "prebuild": "node scripts/generate-seo-files.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "prettier": {
     "printWidth": 100,
