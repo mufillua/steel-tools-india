@@ -1,8 +1,8 @@
 @if (category(); as c) {
   <sti-page-intro
     [crumbs]="crumbs()"
-    [eyebrow]="'Category · ' + company.city"
-    [title]="c.name"
+    [eyebrow]="c.name + ' · ' + company.city"
+    [title]="heading()"
     [lead]="lead()"
   >
     <a class="sti-btn sti-btn--blue" routerLink="/products" [queryParams]="{ category: c.slug }">

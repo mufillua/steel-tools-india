@@ -8,6 +8,7 @@ import { COMPANY, COMPANY_LINKS } from '../../config/company.config';
 import { QUOTE_PATH } from '../../config/navigation.config';
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
+import { categoryHeading } from './category.resolvers';
 
 /** How many product cards the landing page shows before the full, grouped list of links. */
 const CARD_LIMIT = 8;
@@ -63,9 +64,19 @@ export class CategoryPage {
     { label: this.category()?.name ?? 'Not found' },
   ]);
 
+  /** H1: the searched-for heading (e.g. "Chain Pulley Blocks, Electric Hoists & Spring Balancers"). */
+  protected readonly heading = computed(() => {
+    const c = this.category();
+    return c ? categoryHeading(c) : '';
+  });
+
+  /** The street part of the address ("N. S. Road"), whatever order the address line is written in. */
+  private readonly street =
+    COMPANY.address.lines[0].split(', ').find((part) => /road|street|sarani|lane|avenue/i.test(part)) ?? COMPANY.address.lines[0];
+
   protected readonly lead = computed(() => {
     const c = this.category();
-    return c ? `${c.description} Supplied from ${COMPANY.address.lines[0].split(', ').pop()}, ${COMPANY.city} — enquire on WhatsApp or email.` : '';
+    return c ? `${c.description} Supplied from ${this.street}, ${COMPANY.city} — enquire on WhatsApp or email.` : '';
   });
 
   protected readonly whatsapp = computed(() => {

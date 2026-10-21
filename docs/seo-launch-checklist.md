@@ -15,7 +15,7 @@ What the website already does (built in):
 
 What only the owner can do — in this order:
 
-1. **Upload the new build** (`dist/steel-tools-india/browser/`, including the hidden `.htaccess` file) to the host for
+1. **Upload the new build** (`dist/steel-tools-india/browser/`, including the hidden `.htaccess` file and `404.html`) to the host for
    www.steeltoolsindia.in, replacing the old files.
 2. **One address**: steeltoolsindia.in (no www) must redirect permanently to https://www.steeltoolsindia.in.
    Apache/cPanel: done by `.htaccess`. Vercel: done by `vercel.json` (or Settings → Domains → steeltoolsindia.in →
@@ -37,6 +37,31 @@ What only the owner can do — in this order:
    Use the same name, address and phone everywhere and link to https://www.steeltoolsindia.in.
 8. **Social profiles**: Instagram (@steeltoolsindia) is already in the structured data (`sameAs`). Put the website in its bio.
    Add any new profile (Facebook, LinkedIn) to `COMPANY_LINKS` and the `sameAs` list in `seo.service.ts`.
+
+## Keyword targets (Search Console + Google search volume, India, Oct 2026)
+
+Category pages lead with the product names buyers search (`src/app/config/seo-keywords.config.ts`); product titles are
+"<Taparia/Miranda> <product> in Kolkata". Monthly searches in India for terms the site now targets:
+
+| Search term | Searches/month | Page |
+|---|---|---|
+| allen key set · pipe wrench | 22,200 each | /categories/spanners-wrenches |
+| spring balancer | 18,100 | /categories/hoists-pulley-blocks |
+| bench vice | 12,100 | /categories/workshop-equipment |
+| hand pallet truck | 6,600 | /categories/material-handling, /products/hand-pallet-truck |
+| d shackle | 6,600 | /categories/lifting-chain-rigging |
+| taparia screwdriver set | 6,600 | /categories/screwdrivers-bits |
+| eye bolt · turnbuckle | 5,400 · 4,400 | /categories/lifting-chain-rigging |
+| taparia pliers | 4,400 | /categories/pliers-cutting-tools |
+| chain pulley block | 2,900 | /categories/hoists-pulley-blocks |
+| hss drill bit | 2,400 | /categories/hss-cutting-tools |
+| end mill · hole saw · collet chuck | 1,900 · 1,600 · 1,300 | solid carbide / power tool accessories / machine tool accessories |
+| taparia socket set · taparia spanner set | 1,600 each | sockets / spanners |
+| electric chain hoist · webbing sling · manual stacker | 1,000 · 880 · 880 | hoists / slings / material handling |
+
+These national terms are led by IndiaMART, Amazon and manufacturers; "<term> Kolkata" and exact product names
+(sizes, standards) are where a Kolkata stockist wins first. Check Search Console → Performance → Queries monthly
+and strengthen the pages whose queries sit at positions 5–20.
 
 ## Getting the remaining pages indexed
 

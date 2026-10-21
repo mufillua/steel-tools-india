@@ -18,9 +18,10 @@ export interface SeoData {
   jsonLd?: object | object[] | 'business' | 'home';
 }
 
+/** Home page / fallback description: who + where + since, the most-searched product types, the call to action. */
 export const DEFAULT_DESCRIPTION =
-  `${COMPANY.name}, ${COMPANY.city} — industrial tools supplier since ${COMPANY.foundedYear}: machine tool accessories, ` +
-  'cutting tools, Taparia hand tools, hoists and lifting equipment.';
+  `${COMPANY.name}, N. S. Road, ${COMPANY.city} (since ${COMPANY.foundedYear}): collet chucks, end mills, Taparia hand tools, ` +
+  'chain pulley blocks & pallet trucks. Get a quote on WhatsApp.';
 
 const DEFAULT_IMAGE = 'assets/brand/sti-logo-full.png';
 const HERO_IMAGE = 'assets/hero/product-range.webp';

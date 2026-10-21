@@ -9,11 +9,13 @@ RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} !^www\.steeltoolsindia\.in$ [NC]
 RewriteRule ^ https://www.steeltoolsindia.in%{REQUEST_URI} [L,R=301]
 
-# ── Serve prerendered files and folders; anything else goes to the app shell ──────────────────
-RewriteCond %{REQUEST_FILENAME} -f [OR]
+# ── Prerendered files and folders are served as they are; an unknown address gets 404.html ─────
+# (a real 404 status, so Google doesn't index mistyped URLs as copies of the home page)
+DirectorySlash Off
 RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
-RewriteRule ^ index.csr.html [L]
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.*?)/?$ $1/index.html [L]
+ErrorDocument 404 /404.html
 
 # ── Compression ───────────────────────────────────────────────────────────────────────────────
 <IfModule mod_deflate.c>

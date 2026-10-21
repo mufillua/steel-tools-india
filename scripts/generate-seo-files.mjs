@@ -22,7 +22,10 @@ const today = new Date().toISOString().slice(0, 10);
 
 const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-const hash = (data) => createHash('sha1').update(JSON.stringify(data)).digest('hex').slice(0, 12);
+// Bump when the page templates change in a way that matters to Google (titles, headings, structured data):
+// every page then gets today's date, so Google re-crawls them. v2 (Oct 2026): keyword titles, no Product markup.
+const TEMPLATE_VERSION = 2;
+const hash = (data) => createHash('sha1').update(JSON.stringify([TEMPLATE_VERSION, data])).digest('hex').slice(0, 12);
 const productsIn = (slug) => ALL_PRODUCTS.filter((p) => p.category === slug);
 
 // Each entry: path, the data its content is built from (for lastmod), and optional images (site-relative paths)

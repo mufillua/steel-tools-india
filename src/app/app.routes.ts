@@ -23,8 +23,8 @@ export const routes: Routes = [
   {
     path: 'products',
     resolve: { catalogue: catalogueResolver },
-    title: 'Industrial Tools Catalogue — All Products',
-    data: { seo: { description: 'Search 600+ industrial tools by product, size or standard — R★R Brand, Taparia, Miranda and lifting equipment. Steel Tools India, Kolkata.' } },
+    title: 'Industrial Tools Catalogue, Kolkata — All Products',
+    data: { seo: { description: 'Browse 600+ industrial tools by product, size or standard — R★R, Taparia, Miranda, chain pulley blocks, slings, pallet trucks. WhatsApp quote, Kolkata.' } },
     loadComponent: () => import('./pages/products/products').then((m) => m.Products),
   },
   {
@@ -79,9 +79,18 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/quote/quote').then((m) => m.Quote),
   },
   { path: 'about', redirectTo: 'about-us' },
+  // /404 is prerendered and copied to 404.html after the build (scripts/postbuild.mjs): hosts serve it with a real
+  // 404 status for unknown addresses, instead of answering every mistyped URL with the home page (a "soft 404").
+  {
+    path: '404',
+    title: 'Page Not Found',
+    data: { seo: { noindex: true } },
+    loadComponent: () => import('./pages/not-found/not-found').then((m) => m.NotFound),
+  },
   {
     path: '**',
     title: 'Page Not Found',
+    data: { seo: { noindex: true } },
     loadComponent: () => import('./pages/not-found/not-found').then((m) => m.NotFound),
   },
 ];

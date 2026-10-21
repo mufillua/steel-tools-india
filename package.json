@@ -10,6 +10,7 @@
     "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCI",
     "validate": "node scripts/validate-catalogue.mjs",
     "prebuild": "node scripts/generate-seo-files.mjs",
+    "postbuild": "node scripts/postbuild.mjs",
     "indexnow": "node scripts/indexnow.mjs"
   },
   "prettier": {

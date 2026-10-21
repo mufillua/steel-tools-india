@@ -38,6 +38,9 @@ import { ProductGridSkeleton } from '../../components/product-grid-skeleton/prod
 import { Product } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
 
+/** Title of the unfiltered catalogue — also the route title in app.routes.ts. */
+export const PRODUCTS_TITLE = 'Industrial Tools Catalogue, Kolkata — All Products';
+
 const LIST_SEP = ',';
 const split = (v: string | null): string[] => (v ? v.split(LIST_SEP).filter(Boolean) : []);
 const join = (a: string[]): string | null => (a.length ? a.join(LIST_SEP) : null);
@@ -222,10 +225,10 @@ export class Products {
       });
     });
 
-    // Page title reflects a single selected category.
+    // Page title reflects a single selected category (the unfiltered list keeps its search title).
     effect(() => {
       const c = this.focusCategory();
-      this.title.setTitle(`${c ? `${c.name} — Products` : 'Products'} | ${COMPANY.name}`);
+      this.title.setTitle(`${c ? `${c.name} — Products` : PRODUCTS_TITLE} | ${COMPANY.name}`);
     });
 
     // Lock background scroll while the mobile filter drawer is open.

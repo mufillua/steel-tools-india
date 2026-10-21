@@ -2,6 +2,8 @@ import { inject } from '@angular/core';
 import { ResolveFn } from '@angular/router';
 
 import { COMPANY } from '../../config/company.config';
+import { SEARCHED_BRANDS } from '../../config/seo-keywords.config';
+import { Product } from '../../models/product.model';
 import { SeoData, SeoService } from '../../services/seo.service';
 import { ProductService } from '../../services/product.service';
 
@@ -26,9 +28,15 @@ export const catalogueResolver: ResolveFn<boolean> = () =>
     .load()
     .then(() => true);
 
-/** Page title: "<Product>" (SiteTitleStrategy adds " | Steel Tools India"). */
-export const productTitleResolver: ResolveFn<string> = async (route) =>
-  (await productFor(route.paramMap.get('slug')))?.name ?? 'Product Not Found';
+/** "Taparia Heavy Duty Pipe Wrenches" — the brand people search by, in front of the name (not repeated). */
+export const searchName = (p: Product) =>
+  SEARCHED_BRANDS.includes(p.brand) && !p.name.toLowerCase().includes(p.brand.toLowerCase()) ? `${p.brand} ${p.name}` : p.name;
+
+/** Page title: "<Brand> <Product> in Kolkata" (SiteTitleStrategy adds " | Steel Tools India"). */
+export const productTitleResolver: ResolveFn<string> = async (route) => {
+  const p = await productFor(route.paramMap.get('slug'));
+  return p ? `${searchName(p)} in ${COMPANY.city}` : 'Product Not Found';
+};
 
 /** Description, image and schema.org data built from the product record only. */
 export const productSeoResolver: ResolveFn<SeoData> = async (route) => {
@@ -39,25 +47,19 @@ export const productSeoResolver: ResolveFn<SeoData> = async (route) => {
 
   const category = catalogue.getCategory(p.category);
   const url = seo.absolute(`/products/${p.slug}`);
+  // What it is and the sizes, then the call to action, then the catalogue text (Google cuts at ~155 characters).
   const description = clip(
-    `${p.name}${p.standard ? ` (${p.standard})` : ''} — ${p.summary}. Available from ${COMPANY.name}, ${COMPANY.city}. ${p.description}`,
+    `${searchName(p)}${p.standard ? ` (${p.standard})` : ''} — ${p.summary}. ` +
+      `Get a quote on WhatsApp from ${COMPANY.name}, ${COMPANY.city}. ${p.description}`,
   );
 
   return {
     description,
     image: p.images[0],
     type: 'product',
+    // No schema.org Product record: Google requires a price, reviews or ratings for it ("Product snippets" errors
+    // in Search Console), and the site shows none. The breadcrumb trail still shows in search results.
     jsonLd: [
-      {
-        '@context': 'https://schema.org',
-        '@type': 'Product',
-        name: p.name,
-        description: p.description,
-        url,
-        category: category?.name,
-        ...(p.brand ? { brand: { '@type': 'Brand', name: p.brand } } : {}),
-        ...(p.images.length ? { image: p.images.map((i) => seo.absolute(`/${i}`)) } : {}),
-      },
       {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
