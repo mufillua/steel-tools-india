@@ -17,6 +17,7 @@ const load = async (entry) => {
 const { ALL_PRODUCTS } = await load('src/app/data/products/index.ts');
 const { CATEGORIES } = await load('src/app/data/categories.ts');
 const { COMPANY } = await load('src/app/config/company.config.ts');
+const { CATEGORY_SEO_HEADINGS, POPULAR_SEARCHES } = await load('src/app/config/seo-keywords.config.ts');
 const site = COMPANY.siteUrl.replace(/\/$/, '');
 const today = new Date().toISOString().slice(0, 10);
 
@@ -31,10 +32,13 @@ const productsIn = (slug) => ALL_PRODUCTS.filter((p) => p.category === slug);
 // Each entry: path, the data its content is built from (for lastmod), and optional images (site-relative paths)
 // → <image:image> tags, so product photos can show in Google Images.
 const pages = [
-  { path: '/', data: [CATEGORIES, ALL_PRODUCTS.length, COMPANY], images: ['assets/hero/product-range.webp'] },
+  { path: '/', data: [CATEGORIES, ALL_PRODUCTS.length, COMPANY, POPULAR_SEARCHES], images: ['assets/hero/product-range.webp'] },
   { path: '/products', data: ALL_PRODUCTS.map((p) => [p.slug, p.name, p.summary]) },
   { path: '/categories', data: CATEGORIES },
-  ...CATEGORIES.map((c) => ({ path: `/categories/${c.slug}`, data: [c, productsIn(c.slug).map((p) => [p.slug, p.name, p.subcategory])] })),
+  ...CATEGORIES.map((c) => ({
+    path: `/categories/${c.slug}`,
+    data: [c, CATEGORY_SEO_HEADINGS[c.slug], productsIn(c.slug).map((p) => [p.slug, p.name, p.subcategory])],
+  })),
   { path: '/about-us', data: [COMPANY, CATEGORIES.map((c) => c.name)] },
   { path: '/contact', data: COMPANY },
   { path: '/get-a-quote', data: COMPANY },

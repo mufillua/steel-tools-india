@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
+import { POPULAR_SEARCHES } from '../../config/seo-keywords.config';
 import { COMPANY, COMPANY_LINKS } from '../../config/company.config';
 import { QUOTE_PATH } from '../../config/navigation.config';
 import { CategoryCard } from '../../components/category-card/category-card';
@@ -29,6 +30,7 @@ export class Home {
   protected readonly company = COMPANY;
   protected readonly links = COMPANY_LINKS;
   protected readonly quotePath = QUOTE_PATH;
+  protected readonly popular = POPULAR_SEARCHES;
 
   protected readonly status = this.catalogue.status;
   protected readonly categories = this.catalogue.categories;

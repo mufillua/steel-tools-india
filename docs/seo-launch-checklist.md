@@ -71,6 +71,15 @@ Google found the URLs (sitemap, links) and is spreading the crawling out over we
 - **Sitemap**: Search Console → Sitemaps → submit `https://www.steeltoolsindia.in/sitemap.xml` again after each deploy.
 - **Request indexing** (URL Inspection, about 10 a day): start with the 20 category pages — each one links to every product in
   its category, so one crawl leads Google to many products. Then /products, /categories, /contact.
+- **Request-indexing order** (URL Inspection → paste → "Request indexing"; about 10 a day):
+  - Day 1: https://www.steeltoolsindia.in/ then /categories/hoists-pulley-blocks, /categories/lifting-chain-rigging,
+    /categories/slings-lashing, /categories/lifting-clamps-magnets, /categories/workshop-equipment, /categories/screwdrivers-bits,
+    /categories/sockets-accessories, /categories/hss-cutting-tools, /categories/lathe-centres
+  - Day 2: the remaining category pages not yet indexed (check each with URL Inspection first)
+  - Day 3 onwards: /products/hand-pallet-truck, /products/spring-balancer, /products/chain-pulley-block-b-series,
+    /products/screw-pin-dee-shackle, /products/eye-bolt-din-580-galvanised, /products/taparia-heavy-duty-pipe-wrenches,
+    /products/taparia-allen-key-sets-black-finish-mm, /products/taparia-bench-vice-fixed-base, /products/bt-40-er-collet-chuck,
+    then the rest of the "Popular searches" links on the home page.
 - **Links from other websites** are what make Google crawl a new domain faster: Google Business Profile, IndiaMART/TradeIndia/
   JustDial listings, Instagram bio, supplier/customer sites. A brand-new domain with no outside links is crawled slowly.
 - **Do not** click "Validate fix" on these reports, change URLs, or re-upload the same pages under new names — that resets the queue.

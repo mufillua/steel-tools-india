@@ -35,3 +35,42 @@ export const CATEGORY_SEO_HEADINGS: Record<string, string> = {
 
 /** Brands buyers search by name ("taparia pipe wrench", "miranda drill") — put in front of product titles. */
 export const SEARCHED_BRANDS = ['Taparia', 'Miranda'];
+
+/**
+ * "Popular searches" links on the home page: the product names people search most (Google search volume, India,
+ * Oct 2026), each linking straight to that product's page. The home page is the page Google visits most often,
+ * so these links are the quickest way for Google to find and index those product pages.
+ * Every slug must exist (checked by product.service.spec.ts).
+ */
+export const POPULAR_SEARCHES: { label: string; slug: string }[] = [
+  { label: 'Hand Pallet Truck', slug: 'hand-pallet-truck' },
+  { label: 'Spring Balancer', slug: 'spring-balancer' },
+  { label: 'Chain Pulley Block', slug: 'chain-pulley-block-b-series' },
+  { label: 'Electric Chain Hoist', slug: 'electric-chain-hoist-single-speed' },
+  { label: 'Ratchet Lever Hoist', slug: 'ratchet-lever-hoist' },
+  { label: 'Hand Stacker', slug: 'hand-stacker' },
+  { label: 'Webbing Sling', slug: 'polyester-duplex-webbing-sling' },
+  { label: 'D Shackle', slug: 'screw-pin-dee-shackle' },
+  { label: 'Eye Bolt', slug: 'eye-bolt-din-580-galvanised' },
+  { label: 'Turnbuckle', slug: 'drop-forged-galvanised-turnbuckle-jaw-and-jaw' },
+  { label: 'G80 Lifting Chain', slug: 'g80-alloy-steel-lifting-chain' },
+  { label: 'Plate Lifting Clamp', slug: 'vertical-plate-lifting-clamp' },
+  { label: 'Magnetic Lifter', slug: 'permanent-magnet-lifter' },
+  { label: 'Ratchet Lashing Belt', slug: 'cargo-lashing-ratchet' },
+  { label: 'Taparia Pipe Wrench', slug: 'taparia-heavy-duty-pipe-wrenches' },
+  { label: 'Taparia Allen Key Set', slug: 'taparia-allen-key-sets-black-finish-mm' },
+  { label: 'Taparia Spanner Set', slug: 'taparia-combination-spanner-sets' },
+  { label: 'Taparia Socket Set', slug: 'taparia-socket-sets-12-7mm-1-2-square-drive-bi-hexagonal-and-hexagonal' },
+  { label: 'Taparia Screwdriver Set', slug: 'taparia-screw-driver-sets' },
+  { label: 'Taparia Pliers', slug: 'taparia-combination-side-cutting-pliers' },
+  { label: 'Bench Vice', slug: 'taparia-bench-vice-fixed-base' },
+  { label: 'Hydraulic Bottle Jack', slug: 'taparia-hydraulic-bottle-jack' },
+  { label: 'Hole Saw', slug: 'taparia-bi-metal-mini-hole-saw-with-arbor' },
+  { label: 'BT-40 ER Collet Chuck', slug: 'bt-40-er-collet-chuck' },
+  { label: 'ER Collet', slug: 'er-collet' },
+  { label: 'Revolving Centre', slug: 'male-revolving-centre-carbide-tipped-standard' },
+  { label: 'Carbide End Mill', slug: 'miranda-4-flute-solid-carbide-end-mill-standard' },
+  { label: 'HSS Drill Set', slug: 'hss-jobber-drill-set' },
+  { label: 'Taper Shank Drill', slug: 'hss-taper-shank-drill' },
+  { label: 'Carbide Burr Set', slug: 'tungsten-carbide-rotary-burr-set' },
+];

@@ -82,6 +82,27 @@
   </div>
 </section>
 
+<!-- ═══════════ Popular searches (text links to the most-searched products) ═══════════ -->
+<nav class="sti-section home-popular" aria-labelledby="popular-title">
+  <div class="sti-container sti-container--wide">
+    <header class="sec-head">
+      <div>
+        <p class="sti-eyebrow">Popular searches</p>
+        <h2 id="popular-title" class="sec-head__title">Tools buyers ask us for</h2>
+      </div>
+      <p class="sec-head__lead">
+        Quick links to the products most searched for — every size listed, with a quote on WhatsApp from
+        {{ company.city }}.
+      </p>
+    </header>
+    <ul class="popular" role="list">
+      @for (s of popular; track s.slug) {
+        <li><a [routerLink]="['/products', s.slug]">{{ s.label }}</a></li>
+      }
+    </ul>
+  </div>
+</nav>
+
 <!-- ═══════════ Why Steel Tools India ═══════════ -->
 <section class="sti-section home-why" aria-labelledby="why-title">
   <div class="sti-container sti-container--wide home-why__grid">

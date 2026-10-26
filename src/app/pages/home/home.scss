@@ -477,3 +477,42 @@
     background: #fff;
   }
 }
+
+// ── Popular searches: plain text links to the most-searched products (see seo-keywords.config.ts) ──
+.home-popular {
+  padding-top: 0;
+}
+
+.popular {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 16px;
+    border: 1px solid var(--sti-border-strong);
+    border-radius: 999px;
+    background: var(--sti-surface);
+    font-size: var(--sti-text-sm);
+    font-weight: 500;
+    color: var(--sti-text-strong);
+    text-decoration: none;
+    transition: border-color 160ms ease, color 160ms ease;
+
+    &:hover {
+      border-color: var(--sti-blue-800);
+      color: var(--sti-blue-800);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--sti-focus);
+      outline-offset: 2px;
+    }
+  }
+}

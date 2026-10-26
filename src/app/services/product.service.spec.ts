@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { PRODUCTS_PER_PAGE } from '../config/catalogue.config';
+import { CATEGORY_SEO_HEADINGS, POPULAR_SEARCHES } from '../config/seo-keywords.config';
 import { ProductService } from './product.service';
 
 describe('ProductService (catalogue data)', () => {
@@ -70,6 +71,12 @@ describe('ProductService (catalogue data)', () => {
     const text = JSON.stringify(svc.products()).toLowerCase();
     expect(/safelift|\bsaif\b/.test(text)).toBeFalse();
     for (const slug of ['material-handling', 'lifting-chain-rigging']) expect(svc.categories().find((c) => c.slug === slug)?.brands).toEqual([]);
+  });
+
+  it('links search headings and popular searches only to real categories and products', () => {
+    const cats = svc.categories().map((c) => c.slug);
+    expect(Object.keys(CATEGORY_SEO_HEADINGS).sort()).toEqual([...cats].sort());
+    for (const s of POPULAR_SEARCHES) expect(svc.getProductBySlug(s.slug)).withContext(s.slug).toBeTruthy();
   });
 
   it('uses 12 products per page', () => {
