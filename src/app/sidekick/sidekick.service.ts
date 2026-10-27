@@ -92,7 +92,7 @@ export class SidekickService {
       this.context = reply.context;
       this.messages.update((list) => [...list, { id: this.nextId++, from: 'bot', reply }]);
       this.thinking.set(false);
-      this.setMood(reply.intent === 'unknown' ? 'idle' : 'happy', 1600);
+      this.setMood(reply.intent === 'unknown' || reply.intent === 'unlisted' ? 'idle' : 'happy', 1600);
       this.save();
     }, delay);
   }

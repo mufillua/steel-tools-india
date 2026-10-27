@@ -68,7 +68,8 @@ export interface Suggestion {
 }
 
 export type ReplyAction =
-  | { kind: 'whatsapp'; label: string; slug?: string; variantId?: string; text?: string }
+  /** `text` with a product: an extra line for the quote (e.g. the size needed). `request`: `text` is something to supply. */
+  | { kind: 'whatsapp'; label: string; slug?: string; variantId?: string; text?: string; request?: boolean }
   | { kind: 'call'; label: string }
   | { kind: 'email'; label: string }
   | { kind: 'route'; label: string; route: string; query?: Record<string, string> }
@@ -95,6 +96,8 @@ export type Intent =
   | 'specs'
   | 'availability'
   | 'info'
+  /** Not listed exactly — the customer is sent to the team (and shown related products, if any). */
+  | 'unlisted'
   | 'unknown';
 
 /** What the engine remembers between turns, so "what sizes?" after "chain pulley block" works. */

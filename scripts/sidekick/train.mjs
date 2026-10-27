@@ -351,6 +351,8 @@ for (const q of exam) {
   for (const must of q.says ?? []) if (!text.includes(must.toLowerCase())) problems.push(`missing "${must}"`);
   if (/₹|\brs\.?\s?\d/.test(text)) problems.push('mentions a price');
   if (MAKER.test(text.replace(/industries/g, ''))) problems.push('mentions the lifting maker');
+  // Never a dead end: Sidekick doesn't tell a customer we don't have something — it sends them to the team.
+  if (/couldn.t find|can.t find|don.t have|do not have|not in our catalogue|not available|we don.t (sell|stock|carry)/.test(text)) problems.push('says we don\'t have it');
   if (problems.length) failures.push(`  ✗ "${q.ask}" — ${problems.join('; ')}`);
 }
 console.log(`\nExam: ${exam.length - failures.length}/${exam.length} questions answered as expected`);

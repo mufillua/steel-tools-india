@@ -1,7 +1,7 @@
 import { COMPANY } from '../../config/company.config';
 import { CATEGORIES } from '../../data/categories';
 import { ALL_PRODUCTS } from '../../data/products';
-import { SidekickEngine } from './engine';
+import { requestText, SidekickEngine } from './engine';
 import { normalize, sizeTokens, stem } from './text';
 import { Reply, SidekickContext, SidekickKnowledge } from './types';
 
@@ -78,11 +78,31 @@ describe('Sidekick engine', () => {
     expect(engine.answer('talk to a person').intent).toBe('human');
   });
 
-  it('says so when it cannot find something, instead of guessing', () => {
-    const r = engine.answer('xyzzy flibber');
-    expect(r.intent).toBe('unknown');
-    const close = engine.answer('do you have vernier caliper');
-    expect(text(close)).toContain('closest');
+  it('never says "we don\'t have it" — sends the customer to the team, with related products only when they fit', () => {
+    const noWay = /couldn.t find|can.t find|don.t have|do not have|not in our catalogue|not available|we don.t (sell|stock|carry)/;
+    for (const q of ['xyzzy flibber', 'do you have angle grinder', 'do you have welding machine', 'paint brush', 'ER32 collet 30mm']) {
+      const r = engine.answer(q);
+      expect(text(r)).withContext(q).toContain('contact our team');
+      expect(noWay.test(text(r))).withContext(q).toBeFalse();
+      expect(r.actions.some((a) => a.kind === 'whatsapp')).withContext(q).toBeTrue();
+    }
+    // Not the same kind of item → no unrelated products offered.
+    const grinder = engine.answer('do you have angle grinder');
+    expect(grinder.intent).toBe('unlisted');
+    expect(grinder.blocks.some((b) => b.kind === 'products')).toBeFalse();
+    // The same kind of item → shown as related, and the request goes into the WhatsApp message.
+    const caliper = engine.answer('do you have vernier caliper');
+    expect(caliper.intent).toBe('unlisted');
+    expect(caliper.products[0]).toContain('caliper');
+    expect(caliper.actions[0]).toEqual(jasmine.objectContaining({ kind: 'whatsapp', request: true, text: 'vernier caliper' }));
+    // Real products are still answered directly.
+    expect(engine.answer('do you have ER collet set').products[0]).toBe('er-collet-set');
+  });
+
+  it('turns the question into a request for the WhatsApp message', () => {
+    expect(requestText('Do you have a vernier caliper?')).toBe('vernier caliper');
+    expect(requestText('hi, do you sell bosch drills')).toBe('bosch drills');
+    expect(requestText('I need angle grinder 4 inch')).toBe('angle grinder 4 inch');
   });
 
   it('does not reuse the previous product for an unrelated question', () => {

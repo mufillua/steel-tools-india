@@ -70,5 +70,11 @@ template, so it cannot invent sizes, prices or brands. When it can't find someth
 
 - **No prices**: price questions get a WhatsApp / quote-form hand-off; every answer is also scrubbed for ₹ / Rs figures.
 - **Lifting maker never named**: removed from the extracted text, the knowledge file and every answer (tested).
-- **Honest matches**: "do you have X" only says yes for a full match; close matches are labelled as such.
+- **Never a dead end**: Sidekick never tells a customer "we don't have it". For anything not listed exactly it says
+  *"For this product, please contact our team — they'll check and get back to you quickly"*, with a WhatsApp button
+  (their request already written into the message) and a call button. Related products are shown only when they
+  are the same kind of item (vernier caliper → calipers), never unrelated ones. A size that isn't printed gets
+  "contact our team for this size", and the WhatsApp quote includes the size. The exam fails any answer that says
+  we don't have something.
+- **Honest matches**: "do you have X" only says yes when every word of the request matches a product.
 - **Stock**: Sidekick says a product is *in the catalogue*; for stock and price it sends the customer to the team.

@@ -89,6 +89,24 @@ const JOB_LABEL: Record<string, string> = {
 };
 
 /** Short display name: "Chain Pulley Block (B Series)" → "Chain Pulley Block". */
+// "Welding machine", "spanner set": these words alone don't say what kind of item is wanted.
+const GENERIC_HEADS = new Set(['machine', 'set', 'kit', 'tool', 'equipment', 'item', 'product', 'accessory', 'accessori', 'part', 'spare', 'unit', 'type', 'model']);
+const UNITS = new Set(['mm', 'cm', 'm', 'inch', 't', 'kg', 'g', 'gm', 'ton', 'tonne', 'ft', 'feet', 'metre', 'meter', 'ltr', 'l', 'bar', 'psi', 'nm']);
+
+/** "Do you have a vernier caliper?" → "vernier caliper" — the customer's request, for the WhatsApp message. */
+export function requestText(question: string): string {
+  return question
+    .trim()
+    .replace(/^(hi|hello|hey|sir|dear)\b[\s,!.]*/i, '')
+    .replace(/^(do|does|can|could|will|would)\s+(you|u|ya)\s+(guys\s+|people\s+)?(have|sell|stock|supply|keep|carry|deal in|get|provide|make|arrange)\s+/i, '')
+    .replace(/^(i|we)\s*(need|want|require|am looking for|'?m looking for|are looking for)\s+/i, '')
+    .replace(/^(is|are)\s+there\s+/i, '')
+    .replace(/^(have you got|got)\s+/i, '')
+    .replace(/^(a|an|any|some)\s+/i, '')
+    .replace(/\s*(available|in stock)?\s*[?.!]*$/i, '')
+    .trim() || question.trim();
+}
+
 const shortName = (name: string) => name.replace(/\s*[(—–-]\s.*$/, '').replace(/\s*\(.*$/, '').trim() || name;
 
 export class SidekickEngine {
@@ -101,6 +119,8 @@ export class SidekickEngine {
   private readonly categories: (Category & { count: number })[];
   /** Share of the question's words the best product matched (below 1 = a close match, not an exact one). */
   private lastCoverage = 1;
+  /** The question as typed, for WhatsApp messages. */
+  private lastQuestion = '';
 
   constructor(
     products: Product[],
@@ -184,6 +204,7 @@ export class SidekickEngine {
     const raw = (question ?? '').trim();
     const ctx: SidekickContext = { ...previous, turn: previous.turn + 1 };
     if (!raw) return this.welcome();
+    this.lastQuestion = raw;
 
     const norm = normalize(raw.replace(MAKER, ' lifting '));
     const intents = Object.keys(RX).filter((k) => RX[k].test(norm)) as Intent[];
@@ -232,21 +253,40 @@ export class SidekickEngine {
     if (usesContext) found = ctx.products.map((s) => this.bySlug.get(s)).filter((p): p is Product => !!p);
 
     // A whole category named ("lifting equipment", "hand tools") is answered with the category page.
+    let viaCategory = false;
     if (!usesContext) {
       const cat = this.categoryMatch(contentTerms, phrase, found);
       if (cat && (has('uses') || has('howto'))) {
         // "What are non-sparking tools used for?" — answer with the category's product type.
         const inCat = found.filter((p) => p.category === cat);
         found = inCat.length ? inCat : [...this.bySlug.values()].filter((p) => p.category === cat).slice(0, 4);
+        viaCategory = true;
       } else if (cat) {
         return this.categoryReply(cat, ctx);
       }
     }
 
+    const item = this.itemTerms(norm, contentTerms);
     if (!found.length) {
       if (has('price')) return this.priceReply([], ctx);
       if (has('greeting')) return this.greetingReply(ctx);
-      return this.unknownReply(raw, terms, extra, phrase, ctx);
+      return this.unknownReply(raw, terms, extra, phrase, item, ctx);
+    }
+
+    // Not an exact match. Sidekick never tells a customer "we don't have it" — the team can often arrange it — and
+    // only offers products that are the same kind of item (a vernier caliper → calipers; never an angle grinder →
+    // socket accessories). Questions about uses, sizes etc. carry on with those related products.
+    // (The search ignores very common words like "machine" when scoring, so exactness is also checked word by word
+    // against the product's own data: "welding machine" is not a weld-on hook.)
+    const whole = usesContext || viaCategory ? -1 : found.findIndex((p) => item.some((alt) => alt.length > 0 && alt.every((t) => this.mentions(p, t))));
+    // A strong match that has every word asked for goes first ("ER collet set" → the set, not the single collet).
+    if (whole > 0) found = [found[whole], ...found.filter((_, i) => i !== whole)];
+    const exact = this.lastCoverage >= 1 && whole >= 0;
+    if (!usesContext && !viaCategory && !exact) {
+      const related = this.sameKind(found, item);
+      const detail = has('howto') || has('uses') || has('sizes') || has('specs') || has('price') || sizes.length > 0;
+      if (!related.length || !detail) return this.unlistedReply(related, ctx);
+      found = related;
     }
 
     if (usesContext) this.lastCoverage = 1;
@@ -268,12 +308,12 @@ export class SidekickEngine {
 
   // ── Understanding the question ───────────────────────────────────────────────────────────────────────────────
 
-  private searchTerms(norm: string) {
+  private searchTerms(norm: string, rewrite = true) {
     // One pass, longest phrase first at each position, so a rewritten phrase is never rewritten again.
     const words = norm.split(' ');
     const outWords: string[] = [];
     for (let i = 0; i < words.length; ) {
-      const hit = this.replacements.find(([from]) => {
+      const hit = rewrite && this.replacements.find(([from]) => {
         const n = from.split(' ');
         return n.every((w, j) => words[i + j] === w);
       });
@@ -342,6 +382,10 @@ export class SidekickEngine {
     if (!hit || hit.coverage < 1) return null;
     const cat = this.categories.find((c) => c.slug === hit.id);
     if (!cat) return null;
+    // Every word must appear in the category's own text: "welding machine" is not the rigging category just
+    // because it lists weld-on fittings.
+    const catWords = new Set(`${normalize(cat.name)} ${normalize(cat.highlights?.join(' ') ?? '')} ${normalize(cat.description)}`.split(' ').map(stem));
+    if (!terms.every((t) => catWords.has(t))) return null;
     const named = ` ${phrase} `.includes(` ${normalize(cat.name)} `);
     // Prefer a product when the question names it exactly (e.g. "spring balancer" is also a hoists-category word).
     if (found.length && !named) {
@@ -350,6 +394,53 @@ export class SidekickEngine {
     }
     if (!named && terms.length > 2) return null;
     return cat.slug;
+  }
+
+  /**
+   * The item the customer is asking for: "chain block for lifting machinery" → chain, block. Two readings: with
+   * customer words rewritten to catalogue words ("grease pump" → grease gun) and as typed (there is also a
+   * bucket grease pump).
+   */
+  private itemTerms(norm: string, terms: string[]): string[][] {
+    const before = norm.split(/\b(?:for|to|with|used|which|that|in|on|from|at)\b/)[0];
+    const keep = (list: string[]) => list.filter((t) => !UNITS.has(t) && !BRANDS.some((b) => b.re.test(t)));
+    if (!before.trim()) return [keep(terms)];
+    const rewritten = keep(this.searchTerms(before).terms);
+    const typed = keep(this.searchTerms(before, false).terms);
+    return [rewritten.length ? rewritten : keep(terms), typed];
+  }
+
+  /**
+   * Products that are the kind of item asked for. The kind is the last word ("vernier **caliper**", "bosch
+   * **drill**"); a generic last word ("welding **machine**") needs the word before it too.
+   */
+  private sameKind(products: Product[], item: string[][]): Product[] {
+    const needs = item
+      .map((alt) => {
+        const head = alt[alt.length - 1];
+        if (!head) return null;
+        const need = GENERIC_HEADS.has(head) ? alt.slice(-2) : [head];
+        return need.length < (GENERIC_HEADS.has(head) ? 2 : 1) ? null : need;
+      })
+      .filter((n): n is string[] => !!n);
+    return products.filter((p) => needs.some((need) => need.every((t) => this.productHasTerm(p, t))));
+  }
+
+  private readonly wordsOf = new Map<string, Set<string>>();
+  /** Whether a word appears anywhere in the product's own data (name, description, specs, size table). */
+  private mentions(p: Product, term: string): boolean {
+    let words = this.wordsOf.get(p.slug);
+    if (!words) {
+      const text = [
+        p.name, p.subcategory, p.summary, p.description, p.brand ?? '',
+        this.categories.find((c) => c.slug === p.category)?.name ?? '',
+        ...p.specifications.flatMap((x) => [x.label, x.value]),
+        ...p.variants.flatMap((v) => [v.label, ...Object.entries(v.attributes).flat()]),
+      ].join(' ');
+      words = new Set(normalize(text).split(' ').map(stem));
+      this.wordsOf.set(p.slug, words);
+    }
+    return words.has(term);
   }
 
   private productHasTerm(p: Product, term: string): boolean {
@@ -561,10 +652,7 @@ export class SidekickEngine {
     const p = found[0];
     const guide = this.guideFor(p);
     const blocks: Block[] = [];
-    if (this.lastCoverage < 1) {
-      blocks.push({ kind: 'text', text: `I couldn't find an exact match, but these are the closest products we list:` });
-      blocks.push({ kind: 'products', items: found.slice(0, 4).map((x) => this.ref(x)) });
-    } else if (found.length > 2) {
+    if (found.length > 2) {
       blocks.push({ kind: 'text', text: `Here's what we list for that — ${found.length} matching products:` });
       blocks.push({ kind: 'products', items: found.slice(0, 4).map((x) => this.ref(x)) });
       // One shared explanation only when the products are the same kind of tool.
@@ -584,12 +672,6 @@ export class SidekickEngine {
     const p = found[0];
     const blocks: Block[] = [];
     if (sizes.length && p.variants.length) return this.sizesReply(found, ctx, sizes);
-    if (this.lastCoverage < 1) {
-      blocks.push({ kind: 'text', text: `I couldn't find exactly that in our catalogue. The closest products we list are:` });
-      blocks.push({ kind: 'products', items: found.slice(0, 4).map((x) => this.ref(x)) });
-      blocks.push({ kind: 'note', text: 'Not sure these fit? Ask the team on WhatsApp — they can check what you need.' });
-      return this.reply('availability', blocks, this.productSuggestions(p, 'availability'), this.productActions(p), found, ctx);
-    }
     blocks.push({
       kind: 'text',
       text: found.length > 1
@@ -625,7 +707,7 @@ export class SidekickEngine {
     const blocks: Block[] = [];
     const notes = this.operatingNotes(p);
     if (!guide && !notes.length) {
-      blocks.push({ kind: 'text', text: `I don't have usage steps for **${p.name}** yet. The team can explain how to use it — message them on WhatsApp.` });
+      blocks.push({ kind: 'text', text: `Our team can explain how to use **${p.name}** — message them on WhatsApp.` });
       return this.reply('howto', blocks, this.productSuggestions(p, 'howto'), this.productActions(p), found, ctx);
     }
     blocks.push({ kind: 'text', text: `How to use a **${shortName(guide?.title ?? p.name).toLowerCase()}**:` });
@@ -663,13 +745,17 @@ export class SidekickEngine {
       }
       const p = found[0];
       const { rows } = this.sizeSummary(p);
+      const asked = this.prettySizes(this.ownSizes(p, sizes));
       const blocks: Block[] = [
-        { kind: 'text', text: `I can't find ${this.prettySizes(this.ownSizes(p, sizes)) || 'that size'} among the sizes listed for **${p.name}**.` },
+        {
+          kind: 'text',
+          text: `For **${p.name}**${asked ? ` in ${asked}` : ' in this size'}, please contact our team — not every size is printed in the catalogue, and they'll check it for you.`,
+        },
       ];
-      if (rows.length) blocks.push({ kind: 'facts', title: 'Listed sizes', rows });
-      blocks.push({ kind: 'note', text: `Not every size is printed in the catalogue — message the team and they'll check for you.` });
+      if (rows.length) blocks.push({ kind: 'facts', title: 'Sizes on the website', rows });
       blocks.push({ kind: 'products', items: [this.ref(p)] });
-      return this.reply('sizes', blocks, this.productSuggestions(p, 'sizes'), this.productActions(p), found, ctx);
+      const actions = this.productActions(p, undefined, asked ? `Size needed: ${asked}` : undefined);
+      return this.reply('sizes', blocks, this.productSuggestions(p, 'sizes'), actions, found, ctx);
     }
 
     const p = found[0];
@@ -929,16 +1015,46 @@ export class SidekickEngine {
     );
   }
 
-  private unknownReply(raw: string, terms: string[], extra: string[], phrase: string[], ctx: SidekickContext): Reply {
-    const weak = this.index.search(terms, extra, phrase, 4).filter((h) => h.score > 1.2);
-    const blocks: Block[] = [];
-    if (weak.length) {
-      blocks.push({ kind: 'text', text: `I'm not sure I found exactly that. Did you mean one of these?` });
-      blocks.push({ kind: 'products', items: weak.slice(0, 3).map((h) => this.ref(this.bySlug.get(h.id)!)) });
-    } else {
-      blocks.push({ kind: 'text', text: `Sorry, I couldn't find that in our catalogue. Try the tool's name, a size, or the job you need it for — or ask the team, they may still be able to help.` });
+  /** Nothing matched at all — still no dead end: the team is one tap away. */
+  private unknownReply(raw: string, terms: string[], extra: string[], phrase: string[], item: string[][], ctx: SidekickContext): Reply {
+    const weak = this.sameKind(
+      this.index.search(terms, extra, phrase, 6).filter((h) => h.score > 1.2).map((h) => this.bySlug.get(h.id)!).filter(Boolean),
+      item,
+    );
+    if (weak.length) return this.unlistedReply(weak, ctx);
+    const blocks: Block[] = [
+      { kind: 'text', text: `Please contact our team for this — they'll check and get back to you quickly.` },
+      { kind: 'note', text: `You can also ask me with a tool's name, a size, or the job you need it for.` },
+    ];
+    return this.reply('unknown', blocks, this.starterSuggestions(), [
+      { kind: 'whatsapp', label: 'Ask the team on WhatsApp', text: raw },
+      { kind: 'call', label: `Call ${this.company.phoneDisplay}` },
+      { kind: 'route', label: 'Browse categories', route: '/categories' },
+    ], [], ctx);
+  }
+
+  /**
+   * A product we don't list exactly. Never "we don't have it": the customer is asked to contact the team (who can
+   * often arrange it), with their request already written into the WhatsApp message, plus related products when
+   * there are real ones.
+   */
+  private unlistedReply(related: Product[], ctx: SidekickContext): Reply {
+    const blocks: Block[] = [{ kind: 'text', text: `For this product, please contact our team — they'll check and get back to you quickly.` }];
+    if (related.length) {
+      blocks.push({ kind: 'text', text: 'Related products on our website:' });
+      blocks.push({ kind: 'products', items: related.slice(0, 4).map((x) => this.ref(x)) });
     }
-    return this.reply('unknown', blocks, this.starterSuggestions(), [{ kind: 'whatsapp', label: 'Ask the team on WhatsApp', text: raw }, { kind: 'route', label: 'Browse categories', route: '/categories' }], [], { ...ctx, products: weak.length ? [weak[0].id] : ctx.products });
+    blocks.push({ kind: 'note', text: 'Share the product name, size and quantity — the team will confirm availability and price.' });
+    const actions: ReplyAction[] = [
+      { kind: 'whatsapp', label: 'Ask the team on WhatsApp', text: requestText(this.lastQuestion), request: true },
+      { kind: 'call', label: `Call ${this.company.phoneDisplay}` },
+    ];
+    if (!related.length) actions.push({ kind: 'route', label: 'Browse categories', route: '/categories' });
+    const next: SidekickContext = related.length
+      ? { ...ctx, products: related.map((p) => p.slug), category: related[0].category }
+      : { ...ctx, products: [], category: undefined };
+    const suggestions = related.length ? this.productSuggestions(related[0], 'info') : this.starterSuggestions();
+    return this.reply('unlisted', blocks, suggestions, actions, related, next);
   }
 
   private simple(intent: Intent, text: string, ctx: SidekickContext): Reply {
@@ -968,9 +1084,9 @@ export class SidekickEngine {
     return all.filter(([i]) => i !== current).map(([, s]) => s).slice(0, 4);
   }
 
-  private productActions(p: Product, variant?: ProductVariant): ReplyAction[] {
+  private productActions(p: Product, variant?: ProductVariant, note?: string): ReplyAction[] {
     return [
-      { kind: 'whatsapp', label: 'Get a quote on WhatsApp', slug: p.slug, variantId: variant?.id },
+      { kind: 'whatsapp', label: note ? 'Ask the team on WhatsApp' : 'Get a quote on WhatsApp', slug: p.slug, variantId: variant?.id, text: note },
       { kind: 'route', label: 'View product', route: `/products/${p.slug}`, query: variant ? { variant: variant.id } : undefined },
     ];
   }

@@ -137,12 +137,8 @@ export class SidekickPanel {
 
   protected actionHref(a: ReplyAction): string | null {
     switch (a.kind) {
-      case 'whatsapp': {
-        const product = a.slug ? this.catalogue.getProductBySlug(a.slug) : undefined;
-        if (product) return this.enquiry.whatsappUrl(product, product.variants.find((v) => v.id === a.variantId) ?? null);
-        const text = a.text ? `Hello ${COMPANY.name}, I have a question: ${a.text}` : `Hello ${COMPANY.name}, I have a question about your products.`;
-        return `${COMPANY_LINKS.whatsapp}?text=${encodeURIComponent(text)}`;
-      }
+      case 'whatsapp':
+        return `${COMPANY_LINKS.whatsapp}?text=${encodeURIComponent(this.whatsappText(a))}`;
       case 'call':
         return COMPANY_LINKS.tel;
       case 'email':
@@ -152,6 +148,19 @@ export class SidekickPanel {
       default:
         return null;
     }
+  }
+
+  /** The pre-written WhatsApp message: a quote for a product (plus e.g. the size needed), a request, or a question. */
+  private whatsappText(a: Extract<ReplyAction, { kind: 'whatsapp' }>): string {
+    const product = a.slug ? this.catalogue.getProductBySlug(a.slug) : undefined;
+    if (product) {
+      const message = this.enquiry.whatsappMessage(product, product.variants.find((v) => v.id === a.variantId) ?? null);
+      return a.text ? message.replace('Quantity: ', `${a.text}\nQuantity: `) : message;
+    }
+    if (a.request && a.text) {
+      return [`Hello ${COMPANY.name},`, '', `I'm looking for: ${a.text}`, 'Quantity: ', '', 'Please let me know the availability and price.', '', 'Thank you.'].join('\n');
+    }
+    return a.text ? `Hello ${COMPANY.name}, I have a question: ${a.text}` : `Hello ${COMPANY.name}, I have a question about your products.`;
   }
 
   protected go(a: ReplyAction): void {
