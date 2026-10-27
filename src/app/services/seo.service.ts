@@ -25,6 +25,12 @@ export const DEFAULT_DESCRIPTION =
 
 const DEFAULT_IMAGE = 'assets/brand/sti-logo-full.png';
 const HERO_IMAGE = 'assets/hero/product-range.webp';
+/**
+ * Link-preview image (WhatsApp, Facebook, LinkedIn, X) for the home page and every page without its own picture:
+ * the full logo centred on a 1200 × 630 white card — the size these apps show as a large preview. (The logo file
+ * itself is a 765 × 225 strip, which apps shrink to a small square thumbnail and crop.)
+ */
+const SHARE_IMAGE = { path: 'assets/brand/sti-share-logo.png', width: 1200, height: 630, alt: `${COMPANY.name} — Since ${COMPANY.foundedYear}` };
 
 const DAY_URI = ['', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].map(
   (d) => `https://schema.org/${d}`,
@@ -106,10 +112,11 @@ export class SeoService {
 
   apply(title: string, path: string, seo: SeoData = {}): void {
     if (seo.jsonLd === 'business') seo = { ...seo, jsonLd: localBusinessJsonLd() };
-    if (seo.jsonLd === 'home') seo = { ...seo, jsonLd: [websiteJsonLd(), localBusinessJsonLd()], image: seo.image ?? HERO_IMAGE };
+    if (seo.jsonLd === 'home') seo = { ...seo, jsonLd: [websiteJsonLd(), localBusinessJsonLd()] };
     const description = seo.description ?? DEFAULT_DESCRIPTION;
     const url = this.absolute(this.canonicalPath(path));
-    const image = this.absolute(`/${seo.image ?? DEFAULT_IMAGE}`);
+    const shareCard = !seo.image;
+    const image = this.absolute(`/${seo.image ?? SHARE_IMAGE.path}`);
 
     this.meta.updateTag({ name: 'description', content: description });
     this.meta.updateTag({ name: 'robots', content: seo.noindex ? 'noindex, follow' : 'index, follow' });
@@ -120,6 +127,15 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:type', content: seo.type === 'product' ? 'product' : 'website' });
     this.meta.updateTag({ property: 'og:url', content: url });
     this.meta.updateTag({ property: 'og:image', content: image });
+    this.meta.updateTag({ property: 'og:image:alt', content: shareCard ? SHARE_IMAGE.alt : title });
+    // The logo card's size is known, so apps can lay out the large preview on the first share; product photos vary.
+    if (shareCard) {
+      this.meta.updateTag({ property: 'og:image:width', content: String(SHARE_IMAGE.width) });
+      this.meta.updateTag({ property: 'og:image:height', content: String(SHARE_IMAGE.height) });
+      this.meta.updateTag({ property: 'og:image:type', content: 'image/png' });
+    } else {
+      for (const p of ['og:image:width', 'og:image:height', 'og:image:type']) this.meta.removeTag(`property="${p}"`);
+    }
     this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
 
     this.setCanonical(url);
