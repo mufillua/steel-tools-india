@@ -1,0 +1,1802 @@
+{
+  "_about": "General 'where is it used / how is it used' notes per product TYPE, for Sidekick. The supplier catalogues list sizes and features but rarely explain use, so these are written as general workshop guidance (no sizes, prices, ratings or brand claims — those come only from the catalogue data). Each entry's `match` is a case-insensitive regular expression tested against the product name first (then '<name> | <sub-type>' if no entry matches the name); the FIRST matching entry wins, so specific entries come before general ones. `category` (optional) limits an entry to those category slugs. Edit freely and run `npm run sidekick:train`.",
+  "entries": [
+    {
+      "id": "pull-stud",
+      "match": "pull stud",
+      "title": "Pull stud",
+      "uses": "A pull stud (retention knob) screws into the back of a BT, ISO, CAT or SK taper tool holder so the machine's drawbar can grip it and pull the holder tightly into the spindle. It is used on CNC machining centres and milling machines with power drawbars.",
+      "how": [
+        "Choose the pull stud that matches your machine — the spindle taper and the drawbar's gripper type are given in the machine manual.",
+        "Clean the threads, screw the stud into the holder and tighten it with the correct spanner or a tool locking device.",
+        "Check pull studs regularly for wear, cracks or a damaged collar and replace them at the first sign of damage."
+      ],
+      "tips": [
+        "A worn or wrong pull stud can let a tool holder drop out of the spindle — never mix types between machines."
+      ]
+    },
+    {
+      "id": "tool-locking",
+      "match": "tool locking device",
+      "title": "Tool locking device",
+      "uses": "A bench fixture that holds a taper tool holder steady while you tighten or loosen collet nuts, side lock screws or pull studs — so you never clamp the precision taper in a vice.",
+      "how": [
+        "Bolt the device to a bench.",
+        "Place the holder in the matching taper seat with the drive slots engaged and lock it.",
+        "Tighten or loosen the nut or stud with the proper spanner."
+      ]
+    },
+    {
+      "id": "spindle-cleaner",
+      "match": "spindle cleaner",
+      "title": "Spindle cleaner",
+      "uses": "Cleans chips, coolant and dirt from the taper bore of a machine spindle. A clean taper keeps tool holders seated accurately and reduces runout.",
+      "how": [
+        "Stop the machine spindle completely.",
+        "Insert the cleaner into the spindle taper and turn it by hand a few times.",
+        "Wipe the cleaner and repeat until it comes out clean."
+      ]
+    },
+    {
+      "id": "master-mandrel",
+      "match": "master mandrel|spindle tester",
+      "title": "Master mandrel (spindle tester)",
+      "uses": "A precision test bar used with a dial indicator to check the runout and alignment of a machine spindle — for machine inspection, installation and maintenance.",
+      "how": [
+        "Clean the spindle taper and fit the mandrel.",
+        "Set a dial indicator against the mandrel near the spindle nose and again at the far end.",
+        "Turn the spindle slowly by hand and note the dial readings to judge runout and alignment."
+      ]
+    },
+    {
+      "id": "nuts-spanners",
+      "match": "collet nut|chuck spanner|spanner for|spares — spanner|spanner & nut",
+      "title": "Chuck nut / spanner",
+      "uses": "Replacement clamping nuts and the matching spanners for collet chucks and keyless chucks. A worn nut reduces grip and accuracy.",
+      "how": [
+        "Use only the spanner made for the nut — other spanners slip and damage it.",
+        "Replace nuts that are cracked, worn or no longer run true."
+      ]
+    },
+    {
+      "id": "tapping",
+      "match": "tapping adaptor|tap collet|tap reducer",
+      "title": "Quick change tapping system",
+      "uses": "Holds machine taps in a tapping chuck or attachment on drilling, milling and CNC machines. The quick-change collets let you swap taps in seconds without re-setting the machine.",
+      "how": [
+        "Pick the tap collet that matches the tap's shank and square.",
+        "Insert the tap into the collet until the square is fully engaged.",
+        "Push the collet into the adaptor until it clicks; pull the collar to release it."
+      ]
+    },
+    {
+      "id": "e40-chuck",
+      "match": "e-40 collet chuck|e-40 spares",
+      "title": "E-40 collet chuck",
+      "uses": "Holds straight-shank drills, end mills and reamers in E-40 type collets on milling machines and drilling machines.",
+      "how": [
+        "Choose the collet that matches the tool shank diameter.",
+        "Fit the collet into the nut, screw the nut onto the chuck and insert the tool.",
+        "Tighten the nut with the matching spanner — only with a tool in the collet."
+      ]
+    },
+    {
+      "id": "er-chuck",
+      "match": "er collet chuck|baby collet chuck",
+      "title": "ER collet chuck",
+      "uses": "Holds round-shank cutting tools — drills, end mills, reamers, taps and engraving cutters — in ER spring collets. Used on CNC machining centres, milling machines, lathes and drilling machines; the taper (BT, ISO, CAT, SK, HSK, Morse, R8) must match your machine spindle.",
+      "how": [
+        "Choose the ER collet that matches the tool's shank diameter (each collet grips a small range of sizes).",
+        "Snap the collet into the nut first, then screw the nut loosely onto the chuck.",
+        "Insert the tool with as little overhang as possible and tighten the nut with the ER spanner."
+      ],
+      "tips": [
+        "Keep the collet, nut and chuck taper clean; never tighten the nut without a tool in the collet — it can damage the collet."
+      ]
+    },
+    {
+      "id": "side-lock",
+      "match": "side lock holder",
+      "title": "Side lock holder",
+      "uses": "Holds tools that have a Weldon flat on the shank — indexable end mills, U-drills, end mills and drills — with a side screw that presses on the flat. The tool cannot slip, which suits heavy roughing cuts on milling machines and CNC machining centres.",
+      "how": [
+        "Clean the bore and the tool shank.",
+        "Insert the tool so the shank flat faces the clamping screw(s).",
+        "Tighten the side screw firmly onto the flat."
+      ]
+    },
+    {
+      "id": "stub-arbor",
+      "match": "stub milling arbor|stub arbor",
+      "title": "Stub milling arbor",
+      "uses": "Mounts shell mills, face mill cutters and side-and-face cutters on the machine spindle (BT, ISO, CAT, SK, HSK, Morse or R8 taper). Used for face milling and heavy milling on milling machines and machining centres.",
+      "how": [
+        "Clean the arbor spigot and the cutter bore.",
+        "Slide the cutter onto the arbor with its slots engaged on the drive keys.",
+        "Fit and tighten the arbor screw or bolt, then check the cutter runs true."
+      ]
+    },
+    {
+      "id": "drill-chuck-arbor",
+      "match": "drill chuck arbor",
+      "title": "Drill chuck arbor",
+      "uses": "An adaptor with your machine's taper at one end and a chuck taper at the other, so a drill chuck can be fitted to a milling machine, drilling machine, lathe tailstock or machining centre.",
+      "how": [
+        "Wipe both tapers clean and dry — oil stops a taper from gripping.",
+        "Press or tap the drill chuck firmly onto the arbor's chuck end.",
+        "Fit the arbor into the machine spindle or tailstock."
+      ]
+    },
+    {
+      "id": "reduction",
+      "match": "reduction socket|reduction adaptor|reduction adapter",
+      "title": "Reduction socket / adaptor",
+      "uses": "Lets a tool with a smaller taper — for example a Morse taper drill or a smaller BT holder — be used in a larger spindle taper, so one machine can take your existing tools.",
+      "how": [
+        "Clean all tapers.",
+        "Seat the tool firmly in the reduction socket, then fit the socket into the spindle.",
+        "Use an ejecting drift through the slot to remove Morse taper tools."
+      ]
+    },
+    {
+      "id": "turret-sleeve",
+      "match": "turret sleeve|turret socket",
+      "title": "CNC lathe turret sleeve",
+      "uses": "Holds round-shank tools — drills, boring bars, Morse taper tools — in the bore of a CNC lathe turret, so the turret can carry tools it was not designed for directly.",
+      "how": [
+        "Choose the sleeve whose outside diameter matches the turret bore and whose inside matches your tool.",
+        "Clamp the sleeve in the turret, aligned with any coolant or flat as required.",
+        "Fit and clamp the tool in the sleeve."
+      ]
+    },
+    {
+      "id": "sleeve",
+      "match": "drill sleeve|extension socket|morse taper spare tang|spare tang",
+      "title": "Morse taper sleeve / socket",
+      "uses": "Drill sleeves adapt a smaller Morse taper shank to a larger Morse taper bore; extension sockets extend the reach of Morse taper tools. Used on drilling machines, lathes and milling machines.",
+      "how": [
+        "Wipe the tapers clean and dry.",
+        "Push the tool firmly into the sleeve, then the sleeve into the spindle so the tangs line up with the slot.",
+        "To remove, knock the tool out through the slot with an ejecting drift."
+      ]
+    },
+    {
+      "id": "drift",
+      "match": "ejecting drift",
+      "title": "Ejecting drift",
+      "uses": "A flat, wedge-shaped bar used to knock Morse taper drills, sleeves and chucks out of a spindle or sleeve through the drift slot.",
+      "how": [
+        "Insert the drift through the slot with the rounded edge against the tool's tang.",
+        "Hold the tool so it cannot fall, then tap the drift with a soft hammer."
+      ]
+    },
+    {
+      "id": "quick-change-chuck",
+      "match": "quick change chuck",
+      "title": "Quick change chuck",
+      "uses": "Lets you change drills, taps and reamers on a drilling or radial drilling machine without stopping the spindle, using pre-set quick change collets — useful for drill–ream–tap jobs.",
+      "how": [
+        "Set each tool in its own quick change collet.",
+        "Lift the chuck's collar, push the collet in and release the collar.",
+        "Lift the collar again to drop the collet out and fit the next one."
+      ]
+    },
+    {
+      "id": "drill-chuck",
+      "match": "drill chuck",
+      "title": "Drill chuck",
+      "uses": "Grips straight-shank drills and other round tools in three jaws. Keyed chucks are tightened with a chuck key; keyless chucks by hand. Used on drilling machines, lathe tailstocks, milling machines and machining centres.",
+      "how": [
+        "Open the jaws and insert the drill shank fully, not just the tip.",
+        "Tighten by hand, then with the key (keyed type) — using each key hole in turn for an even grip.",
+        "Remove the key before starting the machine."
+      ],
+      "tips": [
+        "Never leave the chuck key in the chuck."
+      ]
+    },
+    {
+      "id": "er-collet",
+      "match": "er collet|erg tap|erc sealed|ers waterjet",
+      "title": "ER collet",
+      "uses": "Spring collets (DIN 6499) that fit in ER collet chucks and grip round tool shanks. Sealed (ERC) collets keep coolant pressure for through-coolant tools, coolant (ERS) collets direct coolant to the cutting edge, and tap (ERG) collets hold taps by the shank and square.",
+      "how": [
+        "Pick the collet size for your tool shank (each collet covers a small range).",
+        "Snap the collet into the chuck nut before screwing the nut onto the chuck.",
+        "Insert the tool and tighten the nut with the ER spanner."
+      ],
+      "tips": [
+        "Clean collets before use and replace worn ones — a worn collet loses grip and accuracy."
+      ]
+    },
+    {
+      "id": "traub-collet",
+      "match": "traub",
+      "title": "Traub collet",
+      "uses": "Collets for Traub-type automatic lathes and bar-feed machines, gripping the bar stock being turned. Collet fingers are the replaceable gripping pads.",
+      "how": [
+        "Match the collet to the bar diameter and section (round, hex or square).",
+        "Fit it in the lathe's collet holder and adjust the clamping as per the machine manual."
+      ]
+    },
+    {
+      "id": "r8-collet",
+      "match": "r8 / m1tr collets",
+      "title": "R8 / M1TR collet",
+      "uses": "Collets for milling machines with an R8 or M1TR spindle (common on turret milling machines). They hold end mills and drills directly in the spindle with the drawbar.",
+      "how": [
+        "Line the collet's keyway up with the pin in the spindle and push it in.",
+        "Insert the tool and tighten the drawbar from the top of the spindle."
+      ]
+    },
+    {
+      "id": "sdc",
+      "match": "\\bsdc\\b",
+      "title": "SDC collet chuck system",
+      "uses": "A slim, high-precision collet chuck system for small drills and end mills, giving low runout and good access in tight spaces on CNC machining centres.",
+      "how": [
+        "Choose the SDC collet for your tool shank.",
+        "Fit the collet and nut, insert the tool and tighten with the matching spanner."
+      ]
+    },
+    {
+      "id": "power-mill",
+      "match": "power mill",
+      "title": "Power mill chuck",
+      "uses": "A heavy-duty milling chuck with a very strong grip for straight-shank end mills in heavy roughing — it resists the tool pulling out under load.",
+      "how": [
+        "Fit the straight collet that matches the tool shank.",
+        "Insert the tool and tighten the chuck with its spanner."
+      ]
+    },
+    {
+      "id": "collet-set",
+      "match": "collet set|collet & adaptor set",
+      "title": "Collet set",
+      "uses": "A boxed set of collets (and adaptors) so a full range of tool shank sizes can be held in one chuck — handy for tool rooms and maintenance shops.",
+      "how": [
+        "Pick the collet for each tool from the set and return it to its slot after use to keep it clean."
+      ]
+    },
+    {
+      "id": "collet-misc",
+      "match": "collet|quick change chuck collet",
+      "category": [
+        "machine-tool-accessories"
+      ],
+      "title": "Collet",
+      "uses": "Collets grip a tool shank (or workpiece) inside a chuck or spindle when the nut or drawbar is tightened.",
+      "how": [
+        "Choose the collet that matches the shank diameter.",
+        "Keep collets clean and tighten only with a tool inserted."
+      ]
+    },
+    {
+      "id": "tslot",
+      "match": "t-slot nut|flange nut",
+      "title": "T-slot nut / flange nut",
+      "uses": "T-slot nuts slide into the T-slots of a machine table to anchor studs for clamping vices, fixtures and workpieces. Flange nuts have a wide face that spreads the clamping force.",
+      "how": [
+        "Slide the T-slot nut into the table slot (match the slot width).",
+        "Screw in a stud, place the clamp and tighten the flange nut on top."
+      ]
+    },
+    {
+      "id": "clamping-kit",
+      "match": "clamping kit",
+      "title": "Clamping kit",
+      "uses": "A set of studs, T-slot nuts, step blocks, step clamps, couplers and flange nuts for clamping workpieces and fixtures to milling machine and drilling machine tables.",
+      "how": [
+        "Fit a T-slot nut in the table and screw in a stud of suitable length.",
+        "Set the step block at the same height as the workpiece.",
+        "Lay the step clamp over the job and the block, then tighten the flange nut — keep the stud closer to the job than to the block."
+      ]
+    },
+    {
+      "id": "boring-head",
+      "match": "boring head",
+      "title": "Boring head",
+      "uses": "Bores accurate holes to a precise diameter on milling machines and CNC machining centres. The micro-adjustable slide moves the boring bar outward in very fine steps.",
+      "how": [
+        "Fit the shank to the spindle and clamp a suitable boring bar in the head.",
+        "Take a light trial cut and measure the hole.",
+        "Adjust the dial by the required amount and repeat until the hole is on size."
+      ]
+    },
+    {
+      "id": "edge-finder",
+      "match": "edge finder",
+      "title": "Edge finder",
+      "uses": "Finds the exact position of a workpiece edge (and so its centre) relative to the milling spindle, for setting work zero on milling machines and machining centres.",
+      "how": [
+        "Mechanical type: run the spindle at low speed and move slowly towards the edge until the tip suddenly kicks sideways.",
+        "Electronic type: keep the spindle stopped and approach until it beeps or lights up.",
+        "Add or subtract half the tip diameter to get the edge position."
+      ]
+    },
+    {
+      "id": "flange-adaptor",
+      "match": "flange type adaptor",
+      "title": "Flange type adaptor",
+      "uses": "An adaptor that mounts tooling to the machine through a flange connection, used to fit a tool with a different mounting to your spindle.",
+      "how": [
+        "Check both mounting faces are clean and undamaged.",
+        "Bolt the adaptor up evenly and check runout before machining."
+      ]
+    },
+    {
+      "id": "spare-point",
+      "match": "spare point|wedge for interchangeable",
+      "title": "Spare point / wedge for revolving centres",
+      "uses": "Replacement points for interchangeable-point revolving centres, so a worn or damaged tip can be changed without replacing the whole centre. The wedge is used to remove the point.",
+      "how": [
+        "Remove the old point with the wedge.",
+        "Clean the seat and press the new point in firmly."
+      ]
+    },
+    {
+      "id": "pipe-centre",
+      "match": "pipe revolving centre",
+      "title": "Pipe revolving centre",
+      "uses": "A revolving centre with a large cone point that supports pipes and tubes (and parts with large bores) at the tailstock end while they are turned on a lathe.",
+      "how": [
+        "Clean the tailstock taper and the centre's shank and push it in firmly.",
+        "Bring the cone into the pipe's bore and apply just enough tailstock pressure to support it, then lock the tailstock."
+      ]
+    },
+    {
+      "id": "revolving-centre",
+      "match": "revolving centre",
+      "title": "Revolving centre (live centre)",
+      "uses": "Fits in the lathe tailstock (Morse taper) and supports the free end of a workpiece held in the chuck; the point turns with the job on bearings. Used for turning long shafts and between-centres work on conventional and CNC lathes — heavy duty and CNC types take higher loads and speeds.",
+      "how": [
+        "Centre-drill the end of the workpiece.",
+        "Clean the tailstock taper and the centre's shank, then push the centre in firmly.",
+        "Bring the point into the centre hole, apply light pressure and lock the tailstock — don't over-tighten, or the job heats up and grows."
+      ],
+      "tips": [
+        "Check for play or rough running bearings now and then; replace worn points on interchangeable types."
+      ]
+    },
+    {
+      "id": "dead-centre",
+      "match": "dead centre",
+      "title": "Dead centre",
+      "uses": "A solid, non-rotating centre. It is used in the headstock spindle (where it turns with the job), for grinding and precision between-centres work, or in the tailstock at low speeds. Carbide tipped points resist wear.",
+      "how": [
+        "Fit the centre into the spindle or tailstock taper after cleaning both.",
+        "When used in the tailstock, put grease in the workpiece's centre hole and keep the speed low."
+      ]
+    },
+    {
+      "id": "tap-handle",
+      "match": "tap handle|tap wrench",
+      "title": "Tap handle / tap wrench",
+      "uses": "Holds a hand tap by its square so internal threads can be cut by hand — in maintenance, fitting and tool rooms.",
+      "how": [
+        "Drill the correct tap drill size first (see a thread chart).",
+        "Clamp the tap's square in the handle and start it square to the surface.",
+        "Turn half a turn forward and a quarter turn back to break the chips; use cutting oil."
+      ]
+    },
+    {
+      "id": "die-handle",
+      "match": "die handle",
+      "title": "Round die handle (die stock)",
+      "uses": "Holds a round threading die to cut external threads on rods, bolts and pipes by hand.",
+      "how": [
+        "Chamfer the end of the rod.",
+        "Fit the die with its tapered (lead) side facing the work and lock the screws.",
+        "Keep the die square, turn half forward and a quarter back, and use cutting oil."
+      ]
+    },
+    {
+      "id": "hand-reamer-adj",
+      "match": "expanding|adjustable hand reamer",
+      "title": "Expanding / adjustable hand reamer",
+      "uses": "Finishes and slightly enlarges holes by hand to an exact size — ideal for maintenance and fitting work such as bushes and worn bores.",
+      "how": [
+        "Set the reamer just above the current hole size.",
+        "Turn it clockwise only, with steady pressure and cutting oil.",
+        "Expand in small steps and repeat until the hole reaches size."
+      ]
+    },
+    {
+      "id": "try-square",
+      "match": "try square",
+      "title": "Engineer's try square",
+      "uses": "Checks and marks right angles (90°) and squareness of edges and faces in fitting, machining and fabrication work.",
+      "how": [
+        "Hold the stock firmly against a true reference edge.",
+        "Look for light between the blade and the work — no gap means it's square."
+      ]
+    },
+    {
+      "id": "protractor",
+      "match": "protractor",
+      "title": "Protractor with steel rule",
+      "uses": "Measures and marks angles on workpieces in fitting, sheet metal and layout work.",
+      "how": [
+        "Place the base along one edge, swing the rule to the other edge and lock it.",
+        "Read the angle on the graduated scale."
+      ]
+    },
+    {
+      "id": "depth-gauge",
+      "match": "depth gauge",
+      "title": "Depth gauge",
+      "uses": "Measures the depth of holes, slots, grooves and steps.",
+      "how": [
+        "Rest the base flat across the opening.",
+        "Lower the rod or blade until it touches the bottom and read the scale."
+      ]
+    },
+    {
+      "id": "thread-gauge",
+      "match": "thread gauge",
+      "title": "Thread (pitch) gauge",
+      "uses": "Identifies the pitch of a screw thread — for matching bolts and nuts or choosing the right tap or die.",
+      "how": [
+        "Try leaves on the thread until one sits in the grooves with no gaps.",
+        "Read the pitch stamped on that leaf."
+      ]
+    },
+    {
+      "id": "radius-gauge",
+      "match": "radius gauge",
+      "title": "Radius gauge",
+      "uses": "Checks inside and outside radii — fillets and rounded corners — on machined and fabricated parts.",
+      "how": [
+        "Hold leaves against the radius until one fits with no light showing.",
+        "Read the radius stamped on that leaf."
+      ]
+    },
+    {
+      "id": "letter-punch",
+      "match": "letter & figure punch|letter|figure punch",
+      "title": "Letter & figure punches",
+      "uses": "Steel stamps for marking letters and numbers into metal parts — part numbers, batch codes, heat numbers and dies. Reverse (mirror) sets are used to make dies and moulds that print the right way round.",
+      "how": [
+        "Place the work on a solid surface.",
+        "Hold the punch upright and strike it once firmly with a hammer.",
+        "Use a guide or line to keep characters level."
+      ],
+      "tips": [
+        "Wear eye protection."
+      ]
+    },
+    {
+      "id": "spot-drill",
+      "match": "spot drill",
+      "title": "Spot drill",
+      "uses": "Makes a short, accurate starting point (and a chamfer) so the following drill starts exactly on position without wandering — standard practice on CNC machining centres.",
+      "how": [
+        "Spot to a depth that gives the chamfer you need.",
+        "Then drill with the full-length drill."
+      ]
+    },
+    {
+      "id": "centre-drill",
+      "match": "centre drill|center drill",
+      "title": "Centre drill",
+      "uses": "Drills the 60° centre hole in the end of a shaft so it can be held between lathe centres; also used to start holes accurately.",
+      "how": [
+        "Face the end of the shaft first.",
+        "Use a high speed and gentle feed, with cutting oil.",
+        "Stop when the countersink reaches the right diameter."
+      ]
+    },
+    {
+      "id": "power-chisel",
+      "match": "pneumatic chisel|sds chisel",
+      "title": "SDS / pneumatic chisel",
+      "uses": "Chisels for rotary hammers (SDS) and air hammers (pneumatic) — for breaking concrete, removing tiles and plaster, chasing walls and chipping.",
+      "how": [
+        "Fit the chisel fully into the tool's chuck or retainer.",
+        "Use chisel (no-rotation) mode and let the tool's weight do the work."
+      ],
+      "tips": [
+        "Wear eye, ear and dust protection."
+      ]
+    },
+    {
+      "id": "masonry",
+      "match": "masonry|sds hammer|hammer drill",
+      "title": "Masonry / hammer drill bit",
+      "uses": "Drills holes in concrete, brick, stone and masonry — for anchors, fasteners and fixing work — using a hammer drill or rotary hammer (SDS bits need an SDS chuck).",
+      "how": [
+        "Mark the spot and start slowly without hammer action.",
+        "Switch to hammer mode once the hole has started.",
+        "Pull the bit out every so often to clear dust."
+      ],
+      "tips": [
+        "Not for metal. Wear eye and dust protection."
+      ]
+    },
+    {
+      "id": "annular",
+      "match": "annular cutter|core drill",
+      "title": "Annular cutter / core drill",
+      "uses": "Annular cutters cut large holes in steel plate and structural steel by removing only a ring of metal — used on magnetic drilling machines in fabrication and erection work. Core drills enlarge cored or pre-drilled holes.",
+      "how": [
+        "Fit the cutter with its pilot pin to the magnetic drill and set the magnet on clean, flat steel.",
+        "Use cutting oil, a steady moderate feed and the recommended speed.",
+        "Let the pilot pin push out the slug at the end."
+      ]
+    },
+    {
+      "id": "taper-pin-reamer",
+      "match": "taper pin",
+      "title": "Taper pin reamer",
+      "uses": "Reams tapered holes for taper pins, which locate and lock parts such as gears, collars and levers on shafts.",
+      "how": [
+        "Drill a hole slightly smaller than the small end of the pin.",
+        "Ream by hand, turning clockwise only, until the pin fits to the right depth."
+      ]
+    },
+    {
+      "id": "reamer",
+      "match": "reamer",
+      "title": "Reamer",
+      "uses": "Finishes a drilled or bored hole to an accurate size (for example H7) with a smooth surface — for dowel holes, bearing and bush fits — on drilling machines, lathes, milling and CNC machines.",
+      "how": [
+        "Drill or bore the hole a little undersize, leaving a small allowance.",
+        "Ream at a lower speed than drilling, with steady feed and coolant.",
+        "Never turn a reamer backwards while it is cutting."
+      ]
+    },
+    {
+      "id": "udrill",
+      "match": "u-drill",
+      "title": "U-drill (indexable insert drill)",
+      "uses": "Drills medium and large holes quickly using replaceable carbide inserts — on CNC lathes and machining centres. 2D / 3D / 4D means the drilling depth relative to the drill diameter.",
+      "how": [
+        "Hold it in a rigid side lock holder with through-coolant.",
+        "Use the speed and feed for the insert grade and material.",
+        "Change worn inserts promptly — insert screws should be tightened with the correct key."
+      ]
+    },
+    {
+      "id": "face-mill",
+      "match": "face mill",
+      "title": "Indexable face mill cutter",
+      "uses": "Machines large flat surfaces quickly using replaceable carbide inserts (AP, RP or LNMU types) on milling machines and machining centres.",
+      "how": [
+        "Mount the cutter on a stub milling arbor of the right bore.",
+        "Clean each insert seat and tighten the insert screws with the proper key.",
+        "Index or replace inserts when the edge wears."
+      ]
+    },
+    {
+      "id": "indexable-endmill",
+      "match": "indexable endmill",
+      "title": "Indexable end mill",
+      "uses": "An end mill that uses replaceable carbide inserts for shoulder milling, slotting, ramping and profiling on milling machines and CNC machining centres — you change inserts instead of regrinding the tool.",
+      "how": [
+        "Hold the shank in a side lock holder.",
+        "Clean the insert seats and fit inserts with their screws tightened properly.",
+        "Index the insert to a fresh edge when it wears."
+      ]
+    },
+    {
+      "id": "ballnose",
+      "match": "ball ?nose|ballnose",
+      "title": "Ball nose end mill",
+      "uses": "An end mill with a rounded tip for 3D contour milling of moulds, dies and curved surfaces, and for cutting radiused slots and fillets on CNC machining centres. HRC figures show how hard a material it is designed to cut.",
+      "how": [
+        "Hold it in a collet chuck or shrink-type holder with minimum overhang.",
+        "Use small step-overs for a good surface finish.",
+        "Use the speed and feed recommended for the material, with coolant or air blast."
+      ]
+    },
+    {
+      "id": "endmill",
+      "match": "end ?mill|endmill|slot drill",
+      "title": "End mill",
+      "uses": "Cuts slots, pockets, shoulders and profiles on milling machines and CNC machining centres. Square end mills give flat-bottomed slots and sharp corners; roughing end mills remove metal fast; slot drills can plunge straight down; key way end mills cut keyways; aluminium end mills have polished flutes so the metal doesn't stick; long neck types reach deep features. HRC figures show the work hardness it suits.",
+      "how": [
+        "Hold it in a collet chuck or side lock holder with as little overhang as possible.",
+        "Use the speed and feed for the material and cutter size.",
+        "Use coolant or air blast to clear chips; don't plunge with non-centre-cutting types."
+      ]
+    },
+    {
+      "id": "drill",
+      "match": "drill",
+      "category": [
+        "hss-cutting-tools",
+        "solid-carbide-tools",
+        "power-tool-accessories"
+      ],
+      "title": "Twist drill",
+      "uses": "Drills holes in steel, cast iron, non-ferrous metals and plastics on drilling machines, lathes, milling machines, CNC centres and hand drills. Jobber drills are for general use, stub drills are short and rigid for accuracy, long and extra long series reach deep holes, taper shank drills fit straight into Morse taper spindles for larger sizes, and solid carbide drills suit high-speed CNC drilling.",
+      "how": [
+        "Clamp the work firmly and mark or spot the hole position.",
+        "Choose a speed that suits the material and drill size, and use coolant or cutting oil.",
+        "Peck (withdraw now and then) to clear chips in deep holes, and ease the feed as the drill breaks through."
+      ]
+    },
+    {
+      "id": "toolbit",
+      "match": "toolbit|tool bit",
+      "title": "HSS toolbit blank",
+      "uses": "Hardened HSS blanks that you grind into single-point cutting tools for lathes and shapers — turning, facing, threading and form tools. Parting toolbits cut grooves and part off finished pieces.",
+      "how": [
+        "Grind the required shape and clearance angles on a bench grinder, dipping in water often so it doesn't overheat.",
+        "Clamp it in the tool post at exactly centre height with short overhang."
+      ]
+    },
+    {
+      "id": "tap",
+      "match": "\\btaps?\\b",
+      "category": [
+        "hss-cutting-tools"
+      ],
+      "title": "Tap",
+      "uses": "Cuts internal threads in drilled holes. Hand taps come as taper, second and plug (bottoming) taps; spiral point taps push chips ahead for through holes; spiral flute taps pull chips out of blind holes; machine taps suit tapping machines and CNC; pipe taps (BSP, NPT) cut pipe threads; helicoil taps prepare holes for thread inserts.",
+      "how": [
+        "Drill the correct tap drill size for the thread (see a thread chart).",
+        "Use cutting oil and keep the tap square to the hole.",
+        "By hand: turn forward and back to break chips. On machines: use the right speed and a tapping attachment or rigid tapping."
+      ]
+    },
+    {
+      "id": "carbide-tipped",
+      "match": "carbide tipped",
+      "category": [
+        "carbide-tipped-tools-burrs"
+      ],
+      "title": "Carbide tipped lathe tool",
+      "uses": "Single-point lathe tools with a brazed carbide tip, for turning, facing, boring, threading, recessing and parting off on centre lathes. The ISO number describes the tool's shape and job; the carbide grade is chosen for the material being cut.",
+      "how": [
+        "Clamp the tool in the tool post at centre height with as little overhang as possible.",
+        "Use a cutting speed suited to carbide and the work material.",
+        "Re-sharpen dull tips on a green silicon carbide or diamond wheel."
+      ]
+    },
+    {
+      "id": "burr",
+      "match": "burr",
+      "title": "Tungsten carbide rotary burr",
+      "uses": "Removes metal for deburring, shaping, enlarging holes, cleaning welds and castings, and die and mould work. Used in die grinders and flexible shaft grinders; the head shape (cylinder, ball, tree, flame, cone, oval…) suits different profiles.",
+      "how": [
+        "Fit the shank fully in the collet of a high-speed die grinder.",
+        "Keep the burr moving with light pressure — let the speed do the work."
+      ],
+      "tips": [
+        "Wear eye protection and gloves; never exceed the grinder's rated speed."
+      ]
+    },
+    {
+      "id": "nonsparking-key",
+      "match": "oxygen bottle key",
+      "title": "Non-sparking oxygen bottle key",
+      "uses": "Opens and closes gas cylinder valves without the risk of sparks — for oxygen, fuel-gas and process gas cylinders.",
+      "how": [
+        "Fit the key squarely on the valve spindle.",
+        "Turn slowly to open or close; never hammer on the key."
+      ]
+    },
+    {
+      "id": "nonsparking",
+      "match": "non-sparking",
+      "title": "Non-sparking tool",
+      "uses": "Made from copper alloys (such as beryllium copper or aluminium bronze) that don't throw sparks when struck or dropped, so they can be used where flammable gases, vapours or dusts are present — oil and gas, refineries, chemical and paint plants, mines, gas cylinder handling and explosives areas. They are also non-magnetic.",
+      "how": [
+        "Use it just like the steel version of the same tool.",
+        "The alloy is softer than steel, so don't over-load it or use extensions.",
+        "Keep tools clean — embedded steel particles can spark."
+      ],
+      "tips": [
+        "Non-sparking tools reduce risk; they don't replace your site's permit and gas-testing rules."
+      ]
+    },
+    {
+      "id": "adjustable-wrench",
+      "match": "adjustable (wrench|spanner)",
+      "title": "Adjustable wrench",
+      "uses": "One wrench that fits a range of nut and bolt sizes — for maintenance, plumbing, electrical and general workshop jobs.",
+      "how": [
+        "Close the jaws snugly on the flats of the nut.",
+        "Pull the handle towards the fixed jaw side."
+      ],
+      "tips": [
+        "Don't hammer it or add a pipe extension."
+      ]
+    },
+    {
+      "id": "torque-wrench",
+      "match": "torque wrench",
+      "title": "Torque wrench",
+      "uses": "Tightens bolts and nuts to a set torque — wheel nuts, engine and machinery bolts, flanges and structural joints — so they are neither loose nor over-tightened.",
+      "how": [
+        "Set the required torque on the scale.",
+        "Pull the handle smoothly at the grip until it clicks, then stop.",
+        "Wind it back to its lowest setting after use."
+      ],
+      "tips": [
+        "Don't use a torque wrench to loosen bolts."
+      ]
+    },
+    {
+      "id": "pipe-wrench",
+      "match": "pipe wrench",
+      "title": "Pipe wrench",
+      "uses": "Grips round pipes, rods and fittings — for plumbing, pipe fitting and maintenance. Chain pipe wrenches grip large pipes and awkward shapes.",
+      "how": [
+        "Set the jaw so the pipe sits deep in the jaws.",
+        "Turn towards the opening of the jaw so the teeth bite harder as you pull."
+      ],
+      "tips": [
+        "The teeth mark the surface — use a spanner on nuts and polished fittings."
+      ]
+    },
+    {
+      "id": "filter-wrench",
+      "match": "filter wrench",
+      "title": "Strap filter wrench",
+      "uses": "Grips and loosens round oil and fuel filters and jar lids using a strap — in vehicle and machinery servicing.",
+      "how": [
+        "Loop the strap around the filter close to its base.",
+        "Pull the handle so the strap tightens and turn anticlockwise to loosen."
+      ]
+    },
+    {
+      "id": "slugging",
+      "match": "slugging",
+      "title": "Slugging spanner",
+      "uses": "A heavy spanner with a striking face that is hit with a hammer to tighten or loosen large, very tight nuts and bolts — flanges, heavy machinery, structural and plant maintenance.",
+      "how": [
+        "Fit the spanner fully onto the nut.",
+        "Strike the striking face squarely with a sledge or club hammer."
+      ],
+      "tips": [
+        "Wear eye protection and keep others clear."
+      ]
+    },
+    {
+      "id": "box-spanner",
+      "match": "box spanner|tubular|l spanner|cross rim",
+      "title": "Box / tubular / L spanner",
+      "uses": "Reaches recessed or deep nuts that open spanners can't — spark plugs, long studs, wheel nuts (cross rim wrench) and machinery nuts. Box and tubular spanners are turned with a tommy bar.",
+      "how": [
+        "Fit the spanner over the nut fully.",
+        "Turn with the tommy bar or handle, keeping it in line with the bolt."
+      ]
+    },
+    {
+      "id": "ring-spanner",
+      "match": "ring spanner",
+      "title": "Ring spanner",
+      "uses": "Grips a nut or bolt head all the way round, so it is less likely to slip or round off — good for tight or rusted fasteners in mechanical maintenance and automobile work.",
+      "how": [
+        "Fit the ring fully over the nut.",
+        "Pull the handle steadily; the offset gives knuckle clearance."
+      ]
+    },
+    {
+      "id": "open-jaw",
+      "match": "open jaw|single ended",
+      "title": "Open jaw spanner",
+      "uses": "Fits nuts and bolts from the side — useful where a ring can't be slid over, such as pipe union nuts and brake lines — in maintenance, automobile and fitting work.",
+      "how": [
+        "Fit the jaws fully onto the flats.",
+        "Pull rather than push, and flip the spanner over to get a new angle in tight spaces."
+      ]
+    },
+    {
+      "id": "combination",
+      "match": "combination spanner|gear wrench|half moon",
+      "title": "Combination spanner",
+      "uses": "Open jaw at one end and a ring at the other in the same size — use the ring to break a nut loose and the open end to run it off quickly. Gear (ratcheting) types turn without lifting off the nut; half moon spanners reach awkward nuts.",
+      "how": [
+        "Use the ring end for the first turn and final tightening.",
+        "Use the open end for quick turning once the nut is free."
+      ]
+    },
+    {
+      "id": "torx",
+      "match": "torx",
+      "title": "Torx key / driver",
+      "uses": "Turns Torx (six-point star) screws used in automobiles, electronics, appliances and machinery.",
+      "how": [
+        "Choose the exact Torx size so the tip fills the recess.",
+        "Push in fully and turn steadily."
+      ]
+    },
+    {
+      "id": "allen",
+      "match": "allen|hex key|t - handle|t-handle hex|folding type keys",
+      "title": "Allen key (hex key)",
+      "uses": "Turns hex socket screws — socket head cap screws, grub screws and set screws — in machinery, furniture, bicycles and automobiles. Ball point ends let you turn at an angle; T-handles give extra grip and speed.",
+      "how": [
+        "Use the exact size (metric or inch) and insert it fully.",
+        "Use the short arm for torque and the long arm for speed.",
+        "Use the straight end, not the ball end, for final tightening."
+      ]
+    },
+    {
+      "id": "circlip",
+      "match": "circlip|snap ring",
+      "title": "Circlip pliers",
+      "uses": "Fit and remove circlips (retaining rings) on shafts (external) and in bores (internal) — in bearing, gearbox and machinery assembly.",
+      "how": [
+        "Choose internal or external type and the right tip size.",
+        "Insert the tips in the circlip's holes, squeeze or open, and lift it out of the groove."
+      ],
+      "tips": [
+        "Circlips can spring off — wear eye protection."
+      ]
+    },
+    {
+      "id": "vde",
+      "match": "\\bvde\\b",
+      "title": "VDE insulated pliers",
+      "uses": "Fully insulated pliers for electrical work near live parts, tested to the VDE standard — the voltage rating is marked on the tool.",
+      "how": [
+        "Check the insulation for cuts or damage before each use.",
+        "Work within the voltage rating marked on the tool."
+      ],
+      "tips": [
+        "Isolate the supply whenever possible; insulated tools are a second line of protection."
+      ]
+    },
+    {
+      "id": "long-nose",
+      "match": "long nose|bent nose|mini pliers|jewellery|long reach",
+      "title": "Long nose / mini pliers",
+      "uses": "Reach into tight spaces to hold, bend and position small parts and wires — electrical and electronics work, jewellery, instrument and panel wiring.",
+      "how": [
+        "Grip close to the tip for fine work and nearer the joint for more force.",
+        "Use the side cutter (where present) for thin wire only."
+      ]
+    },
+    {
+      "id": "water-pump",
+      "match": "water pump|slip joint",
+      "title": "Water pump / slip joint pliers",
+      "uses": "Pliers with adjustable jaw width for gripping pipes, nuts and round parts — plumbing, automobile and maintenance work.",
+      "how": [
+        "Set the jaw opening to suit the part.",
+        "Grip and turn, keeping the jaws square on the work."
+      ]
+    },
+    {
+      "id": "locking",
+      "match": "locking pliers",
+      "title": "Locking pliers",
+      "uses": "Lock onto a part like a hand-held clamp — for holding work while welding or drilling, gripping rounded nuts and stuck bolts.",
+      "how": [
+        "Set the jaw gap with the adjusting screw.",
+        "Squeeze the handles until they lock; press the release lever to open."
+      ]
+    },
+    {
+      "id": "pincer",
+      "match": "pincer",
+      "title": "Pincers",
+      "uses": "Pull out nails and pins and cut wire — in carpentry, packing, construction and general maintenance.",
+      "how": [
+        "Grip the nail head close to the surface.",
+        "Roll the pincers over their curved head to lever the nail out."
+      ]
+    },
+    {
+      "id": "nipper",
+      "match": "nipper|plastic cutting",
+      "title": "Nippers / end cutters",
+      "uses": "Cut wire, plastic and soft metal flush to a surface — electrical, electronics and moulding work.",
+      "how": [
+        "Place the cutting edges at the cut point and squeeze firmly.",
+        "Cut only materials within the tool's stated capacity."
+      ]
+    },
+    {
+      "id": "fencing",
+      "match": "fencing pliers",
+      "title": "Fencing pliers",
+      "uses": "A multi-purpose tool for fencing work — cutting and twisting wire, pulling staples and hammering.",
+      "how": [
+        "Use the cutters for wire and the hammer face for staples."
+      ]
+    },
+    {
+      "id": "stripper",
+      "match": "strip",
+      "category": [
+        "pliers-cutting-tools"
+      ],
+      "title": "Wire stripper",
+      "uses": "Removes the insulation from electrical wires without nicking the copper — for electricians and panel wiring.",
+      "how": [
+        "Select the notch or setting for the wire size.",
+        "Close on the wire and pull to strip the insulation."
+      ]
+    },
+    {
+      "id": "combination-pliers",
+      "match": "plier",
+      "category": [
+        "pliers-cutting-tools"
+      ],
+      "title": "Combination pliers",
+      "uses": "The everyday pliers for gripping, bending, twisting and cutting wires — for electricians, fitters and general maintenance.",
+      "how": [
+        "Grip with the serrated jaws, cut with the side cutter near the joint.",
+        "Don't use pliers on nuts — use a spanner."
+      ],
+      "tips": [
+        "Plastic handle sleeves are for comfort; only VDE-rated pliers are for live electrical work."
+      ]
+    },
+    {
+      "id": "crimping",
+      "match": "crimping",
+      "title": "Crimping tool",
+      "uses": "Crimps lugs, terminals and connectors onto cable ends to make secure electrical connections.",
+      "how": [
+        "Strip the cable to the terminal's length and insert it fully.",
+        "Place it in the matching die and squeeze until the tool closes completely."
+      ]
+    },
+    {
+      "id": "bolt-cutter",
+      "match": "bolt cutter",
+      "title": "Bolt cutter",
+      "uses": "Cuts bolts, rods, wire mesh, chain and padlocks — in construction, fabrication and maintenance.",
+      "how": [
+        "Put the material deep in the jaws, close to the pivot.",
+        "Close the handles with a steady squeeze; cut only within the stated capacity."
+      ]
+    },
+    {
+      "id": "cable-cutter",
+      "match": "cable cutter|wire rope cutter",
+      "title": "Cable / wire rope cutter",
+      "uses": "Cut copper and aluminium cables (cable cutters) or steel wire rope (wire rope cutters) cleanly without crushing the strands.",
+      "how": [
+        "Place the cable fully in the cutting jaws.",
+        "Cut with a steady squeeze; tape wire rope ends first to stop fraying."
+      ]
+    },
+    {
+      "id": "tin-cutter",
+      "match": "tin cutter|aviation",
+      "title": "Tin / aviation snips",
+      "uses": "Cut thin sheet metal, tin, aluminium and HVAC ducting — straight or curved cuts.",
+      "how": [
+        "Open fully and take long cuts, keeping the blades square to the sheet.",
+        "Wear gloves — cut edges are sharp."
+      ]
+    },
+    {
+      "id": "pruning",
+      "match": "pruning",
+      "title": "Pruning shear",
+      "uses": "Cuts branches, stems and plants in gardening and landscaping.",
+      "how": [
+        "Cut with the blade side towards the part you keep for a clean cut."
+      ]
+    },
+    {
+      "id": "insulation-tape",
+      "match": "insulation tape",
+      "title": "PVC insulation tape",
+      "uses": "Insulates and protects electrical joints and cable repairs, and is used for colour coding wires.",
+      "how": [
+        "Stretch the tape slightly and wrap with half-overlaps, starting beyond the joint."
+      ]
+    },
+    {
+      "id": "pipe-cutter",
+      "match": "pvc plastic pipe|pipe cutter",
+      "title": "PVC pipe cutter",
+      "uses": "Cuts PVC and plastic pipes squarely and cleanly — for plumbing and electrical conduit work.",
+      "how": [
+        "Mark the length, place the pipe in the jaw and squeeze, rotating slightly as you cut."
+      ]
+    },
+    {
+      "id": "knife",
+      "match": "snap off|utility knife|spare blade for",
+      "title": "Snap-off cutter / utility knife",
+      "uses": "A sharp knife for cutting cartons, tape, gaskets, carpet, cable sheaths and packaging. Snap-off blades give a fresh edge when you break off the used segment.",
+      "how": [
+        "Extend only as much blade as you need and cut away from your body.",
+        "Snap off a dull segment with the tool's snapper or pliers."
+      ]
+    },
+    {
+      "id": "hacksaw",
+      "match": "hacksaw",
+      "title": "Hacksaw frame and blades",
+      "uses": "Cuts metal rods, pipes, bolts, angles and plastic by hand — in fitting, plumbing and maintenance. Bi-metal blades last longer and resist breaking; all-hard carbon blades suit straight, accurate cuts.",
+      "how": [
+        "Fit the blade with the teeth pointing forward, away from the handle, and tension it firmly.",
+        "Use the full length of the blade with steady strokes; press on the forward stroke only."
+      ]
+    },
+    {
+      "id": "line-tester",
+      "match": "tester",
+      "category": [
+        "screwdrivers-bits"
+      ],
+      "title": "Line tester",
+      "uses": "Shows whether a socket, switch or wire is live. Neon testers light up; digital testers also show an approximate voltage.",
+      "how": [
+        "Check the tester on a known live point first.",
+        "Touch the tip to the point being tested with your finger on the end cap (neon type)."
+      ],
+      "tips": [
+        "A tester is a quick check only — switch off and isolate the supply before working on wiring."
+      ]
+    },
+    {
+      "id": "bit-driver",
+      "match": "bit driver|bit set|bits set|bit sets|driver bit",
+      "category": [
+        "screwdrivers-bits"
+      ],
+      "title": "Screwdriver bits & bit drivers",
+      "uses": "Interchangeable screwdriver bits (Phillips, flat, Pozidriv, Torx, hex) used in a bit driver handle, cordless drill or impact driver — one handle covers many screw types. Impact bits are made for impact drivers.",
+      "how": [
+        "Pick the bit that exactly fits the screw head.",
+        "Push the bit fully into the magnetic holder or chuck.",
+        "Keep the bit in line with the screw and press firmly while turning."
+      ]
+    },
+    {
+      "id": "bits",
+      "match": "\\bbits?\\b",
+      "category": [
+        "screwdrivers-bits"
+      ],
+      "title": "Screwdriver bits",
+      "uses": "Interchangeable screwdriver bits for bit drivers, cordless drills and impact drivers.",
+      "how": [
+        "Choose the bit that fits the screw head exactly and press firmly while turning."
+      ]
+    },
+    {
+      "id": "screwdriver",
+      "match": "screw ?driver|screwdriver",
+      "title": "Screwdriver",
+      "uses": "Drives and removes screws. Flat and Phillips are the most common tips; insulated screwdrivers are for electrical work, two-in-one types have a reversible blade, stubby ones fit tight spaces, striking types can be tapped with a hammer to free stuck screws, and precision sets are for electronics.",
+      "how": [
+        "Choose the tip type and size that fills the screw head.",
+        "Press firmly in line with the screw and turn."
+      ],
+      "tips": [
+        "Don't use a screwdriver as a chisel or lever (except striking types, which are made for hammer blows)."
+      ]
+    },
+    {
+      "id": "socket-wrench",
+      "match": "t socket wrench|double side socket wrench",
+      "title": "Socket wrench",
+      "uses": "A one-piece socket wrench for quickly turning nuts and bolts — common in automobile and two-wheeler repair.",
+      "how": [
+        "Fit the socket end fully over the nut and turn with the handle."
+      ]
+    },
+    {
+      "id": "socket-accessories",
+      "match": "socket accessor|universal joint|sliding t|driver extension|speed handle",
+      "title": "Socket accessories",
+      "uses": "Ratchet handles, extension bars, universal joints, sliding T-bars, speed handles and adaptors that drive sockets — to reach deep or awkward nuts and turn them faster.",
+      "how": [
+        "Match the accessory's square drive size to your sockets.",
+        "Use a breaker bar or T-bar for tight nuts and the ratchet for quick turning."
+      ]
+    },
+    {
+      "id": "socket",
+      "match": "socket",
+      "category": [
+        "sockets-accessories",
+        "non-sparking-tools"
+      ],
+      "title": "Socket",
+      "uses": "Sockets fit on ratchets, T-bars and extensions to tighten and loosen nuts and bolts quickly — in automobile, machinery and plant maintenance. Drive size: 1/4\" for small fasteners, 3/8\" and 1/2\" for general and automobile work, 3/4\" and 1\" for heavy vehicles and industry. Deep sockets reach long studs, impact sockets are for impact wrenches, and bit, spark plug, wheel and E-sockets suit special fasteners.",
+      "how": [
+        "Pick the socket size and drive size that match the nut and your handle.",
+        "Push the socket fully onto the nut and turn with a ratchet or bar.",
+        "Use only impact sockets on impact wrenches."
+      ]
+    },
+    {
+      "id": "hammer",
+      "match": "hammer",
+      "category": [
+        "hammers-chisels-files"
+      ],
+      "title": "Hammer",
+      "uses": "Ball pein hammers are for metal work, riveting and punching; claw hammers for driving and pulling nails in carpentry; club hammers for chisels and masonry; sledge hammers for heavy blows, demolition and slugging spanners; soft faced hammers to tap parts into place without marking them; electrician hammers for light fixing work.",
+      "how": [
+        "Check the head is tight on the handle before use.",
+        "Grip near the end of the handle and strike squarely with the face."
+      ],
+      "tips": [
+        "Wear eye protection; replace cracked handles and chipped faces."
+      ]
+    },
+    {
+      "id": "wood-chisel",
+      "match": "beveled edge|bevelled edge|wood working chisel",
+      "title": "Wood chisel",
+      "uses": "Pares, shapes and cuts joints (mortises, dovetails, recesses) in wood — carpentry and joinery.",
+      "how": [
+        "Keep the edge sharp and cut with the grain.",
+        "Tap with a mallet for heavy cuts; pare by hand for fine work."
+      ]
+    },
+    {
+      "id": "chisel",
+      "match": "chisel",
+      "category": [
+        "hammers-chisels-files"
+      ],
+      "title": "Cold chisel",
+      "uses": "Cuts and chips metal — removing rivets and bolts, cutting sheet and bar, chipping welds and castings, and masonry work.",
+      "how": [
+        "Hold the chisel at a low angle to the work.",
+        "Strike the head with a ball pein or club hammer, keeping your eyes on the cutting edge."
+      ],
+      "tips": [
+        "Grind off a mushroomed head — the burrs can fly off."
+      ]
+    },
+    {
+      "id": "leather-punch",
+      "match": "leather punch",
+      "title": "Leather punch",
+      "uses": "Punches clean round holes in leather, belts, gaskets, rubber and fabric.",
+      "how": [
+        "Place the material on wood or a punching board.",
+        "Hold the punch upright and strike with a hammer."
+      ]
+    },
+    {
+      "id": "punch",
+      "match": "punch",
+      "category": [
+        "hammers-chisels-files"
+      ],
+      "title": "Centre & drift punch",
+      "uses": "Centre punches make a small dent so a drill starts exactly where marked; drift and pin punches drive pins, rivets and keys in or out.",
+      "how": [
+        "Hold the punch upright on the mark.",
+        "Strike once with a hammer."
+      ]
+    },
+    {
+      "id": "axe",
+      "match": "\\baxe\\b",
+      "title": "Axe",
+      "uses": "Chops and splits wood — for site clearing, firewood and carpentry.",
+      "how": [
+        "Keep a firm two-handed grip and a clear area around you.",
+        "Keep the edge sharp and the head tight."
+      ]
+    },
+    {
+      "id": "file",
+      "match": "\\bfiles?\\b|rasp",
+      "title": "File",
+      "uses": "Shapes, smooths and deburrs metal by hand. Flat and hand files are for flat surfaces, half round and round files for curves and holes, square and three square files for corners and slots, knife and needle files for fine detail; rasps are for wood; saw files sharpen saw teeth.",
+      "how": [
+        "Always use the file with a handle.",
+        "Cut on the forward stroke and lift slightly on the return.",
+        "Clean the teeth with a file card."
+      ]
+    },
+    {
+      "id": "plane",
+      "match": "jack plane|block plane|spoke shave",
+      "title": "Plane / spoke shave",
+      "uses": "Planes smooth and flatten wood surfaces and edges (jack plane for general work, block plane for end grain and small pieces); a spoke shave shapes curves.",
+      "how": [
+        "Set a shallow blade depth and plane with the grain.",
+        "Keep the blade sharp; replacement blades are listed separately."
+      ]
+    },
+    {
+      "id": "bench-vice",
+      "match": "bench vice",
+      "title": "Bench vice",
+      "uses": "Holds work firmly on a workbench for filing, sawing, drilling, bending and assembly.",
+      "how": [
+        "Bolt the vice securely to a solid bench.",
+        "Tighten by hand using the handle only — no hammer or pipe extension."
+      ]
+    },
+    {
+      "id": "pipe-vice",
+      "match": "pipe vice",
+      "title": "Pipe vice",
+      "uses": "Holds pipes securely for cutting, threading and fitting — in plumbing and pipe work.",
+      "how": [
+        "Mount it on a bench or stand.",
+        "Close the jaws on the pipe and lock the frame."
+      ]
+    },
+    {
+      "id": "c-f-clamp",
+      "match": "c - clamp|f - clamp|c-clamp|f-clamp",
+      "title": "C-clamp / F-clamp",
+      "uses": "Hold workpieces together or to a bench for welding, drilling, gluing and assembly. F-clamps open wide quickly; C-clamps give a strong grip in a compact frame.",
+      "how": [
+        "Position the clamp and tighten the screw by hand.",
+        "Use packing to protect finished surfaces."
+      ]
+    },
+    {
+      "id": "magnetic",
+      "match": "magnetic products",
+      "title": "Magnetic tools",
+      "uses": "Magnetic pick-ups and holders for retrieving dropped screws and parts and holding work or tools in place.",
+      "how": [
+        "Keep them away from electronics and magnetic media."
+      ]
+    },
+    {
+      "id": "puller",
+      "match": "puller",
+      "category": [
+        "workshop-equipment"
+      ],
+      "title": "Bearing puller",
+      "uses": "Removes bearings, gears, pulleys and couplings from shafts without damaging them — in machinery and automobile repair.",
+      "how": [
+        "Hook the jaws behind the part, square to the shaft.",
+        "Centre the screw on the shaft end and tighten it to draw the part off."
+      ]
+    },
+    {
+      "id": "tool-storage",
+      "match": "tool bag|tool box|tools trolley|backpack|cantilever|organizer",
+      "title": "Tool bag / box / trolley",
+      "uses": "Store, organise and carry tools — on site, in the workshop and for field service.",
+      "how": [
+        "Keep heavy tools at the bottom and the most-used tools on top or in front."
+      ]
+    },
+    {
+      "id": "tool-kit",
+      "match": "tool kit|universal set|plumber",
+      "title": "Tool kit",
+      "uses": "Ready-made sets of commonly used hand tools — for maintenance, plumbing, two-wheelers, automobiles and home use — in one box or case.",
+      "how": [
+        "Check the kit's contents list against the job you have."
+      ]
+    },
+    {
+      "id": "grease",
+      "match": "grease|oil pump|barrel pump",
+      "title": "Grease gun / oil pump",
+      "uses": "Grease guns force grease into machine grease nipples; hand oil pumps and barrel pumps transfer oil from drums and cans — for vehicle and machinery lubrication.",
+      "how": [
+        "Wipe the nipple clean, push the coupler on and pump until fresh grease appears.",
+        "For barrel pumps, fit the pump in the drum bung and pump into a clean container."
+      ]
+    },
+    {
+      "id": "jack-stand",
+      "match": "jack stand",
+      "title": "Jack stand",
+      "uses": "Safely supports a vehicle or load after it has been raised with a jack.",
+      "how": [
+        "Raise the vehicle with a jack, place the stands under strong support points and lower onto them.",
+        "Lock the stand's height pin before getting under."
+      ]
+    },
+    {
+      "id": "jack",
+      "match": "jack",
+      "category": [
+        "workshop-equipment"
+      ],
+      "title": "Hydraulic jack",
+      "uses": "Lifts vehicles, machinery and heavy loads. Bottle jacks are compact and lift vertically; trolley jacks roll under low vehicles and lift quickly.",
+      "how": [
+        "Use on firm, level ground with the load's wheels chocked.",
+        "Place the saddle under a strong lifting point and pump the handle.",
+        "Open the release valve slowly to lower."
+      ],
+      "tips": [
+        "Never work under a load held only by a jack — always use jack stands."
+      ]
+    },
+    {
+      "id": "caliper",
+      "match": "caliper|divider",
+      "title": "Calipers & spring dividers",
+      "uses": "Transfer and compare measurements (inside and outside calipers) and scribe circles and arcs (dividers) in fitting and layout work.",
+      "how": [
+        "Set the legs to the part, then read the size against a steel rule.",
+        "For marking, set the divider to the radius and scribe from a centre-punch mark."
+      ]
+    },
+    {
+      "id": "riveter",
+      "match": "riveter",
+      "title": "Hand riveter",
+      "uses": "Sets blind (pop) rivets to join sheet metal, aluminium and plastic from one side — fabrication, ducting and repair work.",
+      "how": [
+        "Drill a hole of the rivet's size through both sheets.",
+        "Fit the rivet's mandrel into the nozzle, push the rivet into the hole and squeeze until the mandrel snaps."
+      ]
+    },
+    {
+      "id": "spirit-level",
+      "match": "spirit level",
+      "title": "Spirit level",
+      "uses": "Checks whether surfaces, machines and installations are level (horizontal) or plumb (vertical). Magnetic levels stick to steel.",
+      "how": [
+        "Place it on the surface and read the bubble between the lines.",
+        "Turn it end for end to double-check."
+      ]
+    },
+    {
+      "id": "chalk-line",
+      "match": "chalk line",
+      "title": "Chalk line reel",
+      "uses": "Marks long, straight lines on floors, walls, boards and sheets for cutting and installation.",
+      "how": [
+        "Hook the line at one end, pull it tight to the other mark.",
+        "Lift the line in the middle and let it snap onto the surface."
+      ]
+    },
+    {
+      "id": "cup-wheel",
+      "match": "cup wheel",
+      "title": "Diamond cup wheel",
+      "uses": "Grinds and levels concrete, stone and granite surfaces on an angle grinder — removing high spots, coatings and edges.",
+      "how": [
+        "Fit on an angle grinder with the guard on and the correct arbor.",
+        "Keep the wheel flat and moving."
+      ],
+      "tips": [
+        "Wear eye, ear and dust protection; check the wheel's maximum speed."
+      ]
+    },
+    {
+      "id": "diamond-blade",
+      "match": "diamond|tile cutter|granite",
+      "category": [
+        "power-tool-accessories"
+      ],
+      "title": "Diamond / tile / granite cutting blade",
+      "uses": "Cut concrete, brick, tiles, marble and granite with an angle grinder or marble cutter. Segmented blades cut fast (dry), continuous rim blades give clean chip-free tile cuts (often wet), turbo blades balance speed and finish.",
+      "how": [
+        "Check the blade's bore and maximum speed suit your machine.",
+        "Fit it with the arrow matching the machine's rotation and keep the guard on.",
+        "Let the blade cut at its own pace; use water if the blade is meant for wet cutting."
+      ],
+      "tips": [
+        "Wear eye, ear and dust protection."
+      ]
+    },
+    {
+      "id": "wood-blade",
+      "match": "wood cutting blade",
+      "title": "TCT wood cutting blade",
+      "uses": "A carbide-tipped circular saw blade for cutting wood, plywood, MDF and laminates.",
+      "how": [
+        "Match the blade size, bore and rotation arrow to the saw.",
+        "Feed steadily and keep the guard in place."
+      ]
+    },
+    {
+      "id": "cut-off",
+      "match": "cut off wheel",
+      "title": "Cut-off wheel",
+      "uses": "Thin abrasive wheels for angle grinders and chop saws that cut steel rods, pipes, sheets, angles and stainless steel in fabrication and maintenance.",
+      "how": [
+        "Check the wheel size, bore and maximum speed suit the grinder.",
+        "Keep the guard on and cut straight — never grind with the side of a cutting wheel."
+      ],
+      "tips": [
+        "Wear a face shield, gloves and ear protection."
+      ]
+    },
+    {
+      "id": "abrasive",
+      "match": "abrasive|velcro disc|latex paper",
+      "title": "Abrasive paper / velcro disc",
+      "uses": "Sanding and finishing of wood, metal, paint and filler — by hand or on sanders with hook-and-loop (velcro) pads.",
+      "how": [
+        "Start with a coarse grit and move to finer grits for a smooth finish."
+      ],
+      "category": [
+        "power-tool-accessories"
+      ]
+    },
+    {
+      "id": "hole-saw",
+      "match": "hole saw",
+      "title": "Hole saw",
+      "uses": "Cuts round holes in wood, plastic, sheet metal and (with carbide tips) harder materials — for pipes, cables, locks and fittings. Used in a drill with an arbor and pilot drill.",
+      "how": [
+        "Fit the hole saw on its arbor with the pilot drill.",
+        "Drill slowly for metal, with lubricant; let the pilot guide the start.",
+        "Back out now and then to clear chips and dust."
+      ]
+    },
+    {
+      "id": "chain-pulley-block",
+      "match": "chain pulley block",
+      "title": "Chain pulley block (chain hoist)",
+      "uses": "A manual hoist that lifts heavy loads vertically when you pull the hand chain — in workshops, factories, warehouses, construction sites, machine installation and maintenance. It hangs from a beam, gantry, tripod or trolley.",
+      "how": [
+        "Inspect the hooks, load chain and brake before use.",
+        "Hang it from a support that is rated for the load.",
+        "Hook the load centrally with the safety latch closed, then pull the hand chain steadily to lift or lower."
+      ],
+      "tips": [
+        "Never exceed the capacity marked on the block, never side-pull, and never stand or work under a suspended load."
+      ]
+    },
+    {
+      "id": "electric-hoist",
+      "match": "electric chain hoist",
+      "title": "Electric chain hoist",
+      "uses": "A motorised chain hoist for frequent or heavier lifting — production lines, workshops, warehouses and maintenance bays. It can run on an electric trolley along an I-beam.",
+      "how": [
+        "Have it installed and wired by a qualified person on a rated support.",
+        "Test the up/down and emergency stop buttons before each shift.",
+        "Lift smoothly with the load centred under the hoist."
+      ],
+      "tips": [
+        "Stay within the rated capacity and never lift people or pass loads over people."
+      ]
+    },
+    {
+      "id": "electric-trolley",
+      "match": "electric trolley",
+      "title": "Electric trolley",
+      "uses": "A motorised trolley that runs along the flange of an I-beam, moving an electric hoist and its load horizontally.",
+      "how": [
+        "Set the trolley width to the beam flange as per its manual.",
+        "Fit end stops on the beam and test travel before lifting."
+      ]
+    },
+    {
+      "id": "lever-hoist",
+      "match": "lever hoist",
+      "title": "Ratchet lever hoist",
+      "uses": "A compact, portable hoist worked by a ratchet lever for lifting, pulling and tensioning in any direction — positioning machinery, pulling loads, tensioning lines and maintenance in tight spaces.",
+      "how": [
+        "Anchor the top hook to a rated point and attach the load.",
+        "Set the selector to lift (up) and work the lever; switch to lower to release."
+      ],
+      "tips": [
+        "Never extend the lever with a pipe and never exceed the rated capacity."
+      ]
+    },
+    {
+      "id": "gear-trolley",
+      "match": "gear trolley",
+      "title": "Geared trolley",
+      "uses": "Runs on the bottom flange of an I-beam to move a chain pulley block and its load horizontally; the hand chain drives it for smooth, controlled travel.",
+      "how": [
+        "Adjust the side plates to the beam's flange width with the spacer washers.",
+        "Fit end stops on the beam, hang the hoist from the trolley and test travel without load."
+      ]
+    },
+    {
+      "id": "pulling",
+      "match": "pulling & lifting|cable puller",
+      "title": "Pulling & lifting machine / cable puller",
+      "uses": "Pulls, lifts and tensions loads with wire rope over long distances — moving machinery, pulling vehicles, tensioning cables and erection work.",
+      "how": [
+        "Anchor the machine to a rated point and thread the wire rope through it.",
+        "Work the forward lever to pull and the reverse lever to release."
+      ],
+      "tips": [
+        "Use only the rope type made for the machine; stay clear of the rope line under load."
+      ]
+    },
+    {
+      "id": "spring-balancer",
+      "match": "spring balancer",
+      "title": "Spring balancer",
+      "uses": "Hangs hand tools — drills, screwdrivers, nut runners, welding guns — at the workstation and balances their weight, so operators work with less effort and tools stay within reach. Common on assembly lines.",
+      "how": [
+        "Hang it from an overhead rail or hook with a safety chain.",
+        "Attach the tool and adjust the spring tension until the tool floats at the working height."
+      ],
+      "tips": [
+        "Choose a balancer whose load range covers the tool's weight."
+      ]
+    },
+    {
+      "id": "pulley-block",
+      "match": "pulley block|rope pulley",
+      "title": "Rope pulley block",
+      "uses": "Sheave blocks that change the direction of a wire rope or manila rope, or give mechanical advantage — for rigging, erection, construction and hauling.",
+      "how": [
+        "Match the sheave groove to the rope size.",
+        "Anchor or hang the block from a rated point and reeve the rope through the sheave."
+      ]
+    },
+    {
+      "id": "webbing-sling",
+      "match": "webbing sling|round sling",
+      "title": "Polyester webbing / round sling",
+      "uses": "Soft, light lifting slings for crane and hoist lifting that don't scratch or dent finished, painted or delicate loads — machinery, pipes, steel, glass and fabricated parts. They are colour coded by capacity.",
+      "how": [
+        "Check the label and look for cuts, burns or broken stitching before each lift.",
+        "Choose a sling whose capacity suits the load and the hitch (vertical, choke or basket) and angle.",
+        "Use protection sleeves on sharp edges and lift smoothly."
+      ],
+      "tips": [
+        "Never knot a sling, drag it on the ground or leave the load resting on it."
+      ],
+      "category": [
+        "slings-lashing"
+      ]
+    },
+    {
+      "id": "sling-protection",
+      "match": "sleeve|edge protector",
+      "category": [
+        "slings-lashing"
+      ],
+      "title": "Sling sleeve / edge protector",
+      "uses": "Protect webbing slings, round slings and wire ropes from being cut or worn where they pass over sharp edges and corners of the load.",
+      "how": [
+        "Fit the sleeve or protector exactly where the sling touches the sharp edge before lifting."
+      ]
+    },
+    {
+      "id": "lashing",
+      "match": "lashing|load binder",
+      "title": "Cargo lashing / load binder",
+      "uses": "Secures cargo on trucks, trailers, containers and ships so it can't shift in transit. Ratchet lashings tension polyester straps; load binders tension lashing chains.",
+      "how": [
+        "Hook the ends to proper lashing points and route the strap or chain over the load.",
+        "Tighten with the ratchet or binder handle and lock it.",
+        "Re-check the tension during the journey."
+      ],
+      "tips": [
+        "Lashing straps are for securing loads, not for lifting."
+      ]
+    },
+    {
+      "id": "lifting-chain",
+      "match": "lifting chain",
+      "title": "G80 alloy lifting chain",
+      "uses": "Grade 80 alloy steel chain for making chain slings and rigging assemblies for overhead lifting — used with G80 hooks, master links and connecting links.",
+      "how": [
+        "Assemble only with fittings of the same grade and size.",
+        "Inspect links for stretch, nicks, cracks and wear before use."
+      ],
+      "tips": [
+        "Never use ordinary (non-lifting) chain for overhead lifting."
+      ]
+    },
+    {
+      "id": "shackle",
+      "match": "shackle",
+      "title": "Shackle",
+      "uses": "A removable link that joins slings, chains, hooks and lifting points. Dee shackles suit straight in-line pulls; bow shackles take loads from several directions (multi-leg slings). Screw pin types are for temporary rigging; nut-bolt types for long-term or rotating set-ups.",
+      "how": [
+        "Check the working load limit marked on the shackle body.",
+        "Screw the pin fully home (or fit the nut and split pin) before lifting.",
+        "Load the shackle in line with its body — avoid side loading."
+      ]
+    },
+    {
+      "id": "hook",
+      "match": "hook",
+      "category": [
+        "lifting-chain-rigging"
+      ],
+      "title": "Lifting hook",
+      "uses": "Hooks connect chain slings, hoists and lifting gear to the load. Self-locking hooks stay closed under load, clevis hooks pin straight onto chain, eye hooks fit master links and shackles, grab and shortening hooks adjust chain length, foundry hooks have a wide throat for ladles and moulds, and container hooks fit ISO container corner castings.",
+      "how": [
+        "Use hooks of the same grade as the chain and keep the safety latch closed.",
+        "Seat the load in the bottom of the hook — never on the tip.",
+        "Retire hooks that are bent, opened up or cracked."
+      ]
+    },
+    {
+      "id": "master-link",
+      "match": "master link",
+      "title": "Master link / assembly",
+      "uses": "The top link of a chain or webbing sling that goes onto the crane or hoist hook; assemblies with sub-links make two- and four-leg slings.",
+      "how": [
+        "Choose a master link large enough for the crane hook and of the same grade as the chain.",
+        "Seat it fully in the crane hook before lifting."
+      ]
+    },
+    {
+      "id": "connecting",
+      "match": "connecting link|swivel|chain shortener",
+      "title": "Connecting link / swivel / shortener",
+      "uses": "Connecting links join chain to hooks and master links; swivels let the load turn without twisting the sling; chain shorteners adjust a leg's length.",
+      "how": [
+        "Use the same grade and size as the chain.",
+        "Fit the load pin and its retaining pin fully."
+      ]
+    },
+    {
+      "id": "weld-on",
+      "match": "weld on",
+      "title": "Weld-on ring / hook",
+      "uses": "Welded onto equipment, structures, trailers and containers to make permanent lifting or lashing points.",
+      "how": [
+        "Have it welded by a qualified welder following the fitting's welding instructions.",
+        "Inspect the weld before first use and regularly afterwards."
+      ]
+    },
+    {
+      "id": "wire-rope-clamp",
+      "match": "wire rope clamp",
+      "title": "Wire rope clamp",
+      "uses": "Forms an eye or joins wire rope ends — for guy ropes, fencing, rigging and winch lines.",
+      "how": [
+        "Use the number of clamps the rope size needs.",
+        "Put the saddle on the live (load) side and the U-bolt on the dead end.",
+        "Tighten the nuts evenly and re-tighten after the first load."
+      ]
+    },
+    {
+      "id": "eye-bolt",
+      "match": "eye bolt",
+      "title": "Eye bolt",
+      "uses": "Screws into tapped holes in machines, motors, moulds and equipment to make a lifting point. DIN 580 eye bolts are for straight (axial) lifts; rotating eye bolts swivel to take angled lifts.",
+      "how": [
+        "Screw the eye bolt in fully so the collar sits flat on the surface.",
+        "Lift in line with the bolt; for angled lifts, use a rotating eye bolt or reduce the load as the eye bolt's chart shows."
+      ]
+    },
+    {
+      "id": "turnbuckle",
+      "match": "turnbuckle",
+      "title": "Turnbuckle",
+      "uses": "Adjusts the tension and length of wire ropes, stays, guy wires and rigging.",
+      "how": [
+        "Connect both ends, then turn the body to tighten.",
+        "Lock it with a lock nut or wire once tensioned."
+      ]
+    },
+    {
+      "id": "drum-trolley",
+      "match": "drum trolley|drum lifter cum tilter",
+      "title": "Drum trolley / tilter",
+      "uses": "Moves and tilts oil and chemical drums around the plant or store — and holds them for pouring.",
+      "how": [
+        "Engage the drum's rim with the clamp and lock it.",
+        "Tilt back and wheel the drum; use the tilter to pour."
+      ]
+    },
+    {
+      "id": "drum-lifter",
+      "match": "drum lifter",
+      "title": "Drum lifter",
+      "uses": "Lifts steel drums by the rim with a crane or hoist — for loading, unloading and storage.",
+      "how": [
+        "Fit the jaws over the drum rim and check they are fully engaged.",
+        "Lift slowly and keep the drum low while moving."
+      ]
+    },
+    {
+      "id": "magnet",
+      "match": "magnet lifter|magnetic lifter",
+      "title": "Permanent magnet lifter",
+      "uses": "Lifts steel plates, blocks and round bars using a permanent magnet switched on and off with a lever — no electricity needed. Used in fabrication shops, machine shops and steel stores.",
+      "how": [
+        "Clean the contact area and place the magnet centrally on the load.",
+        "Turn the lever to ON and make sure it locks.",
+        "Lift, place the load down fully and then switch OFF."
+      ],
+      "tips": [
+        "Holding power drops on thin, rough, painted or curved steel — check the lifter's chart; never lift over people."
+      ]
+    },
+    {
+      "id": "plate-clamp",
+      "match": "plate (lifting )?clamp|lateral plate",
+      "title": "Plate lifting clamp",
+      "uses": "Grips steel plates for lifting with a crane or hoist. Horizontal clamps are used in pairs to lift plates flat; vertical clamps lift and turn plates from flat to upright; lateral and universal clamps suit other directions.",
+      "how": [
+        "Choose the clamp type for the lifting direction and check the plate thickness is within its jaw range.",
+        "Push the clamp fully onto the plate and lock the jaw.",
+        "Lift smoothly — no shock loads."
+      ],
+      "tips": [
+        "Don't lift more than one plate at a time unless the clamp is designed for it."
+      ]
+    },
+    {
+      "id": "beam-clamp",
+      "match": "beam clamp",
+      "title": "Beam clamp",
+      "uses": "Clamps onto the flange of an I-beam or girder to make a temporary anchor point for a chain pulley block, lever hoist or rigging.",
+      "how": [
+        "Adjust the jaws to the flange width and tighten the screw until they grip fully.",
+        "Hang the hoist from the clamp's shackle point, centred under the beam."
+      ]
+    },
+    {
+      "id": "pipe-clamp",
+      "match": "pipe lifting clamp",
+      "title": "Pipe lifting clamp",
+      "uses": "Grips pipes for lifting and positioning with a crane or hoist — pipeline and fabrication work.",
+      "how": [
+        "Fit the clamp around the pipe at its balance point and close the jaws.",
+        "Lift slowly and keep people clear."
+      ]
+    },
+    {
+      "id": "skates",
+      "match": "skates",
+      "title": "Industrial skates (machine dollies)",
+      "uses": "Roller platforms placed under heavy machines and equipment so they can be pushed and positioned over short distances — machine shifting and installation.",
+      "how": [
+        "Jack the machine up and place skates under its corners.",
+        "Lower it onto the skates and push slowly on smooth, level floors."
+      ]
+    },
+    {
+      "id": "scissor-pallet",
+      "match": "scissor lift pallet",
+      "title": "Scissor lift pallet truck",
+      "uses": "A pallet truck that also raises the pallet to a comfortable working height — for picking, packing and work at assembly stations.",
+      "how": [
+        "Lift only on level ground and with the load centred on the forks.",
+        "Don't move the truck while the load is raised high."
+      ]
+    },
+    {
+      "id": "pallet-truck",
+      "match": "pallet truck|rough terrain",
+      "title": "Hand pallet truck",
+      "uses": "Moves loaded pallets over short distances — in warehouses, godowns, shops, factories and on lorry beds. Rough terrain trucks have large wheels for uneven ground.",
+      "how": [
+        "Lower the forks fully and push them all the way under the pallet.",
+        "Set the lever to lift and pump the handle; set it to neutral to move.",
+        "Lift the lever to lower the load gently."
+      ],
+      "tips": [
+        "Stay within the rated capacity and spread the load evenly over both forks."
+      ]
+    },
+    {
+      "id": "stacker",
+      "match": "stacker",
+      "title": "Stacker",
+      "uses": "Lifts pallets and loads to stack them or place them on racks — warehouses, stores and loading areas. Hand stackers are pumped by hand; electric stackers lift with a motor.",
+      "how": [
+        "Centre the load on the forks and keep it low while moving.",
+        "Lift only when the stacker is stationary and in position."
+      ],
+      "tips": [
+        "Never lift people on the forks or exceed the capacity at the lift height."
+      ]
+    },
+    {
+      "id": "lifting-table",
+      "match": "lifting table",
+      "title": "Hydraulic lifting table",
+      "uses": "Raises loads to a comfortable working height — for assembly, loading machines and handling heavy parts without bending.",
+      "how": [
+        "Place the load centrally on the table.",
+        "Pump to raise and use the release to lower; lock the wheels before working."
+      ]
+    },
+    {
+      "id": "mesh-container",
+      "match": "wire mesh container",
+      "title": "Wire mesh container",
+      "uses": "Stackable, collapsible steel mesh cages for storing and moving parts in warehouses and factories.",
+      "how": [
+        "Stack only within the container's rated stacking load.",
+        "Fold flat for storage when empty."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+<section class="skp" role="dialog" aria-labelledby="skp-title" aria-describedby="skp-sub">
+  <header class="skp__head">
+    <span class="skp__avatar"><sti-sidekick-mascot crop="head" [size]="40" [mood]="chat.mood()" /></span>
+    <div class="skp__id">
+      <h2 id="skp-title" class="skp__title">Sidekick</h2>
+      <p id="skp-sub" class="skp__sub"><span class="skp__dot" aria-hidden="true"></span> {{ company.name }} product helper</p>
+    </div>
+    <button type="button" class="skp__icon" (click)="restart()" aria-label="Start a new chat" title="New chat">
+      <sti-icon name="rotate" [size]="18" />
+    </button>
+    <button type="button" class="skp__icon" (click)="close()" aria-label="Close chat" title="Close">
+      <sti-icon name="close" [size]="18" />
+    </button>
+  </header>
+
+  <div #log class="skp__log" role="log" aria-live="polite" aria-relevant="additions">
+    @switch (chat.status()) {
+      @case ('loading') {
+        <div class="skp__loading">
+          <sti-sidekick-mascot [size]="72" mood="think" />
+          <p>Sidekick is opening the catalogues…</p>
+        </div>
+      }
+      @case ('error') {
+        <div class="skp__loading">
+          <p>Sidekick couldn't load just now. Please check your connection and try again — or message us on WhatsApp.</p>
+          <div class="skp__actions">
+            <button type="button" class="skp__btn" (click)="chat.start()">Try again</button>
+            <a class="skp__btn skp__btn--wa" [href]="actionHref({ kind: 'whatsapp', label: '' })" target="_blank" rel="noopener">
+              <sti-icon name="chat" [size]="15" /> WhatsApp
+            </a>
+          </div>
+        </div>
+      }
+    }
+
+    @for (m of chat.messages(); track m.id; let first = $first) {
+      @if (m.from === 'user') {
+        <div class="msg msg--user"><p class="msg__bubble">{{ m.text }}</p></div>
+      } @else if (m.reply; as r) {
+        <div class="msg msg--bot" [class.msg--welcome]="first && r.intent === 'greeting'">
+          @if (first && r.intent === 'greeting') {
+            <div class="msg__hero"><sti-sidekick-mascot [size]="84" [mood]="chat.mood() === 'think' ? 'idle' : chat.mood()" /></div>
+          }
+          <div class="msg__body">
+            @for (b of r.blocks; track $index) {
+              @switch (b.kind) {
+                @case ('text') {
+                  <p class="msg__text">
+                    @for (s of segments(b.text); track $index) {
+                      @if (s.bold) { <strong>{{ s.text }}</strong> } @else { {{ s.text }} }
+                    }
+                  </p>
+                }
+                @case ('note') {
+                  <p class="msg__note"><sti-icon name="info" [size]="14" /> <span>{{ b.text }}</span></p>
+                }
+                @case ('list') {
+                  @if (b.title) { <p class="msg__label">{{ b.title }}</p> }
+                  @if (b.ordered) {
+                    <ol class="msg__list msg__list--steps">
+                      @for (item of b.items; track $index) { <li>{{ item }}</li> }
+                    </ol>
+                  } @else {
+                    <ul class="msg__list">
+                      @for (item of b.items; track $index) { <li>{{ item }}</li> }
+                    </ul>
+                  }
+                }
+                @case ('facts') {
+                  @if (b.title) { <p class="msg__label">{{ b.title }}</p> }
+                  <dl class="msg__facts">
+                    @for (row of b.rows; track $index) {
+                      <div><dt>{{ row.label }}</dt><dd>{{ row.value }}</dd></div>
+                    }
+                  </dl>
+                }
+                @case ('sizes') {
+                  <p class="msg__label">{{ b.title }}</p>
+                  <ul class="msg__sizes" role="list">
+                    @for (size of b.items; track $index) { <li>{{ size }}</li> }
+                  </ul>
+                  @if (b.more) {
+                    <a class="msg__more" [routerLink]="['/products', b.slug]" (click)="navigated()">+ {{ b.more }} more sizes on the product page</a>
+                  }
+                }
+                @case ('products') {
+                  <ul class="msg__cards" role="list">
+                    @for (p of b.items; track p.slug) {
+                      <li>
+                        <a class="card" [routerLink]="['/products', p.slug]" (click)="navigated()">
+                          <span class="card__img">
+                            @if (p.image) {
+                              <img [src]="p.image" alt="" width="52" height="52" loading="lazy" decoding="async" />
+                            } @else {
+                              <sti-icon name="gear" [size]="22" />
+                            }
+                          </span>
+                          <span class="card__text">
+                            <span class="card__name">{{ p.name }}</span>
+                            <span class="card__meta">{{ p.summary }}@if (p.brand) { · {{ p.brand }} }</span>
+                          </span>
+                          <sti-icon class="card__go" name="chevron-right" [size]="16" />
+                        </a>
+                      </li>
+                    }
+                  </ul>
+                }
+                @case ('links') {
+                  @if (b.title) { <p class="msg__label">{{ b.title }}</p> }
+                  <ul class="msg__links" role="list">
+                    @for (l of b.items; track l.route + l.label) {
+                      <li>
+                        <a [routerLink]="l.route" (click)="navigated()">
+                          <span>{{ l.label }}</span>
+                          @if (l.meta) { <span class="msg__meta">{{ l.meta }}</span> }
+                          <sti-icon name="chevron-right" [size]="15" />
+                        </a>
+                      </li>
+                    }
+                  </ul>
+                }
+              }
+            }
+
+            @if (r.actions.length) {
+              <div class="skp__actions">
+                @for (a of r.actions; track $index) {
+                  @if (a.kind === 'route') {
+                    <button type="button" class="skp__btn" (click)="go(a)">{{ a.label }}</button>
+                  } @else {
+                    <a
+                      class="skp__btn"
+                      [class.skp__btn--wa]="a.kind === 'whatsapp'"
+                      [href]="actionHref(a)"
+                      [attr.target]="a.kind === 'whatsapp' || a.kind === 'map' ? '_blank' : null"
+                      [attr.rel]="a.kind === 'whatsapp' || a.kind === 'map' ? 'noopener' : null"
+                    >
+                      @switch (a.kind) {
+                        @case ('whatsapp') { <sti-icon name="chat" [size]="15" /> }
+                        @case ('call') { <sti-icon name="phone" [size]="15" /> }
+                        @case ('email') { <sti-icon name="mail" [size]="15" /> }
+                        @case ('map') { <sti-icon name="pin" [size]="15" /> }
+                      }
+                      {{ a.label }}
+                    </a>
+                  }
+                }
+              </div>
+            }
+          </div>
+        </div>
+      }
+    }
+
+    @if (chat.thinking()) {
+      <div class="msg msg--bot msg--typing" aria-label="Sidekick is typing">
+        <div class="msg__body"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      </div>
+    }
+  </div>
+
+  @if (suggestions().length) {
+    <div class="skp__chips" role="group" aria-label="Suggested questions">
+      @for (s of suggestions(); track s.ask) {
+        <button type="button" class="skp__chip" (click)="ask(s)">{{ s.label }}</button>
+      }
+    </div>
+  }
+
+  <form class="skp__form" (submit)="send($event)">
+    <label class="sti-sr-only" for="skp-field">Ask Sidekick a question</label>
+    <input
+      #field
+      id="skp-field"
+      class="skp__field"
+      type="text"
+      autocomplete="off"
+      enterkeyhint="send"
+      maxlength="300"
+      placeholder="Ask about a tool, size or use…"
+      [value]="draft()"
+      (input)="draft.set($any($event.target).value)"
+      (keydown.enter)="send($event)"
+      [disabled]="chat.status() !== 'ready'"
+    />
+    <button type="submit" class="skp__send" [disabled]="!draft().trim() || chat.thinking()" aria-label="Send">
+      <sti-icon name="send" [size]="18" />
+    </button>
+  </form>
+  <p class="skp__foot">Answers come from our catalogues. Prices on request.</p>
+</section>

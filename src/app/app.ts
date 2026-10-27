@@ -3,12 +3,13 @@ import { ViewportScroller } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet, Scroll } from '@angular/router';
 import { Header } from './components/header/header';
 import { Footer } from './components/footer/footer';
+import { SidekickLauncher } from './sidekick/launcher/sidekick-launcher';
 
 const pathOf = (url: string) => url.split(/[?#]/)[0];
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer],
+  imports: [RouterOutlet, Header, Footer, SidekickLauncher],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

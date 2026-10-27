@@ -23,6 +23,7 @@ import { COMPANY, COMPANY_LINKS } from '../../config/company.config';
 import { QUOTE_PATH } from '../../config/navigation.config';
 import { Product, SourceDoc } from '../../models/product.model';
 import { ProductService } from '../../services/product.service';
+import { SidekickState } from '../../sidekick/sidekick-state';
 
 /** Public names for the supplied catalogues (the word "price" is deliberately not used). */
 const SOURCE_NAMES: Record<SourceDoc, string> = {
@@ -132,8 +133,14 @@ export class ProductDetail {
   private readonly panelInView = signal(true);
   private readonly endInView = signal(false);
   protected readonly dockVisible = computed(() => !this.panelInView() && !this.endInView());
+  private readonly sidekick = inject(SidekickState);
 
   constructor() {
+    // The Sidekick chat button moves up while the dock is showing, so they never overlap.
+    effect((onCleanup) => {
+      this.sidekick.raised.set(this.dockVisible());
+      onCleanup(() => this.sidekick.raised.set(false));
+    });
     this.catalogue.load();
     afterNextRender(() => this.live.set(true));
 

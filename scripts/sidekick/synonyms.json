@@ -1,0 +1,1219 @@
+{
+  "_about": "Words customers type → the words the catalogue uses. `replace`: the phrase on the left is rewritten to the one on the right before searching. `related`: extra search words added at lower weight. `jobs`: for 'tools for an electrician'-type questions, the product types to show for that trade. Lower case; edit and run `npm run sidekick:train`.",
+  "replace": [
+    [
+      "chain kuppi",
+      "chain pulley block"
+    ],
+    [
+      "kuppi",
+      "chain pulley block"
+    ],
+    [
+      "chain block",
+      "chain pulley block"
+    ],
+    [
+      "chain hoist",
+      "chain pulley block"
+    ],
+    [
+      "manual hoist",
+      "chain pulley block"
+    ],
+    [
+      "hand hoist",
+      "chain pulley block"
+    ],
+    [
+      "pulley block chain",
+      "chain pulley block"
+    ],
+    [
+      "pallet jack",
+      "pallet truck"
+    ],
+    [
+      "hand pallet",
+      "hand pallet truck"
+    ],
+    [
+      "pallet trolley",
+      "pallet truck"
+    ],
+    [
+      "hydraulic pallet",
+      "pallet truck"
+    ],
+    [
+      "live centre",
+      "revolving centre"
+    ],
+    [
+      "live center",
+      "revolving centre"
+    ],
+    [
+      "rotating centre",
+      "revolving centre"
+    ],
+    [
+      "rotating center",
+      "revolving centre"
+    ],
+    [
+      "tailstock centre",
+      "revolving centre"
+    ],
+    [
+      "running centre",
+      "revolving centre"
+    ],
+    [
+      "hex key",
+      "allen key"
+    ],
+    [
+      "allen wrench",
+      "allen key"
+    ],
+    [
+      "allen spanner",
+      "allen key"
+    ],
+    [
+      "allen keys",
+      "allen key"
+    ],
+    [
+      "lashing belt",
+      "cargo lashing ratchet"
+    ],
+    [
+      "ratchet belt",
+      "cargo lashing ratchet"
+    ],
+    [
+      "ratchet strap",
+      "cargo lashing ratchet"
+    ],
+    [
+      "ratchet lashing",
+      "cargo lashing ratchet"
+    ],
+    [
+      "tie down strap",
+      "cargo lashing ratchet"
+    ],
+    [
+      "belt sling",
+      "webbing sling"
+    ],
+    [
+      "sling belt",
+      "webbing sling"
+    ],
+    [
+      "lifting belt",
+      "webbing sling"
+    ],
+    [
+      "flat sling",
+      "webbing sling"
+    ],
+    [
+      "magnetic lifter",
+      "permanent magnet lifter"
+    ],
+    [
+      "magnet lifter",
+      "permanent magnet lifter"
+    ],
+    [
+      "lifting magnet",
+      "permanent magnet lifter"
+    ],
+    [
+      "d shackle",
+      "dee shackle"
+    ],
+    [
+      "d-shackle",
+      "dee shackle"
+    ],
+    [
+      "bow shackle",
+      "bow shackle"
+    ],
+    [
+      "anchor shackle",
+      "bow shackle"
+    ],
+    [
+      "er chuck",
+      "er collet chuck"
+    ],
+    [
+      "collet holder",
+      "collet chuck"
+    ],
+    [
+      "insert drill",
+      "u-drill"
+    ],
+    [
+      "indexable drill",
+      "u-drill"
+    ],
+    [
+      "cutting disc",
+      "cut off wheel"
+    ],
+    [
+      "cutting wheel",
+      "cut off wheel"
+    ],
+    [
+      "cut-off wheel",
+      "cut off wheel"
+    ],
+    [
+      "cutoff wheel",
+      "cut off wheel"
+    ],
+    [
+      "drill bit",
+      "drill"
+    ],
+    [
+      "drill bits",
+      "drill"
+    ],
+    [
+      "tap set",
+      "tap"
+    ],
+    [
+      "thread tap",
+      "tap"
+    ],
+    [
+      "die stock",
+      "die handle"
+    ],
+    [
+      "tap wrench",
+      "tap handle"
+    ],
+    [
+      "car jack",
+      "hydraulic trolley jack"
+    ],
+    [
+      "trolley jack",
+      "hydraulic trolley jack"
+    ],
+    [
+      "bottle jack",
+      "hydraulic bottle jack"
+    ],
+    [
+      "vise",
+      "vice"
+    ],
+    [
+      "bench vise",
+      "bench vice"
+    ],
+    [
+      "machine vice",
+      "vice"
+    ],
+    [
+      "milling cutter",
+      "endmill face mill cutter"
+    ],
+    [
+      "slot cutter",
+      "slot drill"
+    ],
+    [
+      "tool bit",
+      "toolbit"
+    ],
+    [
+      "hss bit",
+      "hss toolbit"
+    ],
+    [
+      "lathe tool",
+      "carbide tipped tool toolbit"
+    ],
+    [
+      "brazed tool",
+      "carbide tipped tool"
+    ],
+    [
+      "carbide tool",
+      "carbide tipped tool"
+    ],
+    [
+      "grinder burr",
+      "rotary burr"
+    ],
+    [
+      "die grinder bit",
+      "rotary burr"
+    ],
+    [
+      "electrical tester",
+      "line tester"
+    ],
+    [
+      "voltage tester",
+      "line tester"
+    ],
+    [
+      "tester screwdriver",
+      "line tester"
+    ],
+    [
+      "star key",
+      "torx key"
+    ],
+    [
+      "star screwdriver",
+      "torx screwdriver"
+    ],
+    [
+      "plus screwdriver",
+      "phillips screwdriver"
+    ],
+    [
+      "cross screwdriver",
+      "phillips screwdriver"
+    ],
+    [
+      "minus screwdriver",
+      "flat screwdriver"
+    ],
+    [
+      "nose plier",
+      "long nose plier"
+    ],
+    [
+      "cutting plier",
+      "side cutting plier"
+    ],
+    [
+      "cutter plier",
+      "side cutting plier"
+    ],
+    [
+      "snap ring plier",
+      "circlip plier"
+    ],
+    [
+      "ring plier",
+      "circlip plier"
+    ],
+    [
+      "vice grip",
+      "locking plier"
+    ],
+    [
+      "grip plier",
+      "locking plier"
+    ],
+    [
+      "wire cutter",
+      "cutting plier nipper"
+    ],
+    [
+      "rope cutter",
+      "wire rope cutter"
+    ],
+    [
+      "metal snip",
+      "tin cutter"
+    ],
+    [
+      "metal cutter",
+      "tin cutter"
+    ],
+    [
+      "sheet cutter",
+      "tin cutter"
+    ],
+    [
+      "paper cutter",
+      "snap off cutter"
+    ],
+    [
+      "cutter knife",
+      "snap off cutter"
+    ],
+    [
+      "box cutter",
+      "utility knife"
+    ],
+    [
+      "hack saw",
+      "hacksaw"
+    ],
+    [
+      "saw blade",
+      "hacksaw blade"
+    ],
+    [
+      "torque spanner",
+      "torque wrench"
+    ],
+    [
+      "socket spanner",
+      "socket"
+    ],
+    [
+      "ratchet spanner",
+      "socket accessories ratchet"
+    ],
+    [
+      "ratchet handle",
+      "socket accessories ratchet"
+    ],
+    [
+      "spanner set",
+      "spanner set"
+    ],
+    [
+      "dual spanner",
+      "combination spanner"
+    ],
+    [
+      "ring cum open",
+      "combination spanner"
+    ],
+    [
+      "ring open",
+      "combination spanner"
+    ],
+    [
+      "double open",
+      "double ended open jaw spanner"
+    ],
+    [
+      "flat spanner",
+      "open jaw spanner"
+    ],
+    [
+      "striking spanner",
+      "slugging spanner"
+    ],
+    [
+      "hammer spanner",
+      "slugging spanner"
+    ],
+    [
+      "wheel spanner",
+      "cross rim wrench"
+    ],
+    [
+      "tyre spanner",
+      "cross rim wrench"
+    ],
+    [
+      "plumber wrench",
+      "pipe wrench"
+    ],
+    [
+      "stillson",
+      "pipe wrench"
+    ],
+    [
+      "monkey wrench",
+      "adjustable wrench"
+    ],
+    [
+      "monkey spanner",
+      "adjustable spanner"
+    ],
+    [
+      "adjustable spanner",
+      "adjustable spanner"
+    ],
+    [
+      "mallet",
+      "soft faced hammer"
+    ],
+    [
+      "rubber hammer",
+      "soft faced hammer"
+    ],
+    [
+      "nylon hammer",
+      "soft faced hammer"
+    ],
+    [
+      "ghan",
+      "sledge hammer"
+    ],
+    [
+      "hathoda",
+      "hammer"
+    ],
+    [
+      "hathodi",
+      "hammer"
+    ],
+    [
+      "pana",
+      "spanner"
+    ],
+    [
+      "paana",
+      "spanner"
+    ],
+    [
+      "pechkas",
+      "screwdriver"
+    ],
+    [
+      "plas",
+      "plier"
+    ],
+    [
+      "chheni",
+      "chisel"
+    ],
+    [
+      "reti",
+      "file"
+    ],
+    [
+      "needle file",
+      "needle files"
+    ],
+    [
+      "grease pump",
+      "grease gun"
+    ],
+    [
+      "oil can",
+      "hand oil pump"
+    ],
+    [
+      "drum pump",
+      "rotary barrel pump"
+    ],
+    [
+      "level tool",
+      "spirit level"
+    ],
+    [
+      "water level",
+      "spirit level"
+    ],
+    [
+      "pop rivet",
+      "hand riveter"
+    ],
+    [
+      "rivet gun",
+      "hand riveter"
+    ],
+    [
+      "toolbox",
+      "tool box"
+    ],
+    [
+      "tool trolley",
+      "tools trolley"
+    ],
+    [
+      "tool kit",
+      "tool kit"
+    ],
+    [
+      "mag drill cutter",
+      "annular cutter"
+    ],
+    [
+      "broach cutter",
+      "annular cutter"
+    ],
+    [
+      "hole cutter",
+      "hole saw annular cutter"
+    ],
+    [
+      "concrete bit",
+      "masonry drill"
+    ],
+    [
+      "wall drill",
+      "masonry drill"
+    ],
+    [
+      "sds bit",
+      "sds hammer drill"
+    ],
+    [
+      "marble cutter blade",
+      "diamond cutting blade"
+    ],
+    [
+      "tile blade",
+      "tile cutter blade"
+    ],
+    [
+      "stone blade",
+      "granite cutting blade"
+    ],
+    [
+      "number punch",
+      "letter figure punch"
+    ],
+    [
+      "alphabet punch",
+      "letter figure punch"
+    ],
+    [
+      "letter punch",
+      "letter figure punch"
+    ],
+    [
+      "number stamp",
+      "letter figure punch"
+    ],
+    [
+      "pitch gauge",
+      "thread gauge"
+    ],
+    [
+      "fillet gauge",
+      "radius gauge"
+    ],
+    [
+      "square tool",
+      "try square"
+    ],
+    [
+      "angle finder",
+      "protractor"
+    ],
+    [
+      "sling hook",
+      "sling hook"
+    ],
+    [
+      "crane hook",
+      "hook"
+    ],
+    [
+      "chain sling",
+      "lifting chain master link hook"
+    ],
+    [
+      "eyebolt",
+      "eye bolt"
+    ],
+    [
+      "lifting eye",
+      "eye bolt"
+    ],
+    [
+      "rope clamp",
+      "wire rope clamp"
+    ],
+    [
+      "bulldog clamp",
+      "wire rope clamp"
+    ],
+    [
+      "bulldog grip",
+      "wire rope clamp"
+    ],
+    [
+      "rigging screw",
+      "turnbuckle"
+    ],
+    [
+      "plate clamp",
+      "plate lifting clamp"
+    ],
+    [
+      "girder clamp",
+      "beam clamp"
+    ],
+    [
+      "machine skate",
+      "industrial skates"
+    ],
+    [
+      "machine dolly",
+      "industrial skates"
+    ],
+    [
+      "machine roller",
+      "industrial skates"
+    ],
+    [
+      "hand stacker",
+      "hand stacker"
+    ],
+    [
+      "manual stacker",
+      "hand stacker"
+    ],
+    [
+      "forklift",
+      "stacker"
+    ],
+    [
+      "lift table",
+      "hydraulic lifting table"
+    ],
+    [
+      "scissor table",
+      "hydraulic lifting table"
+    ],
+    [
+      "drum handler",
+      "drum trolley"
+    ],
+    [
+      "barrel lifter",
+      "drum lifter"
+    ],
+    [
+      "cage",
+      "wire mesh container"
+    ],
+    [
+      "tirfor",
+      "pulling lifting machine"
+    ],
+    [
+      "come along",
+      "cable puller"
+    ],
+    [
+      "tool balancer",
+      "spring balancer"
+    ],
+    [
+      "balancer",
+      "spring balancer"
+    ],
+    [
+      "sheave",
+      "pulley block"
+    ],
+    [
+      "i beam trolley",
+      "gear trolley"
+    ],
+    [
+      "beam trolley",
+      "gear trolley"
+    ],
+    [
+      "push trolley",
+      "gear trolley"
+    ],
+    [
+      "electric hoist",
+      "electric chain hoist"
+    ],
+    [
+      "chain electric hoist",
+      "electric chain hoist"
+    ],
+    [
+      "lever block",
+      "ratchet lever hoist"
+    ],
+    [
+      "ratchet hoist",
+      "ratchet lever hoist"
+    ],
+    [
+      "pull lift",
+      "ratchet lever hoist"
+    ],
+    [
+      "pul lift",
+      "ratchet lever hoist"
+    ],
+    [
+      "tool holder",
+      "holder chuck arbor"
+    ],
+    [
+      "arbor",
+      "arbor"
+    ],
+    [
+      "shell mill arbor",
+      "stub milling arbor"
+    ],
+    [
+      "face mill arbor",
+      "stub milling arbor"
+    ],
+    [
+      "weldon holder",
+      "side lock holder"
+    ],
+    [
+      "end mill holder",
+      "side lock holder collet chuck"
+    ],
+    [
+      "morse taper sleeve",
+      "drill sleeve"
+    ],
+    [
+      "mt sleeve",
+      "drill sleeve"
+    ],
+    [
+      "taper sleeve",
+      "drill sleeve"
+    ],
+    [
+      "reducing sleeve",
+      "drill sleeve"
+    ],
+    [
+      "retention knob",
+      "pull stud"
+    ],
+    [
+      "pull bolt",
+      "pull stud"
+    ],
+    [
+      "drawbar stud",
+      "pull stud"
+    ],
+    [
+      "chuck key",
+      "drill chuck spare key"
+    ],
+    [
+      "test bar",
+      "master mandrel"
+    ],
+    [
+      "edge finder",
+      "edge finder"
+    ],
+    [
+      "t bolt",
+      "t-slot nut"
+    ],
+    [
+      "tee nut",
+      "t-slot nut"
+    ],
+    [
+      "clamping set",
+      "clamping kit"
+    ],
+    [
+      "step clamp",
+      "clamping kit"
+    ],
+    [
+      "fine boring head",
+      "micro boring head"
+    ]
+  ],
+  "related": [
+    [
+      "spanner",
+      "wrench"
+    ],
+    [
+      "wrench",
+      "spanner"
+    ],
+    [
+      "plier",
+      "pliers cutter"
+    ],
+    [
+      "cutter",
+      "plier"
+    ],
+    [
+      "drill",
+      "drills"
+    ],
+    [
+      "hoist",
+      "chain pulley block lever hoist electric chain hoist"
+    ],
+    [
+      "lifting",
+      "hoist sling shackle clamp"
+    ],
+    [
+      "crane",
+      "hoist sling hook shackle"
+    ],
+    [
+      "sling",
+      "webbing round"
+    ],
+    [
+      "centre",
+      "revolving dead"
+    ],
+    [
+      "chuck",
+      "collet drill"
+    ],
+    [
+      "holder",
+      "chuck arbor"
+    ],
+    [
+      "mill",
+      "endmill face"
+    ],
+    [
+      "milling",
+      "endmill face arbor"
+    ],
+    [
+      "threading",
+      "tap die"
+    ],
+    [
+      "thread",
+      "tap die"
+    ],
+    [
+      "key",
+      "allen torx"
+    ],
+    [
+      "clamp",
+      "plate beam pipe vice"
+    ],
+    [
+      "blade",
+      "cutting hacksaw"
+    ],
+    [
+      "cutting",
+      "cutter blade wheel"
+    ],
+    [
+      "electrician",
+      "plier screwdriver tester stripper insulated vde"
+    ],
+    [
+      "electrical",
+      "plier screwdriver tester stripper insulated vde"
+    ],
+    [
+      "plumber",
+      "pipe wrench vice cutter"
+    ],
+    [
+      "plumbing",
+      "pipe wrench vice cutter"
+    ],
+    [
+      "carpenter",
+      "chisel plane hammer saw"
+    ],
+    [
+      "carpentry",
+      "chisel plane hammer saw"
+    ],
+    [
+      "mechanic",
+      "spanner socket wrench plier screwdriver"
+    ],
+    [
+      "automobile",
+      "socket spanner jack"
+    ],
+    [
+      "car",
+      "socket spanner jack"
+    ],
+    [
+      "bike",
+      "socket spanner tool kit"
+    ],
+    [
+      "warehouse",
+      "pallet truck stacker"
+    ],
+    [
+      "godown",
+      "pallet truck stacker"
+    ],
+    [
+      "lathe",
+      "revolving centre dead centre toolbit carbide tipped"
+    ],
+    [
+      "cnc",
+      "collet chuck side lock holder endmill pull stud"
+    ],
+    [
+      "vmc",
+      "bt40 collet chuck side lock holder endmill pull stud"
+    ],
+    [
+      "hmc",
+      "bt collet chuck side lock holder pull stud"
+    ],
+    [
+      "explosive",
+      "nonsparking"
+    ],
+    [
+      "refinery",
+      "nonsparking"
+    ],
+    [
+      "oil gas",
+      "nonsparking"
+    ],
+    [
+      "spark",
+      "nonsparking"
+    ],
+    [
+      "hazardous",
+      "nonsparking"
+    ],
+    [
+      "truck",
+      "pallet cargo lashing"
+    ],
+    [
+      "transport",
+      "cargo lashing load binder"
+    ],
+    [
+      "plate",
+      "plate lifting clamp magnet"
+    ],
+    [
+      "steel plate",
+      "plate lifting clamp magnet"
+    ],
+    [
+      "concrete",
+      "masonry sds diamond"
+    ],
+    [
+      "tile",
+      "tile cutter blade"
+    ],
+    [
+      "wood",
+      "wood cutting blade chisel plane rasp"
+    ],
+    [
+      "stainless",
+      "bimetal cut off"
+    ],
+    [
+      "aluminium",
+      "aluminium endmill"
+    ]
+  ],
+  "jobs": {
+    "electrician": [
+      "vde pliers",
+      "insulated screwdriver",
+      "line tester",
+      "wire stripping pliers",
+      "crimping tool",
+      "insulation tape",
+      "combination side cutting pliers",
+      "cable cutter"
+    ],
+    "electrical": [
+      "vde pliers",
+      "insulated screwdriver",
+      "line tester",
+      "wire stripping pliers",
+      "crimping tool",
+      "insulation tape"
+    ],
+    "plumber": [
+      "pipe wrench",
+      "pipe vice",
+      "pvc plastic pipe cutter",
+      "adjustable wrench",
+      "water pump pliers",
+      "plumber tool kit",
+      "hacksaw frame"
+    ],
+    "plumbing": [
+      "pipe wrench",
+      "pipe vice",
+      "pvc plastic pipe cutter",
+      "adjustable wrench",
+      "water pump pliers",
+      "plumber tool kit"
+    ],
+    "carpenter": [
+      "claw hammer",
+      "wood working chisels set",
+      "jack plane",
+      "block plane",
+      "wood rasp file",
+      "tct wood cutting blade",
+      "chalk line reel",
+      "spirit level"
+    ],
+    "carpentry": [
+      "claw hammer",
+      "wood working chisels set",
+      "jack plane",
+      "block plane",
+      "wood rasp file",
+      "tct wood cutting blade"
+    ],
+    "mechanic": [
+      "combination spanner set",
+      "socket set 1/2 square drive",
+      "torque wrench",
+      "ring spanner set",
+      "allen key set",
+      "hydraulic trolley jack",
+      "screwdriver set"
+    ],
+    "automobile": [
+      "socket set 1/2 square drive",
+      "combination spanner set",
+      "torque wrench",
+      "hydraulic trolley jack",
+      "jack stand",
+      "cross rim wrench",
+      "strap filter wrench"
+    ],
+    "fitter": [
+      "combination spanner set",
+      "allen key set",
+      "bench vice",
+      "hacksaw frame",
+      "flat file",
+      "ball pein hammer",
+      "centre punch",
+      "adjustable wrench"
+    ],
+    "machinist": [
+      "er collet chuck",
+      "revolving centre",
+      "hss drill",
+      "endmill",
+      "hss tap",
+      "edge finder",
+      "clamping kit",
+      "carbide tipped tool"
+    ],
+    "cnc": [
+      "er collet chuck",
+      "side lock holder",
+      "pull stud",
+      "solid carbide endmill",
+      "spot drill",
+      "face mill cutter",
+      "u-drill",
+      "edge finder"
+    ],
+    "lathe": [
+      "revolving centre",
+      "dead centre",
+      "carbide tipped turning tool",
+      "hss toolbit",
+      "drill chuck arbor",
+      "centre drill",
+      "parting toolbit"
+    ],
+    "welder": [
+      "c clamp",
+      "locking pliers",
+      "cut off wheel",
+      "chisel",
+      "wire rope edge protector",
+      "ball pein hammer"
+    ],
+    "fabrication": [
+      "cut off wheel",
+      "annular cutter",
+      "c clamp",
+      "f clamp",
+      "hand riveter",
+      "plate lifting clamp",
+      "magnet lifter"
+    ],
+    "warehouse": [
+      "hand pallet truck",
+      "hand stacker",
+      "electric stacker",
+      "hydraulic lifting table",
+      "wire mesh container",
+      "industrial skates"
+    ],
+    "godown": [
+      "hand pallet truck",
+      "hand stacker",
+      "hydraulic lifting table",
+      "wire mesh container"
+    ],
+    "rigging": [
+      "dee shackle",
+      "bow shackle",
+      "eye bolt",
+      "g80 lifting chain",
+      "master link",
+      "webbing sling",
+      "wire rope clamp",
+      "turnbuckle"
+    ],
+    "crane": [
+      "webbing sling",
+      "round sling",
+      "dee shackle",
+      "g80 eye sling hook",
+      "master link",
+      "plate lifting clamp"
+    ],
+    "construction": [
+      "chain pulley block",
+      "ratchet lever hoist",
+      "sds hammer drill",
+      "masonry drill",
+      "diamond cutting blade",
+      "spirit level",
+      "sledge hammer"
+    ],
+    "refinery": [
+      "non-sparking adjustable wrench",
+      "non-sparking hammer",
+      "non-sparking ring spanner",
+      "non-sparking socket set"
+    ],
+    "home": [
+      "tool kit",
+      "screwdriver set",
+      "combination pliers",
+      "claw hammer",
+      "adjustable wrench",
+      "allen key set"
+    ]
+  }
+}

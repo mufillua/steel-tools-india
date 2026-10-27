@@ -41,3 +41,6 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Python bytecode (scripts/sidekick)
+__pycache__/

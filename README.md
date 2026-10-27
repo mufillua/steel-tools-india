@@ -133,6 +133,8 @@ docs/            catalogue analysis, per-phase notes and items for client review
 - **Category landing pages** (`/categories/<slug>`) are prerendered for search engines: "<Category> Supplier in Kolkata" title,
   description, every product in the category linked by type, and schema.org CollectionPage data. A product list filtered to one
   category (`/products?category=<slug>`) uses that landing page as its canonical URL.
+- **Sidekick** (`src/app/sidekick/`, `scripts/sidekick/`) — the product helper chatbot. Runs in the browser from the catalogue and a
+  trained knowledge file (`npm run sidekick:train`, also run before every build); no external API. See `docs/sidekick.md`.
 - **SEO** lives in `services/seo.service.ts` (meta, Open Graph, canonical, JSON-LD: HardwareStore + WebSite on Home) and
   `scripts/generate-seo-files.mjs` (sitemap with category pages and product images; `<lastmod>` = date the page's content last
   changed, tracked in `scripts/sitemap-lastmod.json` — commit that file with catalogue changes). `npm run indexnow` (after a
@@ -146,7 +148,7 @@ docs/            catalogue analysis, per-phase notes and items for client review
 ## Quality checks (final QA, 1 Oct 2026)
 
 - `ng build`: no errors or warnings; 689 routes prerendered (663 products, 20 category pages).
-- Unit tests: 25 passing (catalogue integrity & no prices, unbranded lifting range, SEO canonical/structured data, search/filter, pagination, enquiry messages, business hours, navbar).
+- Unit tests: 35 passing (catalogue integrity & no prices, unbranded lifting range, SEO canonical/structured data, search/filter, pagination, enquiry messages, business hours, navbar).
 - Browser QA on desktop (1440), tablet (820) and mobile (390): all pages, filters, pagination, sizes, enquiries,
   quote form, mobile menu, invalid URLs — no console errors, no horizontal scrolling, no broken images.
 - Accessibility: axe-core reports 0 violations on every page; Lighthouse accessibility 100.

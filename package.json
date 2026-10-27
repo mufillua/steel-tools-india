@@ -9,7 +9,9 @@
     "test": "ng test",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadlessCI",
     "validate": "node scripts/validate-catalogue.mjs",
-    "prebuild": "node scripts/generate-seo-files.mjs",
+    "prebuild": "node scripts/generate-seo-files.mjs && node scripts/sidekick/train.mjs",
+    "sidekick:train": "node scripts/sidekick/train.mjs",
+    "sidekick:ask": "node scripts/sidekick/ask.mjs",
     "postbuild": "node scripts/postbuild.mjs",
     "indexnow": "node scripts/indexnow.mjs"
   },

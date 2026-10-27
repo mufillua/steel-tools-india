@@ -1,0 +1,15 @@
+{
+  "_about": "Catalogue sentences Sidekick must not quote, after a human read-through. Add the first few words of a sentence to 'drop' and run `npm run sidekick:train`. Sentences are matched from their start, ignoring case and punctuation.",
+  "drop": [
+    "Due to the 5% Cobalt content",
+    "Self centering split point",
+    "Improves hole finish due to better lubrication",
+    "K05 Tip grade is suitable"
+  ],
+  "_why": {
+    "Due to the 5% Cobalt content": "True of the Super (M35) jobber drill only; the product page also covers the M2 versions.",
+    "Self centering split point": "Super jobber drills only, same reason.",
+    "Improves hole finish due to better lubrication": "From the Gold drill page and has no subject; the product page covers three versions.",
+    "K05 Tip grade is suitable": "From the carbide grade chart, which applies to every carbide-tipped tool rather than one product."
+  }
+}

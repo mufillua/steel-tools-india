@@ -1,0 +1,34 @@
+<div class="skl" [class.is-raised]="state.raised()" [class.is-open]="state.open()">
+  @if (teaser() && !state.open()) {
+    <div class="skl__teaser" role="status">
+      <button type="button" class="skl__teaser-x" (click)="dismissTeaser()" aria-label="Dismiss">
+        <sti-icon name="close" [size]="14" />
+      </button>
+      <p><strong>Hi, I'm Sidekick!</strong> Ask me about any tool — what it's for, how to use it, or which sizes we have.</p>
+    </div>
+  }
+
+  <button
+    type="button"
+    class="skl__btn"
+    (click)="toggle()"
+    (mouseenter)="hovered.set(true)"
+    (mouseleave)="hovered.set(false)"
+    [attr.aria-expanded]="state.open()"
+    aria-controls="sidekick-panel"
+    [attr.aria-label]="state.open() ? 'Close Sidekick chat' : 'Ask Sidekick, the product helper'"
+  >
+    <span class="skl__face">
+      @if (state.open()) {
+        <sti-icon name="close" [size]="22" />
+      } @else {
+        <sti-sidekick-mascot crop="head" [size]="44" [mood]="hovered() ? 'happy' : 'still'" [blink]="blink()" />
+      }
+    </span>
+    <span class="skl__label">{{ state.open() ? 'Close' : 'Ask Sidekick' }}</span>
+  </button>
+</div>
+
+@defer (when state.started(); prefetch on idle) {
+  <sti-sidekick-panel id="sidekick-panel" />
+}

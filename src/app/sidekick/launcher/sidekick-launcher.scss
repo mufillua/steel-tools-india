@@ -1,0 +1,184 @@
+@use 'variables' as v;
+@use 'mixins' as *;
+
+:host {
+  display: contents;
+}
+
+.skl {
+  position: fixed;
+  z-index: 75; // above the product page dock (70), below menus and drawers
+  right: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  transition: bottom var(--sti-dur) var(--sti-ease-out);
+
+  &.is-raised {
+    bottom: calc(86px + env(safe-area-inset-bottom));
+  }
+
+  @include down(v.$bp-sm) {
+    right: 14px;
+    bottom: calc(14px + env(safe-area-inset-bottom));
+
+    &.is-raised {
+      bottom: calc(80px + env(safe-area-inset-bottom));
+    }
+
+    // The full-screen chat has its own close button.
+    &.is-open {
+      display: none;
+    }
+  }
+
+  @include reduced-motion {
+    transition: none;
+  }
+}
+
+.skl__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 58px;
+  padding: 0 18px 0 6px;
+  border: 1px solid var(--sti-blue-200);
+  border-radius: 999px;
+  background: var(--sti-surface);
+  color: var(--sti-blue-900);
+  box-shadow:
+    0 2px 6px rgba(23, 38, 58, 0.08),
+    0 14px 30px -12px rgba(34, 69, 122, 0.45);
+  cursor: pointer;
+  animation: skl-in 0.6s var(--sti-ease-out) 0.4s both;
+  transition:
+    transform var(--sti-dur-fast) var(--sti-ease),
+    box-shadow var(--sti-dur-fast) var(--sti-ease);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 2px 6px rgba(23, 38, 58, 0.08),
+      0 18px 34px -12px rgba(34, 69, 122, 0.55);
+  }
+
+  &:focus-visible {
+    @include focus-ring(3px);
+  }
+
+  @include down(v.$bp-sm) {
+    width: 58px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  @include reduced-motion {
+    animation: none;
+    transition: none;
+  }
+}
+
+.skl__face {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(160deg, var(--sti-blue-100), var(--sti-blue-200));
+  color: var(--sti-blue-900);
+
+  @include down(v.$bp-sm) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.skl__label {
+  font-family: var(--sti-font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+
+  @include down(v.$bp-sm) {
+    @include sr-only;
+  }
+}
+
+.skl__teaser {
+  position: relative;
+  max-width: 260px;
+  padding: 12px 34px 12px 14px;
+  border: 1px solid var(--sti-border);
+  border-radius: 14px 14px 4px 14px;
+  background: var(--sti-surface);
+  box-shadow: var(--sti-shadow-lift);
+  color: var(--sti-text);
+  font-size: var(--sti-text-sm);
+  line-height: 1.45;
+  animation: skl-pop 0.4s var(--sti-ease-out) both;
+
+  p {
+    margin: 0;
+  }
+
+  strong {
+    display: block;
+    margin-bottom: 2px;
+    color: var(--sti-text-strong);
+  }
+
+  @include reduced-motion {
+    animation: none;
+  }
+}
+
+.skl__teaser-x {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--sti-muted);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--sti-blue-50);
+    color: var(--sti-text-strong);
+  }
+
+  &:focus-visible {
+    @include focus-ring(1px);
+  }
+}
+
+@keyframes skl-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes skl-pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

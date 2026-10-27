@@ -14,6 +14,8 @@ const ICONS = {
   search: 'M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14z M20.5 20.5l-4.5-4.5',
   sliders: 'M4 6h10 M18 6h2 M4 12h4 M12 12h8 M4 18h12 M20 18h0 M16 4v4 M10 10v4 M18 16v4',
   close: 'M6 6l12 12 M18 6 6 18',
+  send: 'M4 12 20 4l-4 16-4.5-6.5L4 12z M11.5 13.5 20 4',
+  rotate: 'M4 4v6h6 M20 20v-6h-6 M5.6 15A8 8 0 0 0 19.4 16 M18.4 9A8 8 0 0 0 4.6 8',
   'arrow-right': 'M5 12h14 M13 6l6 6-6 6',
   'arrow-up-right': 'M7 17 17 7 M8 7h9v9',
   'chevron-right': 'M9 6l6 6-6 6',
