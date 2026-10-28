@@ -305,7 +305,7 @@ const knowledge = {
   productGuide,
   passages: keptPassages,
   productPassages,
-  synonyms: { replace: syn.replace, related: syn.related, jobs: syn.jobs ?? {} },
+  synonyms: { replace: syn.replace, related: syn.related, jobs: syn.jobs ?? {}, hindi: syn.hindi ?? [] },
 };
 mkdirSync(dirname(OUT), { recursive: true });
 writeFileSync(OUT, JSON.stringify(knowledge));

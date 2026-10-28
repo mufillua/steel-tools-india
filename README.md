@@ -148,7 +148,7 @@ docs/            catalogue analysis, per-phase notes and items for client review
 ## Quality checks (final QA, 1 Oct 2026)
 
 - `ng build`: no errors or warnings; 689 routes prerendered (663 products, 20 category pages).
-- Unit tests: 37 passing (Sidekick answers incl. company & owner questions, catalogue integrity & no prices, unbranded lifting range, SEO canonical/structured data, search/filter, pagination, enquiry messages, business hours, navbar).
+- Unit tests: 38 passing (Sidekick answers incl. company & owner questions and Hindi, catalogue integrity & no prices, unbranded lifting range, SEO canonical/structured data, search/filter, pagination, enquiry messages, business hours, navbar).
 - Browser QA on desktop (1440), tablet (820) and mobile (390): all pages, filters, pagination, sizes, enquiries,
   quote form, mobile menu, invalid URLs — no console errors, no horizontal scrolling, no broken images.
 - Accessibility: axe-core reports 0 violations on every page; Lighthouse accessibility 100.

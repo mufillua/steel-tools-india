@@ -152,3 +152,68 @@ export function listText(items: string[], conj = 'and'): string {
   if (items.length <= 1) return items.join('');
   return `${items.slice(0, -1).join(', ')} ${conj} ${items[items.length - 1]}`;
 }
+
+// ── Devanagari → Latin letters ─────────────────────────────────────────────────────────────────────────────────
+// Customers type Hindi in Devanagari ("दुकान कहाँ है") as well as in English letters ("dukaan kahan hai"). Words the
+// Hindi list doesn't know are spelt out the way people type Hinglish, so the same rules (and spelling correction for
+// loanwords like "ड्रिल" → "dril" → drill) apply to both.
+const DEVA_CONSONANTS: Record<string, string> = {
+  क: 'k', ख: 'kh', ग: 'g', घ: 'gh', ङ: 'n', च: 'ch', छ: 'chh', ज: 'j', झ: 'jh', ञ: 'n', ट: 't', ठ: 'th', ड: 'd', ढ: 'dh', ण: 'n',
+  त: 't', थ: 'th', द: 'd', ध: 'dh', न: 'n', प: 'p', फ: 'ph', ब: 'b', भ: 'bh', म: 'm', य: 'y', र: 'r', ल: 'l', व: 'v', श: 'sh', ष: 'sh',
+  स: 's', ह: 'h', ळ: 'l', क़: 'q', ख़: 'kh', ग़: 'g', ज़: 'z', ड़: 'r', ढ़: 'rh', फ़: 'f', य़: 'y',
+};
+const DEVA_NUKTA: Record<string, string> = { क: 'q', ख: 'kh', ग: 'g', ज: 'z', ड: 'r', ढ: 'rh', फ: 'f', य: 'y' };
+const DEVA_VOWELS: Record<string, string> = { अ: 'a', आ: 'aa', इ: 'i', ई: 'i', उ: 'u', ऊ: 'u', ऋ: 'ri', ए: 'e', ऐ: 'ai', ओ: 'o', औ: 'au', ऑ: 'o', ऍ: 'e' };
+const DEVA_SIGNS: Record<string, string> = { 'ा': 'aa', 'ि': 'i', 'ी': 'i', 'ु': 'u', 'ू': 'u', 'ृ': 'ri', 'े': 'e', 'ै': 'ai', 'ो': 'o', 'ौ': 'au', 'ॉ': 'o', 'ॅ': 'e' };
+
+export const hasDevanagari = (s: string) => /[\u0900-\u097F]/.test(s);
+
+/** Hinglish spellings vary in doubled vowels (dukaan / dukan, maalik / malik, chaahiye / chahiye): compare without them. */
+export const looseHinglish = (word: string) => word.replace(/aa/g, 'a').replace(/ee/g, 'i').replace(/oo/g, 'u');
+
+/** One Devanagari word in Hinglish spelling: "दुकान" → "dukaan", "खुलती" → "khulti", "समय" → "samay". */
+export function devanagariToLatin(word: string): string {
+  const chars = [...word.normalize('NFC')];
+  // Syllables: consonant (+ nukta) with its vowel ("a" = inherent, null = none after a virama), or a bare vowel.
+  const units: { c: string; v: string | null; schwa: boolean; nasal: boolean; visarga: boolean }[] = [];
+  const last = () => units[units.length - 1];
+  for (let i = 0; i < chars.length; i++) {
+    const ch = chars[i];
+    if (DEVA_CONSONANTS[ch] !== undefined) {
+      let c = DEVA_CONSONANTS[ch];
+      if (chars[i + 1] === '\u093C') {
+        c = DEVA_NUKTA[ch] ?? c;
+        i++;
+      }
+      units.push({ c, v: 'a', schwa: true, nasal: false, visarga: false });
+    } else if (DEVA_VOWELS[ch] !== undefined) {
+      units.push({ c: '', v: DEVA_VOWELS[ch], schwa: false, nasal: false, visarga: false });
+    } else if (/[०-९]/.test(ch)) {
+      units.push({ c: String('०१२३४५६७८९'.indexOf(ch)), v: null, schwa: false, nasal: false, visarga: false });
+    } else if (!units.length) {
+      continue;
+    } else if (DEVA_SIGNS[ch] !== undefined) {
+      Object.assign(last(), { v: DEVA_SIGNS[ch], schwa: false });
+    } else if (ch === '\u094D') {
+      Object.assign(last(), { v: null, schwa: false }); // virama
+    } else if (ch === '\u0902' || ch === '\u0901') {
+      last().nasal = true; // anusvara / chandrabindu
+    } else if (ch === '\u0903') {
+      last().visarga = true;
+    }
+  }
+  // Hindi drops the inherent "a" at the end of a word, and between a vowel and a consonant that has a vowel
+  // ("आपकी" → aap-ki, "कितने" → kit-ne), working back from the end of the word.
+  if (units.length > 1 && last().schwa) last().v = null;
+  for (let i = units.length - 2; i > 0; i--) {
+    const u = units[i];
+    if (u.schwa && units[i - 1].v && units[i + 1].c && units[i + 1].v) u.v = null;
+  }
+  return units
+    .map((u, i) => {
+      const next = units[i + 1]?.c ?? '';
+      const nasal = u.nasal ? (/^[pbm]/.test(next) ? 'm' : 'n') : '';
+      return u.c + (u.v ?? '') + nasal + (u.visarga ? 'h' : '');
+    })
+    .join('');
+}

@@ -13,7 +13,13 @@ export interface SidekickKnowledge {
   passages: { t: string; d: string; p: number }[];
   /** Product slug → indexes into `passages`, best first. */
   productPassages: Record<string, number[]>;
-  synonyms: { replace: [string, string][]; related: [string, string][]; jobs?: Record<string, string[]> };
+  synonyms: {
+    replace: [string, string][];
+    related: [string, string][];
+    jobs?: Record<string, string[]>;
+    /** Hindi (English letters or Devanagari) → English, applied before a question is read. */
+    hindi?: [string, string][];
+  };
 }
 
 export interface GuideEntry {

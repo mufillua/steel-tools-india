@@ -2,7 +2,7 @@ import { COMPANY } from '../../config/company.config';
 import { CATEGORIES } from '../../data/categories';
 import { ALL_PRODUCTS } from '../../data/products';
 import { requestText, SidekickEngine } from './engine';
-import { normalize, sizeTokens, stem } from './text';
+import { devanagariToLatin, normalize, sizeTokens, stem } from './text';
 import { Reply, SidekickContext, SidekickKnowledge } from './types';
 
 const text = (r: Reply) => JSON.stringify(r.blocks).toLowerCase();
@@ -125,6 +125,26 @@ describe('Sidekick engine', () => {
     // Product questions that mention brands or makers still get the product.
     expect(engine.answer('who makes the er collet').products[0]).toBe('er-collet');
     expect(engine.answer('talk to the owner').intent).toBe('human');
+  });
+
+  it('understands Hindi typed in English letters and in Devanagari', () => {
+    expect(devanagariToLatin('दुकान')).toBe('dukaan');
+    expect(devanagariToLatin('खुलती')).toBe('khulti');
+    expect(devanagariToLatin('समय')).toBe('samay');
+    for (const q of ['aapki dukaan kaha hai?', 'dukaan kahan hai', 'आपकी दुकान कहाँ है?']) {
+      expect(engine.answer(q).intent).withContext(q).toBe('location');
+    }
+    expect(engine.answer('dukaan kab khulti hai').intent).toBe('hours');
+    expect(engine.answer('मालिक कौन है').intent).toBe('owner');
+    const kuppi = engine.answer('chain kuppi hai kya');
+    expect(kuppi.intent).toBe('availability');
+    expect(kuppi.products[0]).toContain('chain-pulley-block');
+    expect(engine.answer('टॉर्क रिंच कैसे इस्तेमाल करें').intent).toBe('howto');
+    // Follow-ups in Hindi use the previous product.
+    const stud = engine.answer('pull stud kya hota hai');
+    const sizes = engine.answer('iska size kya hai', stud.context);
+    expect(sizes.intent).toBe('sizes');
+    expect(sizes.products[0]).toBe('pull-stud');
   });
 
   it('does not reuse the previous product for an unrelated question', () => {

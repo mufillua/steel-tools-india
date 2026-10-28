@@ -28,6 +28,11 @@ visitor opens the chat ──► knowledge.json + catalogue ──► SidekickEn
   is dropped. The lifting brochure prints two products side by side on each sheet, and OCR mixes their columns, so a
   sentence from it is only used when it names its own product (those products already carry their brochure
   features in the site data). Sentences ruled out after a read-through are listed in `passage-review.json`.
+- **Hindi** (`synonyms.json` → `hindi`) — Hindi typed in English letters ("aapki dukaan kaha hai", "chain kuppi hai
+  kya", "kaise use kare") or in Devanagari ("दुकान कहाँ है") is turned into English before the question is read: the
+  longest listed phrase wins, "dukaan" and "dukan" match either way, and filler words ("ka", "ki", "hai") are dropped.
+  Devanagari words that aren't listed are spelt out in English letters, so spelling correction still finds loanwords
+  ("ड्रिल" → drill). Answers stay in English.
 - **The company** — owner, year established, address, hours and contact details come from
   `src/app/config/company.config.ts`; product, category and brand counts from the catalogue; "years in business" is
   worked out from today's date. These are the same facts as the About page. Questions about things the site doesn't
@@ -52,7 +57,8 @@ template, so it cannot invent sizes, prices or brands. When it can't find someth
 - **New or changed products:** edit the catalogue data as usual; the next build retrains Sidekick. If the train
   report lists products "with no guide entry", add an entry to `tool-guide.json`.
 - **Better wording for a tool:** edit its entry in `tool-guide.json`.
-- **A word customers use that Sidekick doesn't understand:** add it to `synonyms.json` → `replace`.
+- **A word customers use that Sidekick doesn't understand:** add it to `synonyms.json` → `replace` (product words) or
+  `hindi` (Hindi words and phrases, e.g. `["kab khulti hai", "opening time"]`).
 - **A catalogue sentence that shouldn't be quoted** (wrong product, true of one version only): add its first few
   words to `passage-review.json` → `drop`, with the reason under `_why`, and retrain.
 - **A question it answers badly:** add it to `eval.json` with the expected product/intent, fix the guide or synonyms,

@@ -1,7 +1,7 @@
 import { Category } from '../../models/category.model';
 import { Product, ProductVariant } from '../../models/product.model';
 import { correctWord, SearchHit, SearchIndex } from './search';
-import { listText, normalize, SizeToken, sizeTokens, stem, STOP_WORDS } from './text';
+import { devanagariToLatin, hasDevanagari, listText, looseHinglish, normalize, SizeToken, sizeTokens, stem, STOP_WORDS } from './text';
 import {
   Block,
   GuideEntry,
@@ -37,13 +37,14 @@ const RX: Record<string, RegExp> = {
   price:
     /\b(price|prices|pricing|priced|rate|rates|cost|costs|costing|mrp|cheap|cheapest|discount|daam|dam|kimat|keemat|kitne|kitna|quotation|quote|budget|expensive|rupees?|rs)\b|\bhow much\b(?! (weight|load|capacity|can|does it (weigh|lift)|lift))/,
   contact: /\b(contact|phone|mobile|whatsapp|email|e mail|reach you|call you|get in touch|your number|contact number|phone number)\b/,
-  hours: /\b(timing|timings|hours|opening|closing|closed|open today|open now|are you open|open on|working days|holiday|holidays|what time|sunday|saturday|monday|tuesday|wednesday|thursday|friday|weekend)\b/,
-  location: /\b(address|location|located|where are you|where is (your|the) (shop|store|office)|your shop|your store|your office|visit|directions|map|near me|nearby|come to)\b/,
+  hours: /\b(timing|timings|hours|opening|closing|closed|open|tomorrow|working days|holiday|holidays|what time|sunday|saturday|monday|tuesday|wednesday|thursday|friday|weekend)\b/,
+  location:
+    /\b(address|location|located|where are you|where is (your|the) (shop|store|office)|your shop|your store|your office|visit|directions|map|near me|nearby|come to)\b|\bwhere\b.*\b(shop|store|office)\b|\b(shop|store|office)\b.*\bwhere\b/,
   order: /\b(order|ordering|buy|purchase|deliver|delivery|shipping|ship|courier|dispatch|payment|pay|cod|gst|invoice|bulk|wholesale|minimum|moq|return|refund|warranty|guarantee|credit)\b/,
   categories: /\b(categories|category list|what (do|all) (you|u) (sell|have|stock|deal in)|what (products|items|tools) do you|product list|catalog|catalogue|full range|all products|what do you sell|what all)\b/,
   compare: /\b(difference|differences|differ|vs|versus|compare|comparison|which is better|better than)\b/,
   howto:
-    /\bhow (to|do|does|can|should|would|is) (i |we |you |one |it )?(use|used|fit|fix|mount|install|operate|tighten|loosen|remove|change|adjust|set|attach|work|handle|lift|maintain|clean|sharpen|select|choose)\b|\b(procedure|steps|instructions|instruction|operate|operating|installation|how it works|how to)\b/,
+    /\bhow (to|do|does|can|should|would|is) (i |we |you |one |it )?(use|used|fit|fix|mount|install|operate|tighten|loosen|remove|change|adjust|set|attach|work|handle|lift|maintain|clean|sharpen|select|choose)\b|\b(procedure|steps|instructions|instruction|operate|operating|installation|how it works|how to)\b|\bhow (use|fit|install|operate|tighten|loosen)\b/,
   uses: /\b(use|uses|used|usage|purpose|application|applications|meaning|function|for what|kis liye|kaam|good for|suitable|what is|what are|whats|what s|what does)\b/,
   sizes: /\b(size|sizes|sizing|dimension|dimensions|diameter|dia|length|lengths|range|variants?|models?|available in|which sizes|how big|how long|capacity|capacities|tonnage|ton|tons)\b/,
   specs: /\b(spec|specs|specification|specifications|weight|weigh|material|standard|grade|hardness|coating|helix|flutes?|features?|technical|details|tolerance|wll|swl|load|thickness|height|width)\b/,
@@ -69,7 +70,7 @@ const QUESTION_WORDS = new Set(
     'thank thanks thanku thankyou thx bye goodbye hello hey hii namaste name bot robot human person agent team staff ' +
     'talk speak sidekick who are you deliver delivery shipping courier payment pay gst invoice bulk wholesale return ' +
     'warranty guarantee credit cheap discount rupee rupees expensive budget sell selling sale tool tools ' +
-    'sunday saturday monday tuesday wednesday thursday friday weekend holiday holidays kolkata calcutta howrah bengal india ' +
+    'sunday saturday monday tuesday wednesday thursday friday weekend holiday holidays tomorrow kolkata calcutta howrah bengal india ' +
     'something anything thing things need needed require required want ' +
     // "what brand is the torque wrench", "who makes the ER collet" — the product answer shows its brand
     'brand brands make makes made maker manufacturer manufacturers company'
@@ -124,6 +125,10 @@ export class SidekickEngine {
   private readonly catIndex: SearchIndex;
   private readonly vocabulary: Map<string, number>;
   private readonly replacements: [string, string][];
+  /** Hindi phrases in English letters, indexed by their first word (loose spelling), longest first. */
+  private readonly hindiPhrases = new Map<string, [string[], string][]>();
+  /** Devanagari words → Hinglish. */
+  private readonly devanagari = new Map<string, string>();
   private readonly related = new Map<string, string[]>();
   private readonly categories: (Category & { count: number })[];
   /** Share of the question's words the best product matched (below 1 = a close match, not an exact one). */
@@ -187,6 +192,18 @@ export class SidekickEngine {
 
     this.vocabulary = this.index.vocabulary;
     for (const w of QUESTION_WORDS) this.vocabulary.set(w, this.vocabulary.get(w) ?? 1);
+    for (const [from, to] of knowledge.synonyms.hindi ?? []) {
+      if (hasDevanagari(from)) {
+        this.devanagari.set(from.normalize('NFC'), to);
+        continue;
+      }
+      const words = normalize(from).split(' ').map(looseHinglish);
+      const list = this.hindiPhrases.get(words[0]) ?? [];
+      list.push([words, to]);
+      this.hindiPhrases.set(words[0], list);
+    }
+    for (const list of this.hindiPhrases.values()) list.sort((a, b) => b[0].length - a[0].length);
+
     this.replacements = knowledge.synonyms.replace
       .map(([from, to]) => [normalize(from), normalize(to)] as [string, string])
       .filter(([from]) => from)
@@ -215,7 +232,8 @@ export class SidekickEngine {
     if (!raw) return this.welcome();
     this.lastQuestion = raw;
 
-    const norm = normalize(raw.replace(MAKER, ' lifting '));
+    // Hindi — Devanagari or English letters — is turned into the English the rest of Sidekick understands.
+    const norm = this.hindiToEnglish(normalize(this.fromDevanagari(raw).replace(MAKER, ' lifting ')));
     const intents = Object.keys(RX).filter((k) => RX[k].test(norm)) as Intent[];
     const has = (i: Intent) => intents.includes(i);
     const asksAboutLiftingMaker = MAKER_TEST.test(raw);
@@ -319,6 +337,43 @@ export class SidekickEngine {
   }
 
   // ── Understanding the question ───────────────────────────────────────────────────────────────────────────────
+
+  /** Devanagari words → Hinglish: known words from the Hindi list, the rest spelt out in English letters. */
+  private fromDevanagari(raw: string): string {
+    if (!hasDevanagari(raw)) return raw;
+    return raw
+      .normalize('NFC')
+      .replace(/[\u0964\u0965]/g, ' ') // danda
+      .split(/\s+/)
+      .map((token) => {
+        const core = token.replace(/^[^\u0900-\u097F\w]+|[^\u0900-\u097F\w]+$/g, '');
+        if (!hasDevanagari(core)) return token;
+        return this.devanagari.get(core) ?? devanagariToLatin(core);
+      })
+      .join(' ');
+  }
+
+  /**
+   * Hindi typed in English letters → English, longest phrase first, in one pass: "aapki dukaan kaha hai" → "your
+   * shop where", "torque wrench kaise use kare" → "torque wrench how to use". Filler words are dropped.
+   */
+  private hindiToEnglish(norm: string): string {
+    if (!this.hindiPhrases.size || !norm) return norm;
+    const words = norm.split(' ');
+    const keys = words.map(looseHinglish);
+    const out: string[] = [];
+    for (let i = 0; i < words.length; ) {
+      const hit = (this.hindiPhrases.get(keys[i]) ?? []).find(([phrase]) => phrase.every((w, j) => keys[i + j] === w));
+      if (hit) {
+        if (hit[1]) out.push(hit[1]);
+        i += hit[0].length;
+      } else {
+        out.push(words[i]);
+        i++;
+      }
+    }
+    return out.join(' ').replace(/\s+/g, ' ').trim();
+  }
 
   private searchTerms(norm: string, rewrite = true) {
     // One pass, longest phrase first at each position, so a rewritten phrase is never rewritten again.
@@ -1158,7 +1213,7 @@ export class SidekickEngine {
       'help',
       [
         { kind: 'text', text: 'Try asking me things like:' },
-        { kind: 'list', items: ['"Do you have chain pulley blocks?"', '"What is a revolving centre used for?"', '"How to use a torque wrench?"', '"ER32 collet 10 mm"', '"Difference between dead centre and revolving centre"', '"Who is the owner?"', '"Where is your shop?"'] },
+        { kind: 'list', items: ['"Do you have chain pulley blocks?"', '"What is a revolving centre used for?"', '"How to use a torque wrench?"', '"ER32 collet 10 mm"', '"Difference between dead centre and revolving centre"', '"Who is the owner?"', '"Where is your shop?"', '"Chain kuppi hai kya?" — Hindi works too'] },
       ],
       this.starterSuggestions(),
       [],
