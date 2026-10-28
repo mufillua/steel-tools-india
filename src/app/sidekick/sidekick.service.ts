@@ -64,6 +64,7 @@ export class SidekickService {
         addressLines: COMPANY.address.lines,
         pincode: COMPANY.address.pincode,
         hours: COMPANY.hours,
+        owner: COMPANY.owner,
       });
       if (!this.restore()) this.welcome();
       this.status.set('ready');

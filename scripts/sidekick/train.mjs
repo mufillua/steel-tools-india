@@ -336,6 +336,7 @@ const engine = new SidekickEngine(ALL_PRODUCTS, CATEGORIES, knowledge, {
   addressLines: COMPANY.address.lines,
   pincode: COMPANY.address.pincode,
   hours: COMPANY.hours,
+  owner: COMPANY.owner,
 });
 const exam = json('eval.json').questions;
 const failures = [];

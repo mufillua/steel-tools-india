@@ -34,6 +34,8 @@ export interface SidekickCompany {
   addressLines: string[];
   pincode: string;
   hours: { label: string; opens: string | null; closes: string | null }[];
+  /** As shown on the About page. */
+  owner: { name: string; role: string };
 }
 
 export interface ProductRef {
@@ -80,6 +82,10 @@ export type Intent =
   | 'thanks'
   | 'bye'
   | 'about'
+  /** Who owns / runs the business. */
+  | 'owner'
+  /** The company itself: profile, history, brands, supplier or manufacturer, how many products. */
+  | 'company'
   | 'help'
   | 'human'
   | 'price'

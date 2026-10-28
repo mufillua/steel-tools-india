@@ -28,6 +28,10 @@ visitor opens the chat ──► knowledge.json + catalogue ──► SidekickEn
   is dropped. The lifting brochure prints two products side by side on each sheet, and OCR mixes their columns, so a
   sentence from it is only used when it names its own product (those products already carry their brochure
   features in the site data). Sentences ruled out after a read-through are listed in `passage-review.json`.
+- **The company** — owner, year established, address, hours and contact details come from
+  `src/app/config/company.config.ts`; product, category and brand counts from the catalogue; "years in business" is
+  worked out from today's date. These are the same facts as the About page. Questions about things the site doesn't
+  state (who founded the business, dealership status, GST or registration numbers) are passed to the team.
 - **Synonyms** (`synonyms.json`) — customer words → catalogue words ("chain kuppi" → chain pulley block,
   "pallet jack" → pallet truck, "hex key" → Allen key, Hindi words like "pana", "pechkas"), plus `jobs` for
   "tools for an electrician / plumber / warehouse" questions.

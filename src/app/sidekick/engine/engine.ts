@@ -28,6 +28,10 @@ const RX: Record<string, RegExp> = {
   thanks: /\b(thank|thanks|thanku|thankyou|thx|dhanyavad|dhanyawad|shukriya)\b/,
   bye: /^(bye|goodbye|see you|tata|good night|ok bye)\b/,
   about: /\b(who are you|your name|what are you|are you (a )?(bot|robot|human|real|ai)|who made you|sidekick)\b/,
+  owner:
+    /\b(owner|owners|proprietor|propriter|proprieter|malik|maalik|founder|founders|founded by|started by|who (started|founded|runs|owns|manages|heads)|run by|owned by|managed by|ceo|managing director|your boss|the boss|in ?charge)\b/,
+  company:
+    /\b(about (your|the|this) (company|business|firm|shop|store|organi[sz]ation)|(your|the|this) (company|business|firm|organi[sz]ation)|company (details|profile|info|information|history|background)|tell me about (you guys|yourselves|your (company|business|firm|shop))|who are you guys|history|established|establishment|founded|since when|how old (are you|is (your|the|this) (company|business|shop|firm|store))|how long (have you|has (it|the (company|business|shop))|are you in|have you been)|years (in|of) (business|experience|service)|(your|how much|years of) experience|background|legacy|family business|kab se|kitne saal|(do|did) you (make|manufacture|produce)|you manufacture|manufacturer or (dealer|supplier|trader)|(dealer|supplier|trader) or (a )?manufacturer|your (own )?(factory|manufacturing)|are you (a |an )?(dealer|distributor|retailer|wholesaler|stockist|trader|supplier|manufacturer|company)|authori[sz]ed|which brands|what brands|brands (do )?you|your brands|how many (products|items|categories|tools|sizes))\b/,
   help: /^(help|menu|start|options)\b|\bwhat can you (do|answer|help)\b|\bhow (does|do) (this|you) work\b/,
   human: /\b(talk|speak|chat|connect) (to|with) (a |an |the )?(human|person|someone|agent|executive|owner|team|staff|sales|real)\b|\b(call me|call back|callback|representative|customer care|customer service)\b/,
   price:
@@ -66,7 +70,9 @@ const QUESTION_WORDS = new Set(
     'talk speak sidekick who are you deliver delivery shipping courier payment pay gst invoice bulk wholesale return ' +
     'warranty guarantee credit cheap discount rupee rupees expensive budget sell selling sale tool tools ' +
     'sunday saturday monday tuesday wednesday thursday friday weekend holiday holidays kolkata calcutta howrah bengal india ' +
-    'something anything thing things need needed require required want'
+    'something anything thing things need needed require required want ' +
+    // "what brand is the torque wrench", "who makes the ER collet" — the product answer shows its brand
+    'brand brands make makes made maker manufacturer manufacturers company'
   ).split(' '),
 );
 
@@ -106,6 +112,9 @@ export function requestText(question: string): string {
     .replace(/\s*(available|in stock)?\s*[?.!]*$/i, '')
     .trim() || question.trim();
 }
+
+// Words that, next to the company's name, still mean "tell me about the company" ("about Steel Tools India").
+const COMPANY_WORDS = new Set(['about', 'company', 'business', 'firm', 'yourself', 'yourselves', 'introduce', 'introduction', 'profile', 'details', 'detail', 'me', 'us', 'please', 'pls', 'is', 'the']);
 
 const shortName = (name: string) => name.replace(/\s*[(—–-]\s.*$/, '').replace(/\s*\(.*$/, '').trim() || name;
 
@@ -228,6 +237,9 @@ export class SidekickEngine {
 
     // 2 · Business questions (also answered when a product is mentioned alongside).
     if (has('human')) return this.humanReply(ctx);
+    // The company and its owner — answered from the company settings (the same facts as the About page).
+    if (has('owner') || this.namesOwner(norm)) return this.ownerReply(norm, ctx);
+    if (has('company') || this.onlyCompanyName(norm)) return this.companyReply(norm, ctx);
     if (has('hours') && !contentTerms.length) return this.hoursReply(ctx);
     if ((has('location') || has('contact')) && !contentTerms.length) return this.contactReply(ctx, has('location'));
     if (brand && !contentTerms.length && !sizes.length) return this.brandReply(brand, ctx);
@@ -987,11 +999,151 @@ export class SidekickEngine {
     return this.reply('greeting', [{ kind: 'text', text: `Hello! What are you looking for today? You can name a tool, a size, or the job you need it for.` }], this.starterSuggestions(), [], [], ctx);
   }
 
+  // ── The company and its owner ────────────────────────────────────────────────────────────────────────────────
+  // Only facts the site already states (company settings, About page, catalogue counts). Anything else — who
+  // founded it, dealership status, registration numbers — is passed to the team, never guessed.
+
+  private namesOwner(norm: string): boolean {
+    const words = normalize(this.company.owner.name).split(' ').filter((w) => w.length > 3);
+    return words.some((w) => new RegExp(`\\b${w}\\b`).test(norm));
+  }
+
+  /** "What is Steel Tools India?", "about steel tools india" — the name and nothing that points at a product. */
+  private onlyCompanyName(norm: string): boolean {
+    const name = normalize(this.company.name);
+    if (!` ${norm} `.includes(` ${name} `)) return false;
+    const rest = norm.replace(name, ' ').trim();
+    return !rest || this.searchTerms(rest).terms.every((t) => COMPANY_WORDS.has(t));
+  }
+
+  private yearsInBusiness(): number {
+    return new Date().getFullYear() - this.company.foundedYear;
+  }
+
+  private companyStats() {
+    const products = [...this.bySlug.values()];
+    const brands = new Map<string, number>();
+    for (const p of products) if (p.brand) brands.set(p.brand, (brands.get(p.brand) ?? 0) + 1);
+    return {
+      products: products.length,
+      categories: this.categories.length,
+      sizes: products.reduce((n, p) => n + p.variants.length, 0),
+      brands: [...brands.entries()].sort((a, b) => b[1] - a[1]),
+      unbranded: products.filter((p) => !p.brand).length,
+    };
+  }
+
+  private companyActions(): ReplyAction[] {
+    return [
+      { kind: 'whatsapp', label: 'WhatsApp the team' },
+      { kind: 'call', label: `Call ${this.company.phoneDisplay}` },
+      { kind: 'route', label: 'About us', route: '/about-us' },
+    ];
+  }
+
+  private companySuggestions(skip: string): Suggestion[] {
+    return [
+      { label: 'Who is the owner?', ask: 'Who is the owner?' },
+      { label: 'About the company', ask: 'Tell me about your company' },
+      { label: 'Which brands do you deal in?', ask: 'Which brands do you deal in?' },
+      { label: 'Where is your shop?', ask: 'Where is your shop?' },
+    ].filter((s) => s.ask !== skip);
+  }
+
+  private ownerReply(norm: string, ctx: SidekickContext): Reply {
+    const { name, city, foundedYear, owner } = this.company;
+    const aboutFounding = /\b(found|founder|founders|founded|started|start|establish|established)\b/.test(norm);
+    const blocks: Block[] = [
+      {
+        kind: 'text',
+        text: aboutFounding
+          ? `${name} was established in ${foundedYear} in ${city}. Today it is owned and run by **${owner.name}**.`
+          : `${name} is owned and run by **${owner.name}**.`,
+      },
+      {
+        kind: 'text',
+        text: `Under his leadership the business carries on the work it has done in ${city} since ${foundedYear} — supplying machine tool accessories, cutting tools, hand tools and lifting equipment to the workshops and industries that rely on them.`,
+      },
+      { kind: 'note', text: `To speak with him or the team, message us on WhatsApp or call ${this.company.phoneDisplay}.` },
+    ];
+    return this.reply('owner', blocks, this.companySuggestions('Who is the owner?'), this.companyActions(), [], { ...ctx, products: [] });
+  }
+
+  private companyReply(norm: string, ctx: SidekickContext): Reply {
+    const { name, city, foundedYear, owner } = this.company;
+    const years = this.yearsInBusiness();
+    const stats = this.companyStats();
+    const brandNames = listText(stats.brands.map(([b]) => b));
+    const range = `${brandNames}, plus our lifting & material handling range`;
+    const next = { ...ctx, products: [] };
+    const actions = this.companyActions();
+
+    // How many products / categories / sizes.
+    if (/\bhow many (products|items|categories|tools|sizes|variants)\b/.test(norm)) {
+      return this.reply('company', [
+        { kind: 'text', text: `We list **${stats.products} products** in **${stats.categories} categories** — **${stats.sizes.toLocaleString('en-IN')} sizes and variants** in all.` },
+        { kind: 'text', text: `They come from ${range}.` },
+      ], this.companySuggestions(''), [
+        { kind: 'route', label: 'Browse all products', route: '/products' },
+        { kind: 'route', label: 'All categories', route: '/categories' },
+      ], [], next);
+    }
+
+    // Manufacturer, dealer, supplier, authorised…
+    if (/\b(manufactur\w*|make|produce|dealer|distributor|retailer|wholesaler|stockist|trader|supplier|authori[sz]ed)\b/.test(norm)) {
+      return this.reply('company', [
+        { kind: 'text', text: `${name} is a supplier: we deal in tools from ${range}, and supply them to workshops and industries from our shop in ${city}.` },
+        { kind: 'note', text: 'For dealership, bulk supply or special requirements, please contact our team — they will help you directly.' },
+      ], this.companySuggestions('Which brands do you deal in?'), actions, [], next);
+    }
+
+    // Brands.
+    if (/\bbrands?\b/.test(norm)) {
+      return this.reply('company', [
+        { kind: 'text', text: 'We deal in these brands:' },
+        {
+          kind: 'list',
+          items: [
+            ...stats.brands.map(([b, n]) => `${b} — ${n} products`),
+            `Lifting & material handling range — ${stats.unbranded} products`,
+          ],
+        },
+        { kind: 'note', text: `Buy from our shop in ${city}, or send your list on WhatsApp for a quote.` },
+      ], this.companySuggestions('Which brands do you deal in?'),
+      stats.brands.slice(0, 3).map(([b]) => ({ kind: 'route' as const, label: `${b} products`, route: '/products', query: { brand: b } })), [], next);
+    }
+
+    // History: since when, how old, established.
+    if (/\b(history|established|establishment|founded|since when|how old|how long|years|experience|kab se|kitne saal|legacy|background|start|started)\b/.test(norm)) {
+      return this.reply('company', [
+        { kind: 'text', text: `${name} was established in **${foundedYear}** in ${city} — that's ${years} years in business.` },
+        { kind: 'text', text: `Today it is owned and run by **${owner.name}**, and supplies machine tool accessories, cutting tools, hand tools and lifting equipment to the workshops and industries that rely on them.` },
+      ], this.companySuggestions(''), actions, [], next);
+    }
+
+    // The full profile.
+    return this.reply('company', [
+      { kind: 'text', text: `**${name}** is a tooling business in ${city}, established in ${foundedYear} — ${years} years in business.` },
+      { kind: 'text', text: `It is owned and run by **${owner.name}**. We supply machine tool accessories, cutting tools, hand tools and lifting equipment to the workshops and industries that rely on them, from ${range}.` },
+      {
+        kind: 'facts',
+        rows: [
+          { label: 'Established', value: String(foundedYear) },
+          { label: owner.role, value: owner.name },
+          { label: 'Address', value: `${this.company.addressLines.join(', ')}, ${city} ${this.company.pincode}` },
+          { label: 'Products listed', value: `${stats.products} in ${stats.categories} categories` },
+          { label: 'Sizes & variants', value: stats.sizes.toLocaleString('en-IN') },
+        ],
+      },
+      { kind: 'note', text: 'Prices are on request — message the team on WhatsApp for price and availability.' },
+    ], this.companySuggestions('Tell me about your company'), actions, [], next);
+  }
+
   private aboutReply(ctx: SidekickContext): Reply {
     return this.reply(
       'about',
       [
-        { kind: 'text', text: `I'm Sidekick — ${this.company.name}'s product helper. I've been trained on our supplier catalogues (R★R Brand, Miranda, Taparia, and our lifting & material handling range), so I can tell you what a tool is used for, how to use it and which sizes we list.` },
+        { kind: 'text', text: `I'm Sidekick — ${this.company.name}'s product helper. I've been trained on our supplier catalogues (R★R Brand, Miranda, Taparia, and our lifting & material handling range), so I can tell you what a tool is used for, how to use it and which sizes we list. I can also tell you about ${this.company.name} itself — our history, our owner and the brands we deal in.` },
         { kind: 'text', text: `I don't quote prices — for those I'll connect you with the team on WhatsApp.` },
       ],
       this.starterSuggestions(),
@@ -1006,7 +1158,7 @@ export class SidekickEngine {
       'help',
       [
         { kind: 'text', text: 'Try asking me things like:' },
-        { kind: 'list', items: ['"Do you have chain pulley blocks?"', '"What is a revolving centre used for?"', '"How to use a torque wrench?"', '"ER32 collet 10 mm"', '"Difference between dead centre and revolving centre"', '"Where is your shop?"'] },
+        { kind: 'list', items: ['"Do you have chain pulley blocks?"', '"What is a revolving centre used for?"', '"How to use a torque wrench?"', '"ER32 collet 10 mm"', '"Difference between dead centre and revolving centre"', '"Who is the owner?"', '"Where is your shop?"'] },
       ],
       this.starterSuggestions(),
       [],

@@ -23,6 +23,7 @@ describe('Sidekick engine', () => {
       addressLines: COMPANY.address.lines,
       pincode: COMPANY.address.pincode,
       hours: COMPANY.hours,
+      owner: COMPANY.owner,
     });
   });
 
@@ -103,6 +104,27 @@ describe('Sidekick engine', () => {
     expect(requestText('Do you have a vernier caliper?')).toBe('vernier caliper');
     expect(requestText('hi, do you sell bosch drills')).toBe('bosch drills');
     expect(requestText('I need angle grinder 4 inch')).toBe('angle grinder 4 inch');
+  });
+
+  it('answers questions about the company and its owner from the company settings', () => {
+    const years = String(new Date().getFullYear() - COMPANY.foundedYear);
+    const owner = engine.answer('who is the owner');
+    expect(owner.intent).toBe('owner');
+    expect(text(owner)).toContain(COMPANY.owner.name.toLowerCase());
+    expect(engine.answer('malik kaun hai').intent).toBe('owner');
+    // Founding: the year is stated, the founder is not guessed.
+    const founded = text(engine.answer('who founded steel tools india'));
+    expect(founded).toContain(String(COMPANY.foundedYear));
+    expect(founded).not.toContain('founded by');
+    const profile = engine.answer('tell me about your company');
+    expect(profile.intent).toBe('company');
+    expect(text(profile)).toContain(String(COMPANY.foundedYear));
+    expect(text(profile)).toContain(years + ' years');
+    expect(text(engine.answer('are you a manufacturer'))).toContain('supplier');
+    expect(text(engine.answer('which brands do you deal in'))).toContain('taparia');
+    // Product questions that mention brands or makers still get the product.
+    expect(engine.answer('who makes the er collet').products[0]).toBe('er-collet');
+    expect(engine.answer('talk to the owner').intent).toBe('human');
   });
 
   it('does not reuse the previous product for an unrelated question', () => {

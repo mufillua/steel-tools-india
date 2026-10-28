@@ -46,11 +46,8 @@
             @for (b of r.blocks; track $index) {
               @switch (b.kind) {
                 @case ('text') {
-                  <p class="msg__text">
-                    @for (s of segments(b.text); track $index) {
-                      @if (s.bold) { <strong>{{ s.text }}</strong> } @else { {{ s.text }} }
-                    }
-                  </p>
+                  <!-- One line on purpose: line breaks here would show as a space before punctuation after bold text. -->
+                  <p class="msg__text">@for (s of segments(b.text); track $index) {@if (s.bold) {<strong>{{ s.text }}</strong>} @else {<span>{{ s.text }}</span>}}</p>
                 }
                 @case ('note') {
                   <p class="msg__note"><sti-icon name="info" [size]="14" /> <span>{{ b.text }}</span></p>
