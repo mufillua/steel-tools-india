@@ -195,6 +195,54 @@
   color: var(--sti-muted);
 }
 
+// ═════ Buying guide ═════
+.cat-guide {
+  padding-bottom: 0;
+}
+
+.cat-guide__inner {
+  display: grid;
+  gap: 16px 48px;
+
+  @include up(v.$bp-lg) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    align-items: start;
+  }
+}
+
+.cat-guide__head .cat-sec__title {
+  margin-top: 4px;
+  font-size: var(--sti-text-xl);
+}
+
+.cat-guide__body {
+  max-width: 72ch;
+
+  p {
+    margin: 0;
+    color: var(--sti-text);
+    line-height: 1.75;
+
+    + p {
+      margin-top: 16px;
+    }
+  }
+
+  a {
+    color: var(--sti-blue-800);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: var(--sti-blue-200);
+    text-underline-offset: 3px;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--sti-red-600);
+      text-decoration-color: currentColor;
+    }
+  }
+}
+
 // ═════ Why buy here ═════
 .cat-why__inner {
   display: grid;

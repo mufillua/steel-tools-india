@@ -79,6 +79,25 @@
     </div>
   </section>
 
+  <!-- ═════ Buying guide ═════ -->
+  @if (guide(); as g) {
+    <section class="sti-section cat-guide" aria-labelledby="cat-guide">
+      <div class="sti-container sti-container--wide">
+        <div class="cat-guide__inner">
+          <header class="cat-guide__head">
+            <p class="sti-eyebrow">Buying guide</p>
+            <h2 id="cat-guide" class="cat-sec__title">{{ g.title }}</h2>
+          </header>
+          <div class="cat-guide__body">
+            @for (para of g.paragraphs; track $index) {
+              <p>@for (s of para; track $index) {@if (s.link) {<a [routerLink]="s.link">{{ s.text }}</a>} @else {<ng-container>{{ s.text }}</ng-container>}}</p>
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+  }
+
   <!-- ═════ Why buy here ═════ -->
   <section class="sti-section cat-why" aria-labelledby="cat-why">
     <div class="sti-container sti-container--wide">

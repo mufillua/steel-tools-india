@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { Icon } from '../../components/icon/icon';
 import { PageIntro } from '../../components/page-intro/page-intro';
 import { ProductCard } from '../../components/product-card/product-card';
+import { CATEGORY_GUIDES, guideSegments } from '../../config/category-guides.config';
 import { COMPANY, COMPANY_LINKS } from '../../config/company.config';
 import { QUOTE_PATH } from '../../config/navigation.config';
 import { Product } from '../../models/product.model';
@@ -68,6 +69,13 @@ export class CategoryPage {
   protected readonly heading = computed(() => {
     const c = this.category();
     return c ? categoryHeading(c) : '';
+  });
+
+  /** "Choosing …" buying guide below the product list — search-term-rich text, prerendered for Google. */
+  protected readonly guide = computed(() => {
+    const c = this.category();
+    const g = c ? CATEGORY_GUIDES[c.slug] : undefined;
+    return g ? { title: g.title, paragraphs: g.paragraphs.map(guideSegments) } : null;
   });
 
   /** The street part of the address ("N. S. Road"), whatever order the address line is written in. */

@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { PRODUCTS_PER_PAGE } from '../config/catalogue.config';
+import { CATEGORY_GUIDES, guidePlainText, guideSegments } from '../config/category-guides.config';
 import { CATEGORY_SEO_HEADINGS, POPULAR_SEARCHES } from '../config/seo-keywords.config';
 import { ProductService } from './product.service';
 
@@ -77,6 +78,36 @@ describe('ProductService (catalogue data)', () => {
     const cats = svc.categories().map((c) => c.slug);
     expect(Object.keys(CATEGORY_SEO_HEADINGS).sort()).toEqual([...cats].sort());
     for (const s of POPULAR_SEARCHES) expect(svc.getProductBySlug(s.slug)).withContext(s.slug).toBeTruthy();
+  });
+
+  it('has a buying guide for every category, with no prices or hidden brand and only real product links', () => {
+    const cats = svc.categories();
+    expect(Object.keys(CATEGORY_GUIDES).sort()).toEqual(cats.map((c) => c.slug).sort());
+    for (const c of cats) {
+      const guide = CATEGORY_GUIDES[c.slug];
+      const text = guidePlainText(guide);
+      expect(guide.paragraphs.length).withContext(c.slug).toBeGreaterThanOrEqual(2);
+      expect(text).withContext(c.slug).not.toMatch(/price|₹|rs\.\s?\d|\/-/i);
+      expect(/safelift|\bsaif\b/i.test(text)).withContext(c.slug).toBeFalse();
+      // the lifting & material handling range shows no brand (client request)
+      if (!c.brands.length) expect(/taparia|miranda|r★r/i.test(text)).withContext(c.slug).toBeFalse();
+      for (const s of guide.paragraphs.flatMap(guideSegments)) {
+        if (s.link?.startsWith('/products/')) {
+          expect(svc.getProductBySlug(s.link.slice('/products/'.length))).withContext(`${c.slug} → ${s.link}`).toBeTruthy();
+        }
+      }
+    }
+  });
+
+  it('turns [label](slug) in guide text into product links', () => {
+    expect(guideSegments('A [D shackle](screw-pin-dee-shackle) or [any category](/categories).')).toEqual([
+      { text: 'A ' },
+      { text: 'D shackle', link: '/products/screw-pin-dee-shackle' },
+      { text: ' or ' },
+      { text: 'any category', link: '/categories' },
+      { text: '.' },
+    ]);
+    expect(guideSegments('Plain text only')).toEqual([{ text: 'Plain text only' }]);
   });
 
   it('uses 12 products per page', () => {
